@@ -65,6 +65,15 @@ DefaultProfileImage.propTypes = {
   height: PropTypes.number.isRequired,
 }
 
+/**
+ * The ProfileImage is always used to show a profile image to the user.
+ * ```example
+ * <Card>
+ *   <ProfileImage image="https://placeimg.com/100/100/people" />
+ *   <ProfileImage />
+ * </Card>
+ * ```
+ */
 const ProfileImage = ({
   size = 'medium',
   showBorder = true,

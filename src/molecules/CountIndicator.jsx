@@ -5,7 +5,19 @@ import Text from '../atoms/Text'
 import Absolute from '../atoms/Absolute'
 import Theme from '../behaviour/Theme'
 
-/** Indicates changes or updates */
+/**
+ * CountIndicator are used to indicated changes or updates. They can also be
+ * used to inform user about new or unseen information that are available
+ *
+ * ```example
+ * <ThemeProvider>
+ *   <Relative>
+ *     <Text>Hello</Text>
+ *     <CountIndicator top={0} left={35} count={123} />
+ *   </Relative>
+ * </ThemeProvider>
+ * ```
+ **/
 const CountIndicator = ({ count, ...props }) =>
   count === 0 ? null : (
     <Theme>

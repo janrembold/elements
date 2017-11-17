@@ -25,6 +25,15 @@ const styles = {
   }),
 }
 
+/**
+ * Checkbox are used to give users a way to select or deselect options.
+ *
+ * ```example
+ * <View>
+ *   <Checkbox checked name="ok" label="Are you ok?" />
+ *   <Checkbox name="notok" label="Are you not ok?" />
+ * </View>
+ */
 class Checkbox extends React.Component {
   static propTypes = {
     onChange: PropTypes.func,
@@ -40,7 +49,7 @@ class Checkbox extends React.Component {
 
   static defaultProps = {
     checked: false,
-    size: 'l',
+    labelSize: 'l',
   }
 
   handleChange = () => this.setState(({ checked }) => ({ checked: !checked }))

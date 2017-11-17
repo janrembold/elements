@@ -5,6 +5,19 @@ import Circle from '../atoms/Circle'
 import { color } from '../propTypes/color'
 import { withTheme } from '../behaviour/ThemeProvider'
 
+/**
+ * ListIcons are used to display icons in a list.
+ *
+ * ```example
+ * <ResourceProvider>
+ *   <ListIcon
+ *     color="white"
+ *     backgroundColor="blue"
+ *     name="serving-filled"
+ *   />
+ * </ResourceProvider>
+ * ```
+ */
 class ListIcon extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,

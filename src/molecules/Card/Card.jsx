@@ -9,6 +9,23 @@ const style = css({
   boxShadow: '2px 2px 2px rgba(230, 230, 230, 0.5)',
 })
 
+/**
+ * Cards can be used to group related content
+ *
+ * ```example
+ * <Card>
+ *  <CardContent>
+ *    <Text size="xxl" strong>
+ *      Cards
+ *    </Text>
+ *    <Text>
+ *      Cards are the basic elements to fit content in. They can may
+ *      contain any kind of content.
+ *    </Text>
+ *  </CardContent>
+ * </Card>
+ * ```
+ */
 const Card = ({ children, containerStyle, ...props }) => {
   return (
     <View {...css(style, containerStyle)} {...props}>

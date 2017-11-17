@@ -22,6 +22,14 @@ const box = (background, onClick) =>
     },
   })
 
+/**
+ * Button with only an icon. Can be used in toolbars. May also be used
+ * for back-buttons in the titlebar.
+ *
+ * ```example
+ * <SquareIconButton icon="armchairFilled" color="red" iconColor="white" />
+ * ```
+ */
 class SquareIconButton extends React.Component {
   static propTypes = {
     icon: PropTypes.string.isRequired,

@@ -33,7 +33,20 @@ const styles = {
 
 /**
  * Let's you choose between a limited set of items.
- * Note: This is not meant to used for navigation
+ *
+ * **Note:** This is not meant to used for navigation
+ *
+ * ```example
+ * <SwitchList
+ *   options={{
+ *     a: 'Freiburg',
+ *     b: 'Berlin',
+ *     c: 'München',
+ *   }}
+ *   initialActive="b"
+ *   showSpinner={false}
+ * />
+ * ```
  */
 export default class SwitchList extends React.Component {
   static propTypes = {

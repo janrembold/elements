@@ -36,6 +36,12 @@ function styles(
  * You can use two different looks for the button: primary and
  * secondary. Primary is the default type, so there's no need to explicitly
  * define it.
+ *
+ * ```example
+ * <ThemeProvider>
+ *   <Button>Hello you</Button>
+ * </ThemeProvider>
+ * ```
  */
 class Button extends React.Component {
   static propTypes = {

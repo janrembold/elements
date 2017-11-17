@@ -3,6 +3,19 @@ import React from 'react'
 import Image from './Image'
 import View from '../atoms/View'
 
+/**
+ * The Allthings logo
+ *
+ * ```example
+ * <ThemeProvider>
+ *  <View style={{ background: '#bada55', padding: 15 }}>
+ *    <Relative>
+ *      <Logo size={80} onClick={this.handleClick} />
+ *      <CountIndicator top="55" left="50" count={this.state.count} />
+ *    </Relative>
+ *  </View>
+ *</ThemeProvider>
+ */
 class Logo extends React.Component {
   static propTypes = {
     /** Callback when user clicks the logo */

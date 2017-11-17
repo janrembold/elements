@@ -1,5 +1,12 @@
 import React from 'react'
 
+/**
+ * The spinner is usefull to indicate a loading state
+ *
+ * ```example
+ * <Spinner />
+ * ```
+ */
 class Spinner extends React.Component {
   render() {
     return (

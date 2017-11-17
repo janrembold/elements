@@ -75,6 +75,14 @@ InputError.propTypes = {
   children: PropTypes.string.isRequired,
 }
 
+/**
+ * TextInputs are used to allow users to enter information like names, numbers, urls, email addresses or passwords.
+ *
+ * ```example
+ * <TextInput name="email" type="email" placeholder="Your email" required />
+ * <TextInput lines={5} placeholder="Your question" maxLength={255} minLength={50} />
+ * ```example
+ */
 class TextInput extends React.Component {
   static propTypes = {
     /** The default value to put into the component, without making it controlled */
