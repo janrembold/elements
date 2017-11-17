@@ -32,7 +32,7 @@ class SimpleLayout extends React.PureComponent {
   static propTypes = {
     children: PropTypes.node,
     backgroundColor: color,
-    follow: PropTypes.bool.isRequired
+    follow: PropTypes.bool.isRequired,
     padded: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.oneOf(['horizontal', 'vertical']),
