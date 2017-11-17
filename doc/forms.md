@@ -1,10 +1,6 @@
 ---
 name: Forms
 category: Getting started
-title: 'jo'
-keywords:
-  - Button
-  - Actions
 ---
 
 # Forms
