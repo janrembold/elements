@@ -11,8 +11,15 @@ import { css } from 'glamor'
  * For explanation see:
  * - https://material.angularjs.org/latest/layout/alignment
  * - https://material.angularjs.org/latest/layout/children
+ *
+ * ```example
+ * <ThemeProvider>
+ *   <View fill direction="row" alignH="flex-end">
+ *     <Text>Say Hello!</Text>
+ *   </View>
+ * </ThemeProvider>
+ * ```
  */
-
 class View extends Component {
   static propTypes = {
     children: PropTypes.node,

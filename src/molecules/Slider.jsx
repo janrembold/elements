@@ -98,12 +98,28 @@ const styles = {
   }),
 }
 
+/**
+ * Slider give the user a way to select from a limited range of numbers.
+ *
+ * ```example
+ * <Slider
+ *   min={20}
+ *   max={200}
+ *   step={10}
+ * />
+ * ```
+ */
 class Slider extends React.Component {
   static propTypes = {
+    /** Minimum selectable value **/
     min: PropTypes.number.isRequired,
+    /** Maximum selectable value **/
     max: PropTypes.number.isRequired,
+    /** Step interval **/
     step: PropTypes.number,
+    /** Current value to show **/
     value: PropTypes.number.isRequired,
+    /** Callback when the users changes the value **/
     onChange: PropTypes.func.isRequired,
   }
 

@@ -28,6 +28,18 @@ const availableSizes = {
  * Text will be used for everywhere a text appears.
  * The only exception is in molecules that already provide the
  * text component for you.
+ *
+ * ```example
+ * <Text>
+ *   Text will be used for everywhere a text appears. The only exception
+ *   is in molecules that already provide the text component for you.
+ * </Text>
+ * ```
+ *
+ * ```example
+ * <Text autoBreak={true}>
+ *   Textwillbeusedforeverywhereatextappears.Theonlyexceptionisinmoleculesthatalreadyprovidethetextcomponentforyou.Textwillbeusedforeverywhereatextappears.Theonlyexceptionisinmoleculesthatalreadyprovidethetextcomponentforyou.
+ *  </Text>
  */
 class Text extends React.Component {
   static propTypes = {
