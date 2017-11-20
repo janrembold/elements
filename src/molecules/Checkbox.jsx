@@ -33,6 +33,7 @@ const styles = {
  *   <Checkbox checked name="ok" label="Are you ok?" />
  *   <Checkbox name="notok" label="Are you not ok?" />
  * </View>
+ * ```
  */
 class Checkbox extends React.Component {
   static propTypes = {
