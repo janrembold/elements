@@ -15,25 +15,25 @@ const circle = (backgroundColor, outline, outlineColor, fill, radius) =>
   })
 
 /**
-Simple circle element that is used to build other things.
-
-Check out ProfileImage to see it in action.
-
-```example
-<ThemeProvider>
-  <ResourceProvider>
-    <View direction="row" alignV="center">
-      <Circle outline fill={false} outlineColor="lightGrey">
-        <Icon size="s" name="remove-filled" color="lightGrey" />
-      </Circle>
-      <Circle color="primary" />
-      <Circle color="#bada55" radius={20} />
-      <Circle color="gray" radius={10} />
-    </View>
-  </ResourceProvider>
-</ThemeProvider>
-```
-*/
+ * Simple circle element that is used to build other things.
+ *
+ * Check out ProfileImage to see it in action.
+ *
+ * ```example
+ * <ThemeProvider>
+ *   <ResourceProvider>
+ *     <View direction="row" alignV="center">
+ *       <Circle outline fill={false} outlineColor="lightGrey">
+ *         <Icon size="s" name="remove-filled" color="lightGrey" />
+ *       </Circle>
+ *       <Circle color="primary" />
+ *       <Circle color="#bada55" radius={20} />
+ *       <Circle color="gray" radius={10} />
+ *     </View>
+ *   </ResourceProvider>
+ * </ThemeProvider>
+ * ```
+**/
 const Circle = ({
   fill = true,
   color = 'primary',
