@@ -5,6 +5,16 @@ import PropTypes from 'prop-types'
 import { css } from 'glamor'
 import View from '../atoms/View'
 
+const buttonStyle = css({
+  width: '100%',
+  display: 'flex',
+  alignItem: 'center',
+  justifyContent: 'center',
+  height: '100%',
+  background: 'transparent',
+  border: 0,
+})
+
 class FloatingButton extends React.Component {
   static propTypes = {
     color: PropTypes.string.isRequired,
@@ -31,8 +41,9 @@ class FloatingButton extends React.Component {
             overflow: 'hidden',
             width: '100%',
           })}
-          {...props}
-        />
+        >
+          <button {...buttonStyle} {...props} />
+        </Absolute>
       </View>
     )
   }
