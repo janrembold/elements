@@ -38,7 +38,11 @@ const jo = (async function() {
     files = files.filter(file => !!file)
     files = files.map(({ file, docs }) => ({
       file,
-      docs: `# ${docs.displayName}
+      docs: `<!-- 
+This is an auto-generated markdown. 
+You can change it in "${file}" and run build:docs to update this file.
+-->
+# ${docs.displayName}
 ${docs.description}
 ## Usage
 | Name        | Type           | Description  |
