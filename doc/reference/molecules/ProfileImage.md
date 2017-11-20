@@ -1,3 +1,7 @@
+<!-- 
+This is an auto-generated markdown. 
+You can change it in "src/molecules/ProfileImage.jsx" and run build:docs to update this file.
+-->
 # ProfileImage
 The ProfileImage is always used to show a profile image to the user.
 ```example

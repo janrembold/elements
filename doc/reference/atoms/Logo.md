@@ -1,3 +1,7 @@
+<!-- 
+This is an auto-generated markdown. 
+You can change it in "src/atoms/Logo.jsx" and run build:docs to update this file.
+-->
 # Logo
 The Allthings logo
 

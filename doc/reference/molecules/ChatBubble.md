@@ -1,3 +1,7 @@
+<!-- 
+This is an auto-generated markdown. 
+You can change it in "src/molecules/ChatBubble.jsx" and run build:docs to update this file.
+-->
 # ChatBubble
 ChatBubble are used to show conversations between to or more users.
 

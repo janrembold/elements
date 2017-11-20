@@ -1,3 +1,7 @@
+<!-- 
+This is an auto-generated markdown. 
+You can change it in "src/molecules/NotificationBubble.jsx" and run build:docs to update this file.
+-->
 # NotificationBubble
 NotificationBubbles are used to inform users about important
 information, when an action has failed or succeeded. They're a most

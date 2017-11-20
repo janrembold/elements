@@ -1,3 +1,7 @@
+<!-- 
+This is an auto-generated markdown. 
+You can change it in "src/atoms/Icon.jsx" and run build:docs to update this file.
+-->
 # Icon
 Icons are used to visually communicate core parts of the product and
 available actions. They can act as wayfinding tools to help users more

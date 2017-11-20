@@ -1,3 +1,7 @@
+<!-- 
+This is an auto-generated markdown. 
+You can change it in "src/atoms/Circle.jsx" and run build:docs to update this file.
+-->
 # Circle
 Simple circle element that is used to build other things.
 

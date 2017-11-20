@@ -1,3 +1,7 @@
+<!-- 
+This is an auto-generated markdown. 
+You can change it in "src/behaviour/ResourceProvider.jsx" and run build:docs to update this file.
+-->
 # ResourceProvider
 Elements uses a set of static resources like images or icons.
 In order to benefit from caching across all apps, these resources are provided by a static asset CDN.

@@ -1,3 +1,7 @@
+<!-- 
+This is an auto-generated markdown. 
+You can change it in "src/molecules/Button.jsx" and run build:docs to update this file.
+-->
 # Button
 Buttons make common actions immediately visible and easy to perform with one
 click or tap. They can be used for any type of action, including navigation.

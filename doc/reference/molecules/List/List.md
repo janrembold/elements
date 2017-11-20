@@ -1,3 +1,7 @@
+<!-- 
+This is an auto-generated markdown. 
+You can change it in "src/molecules/List/List.jsx" and run build:docs to update this file.
+-->
 # List
 Lists display a series of related content.
 Make sure to check out ListItem, ListIcon and ListSpinner to

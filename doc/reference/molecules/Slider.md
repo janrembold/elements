@@ -1,3 +1,7 @@
+<!-- 
+This is an auto-generated markdown. 
+You can change it in "src/molecules/Slider.jsx" and run build:docs to update this file.
+-->
 # Slider
 Slider give the user a way to select from a limited range of numbers.
 

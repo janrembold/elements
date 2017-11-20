@@ -1,3 +1,7 @@
+<!-- 
+This is an auto-generated markdown. 
+You can change it in "src/atoms/View.jsx" and run build:docs to update this file.
+-->
 # View
 This Component is rebuild of angular-material's flexbox directives.
 

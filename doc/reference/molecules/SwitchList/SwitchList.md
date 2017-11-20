@@ -1,3 +1,7 @@
+<!-- 
+This is an auto-generated markdown. 
+You can change it in "src/molecules/SwitchList/SwitchList.jsx" and run build:docs to update this file.
+-->
 # SwitchList
 Let's you choose between a limited set of items.
 
