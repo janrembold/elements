@@ -116,7 +116,6 @@ exports[`NotificationBubbleManager renders the bubble 1`] = `
 
 <div
   data-css-4p3ux5=""
-  renderBubble={[Function]}
 >
   <div
     data-css-4p3ux5=""
