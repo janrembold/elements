@@ -3,9 +3,11 @@ This is an auto-generated markdown.
 You can change it in "src/molecules/Card/CardButton.jsx" and run build:docs to update this file.
 -->
 # CardButton
-
+CardButton can to enable users to do actions directly related to content on
+on cards. It should always go into a [CardFooter](CardFooter.md).
 ## Usage
 | Name        | Type           | Description  |
 | ----------- |:--------------:| ------------:|
 |children|node|
-|onClick|func|<br>Default: noop => noop
+|onClick|func|Callback when button is clicked *<br>Default: noop => noop
+|backgroundColor|string|Color of the button *<br>Default: '#ffffff'

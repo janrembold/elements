@@ -12,7 +12,6 @@ It could be used on cards to indicate that this card contains important informat
   <Pill label="A warning" color="warn">
 </ThemeProvider>
 ```
-
 ## Usage
 | Name        | Type           | Description  |
 | ----------- |:--------------:| ------------:|
