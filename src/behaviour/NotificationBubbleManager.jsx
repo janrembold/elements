@@ -55,7 +55,7 @@ class NotificationBubbleManager extends React.Component {
     )
 
   render() {
-    const { children, ...props } = this.props
+    const { children, renderBubble, ...props } = this.props
     const message = this.state.messages[0]
 
     return (
