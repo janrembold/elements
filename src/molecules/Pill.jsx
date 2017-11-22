@@ -15,6 +15,17 @@ const styles = backgroundColor =>
     cursor: 'default',
   })
 
+/**
+ * Pills 💊 are used to show status or to highlight a piece of information.
+ * It could be used on cards to indicate that this card contains important information.
+ *
+ * ```example
+ * <ThemeProvider>
+ *   <Pill label="Important message" color="primary" />
+ *   <Pill label="A warning" color="warn">
+ * </ThemeProvider>
+ * ```
+ */
 const Pill = ({ color = 'primary', label, ...props }) => {
   return (
     <Theme>
@@ -30,7 +41,9 @@ const Pill = ({ color = 'primary', label, ...props }) => {
 }
 
 Pill.propTypes = {
+  /** Text that shows on the pill **/
   label: PropTypes.string.isRequired,
+  /** Themed color of the pill **/
   color: PropTypes.string,
 }
 

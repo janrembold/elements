@@ -13,3 +13,14 @@ test('Pill renders without error', () => {
     .toJSON()
   expect(tree).toMatchSnapshot()
 })
+
+test('Pill renders with custom color', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider>
+        <Pill label="Important message" color="warn" />
+      </ThemeProvider>
+    )
+    .toJSON()
+  expect(tree).toMatchSnapshot()
+})
