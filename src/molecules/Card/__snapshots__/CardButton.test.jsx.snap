@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardButton renders custom color 1`] = `
+.css-yd6zvg,
+[data-css-yd6zvg] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+  flex: 1;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 1;
+}
+
+.css-keghjr,
+[data-css-keghjr] {
+  background-color: #f0f0f0;
+  transition: 500ms ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  -moz-transition: 500ms ease-in-out;
+}
+
+.css-keghjr:hover,
+[data-css-keghjr]:hover {
+  cursor: pointer;
+  background: #d9d9d9;
+}
+
+<div
+  data-css-keghjr=""
+  data-css-yd6zvg=""
+  onClick={[Function]}
+>
+  Click me
+</div>
+`;
+
+exports[`CardButton renders without error 1`] = `
+.css-7wo8x0,
+[data-css-7wo8x0] {
+  background-color: #3598db;
+  transition: 500ms ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  -moz-transition: 500ms ease-in-out;
+}
+
+.css-7wo8x0:hover,
+[data-css-7wo8x0]:hover {
+  cursor: pointer;
+  background: #227dbf;
+}
+
+.css-yd6zvg,
+[data-css-yd6zvg] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+  flex: 1;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 1;
+}
+
+<div
+  data-css-7wo8x0=""
+  data-css-yd6zvg=""
+  onClick={[Function]}
+>
+  Click me
+</div>
+`;
