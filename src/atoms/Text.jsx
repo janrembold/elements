@@ -8,8 +8,8 @@ import neue from 'neue'
 if (typeof window !== `undefined`) {
   neue.load([
     {
-      families: ['Open Sans:n3,n6'],
-      css: '//fonts.googleapis.com/css?family=Open+Sans:300,600',
+      families: ['Open Sans:n4,n4i,n6,n6i'],
+      css: '//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i',
     },
   ])
 }
