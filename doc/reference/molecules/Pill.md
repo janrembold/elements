@@ -8,8 +8,10 @@ It could be used on cards to indicate that this card contains important informat
 
 ```example
 <ThemeProvider>
-  <Pill label="Important message" color="primary" />
-  <Pill label="A warning" color="warn">
+  <View>
+    <Pill label="Important message" color="primary" />
+    <Pill label="A warning" color="warn" />
+  </View>
 </ThemeProvider>
 ```
 ## Usage

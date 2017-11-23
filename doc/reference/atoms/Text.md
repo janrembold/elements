@@ -18,6 +18,7 @@ text component for you.
 <Text autoBreak={true}>
   Textwillbeusedforeverywhereatextappears.Theonlyexceptionisinmoleculesthatalreadyprovidethetextcomponentforyou.Textwillbeusedforeverywhereatextappears.Theonlyexceptionisinmoleculesthatalreadyprovidethetextcomponentforyou.
  </Text>
+ ```
 ## Usage
 | Name        | Type           | Description  |
 | ----------- |:--------------:| ------------:|

@@ -21,8 +21,10 @@ const styles = backgroundColor =>
  *
  * ```example
  * <ThemeProvider>
- *   <Pill label="Important message" color="primary" />
- *   <Pill label="A warning" color="warn">
+ *   <View>
+ *     <Pill label="Important message" color="primary" />
+ *     <Pill label="A warning" color="warn" />
+ *   </View>
  * </ThemeProvider>
  * ```
  */

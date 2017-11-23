@@ -40,6 +40,7 @@ const availableSizes = {
  * <Text autoBreak={true}>
  *   Textwillbeusedforeverywhereatextappears.Theonlyexceptionisinmoleculesthatalreadyprovidethetextcomponentforyou.Textwillbeusedforeverywhereatextappears.Theonlyexceptionisinmoleculesthatalreadyprovidethetextcomponentforyou.
  *  </Text>
+ *  ```
  */
 class Text extends React.Component {
   static propTypes = {
