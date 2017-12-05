@@ -31,7 +31,7 @@
     "build:docs": "babel-node ./scripts/generate-docs.js",
     "prepublishOnly":
       "echo 'To publish this, go to build/ and run 'yarn publish''",
-    "test": "jest src/",
+    "test": "NODE_ENV=development jest src/",
     "prettier":
       "prettier --no-semi --single-quote --trailing-comma es5 --write",
     "lint": "eslint --cache --ext .js,.jsx src/ documentation/src/",
