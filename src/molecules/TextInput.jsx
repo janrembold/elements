@@ -127,6 +127,7 @@ class TextInput extends React.Component {
     for (const state of STATES) {
       if (e.target.validity[state]) {
         this.setState({ message: validity[state] || message })
+        hasState = true
         break
       }
     }
