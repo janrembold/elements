@@ -43,7 +43,7 @@ Are you looking for a full example project to get started?
 
 ## Documentation
 
-Check out our [documentation website](https://allthings.github.io/documentation/elements).
+Check out our [documentation website](https://developers.allthings.me/elements/index.html).
 
 ## Writing unit tests
 
