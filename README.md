@@ -75,7 +75,7 @@ You can also use the corresponding watch task:
 yarn watch:test:unit
 ```
 
-The unit tests are performed using the [Jest platform](https://facebook.github.io/jest/), please refer its documentation.
+The unit tests are performed using the [Jest platform](https://facebook.github.io/jest/), please refer to its documentation.
 
 React component testing is based on the [Enzyme testing utility](http://airbnb.io/enzyme/docs/api/), please refer to its documentation.
 
