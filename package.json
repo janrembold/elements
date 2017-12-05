@@ -1,6 +1,6 @@
 {
   "name": "@allthings/elements-build",
-  "version": "1.11.2",
+  "version": "1.12.0",
   "main": "src/index.js",
   "repository": "https://github.com/allthings/elements",
   "author": "Moritz Schwörer <moritz.schwoerer@allthings.me>",
@@ -22,18 +22,14 @@
     "react-dom": ">=0.14.0 <17.0.0"
   },
   "scripts": {
-    "create:release":
-      "yarn lint && yarn test && yarn version && git push --tags origin HEAD && yarn build && cd build && yarn publish",
+    "create:release": "yarn lint && yarn test && yarn version && git push --tags origin HEAD && yarn build && cd build && yarn publish",
     "prebuild": "rimraf build",
-    "build":
-      "NODE_ENV=production babel ./src --ignore *.spec.js --out-dir ./build && yarn build:copy-files",
+    "build": "NODE_ENV=production babel ./src --ignore *.spec.js --out-dir ./build && yarn build:copy-files",
     "build:copy-files": "babel-node ./scripts/copy-files.js",
     "build:docs": "babel-node ./scripts/generate-docs.js",
-    "prepublishOnly":
-      "echo 'To publish this, go to build/ and run 'yarn publish''",
+    "prepublishOnly": "echo 'To publish this, go to build/ and run 'yarn publish''",
     "test": "NODE_ENV=development jest src/",
-    "prettier":
-      "prettier --no-semi --single-quote --trailing-comma es5 --write",
+    "prettier": "prettier --no-semi --single-quote --trailing-comma es5 --write",
     "lint": "eslint --cache --ext .js,.jsx src/ documentation/src/",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -99,6 +95,9 @@
     "bail": true,
     "collectCoverage": true,
     "setupTestFrameworkScriptFile": "<rootDir>/bootstrap-jest.js",
-    "snapshotSerializers": ["enzyme-to-json/serializer", "jest-glamor-react"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer",
+      "jest-glamor-react"
+    ]
   }
 }
