@@ -7,15 +7,17 @@
   ],
   "globals": {
     "React": true,
+    "describe": true,
+    "expect": true,
     "fetch": false,
-    "graphql": false
+    "graphql": false,
+    "it": true,
+    "jest": true,
+    "mount": true,
+    "shallow": true
   },
   "parser": "babel-eslint",
-  "plugins": [
-    "react",
-    "jest",
-    "import"
-  ],
+  "plugins": ["react", "jest", "import"],
   "rules": {
     "comma-dangle": [2, "always-multiline"],
     "generator-star-spacing": 0,
@@ -30,10 +32,13 @@
     "react/jsx-no-target-blank": 0,
     "react/no-array-index-key": 2,
     "react/no-multi-comp": [1, { "ignoreStateless": true }],
-    "react/self-closing-comp": [2, {
-      "component": true,
-      "html": true
-    }],
+    "react/self-closing-comp": [
+      2,
+      {
+        "component": true,
+        "html": true
+      }
+    ],
     "react/display-name": 0,
     "react/no-render-return-value": 0,
     "space-before-function-paren": 0,
