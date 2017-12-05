@@ -9,7 +9,7 @@ import {
 } from '../'
 
 describe('Check FormValidityProvider', () => {
-  it('should click on the button and get an custom error message', () => {
+  it('should click on the button and get a custom error message', () => {
     function noop() {}
     const valueMissing = 'A nice error message 🐼'
     const wrapper = mount(
