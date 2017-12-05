@@ -124,14 +124,16 @@ class TextInput extends React.Component {
     const { STATES, validity } = this.context
     const message = e.target.validationMessage
     let hasState = false
-    for (const state of STATES) {
-      if (e.target.validity[state]) {
-        this.setState({ message: validity[state] || message })
-        hasState = true
-        break
+    if (STATES) {
+      for (const state of STATES) {
+        if (e.target.validity[state]) {
+          this.setState({ message: validity[state] || message })
+          hasState = true
+          break
+        }
       }
     }
-    hasState && this.setState({ message })
+    !hasState && this.setState({ message })
   }
 
   setInput = input => {
