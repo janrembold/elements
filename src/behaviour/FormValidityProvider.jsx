@@ -1,13 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-/**
- * The FormValidityProvider gives a nice and simple way for injecting custom
- * error messages that are mapping the HTML5 constraint validation API.
- *
- * Please check the following documentation:
- * https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation#Validating_forms_using_JavaScript
- */
 const STATES = [
   'badInput',
   'customError',
@@ -26,6 +19,13 @@ const validityPropTypes = STATES.reduce((acc, prop) => ({
   [prop]: PropTypes.string,
 }), {})
 
+/**
+ * The FormValidityProvider gives a nice and simple way for injecting custom
+ * error messages that are mapping the HTML5 constraint validation API.
+ *
+ * Please check the following documentation:
+ * https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation#Validating_forms_using_JavaScript
+ */
 class FormValidityProvider extends React.Component {
   getChildContext() {
     return { validity: this.props.validity, STATES }
