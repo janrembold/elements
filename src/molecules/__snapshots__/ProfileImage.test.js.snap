@@ -19,7 +19,9 @@ exports[`Profile image with source renders correctly 1`] = `
 }
 
 .css-1xt26v0:before,
-[data-css-1xt26v0]:before {
+[data-css-1xt26v0]:before,
+.css-1xt26v0[data-simulate-before],
+[data-css-1xt26v0][data-simulate-before] {
   content: "";
   position: absolute;
   top: 0;
@@ -69,7 +71,9 @@ exports[`Profile image without source renders correctly 1`] = `
 }
 
 .css-1xt26v0:before,
-[data-css-1xt26v0]:before {
+[data-css-1xt26v0]:before,
+.css-1xt26v0[data-simulate-before],
+[data-css-1xt26v0][data-simulate-before] {
   content: "";
   position: absolute;
   top: 0;

@@ -121,7 +121,19 @@ class TextInput extends React.Component {
 
   handleInvalid = e => {
     e.preventDefault()
-    this.setState({ message: e.target.validationMessage })
+    const { STATES, validity } = this.context
+    const message = e.target.validationMessage
+    let hasState = false
+    if (STATES) {
+      for (const state of STATES) {
+        if (e.target.validity[state]) {
+          this.setState({ message: validity[state] || message })
+          hasState = true
+          break
+        }
+      }
+    }
+    !hasState && this.setState({ message })
   }
 
   setInput = input => {
@@ -191,6 +203,11 @@ class TextInput extends React.Component {
       </Theme>
     )
   }
+}
+
+TextInput.contextTypes = {
+  validity: PropTypes.object,
+  STATES: PropTypes.array,
 }
 
 export default TextInput
