@@ -29,4 +29,5 @@ src={'https://placeimg.com/nothing'}
 |onClick|func|Will be called when the image is clicked
 |src **(required)**|string|The URL of the image
 |srcFallback|string|The URL of the fallback image
-|size|enum|The Position behavior of image. If passed, image will be rendered as background image.
+|size|enum|The behaviour behavior of image within the container
+|position|enum|The position of image<br>Default: 'left'

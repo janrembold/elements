@@ -34,8 +34,10 @@ export default class Image extends React.Component {
     src: PropTypes.string.isRequired,
     /** The URL of the fallback image */
     srcFallback: PropTypes.string,
-    /** The Position behavior of image. If passed, image will be rendered as background image. */
+    /** The behaviour behavior of image within the container */
     size: PropTypes.oneOf(['contain', 'cover']),
+    /** The position of image */
+    position: PropTypes.oneOf(['center', 'left', 'right', 'top', 'bottom']),
   }
 
   state = {
@@ -64,7 +66,8 @@ export default class Image extends React.Component {
   }
 
   getFallbackUrl = () => {
-    const baseUrl = typeof this.context.resourcePath === 'undefined'
+    const baseUrl =
+      typeof this.context.resourcePath === 'undefined'
         ? 'https://static.allthings.me/app/prod/'
         : this.context.resourcePath
 
@@ -74,15 +77,18 @@ export default class Image extends React.Component {
   onError = () => this.props.srcFallback && this.setState({ useFallback: true })
 
   render() {
-    const { srcFallback, src, size, ...props } = this.props
+    const { srcFallback, src, position, size, ...props } = this.props
 
-    const imageUrl = this.state.useFallback ? srcFallback || this.getFallbackUrl() : src
+    const imageUrl = this.state.useFallback
+      ? srcFallback || this.getFallbackUrl()
+      : src
 
     return (
       <View
         {...css({
           backgroundImage: `url(${imageUrl})`,
           backgroundSize: size,
+          backgroundPosition: position,
         })}
         {...props}
       />

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image renders correctly 1`] = `
+.css-8ccywx,
+[data-css-8ccywx] {
+  background-image: url(http://example.com/test.js);
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+<div
+  data-css-4p3ux5=""
+  data-css-8ccywx=""
+/>
+`;
+
+exports[`Image should set position 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-q9io93,
+[data-css-q9io93] {
+  background-image: url(http://example.com/test.js);
+  background-position: center;
+}
+
+<div
+  data-css-4p3ux5=""
+  data-css-q9io93=""
+/>
+`;
