@@ -30,4 +30,4 @@ src={'https://placeimg.com/nothing'}
 |src **(required)**|string|The URL of the image
 |srcFallback|string|The URL of the fallback image
 |size|enum|The behaviour behavior of image within the container
-|position|enum|The position of image<br>Default: 'left'
+|position|enum|The position of image
