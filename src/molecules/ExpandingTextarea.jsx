@@ -10,12 +10,24 @@ const styles = {
     fontSize: 13,
     resize: 'none',
     flex: 1,
+    minHeight: 20,
     maxHeight: '25vh',
     width: '100%',
     paddingLeft: 15,
   }),
 }
 
+/**
+ * The height of the ExpandingTextarea will expand when the user adds a new line.
+ * It will take at maximum 25% of the current viewport. (max-height: 25vh)
+ *
+ * ```example
+ * <ExpandingTextarea>
+ *   placeholder="Write somthing..."
+ *   value=""
+ * />
+ * ```
+ */
 export default class ExpandingTextarea extends React.Component {
   static propTypes = {
     autoFocus: PropTypes.bool,

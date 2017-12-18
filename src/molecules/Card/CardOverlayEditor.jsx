@@ -21,7 +21,7 @@ const styles = {
   }),
 }
 
-export default class PostEditor extends React.Component {
+export default class CardOverlayEditor extends React.Component {
   static propTypes = {
     initialText: PropTypes.string,
     confirmText: PropTypes.string.isRequired,
