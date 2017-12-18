@@ -60,21 +60,22 @@ export default class CardOverlayEditor extends React.Component {
         { bottom, left, right, top }
       )
     ) {
-      if (
-        !this.state.text ||
-        (this.state.text && window.confirm(this.props.confirmText))
-      ) {
         e.stopPropagation()
         this.triggerClose()
         return false
       }
-    }
+
   }
 
   setElement = element => (this.element = element)
 
   triggerClose = () => {
-    this.props.onRequestClose && this.props.onRequestClose()
+    if (
+      !this.state.text ||
+      (this.state.text && window.confirm(this.props.confirmText))
+    ) {
+      this.props.onRequestClose && this.props.onRequestClose()
+    }
   }
 
   handleSave = e => this.props.onSave(this.state.text)
