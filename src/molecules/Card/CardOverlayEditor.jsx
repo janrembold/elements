@@ -64,7 +64,7 @@ export default class PostEditor extends React.Component {
         this.triggerClose()
         return false
       }
-    
+
   }
 
   setElement = element => (this.element = element)
@@ -86,7 +86,6 @@ export default class PostEditor extends React.Component {
   }
 
   render() {
-    console.log("from elements new")
     return (
       <View onRef={this.setElement} {...css(styles.wrapper)}>
         <View {...css({ padding: 15 })}>
