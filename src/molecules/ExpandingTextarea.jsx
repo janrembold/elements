@@ -10,6 +10,7 @@ const styles = {
     fontSize: 13,
     resize: 'none',
     flex: 1,
+    minHeight: 20,
     maxHeight: '25vh',
     width: '100%',
     paddingLeft: 15,
