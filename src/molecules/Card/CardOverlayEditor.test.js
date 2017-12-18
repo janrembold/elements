@@ -68,3 +68,53 @@ test('Should save when confirm button is clicked', () => {
   expect(requestClose).toHaveBeenCalledTimes(0)
   expect(save).toHaveBeenCalled()
 })
+
+test('Should request close if click outside of component', () => {
+  const requestClose = jest.fn()
+  const save = jest.fn()
+  const stopPropagation = jest.fn()
+  const wrapper = shallow(
+    <CardOverlayEditor
+      onSave={save}
+      onRequestClose={requestClose}
+      confirmText="cancel forsure"
+      cancelText="buttoncancel"
+      submitText="sumbit"
+    />
+  )
+  const instance = wrapper.instance()
+  instance.element = {
+    getBoundingClientRect: () => ({ bottom: 10, left: 20, right: 20, top: 10 }),
+  }
+
+  wrapper.instance().handleClick({ clientX: 0, clientY: 0, stopPropagation })
+  wrapper.instance().handleClick({ clientX: 1, clientY: 10, stopPropagation })
+
+  expect(stopPropagation).toHaveBeenCalledTimes(2)
+  expect(requestClose).toHaveBeenCalledTimes(2)
+})
+
+test('Should update the textbox', () => {
+  const requestClose = jest.fn()
+  const onSave = jest.fn()
+  const wrapper = mount(
+    <CardOverlayEditor
+      onSave={onSave}
+      onRequestClose={requestClose}
+      confirmText="cancel forsure"
+      cancelText="buttoncancel"
+      submitText="sumbit"
+    />
+  )
+
+  wrapper
+    .find('textarea')
+    .simulate('change', { target: { value: 'Hello World' } })
+  wrapper
+    .find(CardButton)
+    .at(1)
+    .simulate('click')
+
+  wrapper.unmount()
+  expect(onSave).toHaveBeenCalledWith('Hello World')
+})
