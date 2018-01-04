@@ -10,18 +10,11 @@ import { css } from 'glamor'
  * be shown instead.
  *
  * ```example
- * <Image
- *   style={{width: 225, height: 225}}
- *   size="cover"
- *   src={'https://placeimg.com/225/225/people'}
- * />
+ console.log('heyy')
  * ```
  *
  * ```example
- * <Image
- * style={{width: 225, height: 225}}
- * src={'https://placeimg.com/nothing'}
- * />
+ console.log('hallo again!')
  * ```
  */
 export default class Image extends React.Component {

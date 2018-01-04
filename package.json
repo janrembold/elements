@@ -27,6 +27,7 @@
     "build": "NODE_ENV=production babel ./src --ignore *.spec.js --out-dir ./build && yarn build:copy-files",
     "build:copy-files": "babel-node ./scripts/copy-files.js",
     "build:docs": "babel-node ./scripts/generate-docs.js",
+    "build:example": "babel-node ./scripts/example-test.js",
     "prepublishOnly": "echo 'To publish this, go to build/ and run 'yarn publish''",
     "test": "NODE_ENV=development jest src/",
     "prettier": "prettier --no-semi --single-quote --trailing-comma es5 --write",
