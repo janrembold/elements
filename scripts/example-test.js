@@ -2,6 +2,11 @@ import glob from 'glob'
 import { promisify } from 'util'
 import fs from 'fs'
 import path from 'path'
+import View from '../src/atoms/View'
+import { transform } from 'babel-core';
+import React from 'react'
+var babel = require("babel-core");
+
 const reactDocs = require('react-docgen')
 
 const writeFile = promisify(fs.writeFile)
@@ -38,13 +43,15 @@ const retrieveExamples = (async function() {
     )
     files = files.filter(file => !!file)
     files = files.map(({ file, docs }) => {
-      //.match(/```example(.*?)(?=```)/gm
       const description = docs.description
       const exampleString = description.replace(/^\s+|\r?\n|\r/mg, "").match(/```example(.*?)(?=```)/gm)
-      const wholeExample = (!exampleString || null) ? 'false' : exampleString
-      //console.log('descriptionnn', wholeExample.length)
-      if (wholeExample !== 'false' && wholeExample.length > 1) {
-        console.log('more than 1!', wholeExample[1].length)
+      const wholeExample = (!exampleString || null) ? 'false' : exampleString.map(string => string.replace('```example', ''))
+      if (wholeExample !== 'false' && wholeExample.length > 2) {
+        //console.log('more than 1!', wholeExample)
+        wholeExample.forEach(example=> {
+          const result = babel.transform(example, {babelrc: true, presets: ['react']})
+          console.log(eval('var React= require("react"); var View = require("../src/atoms/View");' + result.code))
+        })
       }
       return ({
       file,
