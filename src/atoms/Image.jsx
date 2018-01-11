@@ -10,14 +10,14 @@ import { css } from 'glamor'
  * be shown instead.
  *
  * ```example
- * <View>One</View>
+ * <Image>One</Image>
  * ```
  * 
  * ```example
- * <View>Two</View>
+ * <Image>Two</Image>
  * ```
  * ```example
- * <View>Three</View>
+ * <Image>Three</Image>
  * ```
  */
 export default class Image extends React.Component {
