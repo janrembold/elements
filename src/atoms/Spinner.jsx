@@ -4,7 +4,7 @@ import React from 'react'
  * The spinner is usefull to indicate a loading state
  *
  * ```example
- * <Spinner />
+ * <Spinner hello="hi" />
  * ```
  */
 class Spinner extends React.Component {

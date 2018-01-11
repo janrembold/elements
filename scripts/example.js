@@ -34,12 +34,6 @@ const retrieveExamples = new Promise(async resolve => {
     const { description, displayName } = docs
     const exampleString = description.replace(/^\s+|\r?\n|\r/mg, "").match(/```example(.*?)(?=```)/gm)
     const wholeExample = (!exampleString || null) ? 'false' : exampleString.map(string => string.replace('```example', ''))
-    if (wholeExample !== 'false' && wholeExample.length > 2) {
-      wholeExample.forEach(example=> {
-        const result = transform(example, {babelrc: true, presets: ['react']})
-        //console.log(eval(result.code))
-      })
-    }
     return {wholeExample, file, displayName}
   })
   resolve(filesMapped)

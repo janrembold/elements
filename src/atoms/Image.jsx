@@ -10,11 +10,11 @@ import { css } from 'glamor'
  * be shown instead.
  *
  * ```example
- * <Image>One</Image>
+ * <View>One</View>
  * ```
  * 
  * ```example
- * <Image>Two</Image>
+ * <ThemeProvider>Two</ThemeProvider>
  * ```
  * ```example
  * <Image>Three</Image>
