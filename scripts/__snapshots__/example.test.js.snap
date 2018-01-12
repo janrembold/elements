@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ladeeda should match: Spinner0 1`] = `
+<svg
+  height="30px"
+  preserveAspectRatio="xMidYMid"
+  viewBox="0 0 100 100"
+  width="30px"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect
+    fill="none"
+    height="100"
+    width="100"
+    x="0"
+    y="0"
+  />
+  <circle
+    cx="50"
+    cy="50"
+    fill="none"
+    r="40"
+    stroke="#ffffff"
+    strokeLinecap="round"
+    strokeWidth="10"
+  />
+  <circle
+    cx="50"
+    cy="50"
+    fill="none"
+    r="40"
+    stroke="#369980"
+    strokeLinecap="round"
+    strokeWidth="8"
+  >
+    <animate
+      attributeName="stroke-dashoffset"
+      dur="2s"
+      from="0"
+      repeatCount="indefinite"
+      to="502"
+    />
+    <animate
+      attributeName="stroke-dasharray"
+      dur="2s"
+      repeatCount="indefinite"
+      values="125.5 125.5;1 250;125.5 125.5"
+    />
+  </circle>
+</svg>
+`;
