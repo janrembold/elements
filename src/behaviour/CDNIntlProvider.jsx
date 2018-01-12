@@ -2,22 +2,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { IntlProvider } from 'react-intl'
 
-const getMessages = locale => {
-  return {
-    de: {
-      'address.address-list-title.my': 'Test',
-    },
-    en: {},
-    fr: {},
-    it: {},
-    pt: {},
-  }[locale]
-}
-/* eslint-enable camelcase */
-
-// https://static.allthings.me/app/staging/i18n/de/residential-formal.json
-// https://static.allthings.me/cockpit/staging/i18n/de/default.json
-
 class CDNIntlProvider extends React.Component {
   static propTypes = {
     project: PropTypes.string.isRequired,
