@@ -593,7 +593,6 @@ exports[`Component Examples should match snapshot: Checkbox0 1`] = `
               checked=""
               id="ok"
               label="Are you ok?"
-              labelsize="l"
               name="ok"
               style="opacity:0;width:25px;height:25px"
               type="checkbox"
@@ -647,7 +646,6 @@ exports[`Component Examples should match snapshot: Checkbox0 1`] = `
             <input
               id="notok"
               label="Are you not ok?"
-              labelsize="l"
               name="notok"
               style="opacity:0;width:25px;height:25px"
               type="checkbox"
@@ -1371,7 +1369,6 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
                   <input
                     id="accept"
                     label="Hereby I accept the terms & blablabla"
-                    labelsize="s"
                     name="accept"
                     required=""
                     style="opacity:0;width:25px;height:25px"
@@ -1533,11 +1530,11 @@ exports[`Component Examples should match snapshot: Hero0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-1lja1ap,
-[data-css-1lja1ap] {
+.css-ry4scs,
+[data-css-ry4scs] {
   box-sizing: border-box;
-  align-content: space-between;
-  align-items: space-between;
+  align-content: stretch;
+  align-items: stretch;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1550,9 +1547,9 @@ exports[`Component Examples should match snapshot: Hero0 1`] = `
   min-height: 100%;
   width: 100%;
   flex: 0 0 auto;
-  -webkit-align-content: space-between;
-  -webkit-box-align: justify;
-  -webkit-align-items: space-between;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -1600,7 +1597,7 @@ exports[`Component Examples should match snapshot: Hero0 1`] = `
       You are my Hero!
     </div>
     <div
-      data-css-1lja1ap=""
+      data-css-ry4scs=""
     >
       <button
         data-css-19kis64=""
@@ -3140,6 +3137,7 @@ exports[`Component Examples should match snapshot: TextInput0 1`] = `
         data-css-c808ky=""
         maxlength="255"
         minlength="50"
+        name="inquiry"
         placeholder="Your question"
         type="text"
       />
