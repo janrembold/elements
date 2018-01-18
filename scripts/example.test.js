@@ -1,71 +1,60 @@
-import { shallow, mount, render } from 'enzyme'
+import { render } from 'enzyme'
 import retrieveExamples from './example'
 import { transform } from 'babel-core'
-var { View, ThemeProvider, Spinner } = require('./atoms')
-var React = require('react');
+var React = require('react')
 
-/*
-describe('Ladeeda', async () => {
-  const randomShit = retrieveExamples.then(result => {
-    //console.log('restul result result', result)
-    result.map(example => {
-      const { wholeExample, file, displayName } = example
-      if (displayName === 'Spinner') {
-        wholeExample.forEach(stringExample => {
-          console.log('working working', stringExample)
-          console.log('spinner3', Spinner)
-          const transformedString = transform(stringExample, {presets: ['react'], plugins: ['transform-react-jsx']}, function(err, result) {
-            console.log('result is', result)
-          })
-          //console.log('resulttwo is', transformedString)
-          //const Spin = eval('console.log("eval spiner is");' + resultTwo.code)
-          //const component = shallow(Spin)
-          //console.log('prop is', Spin)
-        })
-      }
-    })
-    return('jello')
-  }).catch(err => {
-    console.log(err)
-    return('mistake')
-  })
-  randomShit.then(result => console.log('awaited', result))
-  it('should match', async () => {
-    //const examples = await retrieveExamples
-    
-  })
-})
-*/
-
-
-describe('Ladeeda', async () => {
-  it('should match', async () => {
-    const examples = await retrieveExamples
-    examples.map(example => {
-      const { wholeExample, file, displayName } = example
-      //console.log('example is', displayName)
-      if (displayName === 'Spinner') {
+describe('Component Examples', async () => {
+  it('should match snapshot', async () => {
+    const { filesMapped, fileObj } = await retrieveExamples
+    filesMapped.map(example => {
+      const { wholeExample, displayName } = example
+      if (wholeExample !== 'false') {
         wholeExample.forEach((stringExample, index) => {
-          const result = transform(stringExample, {presets: ['react']})
-          console.log('result.code', result.code)
-          const Spin = eval(result.code)
-          const component = shallow(Spin)
-          console.log('prop is', component)
-          expect(component).toMatchSnapshot(displayName + index)
+          const avoid = stringExample.match(/import|const/g)
+          if (!avoid) {
+            let evalString = ``
+            const requiredComponents = stringExample.match(/<([A-Z])\w+/g)
+            requiredComponents.push('View', 'ResourceProvider', 'ThemeProvider')
+            requiredComponents.map(required => {
+              const requiredComponent = required.replace('<', '')
+              evalString =
+                evalString +
+                `var ${requiredComponent} = require("../${
+                  fileObj[requiredComponent].file
+                }").default; `
+              return requiredComponent
+            })
+            const themeOccurrence = requiredComponents.reduce((acc, curr) => {
+              const requiredComponent = curr.replace('<', '')
+              const count =
+                requiredComponent === 'ThemeProvider' ? acc + 1 : acc
+              return count
+            }, 0)
+            const themeTagStart =
+              themeOccurrence > 1
+                ? ''
+                : '<ThemeProvider><ResourceProvider><View>'
+            const themeTagEnd =
+              themeOccurrence > 1
+                ? ''
+                : '</View></ResourceProvider></ThemeProvider>'
+            const result = transform(
+              themeTagStart + stringExample + themeTagEnd,
+              { presets: ['react'] }
+            )
+
+            try {
+              const wrapper = eval(evalString + result.code)
+              const component = render(wrapper)
+              expect(component).toMatchSnapshot(displayName + index)
+            } catch (e) {
+              console.log(
+                `Component ${displayName} example #${index} has failed. ${e}`
+              )
+            }
+          }
         })
       }
     })
   })
 })
-
-
-
-
-      /*
-      if (wholeExample !== 'false' && wholeExample.length > 2) {
-        wholeExample.forEach(ex => {
-          const result = transform(ex, {presets: ['react']})
-          console.log('lolilol', eval(result.code))
-        })
-      }
-      */

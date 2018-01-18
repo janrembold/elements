@@ -10,14 +10,18 @@ import { css } from 'glamor'
  * be shown instead.
  *
  * ```example
- * <View>One</View>
+ * <Image
+ *   style={{width: 225, height: 225}}
+ *   size="cover"
+ *   src={'https://placeimg.com/225/225/people'}
+ * />
  * ```
- * 
+ *
  * ```example
- * <ThemeProvider>Two</ThemeProvider>
- * ```
- * ```example
- * <Image>Three</Image>
+ * <Image
+ * style={{width: 225, height: 225}}
+ * src={'https://placeimg.com/nothing'}
+ * />
  * ```
  */
 export default class Image extends React.Component {
