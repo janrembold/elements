@@ -38,6 +38,7 @@
     "test:example": "jest babel-node ./scripts/example.test.js",
     "prepublishOnly":
       "echo 'To publish this, go to build/ and run 'yarn publish''",
+    "watch:test": "yarn test --watch",
     "test": "NODE_ENV=development jest src/",
     "prettier":
       "prettier --no-semi --single-quote --trailing-comma es5 --write",
