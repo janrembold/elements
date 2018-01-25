@@ -87,7 +87,7 @@
     "jest-glamor-react": "3.3.0",
     "markdown-extract": "^1.0.2",
     "path": "0.12.7",
-    "prettier": "1.9.2",
+    "prettier": "1.10.2",
     "react": ">=0.14.0 <17.0.0",
     "react-docgen": "^2.20.0",
     "react-dom": ">=0.14.0 <17.0.0",
