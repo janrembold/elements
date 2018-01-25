@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationBubbleManager renders the bubble 1`] = `
+<span>
+  Hallo Welt
+</span>
+`;
+
+exports[`NotificationBubbleManager renders the bubble 2`] = `
+<span>
+  Hello World
+</span>
+`;

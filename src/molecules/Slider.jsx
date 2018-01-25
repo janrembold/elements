@@ -118,9 +118,9 @@ class Slider extends React.Component {
     /** Step interval **/
     step: PropTypes.number,
     /** Current value to show **/
-    value: PropTypes.number.isRequired,
+    value: PropTypes.number,
     /** Callback when the users changes the value **/
-    onChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func,
   }
 
   static defaultProps = {
