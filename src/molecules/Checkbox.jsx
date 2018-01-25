@@ -37,11 +37,11 @@ const styles = {
  */
 class Checkbox extends React.Component {
   static propTypes = {
-    onChange: PropTypes.func,
     checked: PropTypes.bool,
-    name: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
     labelSize: Text.propTypes.size,
+    name: PropTypes.string.isRequired,
+    onChange: PropTypes.func,
   }
 
   state = {
@@ -56,17 +56,15 @@ class Checkbox extends React.Component {
   handleChange = () => this.setState(({ checked }) => ({ checked: !checked }))
 
   render() {
-    const { checked, onChange, labelSize, ...props } = this.props
+    const { checked, onChange, label, labelSize, name, ...props } = this.props
     const realChecked = checked || this.state.checked
     const changeHandler = onChange || this.handleChange
     return (
       <Theme>
         {({ theme, colorize }) => (
-          <ListItem>
+          <ListItem backgroundColor={theme.background}>
             <View direction="row" alignV="center">
-              <Relative
-                {...styles.checkbox(theme.primary, realChecked)}
-              >
+              <Relative {...styles.checkbox(theme.primary, realChecked)}>
                 <Absolute top={1} left={5}>
                   <Icon
                     name="check-filled"
@@ -78,7 +76,7 @@ class Checkbox extends React.Component {
                   <input
                     type="checkbox"
                     checked={realChecked}
-                    id={this.props.name}
+                    id={name}
                     value={realChecked}
                     style={{ opacity: 0, width: '25px', height: '25px' }}
                     onChange={changeHandler}
@@ -87,9 +85,9 @@ class Checkbox extends React.Component {
                 </Absolute>
               </Relative>
             </View>
-            <label htmlFor={this.props.name}>
+            <label htmlFor={name}>
               <Inset horizontal>
-                <Text size={labelSize}>{this.props.label}</Text>
+                <Text size={labelSize}>{label}</Text>
               </Inset>
             </label>
           </ListItem>
