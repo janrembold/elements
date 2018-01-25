@@ -22,7 +22,7 @@ const styles = {
  * It will take at maximum 25% of the current viewport. (max-height: 25vh)
  *
  * ```example
- * <ExpandingTextarea>
+ * <ExpandingTextarea
  *   placeholder="Write somthing..."
  *   value=""
  * />
