@@ -56,7 +56,7 @@ class Checkbox extends React.Component {
   handleChange = () => this.setState(({ checked }) => ({ checked: !checked }))
 
   render() {
-    const { checked, onChange, ...props } = this.props
+    const { checked, onChange, labelSize, ...props } = this.props
     const realChecked = checked || this.state.checked
     const changeHandler = onChange || this.handleChange
     return (
@@ -65,7 +65,6 @@ class Checkbox extends React.Component {
           <ListItem>
             <View direction="row" alignV="center">
               <Relative
-                focusable={false}
                 {...styles.checkbox(theme.primary, realChecked)}
               >
                 <Absolute top={1} left={5}>
@@ -90,7 +89,7 @@ class Checkbox extends React.Component {
             </View>
             <label htmlFor={this.props.name}>
               <Inset horizontal>
-                <Text size={this.props.labelSize}>{this.props.label}</Text>
+                <Text size={labelSize}>{this.props.label}</Text>
               </Inset>
             </label>
           </ListItem>

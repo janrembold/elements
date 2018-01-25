@@ -15,7 +15,7 @@ const style = css({
  * ```example
  * <Card>
  *  <CardContent>
- *    <Text size="xxl" strong>
+ *    <Text size="xl" strong>
  *      Cards
  *    </Text>
  *    <Text>

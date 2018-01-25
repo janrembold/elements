@@ -27,7 +27,7 @@ const box = (background, onClick) =>
  * for back-buttons in the titlebar.
  *
  * ```example
- * <SquareIconButton icon="armchairFilled" color="red" iconColor="white" />
+ * <SquareIconButton icon="armchair-filled" color="red" iconColor="white" />
  * ```
  */
 class SquareIconButton extends React.Component {
