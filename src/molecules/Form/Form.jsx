@@ -112,6 +112,10 @@ class Form extends React.Component {
     onSubmit: PropTypes.func.isRequired,
   }
 
+  static defaultProps = {
+    onSubmit: _ => _,
+  }
+
   handleSubmit = e => {
     e.preventDefault()
     const data = {}

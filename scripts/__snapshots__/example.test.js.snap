@@ -1,0 +1,3367 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Examples should match snapshot: Button0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-zt77k3,
+[data-css-zt77k3] {
+  position: relative;
+  padding: 8px 14px;
+  border-radius: 2px;
+  user-select: none;
+  outline: none;
+  border: none;
+  background: #3598db;
+  color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.css-1riya2o,
+[data-css-1riya2o] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+<button
+  data-css-zt77k3=""
+  name="button"
+  type="button"
+>
+  <div
+    data-css-1riya2o=""
+    data-css-4p3ux5=""
+  >
+    Hello you
+  </div>
+</button>
+`;
+
+exports[`Component Examples should match snapshot: Card0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-18icfsk,
+[data-css-18icfsk] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-amrpfn,
+[data-css-amrpfn] {
+  width: 100%;
+  background: white;
+  box-shadow: 2px 2px 2px rgba(230, 230, 230, 0.5);
+}
+
+.css-38axn2,
+[data-css-38axn2] {
+  padding: 15px;
+  position: relative;
+}
+
+.css-1i6mq27,
+[data-css-1i6mq27] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-4p3ux5=""
+    data-css-amrpfn=""
+  >
+    <div
+      data-css-38axn2=""
+      data-css-4p3ux5=""
+    >
+      <div
+        data-css-1i6mq27=""
+        data-css-4p3ux5=""
+      >
+         Cards 
+      </div>
+      <div
+        data-css-18icfsk=""
+        data-css-4p3ux5=""
+      >
+         Cards are the basic elements to fit content in. They can may contain any kind of content. 
+      </div>
+    </div>
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-18icfsk,
+[data-css-18icfsk] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-1ebs7nx,
+[data-css-1ebs7nx] {
+  width: 100%;
+  height: 100%;
+}
+
+.css-15n0sh2,
+[data-css-15n0sh2] {
+  padding: 0 15px 15px 15px;
+}
+
+.css-ia6o6a,
+[data-css-ia6o6a] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+
+.css-1vzm8wl,
+[data-css-1vzm8wl] {
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.css-bwdon3,
+[data-css-bwdon3] {
+  opacity: 0.5;
+}
+
+.css-1b5v5q0,
+[data-css-1b5v5q0] {
+  margin-top: 4px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+
+.css-1l9a57c,
+[data-css-1l9a57c] {
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+}
+
+.css-evmaeu,
+[data-css-evmaeu] {
+  white-space: pre-wrap;
+}
+
+.css-evmaeu a,
+[data-css-evmaeu] a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.css-13wj96o,
+[data-css-13wj96o] {
+  padding-left: 15px;
+  flex: 1;
+  position: relative;
+  -webkit-flex: 1;
+}
+
+.css-13wj96o:before,
+[data-css-13wj96o]:before {
+  content: "";
+  background: transparent;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 5px 6px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.css-bg2qj6,
+[data-css-bg2qj6] {
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 2px 3px 3px 0px rgba(211, 211, 211, .25);
+  background: white;
+}
+
+.css-1enkxco,
+[data-css-1enkxco] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-1xt26v0,
+[data-css-1xt26v0] {
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  -webkit-flex-shrink: 0;
+}
+
+.css-1xt26v0:before,
+[data-css-1xt26v0]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.css-9lr3u1,
+[data-css-9lr3u1] {
+  background-image: url(https://placeimg.com/40/40/people?t=3);
+  background-size: contain;
+}
+
+.css-6srz6u,
+[data-css-6srz6u] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+
+.css-1esgfii,
+[data-css-1esgfii] {
+  margin-top: 4px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+
+.css-19pq1pm,
+[data-css-19pq1pm] {
+  padding-left: 0;
+  flex: 1;
+  position: relative;
+  padding-right: 15px;
+  -webkit-flex: 1;
+}
+
+.css-19pq1pm:before,
+[data-css-19pq1pm]:before {
+  content: "";
+  background: transparent;
+  position: absolute;
+  left: initial;
+  top: 15px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 5px;
+  border-color: transparent transparent transparent white;
+  right: 10px;
+}
+
+.css-to0zoj,
+[data-css-to0zoj] {
+  background-image: url(https://placeimg.com/40/40/people?t=1);
+  background-size: contain;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+  <div
+    data-css-15n0sh2=""
+  >
+    <div
+      class="info"
+      data-css-ia6o6a=""
+    >
+      <div
+        data-css-1enkxco=""
+        data-css-1vzm8wl=""
+        data-css-4p3ux5=""
+      >
+        You
+      </div>
+      <div
+        data-css-1enkxco=""
+        data-css-4p3ux5=""
+        data-css-bwdon3=""
+      >
+        a minute ago
+      </div>
+    </div>
+    <div
+      class="content"
+      data-css-1b5v5q0=""
+    >
+      <div
+        class="image"
+        data-css-1l9a57c=""
+      >
+        <div
+          data-css-1xt26v0=""
+        >
+          <div
+            alt=""
+            data-css-1ebs7nx=""
+            data-css-4p3ux5=""
+            data-css-9lr3u1=""
+          />
+        </div>
+      </div>
+      <div
+        data-css-13wj96o=""
+      >
+        <div
+          data-css-bg2qj6=""
+        >
+          <div
+            data-css-18icfsk=""
+            data-css-4p3ux5=""
+            data-css-evmaeu=""
+          >
+            Hello World
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    data-css-15n0sh2=""
+  >
+    <div
+      class="info"
+      data-css-6srz6u=""
+    >
+      <div
+        data-css-1enkxco=""
+        data-css-1vzm8wl=""
+        data-css-4p3ux5=""
+      >
+        Agent
+      </div>
+      <div
+        data-css-1enkxco=""
+        data-css-4p3ux5=""
+        data-css-bwdon3=""
+      >
+        just now
+      </div>
+    </div>
+    <div
+      class="content"
+      data-css-1esgfii=""
+    >
+      <div
+        class="image"
+        data-css-1l9a57c=""
+      >
+        <div
+          data-css-1xt26v0=""
+        >
+          <div
+            alt=""
+            data-css-1ebs7nx=""
+            data-css-4p3ux5=""
+            data-css-to0zoj=""
+          />
+        </div>
+      </div>
+      <div
+        data-css-19pq1pm=""
+      >
+        <div
+          data-css-bg2qj6=""
+        >
+          <div
+            data-css-18icfsk=""
+            data-css-4p3ux5=""
+            data-css-evmaeu=""
+          >
+            Hello You
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Checkbox0 1`] = `
+.css-h7582n,
+[data-css-h7582n] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-18icfsk,
+[data-css-18icfsk] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-jn2bq2,
+[data-css-jn2bq2] {
+  border-radius: 3px;
+  height: 25px;
+  width: 25px;
+  background-color: #3598db;
+  border: 0;
+}
+
+.css-1m9hm8a,
+[data-css-1m9hm8a] {
+  padding: 10px 15px;
+  min-height: 50px;
+  border-bottom: 1px solid #ecf0f1;
+  background-color: white;
+}
+
+.css-13azwyo,
+[data-css-13azwyo] {
+  position: relative;
+}
+
+.css-1vj6r0m,
+[data-css-1vj6r0m] {
+  position: absolute;
+  top: 1px;
+  left: 5px;
+}
+
+.css-uef4pa,
+[data-css-uef4pa] {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.css-kvq3ck,
+[data-css-kvq3ck] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.css-8wl8ax,
+[data-css-8wl8ax] {
+  border-radius: 3px;
+  height: 25px;
+  width: 25px;
+  border: 3px solid lightGrey;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-4p3ux5=""
+  >
+    <div
+      data-css-1m9hm8a=""
+      data-css-h7582n=""
+    >
+      <div
+        data-css-h7582n=""
+      >
+        <div
+          data-css-13azwyo=""
+          data-css-4p3ux5=""
+          data-css-jn2bq2=""
+        >
+          <div
+            data-css-1vj6r0m=""
+            data-css-4p3ux5=""
+          >
+            <div
+              data-css-4p3ux5=""
+              size="14"
+              style="width:14px;height:14px;fill:rgba(255,255,255,1);stroke:"
+            />
+          </div>
+          <div
+            data-css-4p3ux5=""
+            data-css-uef4pa=""
+          >
+            <input
+              checked=""
+              id="ok"
+              label="Are you ok?"
+              name="ok"
+              style="opacity:0;width:25px;height:25px"
+              type="checkbox"
+              value="true"
+            />
+          </div>
+        </div>
+      </div>
+      <label
+        for="ok"
+      >
+        <div
+          data-css-4p3ux5=""
+          data-css-kvq3ck=""
+        >
+          <div
+            data-css-18icfsk=""
+            data-css-4p3ux5=""
+          >
+            Are you ok?
+          </div>
+        </div>
+      </label>
+    </div>
+    <div
+      data-css-1m9hm8a=""
+      data-css-h7582n=""
+    >
+      <div
+        data-css-h7582n=""
+      >
+        <div
+          data-css-13azwyo=""
+          data-css-4p3ux5=""
+          data-css-8wl8ax=""
+        >
+          <div
+            data-css-1vj6r0m=""
+            data-css-4p3ux5=""
+          >
+            <div
+              data-css-4p3ux5=""
+              size="14"
+              style="width:14px;height:14px;fill:rgba(255,255,255,0.3);stroke:"
+            />
+          </div>
+          <div
+            data-css-4p3ux5=""
+            data-css-uef4pa=""
+          >
+            <input
+              id="notok"
+              label="Are you not ok?"
+              name="notok"
+              style="opacity:0;width:25px;height:25px"
+              type="checkbox"
+              value="false"
+            />
+          </div>
+        </div>
+      </div>
+      <label
+        for="notok"
+      >
+        <div
+          data-css-4p3ux5=""
+          data-css-kvq3ck=""
+        >
+          <div
+            data-css-18icfsk=""
+            data-css-4p3ux5=""
+          >
+            Are you not ok?
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Circle0 1`] = `
+.css-h7582n,
+[data-css-h7582n] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1imhi9r,
+[data-css-1imhi9r] {
+  border: 1px solid lightGrey;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+.css-yirehu,
+[data-css-yirehu] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-ex3si9,
+[data-css-ex3si9] {
+  background-color: #3598db;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+.css-9mzqv9,
+[data-css-9mzqv9] {
+  background-color: #bada55;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+.css-25tizv,
+[data-css-25tizv] {
+  background-color: gray;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+<div
+  data-css-h7582n=""
+>
+  <div
+    data-css-1imhi9r=""
+    data-css-yirehu=""
+  >
+    <div
+      data-css-4p3ux5=""
+      style="width:21.5px;height:21.5px;fill:lightGrey;stroke:"
+    />
+  </div>
+  <div
+    data-css-ex3si9=""
+    data-css-yirehu=""
+  />
+  <div
+    data-css-9mzqv9=""
+    data-css-yirehu=""
+  />
+  <div
+    data-css-25tizv=""
+    data-css-yirehu=""
+  />
+</div>
+`;
+
+exports[`Component Examples should match snapshot: ExpandingTextarea0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1blxhe9,
+[data-css-1blxhe9] {
+  outline: none;
+  border: 0;
+  font-size: 13px;
+  resize: none;
+  flex: 1;
+  min-height: 20px;
+  max-height: 25vh;
+  width: 100%;
+  padding-left: 15px;
+  -webkit-flex: 1;
+}
+
+.css-1ctvsbg,
+[data-css-1ctvsbg] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 1;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 1;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-1ctvsbg=""
+  >
+    <textarea
+      cols="1"
+      data-css-1blxhe9=""
+      placeholder="Write somthing..."
+      rows="1"
+    />
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Form0 1`] = `
+.css-h7582n,
+[data-css-h7582n] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1riya2o,
+[data-css-1riya2o] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+.css-amrpfn,
+[data-css-amrpfn] {
+  width: 100%;
+  background: white;
+  box-shadow: 2px 2px 2px rgba(230, 230, 230, 0.5);
+}
+
+.css-1enkxco,
+[data-css-1enkxco] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-1m9hm8a,
+[data-css-1m9hm8a] {
+  padding: 10px 15px;
+  min-height: 50px;
+  border-bottom: 1px solid #ecf0f1;
+  background-color: white;
+}
+
+.css-13azwyo,
+[data-css-13azwyo] {
+  position: relative;
+}
+
+.css-1vj6r0m,
+[data-css-1vj6r0m] {
+  position: absolute;
+  top: 1px;
+  left: 5px;
+}
+
+.css-uef4pa,
+[data-css-uef4pa] {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.css-kvq3ck,
+[data-css-kvq3ck] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.css-8wl8ax,
+[data-css-8wl8ax] {
+  border-radius: 3px;
+  height: 25px;
+  width: 25px;
+  border: 3px solid lightGrey;
+}
+
+.css-1pyiiji,
+[data-css-1pyiiji] {
+  position: absolute;
+  right: 10px;
+}
+
+.css-z169em,
+[data-css-z169em] {
+  position: absolute;
+  bottom: 2px;
+  right: 15px;
+}
+
+.css-12jx2y3,
+[data-css-12jx2y3] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 1;
+}
+
+.css-2wchxd,
+[data-css-2wchxd] {
+  height: 50px;
+  background-color: #bada55;
+  position: relative;
+  z-index: 2;
+}
+
+.css-cjuhep,
+[data-css-cjuhep] {
+  height: 50px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.css-1wp5mix,
+[data-css-1wp5mix] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1i51xt9,
+[data-css-1i51xt9] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+.css-136033y,
+[data-css-136033y] {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  overflow-x: hidden;
+  background-color: #f3f5f7;
+  height: 100%;
+}
+
+.css-iar4wy,
+[data-css-iar4wy] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-18egye,
+[data-css-18egye] {
+  height: 50px;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 0;
+}
+
+.css-18egye:invalid:focus,
+[data-css-18egye]:invalid:focus {
+  color: red;
+}
+
+.css-dau5wj,
+[data-css-dau5wj] {
+  min-height: 50px;
+  border-bottom: 1px solid #ecf0f1;
+  background-color: white;
+}
+
+.css-1u2d6au,
+[data-css-1u2d6au] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #626262;
+}
+
+.css-6s4sz7,
+[data-css-6s4sz7] {
+  height: calc(30px*3);
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 0;
+}
+
+.css-6s4sz7:invalid:focus,
+[data-css-6s4sz7]:invalid:focus {
+  color: red;
+}
+
+.css-9ov9ah,
+[data-css-9ov9ah] {
+  height: calc(30px*2);
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 0;
+}
+
+.css-9ov9ah:invalid:focus,
+[data-css-9ov9ah]:invalid:focus {
+  color: red;
+}
+
+.css-cuffp,
+[data-css-cuffp] {
+  position: relative;
+  padding: 8px 14px;
+  border-radius: 2px;
+  user-select: none;
+  outline: none;
+  border: none;
+  background: #bada55;
+  color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+@media (max-width: 640px) {
+  .css-cjuhep,
+  [data-css-cjuhep] {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 930px), (min-width: 931px) {
+  .css-1u21jvx,
+  [data-css-1u21jvx] {
+    padding-top: 0;
+  }
+}
+
+<div
+  data-css-12jx2y3=""
+>
+  <div
+    data-css-2wchxd=""
+    data-css-h7582n=""
+  >
+    <div
+      data-css-1wp5mix=""
+      data-css-cjuhep=""
+    >
+      <div
+        data-css-4p3ux5=""
+        style="width:21.5px;height:21.5px;fill:;stroke:white"
+      />
+    </div>
+    <div
+      data-css-1i51xt9=""
+      data-css-4p3ux5=""
+    >
+       Create new account 
+    </div>
+  </div>
+  <div
+    data-css-12jx2y3=""
+    data-css-136033y=""
+    data-css-1u21jvx=""
+    id="scroll-container"
+  >
+    <form>
+      <div
+        data-css-4p3ux5=""
+        data-css-amrpfn=""
+      >
+        <div
+          data-css-iar4wy=""
+        >
+          <div
+            data-css-dau5wj=""
+            data-css-h7582n=""
+          >
+            <div
+              data-css-13azwyo=""
+              data-css-4p3ux5=""
+              style="width:100%"
+            >
+              <div
+                data-css-1pyiiji=""
+                data-css-4p3ux5=""
+              >
+                <div
+                  data-css-1u2d6au=""
+                  data-css-4p3ux5=""
+                >
+                  *
+                </div>
+              </div>
+              <input
+                aria-required="true"
+                data-css-18egye=""
+                name="name"
+                pattern="[A-Za-z ]*"
+                placeholder="Your first- and surname"
+                required=""
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            data-css-dau5wj=""
+            data-css-h7582n=""
+          >
+            <div
+              data-css-13azwyo=""
+              data-css-4p3ux5=""
+              style="width:100%"
+            >
+              <div
+                data-css-1pyiiji=""
+                data-css-4p3ux5=""
+              >
+                <div
+                  data-css-1u2d6au=""
+                  data-css-4p3ux5=""
+                >
+                  *
+                </div>
+              </div>
+              <input
+                aria-required="true"
+                data-css-18egye=""
+                name="number"
+                placeholder="Your email address"
+                required=""
+                type="email"
+              />
+            </div>
+          </div>
+          <div
+            data-css-dau5wj=""
+            data-css-h7582n=""
+          >
+            <div
+              data-css-13azwyo=""
+              data-css-4p3ux5=""
+              style="width:100%"
+            >
+              <textarea
+                data-css-6s4sz7=""
+                name="longStory"
+                placeholder="A long story"
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            data-css-dau5wj=""
+            data-css-h7582n=""
+          >
+            <div
+              data-css-13azwyo=""
+              data-css-4p3ux5=""
+              style="width:100%"
+            >
+              <textarea
+                data-css-9ov9ah=""
+                maxlength="15"
+                name="limitedStory"
+                placeholder="A limited story"
+                type="text"
+              />
+              <div
+                data-css-4p3ux5=""
+                data-css-z169em=""
+              >
+                <div
+                  data-css-1u2d6au=""
+                  data-css-4p3ux5=""
+                >
+                  0/15
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-css-dau5wj=""
+            data-css-h7582n=""
+          >
+            <div
+              data-css-13azwyo=""
+              data-css-4p3ux5=""
+              style="width:100%"
+            >
+              <input
+                aria-required="false"
+                data-css-18egye=""
+                minlength="3"
+                name="number"
+                placeholder="Your phone number"
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            data-css-1m9hm8a=""
+            data-css-h7582n=""
+          >
+            <div
+              data-css-h7582n=""
+            >
+              <div
+                data-css-13azwyo=""
+                data-css-4p3ux5=""
+                data-css-8wl8ax=""
+              >
+                <div
+                  data-css-1vj6r0m=""
+                  data-css-4p3ux5=""
+                >
+                  <div
+                    data-css-4p3ux5=""
+                    size="14"
+                    style="width:14px;height:14px;fill:rgba(255,255,255,0.3);stroke:"
+                  />
+                </div>
+                <div
+                  data-css-4p3ux5=""
+                  data-css-uef4pa=""
+                >
+                  <input
+                    id="accept"
+                    label="Hereby I accept the terms & blablabla"
+                    name="accept"
+                    required=""
+                    style="opacity:0;width:25px;height:25px"
+                    type="checkbox"
+                    value="false"
+                  />
+                </div>
+              </div>
+            </div>
+            <label
+              for="accept"
+            >
+              <div
+                data-css-4p3ux5=""
+                data-css-kvq3ck=""
+              >
+                <div
+                  data-css-1enkxco=""
+                  data-css-4p3ux5=""
+                >
+                  Hereby I accept the terms & blablabla
+                </div>
+              </div>
+            </label>
+          </div>
+          <div
+            data-css-1m9hm8a=""
+            data-css-1wp5mix=""
+          >
+            <button
+              data-css-cuffp=""
+              name="submit"
+              type="submit"
+            >
+              <div
+                data-css-1riya2o=""
+                data-css-4p3ux5=""
+              >
+                Create my account
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Hero0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1riya2o,
+[data-css-1riya2o] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+.css-kvq3ck,
+[data-css-kvq3ck] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.css-1i51xt9,
+[data-css-1i51xt9] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+.css-iar4wy,
+[data-css-iar4wy] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1b6io93,
+[data-css-1b6io93] {
+  position: absolute;
+  right: -150px;
+  top: -70px;
+  width: 360px;
+  height: 360px;
+}
+
+.css-18a50kg,
+[data-css-18a50kg] {
+  width: 150px;
+}
+
+.css-1n49tmg,
+[data-css-1n49tmg] {
+  width: 142px;
+}
+
+.css-ujqs66,
+[data-css-ujqs66] {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 232px;
+  background-color: #3598db;
+  position: relative;
+  box-shadow: 0px -1px 5px rgba(0,0,0,0.3);
+}
+
+.css-qvz9eo,
+[data-css-qvz9eo] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-around;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-ry4scs,
+[data-css-ry4scs] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+  flex: 0 0 auto;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-19kis64,
+[data-css-19kis64] {
+  position: relative;
+  padding: 8px 14px;
+  border-radius: 2px;
+  user-select: none;
+  outline: none;
+  border: none;
+  background: rgba(0,0,0,0.2);
+  color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+@media (min-width: 641px) and (max-width: 930px), (min-width: 931px) {
+  .css-1n49tmg,
+  [data-css-1n49tmg] {
+    width: 50%;
+  }
+}
+
+<div
+  data-css-qvz9eo=""
+  data-css-ujqs66=""
+>
+  <div
+    data-css-1n49tmg=""
+    data-css-iar4wy=""
+    data-css-kvq3ck=""
+  >
+    <div
+      data-css-1i51xt9=""
+      data-css-4p3ux5=""
+    >
+      You are my Hero!
+    </div>
+    <div
+      data-css-ry4scs=""
+    >
+      <button
+        data-css-19kis64=""
+        name="button"
+        type="button"
+      >
+        <div
+          data-css-1riya2o=""
+          data-css-4p3ux5=""
+        >
+          Thank you
+        </div>
+      </button>
+    </div>
+  </div>
+  <div
+    data-css-18a50kg=""
+    data-css-4p3ux5=""
+  >
+    <img
+      data-css-1b6io93=""
+      src="https://placeimg.com/500/500/people"
+    />
+  </div>
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Image0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-t4755w,
+[data-css-t4755w] {
+  background-image: url(https://placeimg.com/225/225/people);
+  background-size: cover;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-4p3ux5=""
+    data-css-t4755w=""
+    style="width:225px;height:225px"
+  />
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Image1 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-17b8ly7,
+[data-css-17b8ly7] {
+  background-image: url(https://placeimg.com/nothing);
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-17b8ly7=""
+    data-css-4p3ux5=""
+    style="width:225px;height:225px"
+  />
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: List0 1`] = `
+.css-h7582n,
+[data-css-h7582n] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-18icfsk,
+[data-css-18icfsk] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-amrpfn,
+[data-css-amrpfn] {
+  width: 100%;
+  background: white;
+  box-shadow: 2px 2px 2px rgba(230, 230, 230, 0.5);
+}
+
+.css-1m9hm8a,
+[data-css-1m9hm8a] {
+  padding: 10px 15px;
+  min-height: 50px;
+  border-bottom: 1px solid #ecf0f1;
+  background-color: white;
+}
+
+.css-iar4wy,
+[data-css-iar4wy] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1iarg5e,
+[data-css-1iarg5e] {
+  width: 12px;
+  height: 12px;
+}
+
+.css-63oe3q,
+[data-css-63oe3q] {
+  width: 100%;
+}
+
+.css-1dd5qqi,
+[data-css-1dd5qqi] {
+  padding: 10px 15px;
+  min-height: 50px;
+  border-bottom: 1px solid #ecf0f1;
+  cursor: pointer;
+  background-color: white;
+}
+
+.css-zt522r,
+[data-css-zt522r] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  cursor: pointer;
+  flex: 1 1 100%;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 1 1 100%;
+}
+
+.css-10aplih,
+[data-css-10aplih] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1 1 100%;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 1 1 100%;
+}
+
+.css-nld6zb,
+[data-css-nld6zb] {
+  box-sizing: border-box;
+  flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-4p3ux5=""
+    data-css-amrpfn=""
+  >
+    <div
+      data-css-iar4wy=""
+    >
+      <div
+        data-css-1m9hm8a=""
+        data-css-h7582n=""
+      >
+        <div
+          data-css-18icfsk=""
+          data-css-4p3ux5=""
+        >
+          Item 1
+        </div>
+      </div>
+      <div
+        data-css-1m9hm8a=""
+        data-css-h7582n=""
+      >
+        <div
+          data-css-18icfsk=""
+          data-css-4p3ux5=""
+        >
+          Item 2
+        </div>
+      </div>
+      <div
+        data-css-1m9hm8a=""
+        data-css-h7582n=""
+      >
+        <div
+          data-css-18icfsk=""
+          data-css-4p3ux5=""
+        >
+          Item 3
+        </div>
+      </div>
+      <div
+        data-css-1m9hm8a=""
+        data-css-h7582n=""
+      >
+        <div
+          data-css-18icfsk=""
+          data-css-4p3ux5=""
+        >
+          Item 4
+        </div>
+      </div>
+      <div
+        data-css-1dd5qqi=""
+        data-css-zt522r=""
+      >
+        <div
+          data-css-10aplih=""
+          data-css-63oe3q=""
+        >
+          <div
+            data-css-18icfsk=""
+            data-css-4p3ux5=""
+          >
+            ChevronRightListItem to show indicator
+          </div>
+        </div>
+        <div
+          data-css-nld6zb=""
+        >
+          <div
+            data-css-1iarg5e=""
+            data-css-4p3ux5=""
+            style="width:16px;height:16px;fill:;stroke:#7e8c8d"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: List1 1`] = `
+.css-yirehu,
+[data-css-yirehu] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-18icfsk,
+[data-css-18icfsk] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-amrpfn,
+[data-css-amrpfn] {
+  width: 100%;
+  background: white;
+  box-shadow: 2px 2px 2px rgba(230, 230, 230, 0.5);
+}
+
+.css-1m9hm8a,
+[data-css-1m9hm8a] {
+  padding: 10px 15px;
+  min-height: 50px;
+  border-bottom: 1px solid #ecf0f1;
+  background-color: white;
+}
+
+.css-iar4wy,
+[data-css-iar4wy] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1iarg5e,
+[data-css-1iarg5e] {
+  width: 12px;
+  height: 12px;
+}
+
+.css-63oe3q,
+[data-css-63oe3q] {
+  width: 100%;
+}
+
+.css-10aplih,
+[data-css-10aplih] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1 1 100%;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 1 1 100%;
+}
+
+.css-nld6zb,
+[data-css-nld6zb] {
+  box-sizing: border-box;
+  flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+}
+
+.css-1pfel1f,
+[data-css-1pfel1f] {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.css-rbl5we,
+[data-css-rbl5we] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-12s8f6o,
+[data-css-12s8f6o] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-155bo4i,
+[data-css-155bo4i] {
+  background-image: url(https://placeimg.com/80/80/people?t=1);
+}
+
+.css-2bjq5a,
+[data-css-2bjq5a] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 1 1 100%;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 1 1 100%;
+}
+
+.css-tbyxvm,
+[data-css-tbyxvm] {
+  background-image: url(https://placeimg.com/80/80/people?t=2);
+}
+
+.css-od1ur0,
+[data-css-od1ur0] {
+  background-image: url(https://placeimg.com/80/80/people?t=3);
+}
+
+.css-1igobpl,
+[data-css-1igobpl] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-h9acye,
+[data-css-h9acye] {
+  background-color: white;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-4p3ux5=""
+  >
+    <div
+      data-css-4p3ux5=""
+    >
+      <div
+        data-css-1pfel1f=""
+        data-css-4p3ux5=""
+      >
+        <div
+          data-css-4p3ux5=""
+          data-css-rbl5we=""
+        >
+          A list with images
+        </div>
+      </div>
+      <div
+        data-css-4p3ux5=""
+        data-css-amrpfn=""
+      >
+        <div
+          data-css-iar4wy=""
+        >
+          <div
+            data-css-12s8f6o=""
+          >
+            <div
+              data-css-155bo4i=""
+              data-css-4p3ux5=""
+            />
+            <div
+              data-css-1m9hm8a=""
+              data-css-2bjq5a=""
+            >
+              <div
+                data-css-10aplih=""
+                data-css-63oe3q=""
+              >
+                <div
+                  data-css-18icfsk=""
+                  data-css-4p3ux5=""
+                >
+                  Jules
+                </div>
+              </div>
+              <div
+                data-css-nld6zb=""
+              >
+                <div
+                  data-css-1iarg5e=""
+                  data-css-4p3ux5=""
+                  style="width:16px;height:16px;fill:;stroke:#7e8c8d"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            data-css-12s8f6o=""
+          >
+            <div
+              data-css-4p3ux5=""
+              data-css-tbyxvm=""
+            />
+            <div
+              data-css-1m9hm8a=""
+              data-css-2bjq5a=""
+            >
+              <div
+                data-css-18icfsk=""
+                data-css-4p3ux5=""
+              >
+                Luan
+              </div>
+            </div>
+          </div>
+          <div
+            data-css-12s8f6o=""
+          >
+            <div
+              data-css-4p3ux5=""
+              data-css-od1ur0=""
+            />
+            <div
+              data-css-1m9hm8a=""
+              data-css-2bjq5a=""
+            >
+              <div
+                data-css-18icfsk=""
+                data-css-4p3ux5=""
+              >
+                Uli
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-css-1igobpl=""
+    >
+      <div
+        data-css-h9acye=""
+        data-css-yirehu=""
+      >
+        <svg
+          height="30px"
+          preserveAspectRatio="xMidYMid"
+          viewBox="0 0 100 100"
+          width="30px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="none"
+            height="100"
+            width="100"
+            x="0"
+            y="0"
+          />
+          <circle
+            cx="50"
+            cy="50"
+            fill="none"
+            r="40"
+            stroke="#ffffff"
+            stroke-linecap="round"
+            stroke-width="10"
+          />
+          <circle
+            cx="50"
+            cy="50"
+            fill="none"
+            r="40"
+            stroke="#369980"
+            stroke-linecap="round"
+            stroke-width="8"
+          >
+            <animate
+              attributeName="stroke-dashoffset"
+              dur="2s"
+              from="0"
+              repeatCount="indefinite"
+              to="502"
+            />
+            <animate
+              attributeName="stroke-dasharray"
+              dur="2s"
+              repeatCount="indefinite"
+              values="125.5 125.5;1 250;125.5 125.5"
+            />
+          </circle>
+        </svg>
+      </div>
+    </div>
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: ListIcon0 1`] = `
+.css-yirehu,
+[data-css-yirehu] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-ex3si9,
+[data-css-ex3si9] {
+  background-color: #3598db;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-ex3si9=""
+    data-css-yirehu=""
+    height="40"
+    width="40"
+  >
+    <div
+      data-css-4p3ux5=""
+      style="width:21.5px;height:21.5px;fill:#ffffff;stroke:"
+    />
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Pill0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-9j98ks,
+[data-css-9j98ks] {
+  background-color: #3598db;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 2px 15px;
+  cursor: default;
+}
+
+.css-7xie1s,
+[data-css-7xie1s] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+}
+
+.css-16z60nk,
+[data-css-16z60nk] {
+  background-color: #e84c3d;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 2px 15px;
+  cursor: default;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+  <div
+    data-css-4p3ux5=""
+    data-css-9j98ks=""
+  >
+    <div
+      data-css-4p3ux5=""
+      data-css-7xie1s=""
+    >
+      Important message
+    </div>
+  </div>
+  <div
+    data-css-16z60nk=""
+    data-css-4p3ux5=""
+  >
+    <div
+      data-css-4p3ux5=""
+      data-css-7xie1s=""
+    >
+      A warning
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component Examples should match snapshot: ProfileImage0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-amrpfn,
+[data-css-amrpfn] {
+  width: 100%;
+  background: white;
+  box-shadow: 2px 2px 2px rgba(230, 230, 230, 0.5);
+}
+
+.css-1ebs7nx,
+[data-css-1ebs7nx] {
+  width: 100%;
+  height: 100%;
+}
+
+.css-1xt26v0,
+[data-css-1xt26v0] {
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  -webkit-flex-shrink: 0;
+}
+
+.css-1xt26v0:before,
+[data-css-1xt26v0]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.css-94c4ii,
+[data-css-94c4ii] {
+  background-image: url(https://placeimg.com/100/100/people);
+  background-size: contain;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-4p3ux5=""
+    data-css-amrpfn=""
+  >
+    <div
+      data-css-1xt26v0=""
+    >
+      <div
+        alt=""
+        data-css-1ebs7nx=""
+        data-css-4p3ux5=""
+        data-css-94c4ii=""
+      />
+    </div>
+    <div
+      data-css-1xt26v0=""
+    >
+      <svg
+        style="width:40px;height:40px;background-color:#B4B4B4;box-sizing:border-box;padding-top:4px"
+        version="1.1"
+        viewBox="0 0 500 500"
+      >
+        <path
+          d="M0.362506473,496.000708 C1.70895909,480.36711 8.07871569,467.694027 20.7664423,455.124822 C31.7969964,444.217661 42.6204039,436.894281 60.9010875,428.064675 C82.9104091,417.365269 93.112377,414.352815 123.873641,409.314745 C142.723977,406.250352 147.229415,405.315453 155.204557,402.822387 C167.633351,398.875034 177.006732,394.667986 179.699637,391.811348 L180.942517,390.512877 L181.719316,358.622415 L182.496116,326.783892 L180.113931,322.680722 C177.369239,318.110102 172.345935,308.189779 170.170896,303.151709 C169.238736,300.970277 166.804764,290.894137 163.231486,274.689212 L157.742103,249.550802 L154.997411,248.615903 C148.834801,246.538348 145.934749,241.604156 143.345417,228.827196 C142.361471,224.048821 140.600725,216.829319 139.357846,212.726149 C134.852408,197.196428 134.593475,196.053774 134.541688,187.847433 C134.489902,180.991503 134.593475,180.056604 135.680994,177.719355 C137.079234,174.706901 139.720352,171.746386 141.066805,171.746386 C141.791818,171.746386 141.895391,171.53863 141.481098,170.499853 C141.222165,169.772709 140.445365,166.448622 139.720352,163.072595 C135.111341,141.154395 132.832729,100.018816 135.473848,85.7875673 C139.150699,65.427533 147.902641,48.8070968 163.1797,32.9138047 C174.365614,21.3314382 185.603314,13.8003031 200.517866,7.87927272 C206.991196,5.33426843 219.316416,2.21793665 227.705852,1.0233428 C238.114966,-0.430945364 263.801139,-0.327067638 273.795961,1.28303712 C299.585707,5.3862073 319.10927,14.8910192 335.422061,31.3556388 C352.045572,48.1318916 361.93682,67.1415154 364.940445,88.176755 C366.442258,98.7203442 366.027965,105.732091 361.93682,140.063679 L358.156396,171.486691 L359.502848,172.161897 C363.386846,174.187512 365.251165,177.92711 365.613672,184.523346 C365.872605,189.82111 365.406525,192.521931 358.933195,221.088305 C355.981357,234.176899 354.997411,237.656803 353.288452,241.136707 C350.802693,246.278654 346.504402,250.693457 344.018643,250.693457 C342.620404,250.693457 342.413257,250.901213 342.102538,252.667134 C340.341792,262.951029 336.768514,280.194732 334.904195,287.57005 C332.625583,296.503535 332.470223,296.970984 325.064733,311.877438 L317.555671,327.095525 L316.986018,338.885647 C316.675298,345.378005 316.519938,358.154965 316.675298,367.296205 C316.986018,389.266344 317.244951,390.35706 323.821854,394.356353 C329.518384,397.784318 346.193682,403.757287 355.722424,405.730964 C357.949249,406.198413 367.477991,407.860457 376.851372,409.418623 C403.676851,413.885365 411.910927,416.014858 427.343345,422.611094 C449.870533,432.219784 467.840497,443.438578 479.699637,455.280639 C491.765924,467.382394 498.601761,481.094254 499.637494,495.481319 L500,500 L249.974107,500 L0,500 L0.362506473,496.000708 Z"
+          fill="#909090"
+          fill-rule="nonzero"
+          id="Shape"
+        />
+      </svg>
+    </div>
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Slider0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-vgixfh,
+[data-css-vgixfh] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 7px 0;
+}
+
+.css-vgixfh:focus,
+[data-css-vgixfh]:focus {
+  outline: none;
+}
+
+.css-vgixfh::-webkit-slider-runnable-track,
+[data-css-vgixfh]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #4a5256;
+  border-radius: 4px;
+  border: 0px solid #010101;
+}
+
+.css-vgixfh::-webkit-slider-thumb,
+[data-css-vgixfh]::-webkit-slider-thumb {
+  border: 0px solid #000000;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #4a5256;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+
+.css-vgixfh:focus::-webkit-slider-runnable-track,
+[data-css-vgixfh]:focus::-webkit-slider-runnable-track {
+  background: #646f74;
+}
+
+.css-vgixfh::-moz-range-track,
+[data-css-vgixfh]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #4a5256;
+  border-radius: 4px;
+  border: 0px solid #010101;
+}
+
+.css-vgixfh::-moz-range-thumb,
+[data-css-vgixfh]::-moz-range-thumb {
+  border: 0px solid #000000;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #4a5256;
+  cursor: pointer;
+}
+
+.css-vgixfh::-ms-track,
+[data-css-vgixfh]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.css-vgixfh::-ms-fill-lower,
+[data-css-vgixfh]::-ms-fill-lower {
+  background: #303538;
+  border: 0px solid #010101;
+  border-radius: 4px;
+}
+
+.css-vgixfh::-ms-fill-upper,
+[data-css-vgixfh]::-ms-fill-upper {
+  background: #4a5256;
+  border: 0px solid #010101;
+  border-radius: 4px;
+}
+
+.css-vgixfh::-ms-thumb,
+[data-css-vgixfh]::-ms-thumb {
+  border: 0px solid #000000;
+  height: 2px;
+  width: 16px;
+  border-radius: 50%;
+  background: #4a5256;
+  cursor: pointer;
+}
+
+.css-vgixfh:focus::-ms-fill-lower,
+[data-css-vgixfh]:focus::-ms-fill-lower {
+  background: #4a5256;
+}
+
+.css-vgixfh:focus::-ms-fill-upper,
+[data-css-vgixfh]:focus::-ms-fill-upper {
+  background: #646f74;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-4p3ux5=""
+  >
+    <input
+      data-css-vgixfh=""
+      max="200"
+      min="20"
+      step="10"
+      type="range"
+    />
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Spinner0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <svg
+    height="30px"
+    preserveAspectRatio="xMidYMid"
+    viewBox="0 0 100 100"
+    width="30px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="none"
+      height="100"
+      width="100"
+      x="0"
+      y="0"
+    />
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="40"
+      stroke="#ffffff"
+      stroke-linecap="round"
+      stroke-width="10"
+    />
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="40"
+      stroke="#369980"
+      stroke-linecap="round"
+      stroke-width="8"
+    >
+      <animate
+        attributeName="stroke-dashoffset"
+        dur="2s"
+        from="0"
+        repeatCount="indefinite"
+        to="502"
+      />
+      <animate
+        attributeName="stroke-dasharray"
+        dur="2s"
+        repeatCount="indefinite"
+        values="125.5 125.5;1 250;125.5 125.5"
+      />
+    </circle>
+  </svg>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: SquareIconButton0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1wp5mix,
+[data-css-1wp5mix] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-wum0co,
+[data-css-wum0co] {
+  height: 50px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: #e84c3d;
+}
+
+@media (max-width: 640px) {
+  .css-wum0co,
+  [data-css-wum0co] {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-1wp5mix=""
+    data-css-wum0co=""
+  >
+    <div
+      data-css-4p3ux5=""
+      style="width:21.5px;height:21.5px;fill:white;stroke:"
+    />
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: SwitchList0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-13azwyo,
+[data-css-13azwyo] {
+  position: relative;
+}
+
+.css-14c6t4g,
+[data-css-14c6t4g] {
+  overflow: hidden;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+}
+
+.css-14c6t4g> *:last-child,
+[data-css-14c6t4g]> *:last-child {
+  border-bottom: none;
+}
+
+.css-14c6t4g> *,
+[data-css-14c6t4g]> * {
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.css-14c6t4g:hover,
+[data-css-14c6t4g]:hover {
+  cursor: pointer;
+}
+
+.css-1eqigeq:hover,
+[data-css-1eqigeq]:hover {
+  cursor: pointer;
+}
+
+.css-1coqryx,
+[data-css-1coqryx] {
+  padding: 10px;
+  text-align: center;
+}
+
+.css-1bwbff3,
+[data-css-1bwbff3] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: gray;
+}
+
+.css-uoy6yz,
+[data-css-uoy6yz] {
+  background-color: #3598db;
+}
+
+.css-uoy6yz:hover,
+[data-css-uoy6yz]:hover {
+  cursor: pointer;
+}
+
+.css-1v578pt,
+[data-css-1v578pt] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-14c6t4g=""
+    data-css-4p3ux5=""
+  >
+    <div
+      data-css-13azwyo=""
+      data-css-1eqigeq=""
+      data-css-4p3ux5=""
+      data-e2e="settings-switch-locale-a"
+    >
+      <div
+        data-css-1bwbff3=""
+        data-css-1coqryx=""
+        data-css-4p3ux5=""
+      >
+        Freiburg
+      </div>
+    </div>
+    <div
+      data-css-13azwyo=""
+      data-css-4p3ux5=""
+      data-css-uoy6yz=""
+      data-e2e="settings-switch-locale-b"
+    >
+      <div
+        data-css-1coqryx=""
+        data-css-1v578pt=""
+        data-css-4p3ux5=""
+      >
+        Berlin
+      </div>
+    </div>
+    <div
+      data-css-13azwyo=""
+      data-css-1eqigeq=""
+      data-css-4p3ux5=""
+      data-e2e="settings-switch-locale-c"
+    >
+      <div
+        data-css-1bwbff3=""
+        data-css-1coqryx=""
+        data-css-4p3ux5=""
+      >
+        München
+      </div>
+    </div>
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Text0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-18icfsk,
+[data-css-18icfsk] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-18icfsk=""
+    data-css-4p3ux5=""
+  >
+     Text will be used for everywhere a text appears. The only exception is in molecules that already provide the text component for you. 
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Text1 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-x5idof,
+[data-css-x5idof] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-4p3ux5=""
+    data-css-x5idof=""
+  >
+     Textwillbeusedforeverywhereatextappears.Theonlyexceptionisinmoleculesthatalreadyprovidethetextcomponentforyou.Textwillbeusedforeverywhereatextappears.Theonlyexceptionisinmoleculesthatalreadyprovidethetextcomponentforyou. 
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: TextInput0 1`] = `
+.css-h7582n,
+[data-css-h7582n] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-13azwyo,
+[data-css-13azwyo] {
+  position: relative;
+}
+
+.css-1pyiiji,
+[data-css-1pyiiji] {
+  position: absolute;
+  right: 10px;
+}
+
+.css-z169em,
+[data-css-z169em] {
+  position: absolute;
+  bottom: 2px;
+  right: 15px;
+}
+
+.css-18egye,
+[data-css-18egye] {
+  height: 50px;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 0;
+}
+
+.css-18egye:invalid:focus,
+[data-css-18egye]:invalid:focus {
+  color: red;
+}
+
+.css-dau5wj,
+[data-css-dau5wj] {
+  min-height: 50px;
+  border-bottom: 1px solid #ecf0f1;
+  background-color: white;
+}
+
+.css-1u2d6au,
+[data-css-1u2d6au] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #626262;
+}
+
+.css-c808ky,
+[data-css-c808ky] {
+  height: calc(30px*5);
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 0;
+}
+
+.css-c808ky:invalid:focus,
+[data-css-c808ky]:invalid:focus {
+  color: red;
+}
+
+<div
+  data-css-4p3ux5=""
+>
+   
+  <div
+    data-css-dau5wj=""
+    data-css-h7582n=""
+  >
+    <div
+      data-css-13azwyo=""
+      data-css-4p3ux5=""
+      style="width:100%"
+    >
+      <div
+        data-css-1pyiiji=""
+        data-css-4p3ux5=""
+      >
+        <div
+          data-css-1u2d6au=""
+          data-css-4p3ux5=""
+        >
+          *
+        </div>
+      </div>
+      <input
+        aria-required="true"
+        data-css-18egye=""
+        name="email"
+        placeholder="Your email"
+        required=""
+        type="email"
+      />
+    </div>
+  </div>
+  <div
+    data-css-dau5wj=""
+    data-css-h7582n=""
+  >
+    <div
+      data-css-13azwyo=""
+      data-css-4p3ux5=""
+      style="width:100%"
+    >
+      <textarea
+        data-css-c808ky=""
+        maxlength="255"
+        minlength="50"
+        name="inquiry"
+        placeholder="Your question"
+        type="text"
+      />
+      <div
+        data-css-4p3ux5=""
+        data-css-z169em=""
+      >
+        <div
+          data-css-1u2d6au=""
+          data-css-4p3ux5=""
+        >
+          0/255
+        </div>
+      </div>
+    </div>
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: TitleBar0 1`] = `
+.css-h7582n,
+[data-css-h7582n] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-cjuhep,
+[data-css-cjuhep] {
+  height: 50px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.css-1wp5mix,
+[data-css-1wp5mix] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1i51xt9,
+[data-css-1i51xt9] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+.css-19r6vwt,
+[data-css-19r6vwt] {
+  height: 50px;
+  background-color: #3598db;
+  position: relative;
+  z-index: 2;
+}
+
+.css-lr7l9f,
+[data-css-lr7l9f] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -webkit-flex: 0 0 auto;
+}
+
+@media (max-width: 640px) {
+  .css-cjuhep,
+  [data-css-cjuhep] {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+<div
+  data-css-19r6vwt=""
+  data-css-lr7l9f=""
+>
+  <div
+    data-css-h7582n=""
+  >
+    <div
+      data-css-1wp5mix=""
+      data-css-cjuhep=""
+    >
+      <div
+        data-css-4p3ux5=""
+        style="width:21.5px;height:21.5px;fill:white;stroke:"
+      />
+    </div>
+    <div
+      data-css-1i51xt9=""
+      data-css-4p3ux5=""
+    >
+       Get Relaxed 
+    </div>
+  </div>
+  <div
+    data-css-1wp5mix=""
+    data-css-cjuhep=""
+  >
+    <div
+      data-css-4p3ux5=""
+      style="width:21.5px;height:21.5px;fill:white;stroke:"
+    />
+  </div>
+</div>
+`;
+
+exports[`Component Examples should match snapshot: View0 1`] = `
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-18icfsk,
+[data-css-18icfsk] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-zos5k4,
+[data-css-zos5k4] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 100%;
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+  flex: 0 0 auto;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -webkit-flex: 0 0 auto;
+}
+
+<div
+  data-css-zos5k4=""
+>
+  <div
+    data-css-18icfsk=""
+    data-css-4p3ux5=""
+  >
+    Say Hello!
+  </div>
+</div>
+`;
