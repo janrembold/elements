@@ -9,7 +9,7 @@ You can change it in "src/layouts/SimpleLayout.jsx" and run build:docs to update
 | ----------- |:--------------:| ------------:|
 |children|node|
 |backgroundColor|custom|<br>Default: 'background'
-|follow **(required)**|bool|
+|follow|bool|
 |padded|union|
 |onScrollEnd|func|
 |onPullDown|func|
