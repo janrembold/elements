@@ -80,7 +80,7 @@ InputError.propTypes = {
  *
  * ```example
  * <TextInput name="email" type="email" placeholder="Your email" required />
- * <TextInput lines={5} placeholder="Your question" maxLength={255} minLength={50} />
+ * <TextInput name="inquiry" lines={5} placeholder="Your question" maxLength={255} minLength={50} />
  * ```
  */
 class TextInput extends React.Component {
