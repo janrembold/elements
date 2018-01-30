@@ -76,7 +76,7 @@ const countryInfo = [
       6,
       7,
       8,
-      9
+      9,
     ],
   },
   { name: 'French Antilles', code: 596 },

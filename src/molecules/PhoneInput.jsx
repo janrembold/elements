@@ -141,10 +141,14 @@ class PhoneInput extends Component {
     }
   }
 
+  createRef= node => {
+    this.textInput = node
+  }
+
   render() {
     return (
       <TextInput
-        ref={node => (this.textInput = node)}
+        ref={this.createRef}
         name="phone"
         type="tel"
         defaultValue="+"
