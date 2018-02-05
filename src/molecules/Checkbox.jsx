@@ -75,7 +75,7 @@ class Checkbox extends React.Component {
     return (
       <Theme>
         {({ theme, colorize }) => (
-          <ListItem backgroundColor={backgroundColor}>
+          <ListItem backgroundColor={colorize(backgroundColor)}>
             <View direction="row" alignV="center">
               <Relative {...styles.checkbox(theme.primary, realChecked)}>
                 <Absolute top={1} left={5}>

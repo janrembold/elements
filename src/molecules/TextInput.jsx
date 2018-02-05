@@ -156,11 +156,11 @@ class TextInput extends React.Component {
   handleMessageClick = () => this.setState({ message: null })
 
   render() {
-    const { required, lines, ...props } = this.props
+    const { required, backgroundColor, lines, ...props } = this.props
     return (
       <Theme>
         {({ theme, colorize }) => (
-          <ListItem padded={false}>
+          <ListItem padded={false} backgroundColor={colorize(backgroundColor)}>
             <Relative style={{ width: '100%' }}>
               {this.state.message && (
                 <InputError onClick={this.handleMessageClick}>
