@@ -105,6 +105,8 @@ class TextInput extends React.Component {
     minLength: PropTypes.number,
     /** Max number of characters that can be provided */
     maxLength: PropTypes.number,
+    /** Background color of the form item */
+    backgroundColor: PropTypes.string,
   }
 
   state = {

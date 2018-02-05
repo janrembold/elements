@@ -37,11 +37,16 @@ const styles = {
  */
 class Checkbox extends React.Component {
   static propTypes = {
+    /** True to make it checked */
     checked: PropTypes.bool,
+    /** Label of Checkbox */
     label: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
+    /** Text size of the label */
     labelSize: Text.propTypes.size,
     name: PropTypes.string.isRequired,
     onChange: PropTypes.func,
+    /** Background color of the form item */
+    backgroundColor: PropTypes.string,
   }
 
   state = {
@@ -56,13 +61,21 @@ class Checkbox extends React.Component {
   handleChange = () => this.setState(({ checked }) => ({ checked: !checked }))
 
   render() {
-    const { checked, onChange, label, labelSize, name, ...props } = this.props
+    const {
+      checked,
+      onChange,
+      label,
+      labelSize,
+      name,
+      backgroundColor,
+      ...props
+    } = this.props
     const realChecked = checked || this.state.checked
     const changeHandler = onChange || this.handleChange
     return (
       <Theme>
         {({ theme, colorize }) => (
-          <ListItem backgroundColor={theme.background}>
+          <ListItem backgroundColor={backgroundColor}>
             <View direction="row" alignV="center">
               <Relative {...styles.checkbox(theme.primary, realChecked)}>
                 <Absolute top={1} left={5}>
