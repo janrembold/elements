@@ -5,16 +5,18 @@ import { IntlProvider } from 'react-intl'
 class CDNIntlProvider extends React.Component {
   static propTypes = {
     children: PropTypes.node,
-    messages: PropTypes.object,
     locale: PropTypes.string.isRequired,
+    messages: PropTypes.object,
     onDone: PropTypes.func,
     project: PropTypes.string.isRequired,
+    stage: PropTypes.oneOf(['prerelease', 'production', 'staging']),
     variation: PropTypes.string,
   }
 
   static defaultProps = {
-    variation: 'default',
     onDone: _ => _,
+    stage: 'production',
+    variation: 'default',
   }
 
   static contextTypes = {
@@ -46,11 +48,11 @@ class CDNIntlProvider extends React.Component {
   }
 
   loadLanguages = async props => {
-    const { project, variation, locale } = props
+    const { locale, project, stage, variation } = props
     const countryCode = locale.split('_')[0]
-    const resourcePath = this.context.resourcePath
+    const { resourcePath } = this.context
     const translations = await fetch(
-      `${resourcePath}/${project}/staging/i18n/${countryCode}/${variation}.json`
+      `${resourcePath}/${project}/${stage}/i18n/${countryCode}/${variation}.json`
     )
     const messages = await translations.json()
     this.setState({

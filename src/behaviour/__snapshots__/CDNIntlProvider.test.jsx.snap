@@ -12,6 +12,27 @@ exports[`Check the CDNIntlProvider component should fetch the corresponding loca
 </span>
 `;
 
+exports[`Check the CDNIntlProvider component should use the correct stage 1`] = `
+<CDNIntlProvider
+  locale="fr_FR"
+  messages={
+    Object {
+      "test": "Bonjour tout le monde",
+    }
+  }
+  onDone={[Function]}
+  project="app"
+  stage="staging"
+  variation="residential-formal"
+>
+  <FormattedMessage
+    defaultMessage="Default"
+    id="test"
+    values={Object {}}
+  />
+</CDNIntlProvider>
+`;
+
 exports[`Check the CDNIntlProvider component should use the provided locale and do no fetch 1`] = `
 <span>
   Bonjour tout le monde
