@@ -1,6 +1,6 @@
 {
   "name": "@allthings/elements-build",
-  "version": "1.17.0",
+  "version": "1.18.0",
   "main": "src/index.js",
   "repository": "https://github.com/allthings/elements",
   "author": "Moritz Schwörer <moritz.schwoerer@allthings.me>",
