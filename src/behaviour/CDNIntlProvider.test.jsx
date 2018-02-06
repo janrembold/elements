@@ -33,7 +33,7 @@ describe('Check the CDNIntlProvider component', () => {
     })
 
     expect(fetchGerman).toHaveBeenCalledWith(
-      'https://static.allthings.me/app/staging/i18n/de/residential-formal.json'
+      'https://static.allthings.me/app/production/i18n/de/residential-formal.json'
     )
     expect(testRenderer).toMatchSnapshot()
 
@@ -59,7 +59,7 @@ describe('Check the CDNIntlProvider component', () => {
     })
 
     expect(fetchEnglish).toHaveBeenCalledWith(
-      'https://static.allthings.me/app/staging/i18n/en/residential-formal.json'
+      'https://static.allthings.me/app/production/i18n/en/residential-formal.json'
     )
     expect(testRenderer).toMatchSnapshot()
   })
@@ -80,5 +80,23 @@ describe('Check the CDNIntlProvider component', () => {
     )
     expect(wrapper).toMatchSnapshot()
     expect(onDone.mock.calls.length).toBe(0)
+  })
+  it('should use the correct stage', () => {
+    const stage = 'staging'
+    const wrapper = shallow(
+      <ResourceProvider>
+        <CDNIntlProvider
+          messages={{ test: 'Bonjour tout le monde' }}
+          locale="fr_FR"
+          project="app"
+          stage={stage}
+          variation="residential-formal"
+        >
+          <FormattedMessage id="test" defaultMessage="Default" />
+        </CDNIntlProvider>
+      </ResourceProvider>
+    )
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.props().stage).toBe(stage)
   })
 })
