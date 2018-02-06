@@ -3,7 +3,7 @@ import Checkbox from './Checkbox'
 import { ThemeProvider } from '../'
 
 const THEME = {
-    background: 'darkMarco',
+  background: 'darkMarco',
 }
 const STRING_LABEL = 'I am a nice checkbox!'
 
@@ -29,7 +29,7 @@ describe('Test the checkbox component', () => {
   it('should work with children', () => {
     const wrapper = mount(
       <ThemeProvider theme={THEME}>
-        <Checkbox label={<h1>test</h1>} name="a" />
+        <Checkbox label={<h1>test</h1>} name="a" backgroundColor="darkMarco" />
       </ThemeProvider>
     )
     expect(wrapper).toMatchSnapshot()
