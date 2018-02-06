@@ -4,11 +4,12 @@ import { IntlProvider } from 'react-intl'
 
 class CDNIntlProvider extends React.Component {
   static propTypes = {
-    project: PropTypes.string.isRequired,
-    locale: PropTypes.string.isRequired,
-    variation: PropTypes.string,
-    onDone: PropTypes.func,
     children: PropTypes.node,
+    messages: PropTypes.object,
+    locale: PropTypes.string.isRequired,
+    onDone: PropTypes.func,
+    project: PropTypes.string.isRequired,
+    variation: PropTypes.string,
   }
 
   static defaultProps = {
@@ -20,12 +21,17 @@ class CDNIntlProvider extends React.Component {
     resourcePath: PropTypes.string,
   }
 
-  state = {
-    loaded: false,
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      loaded: typeof props.messages !== 'undefined',
+      messages: props.messages,
+    }
   }
 
   componentWillMount() {
-    this.loadLanguages(this.props)
+    !this.props.messages && this.loadLanguages(this.props)
   }
 
   componentWillReceiveProps(nextProps) {
