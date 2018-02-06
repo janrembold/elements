@@ -1,13 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NotificationBubbleManager renders the bubble 1`] = `
+exports[`Check the CDNIntlProvider component should fetch the corresponding locales 1`] = `
 <span>
   Hallo Welt
 </span>
 `;
 
-exports[`NotificationBubbleManager renders the bubble 2`] = `
+exports[`Check the CDNIntlProvider component should fetch the corresponding locales 2`] = `
 <span>
   Hello World
+</span>
+`;
+
+exports[`Check the CDNIntlProvider component should use the provided locale and do no fetch 1`] = `
+<span>
+  Bonjour tout le monde
 </span>
 `;
