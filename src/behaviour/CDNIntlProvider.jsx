@@ -9,7 +9,7 @@ class CDNIntlProvider extends React.Component {
     messages: PropTypes.object,
     onDone: PropTypes.func,
     project: PropTypes.string.isRequired,
-    stage: PropTypes.oneOf(['production', 'staging']),
+    stage: PropTypes.oneOf(['prerelease', 'production', 'staging']),
     variation: PropTypes.string,
   }
 
