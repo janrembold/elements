@@ -14,12 +14,12 @@ exports[`Test the checkbox component should tick it 1`] = `
   border: 3px solid lightGrey;
 }
 
-.css-l8kta8,
-[data-css-l8kta8] {
+.css-1m9hm8a,
+[data-css-1m9hm8a] {
   padding: 10px 15px;
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
-  background-color: darkMarco;
+  background-color: white;
 }
 
 .css-h7582n,
@@ -84,8 +84,8 @@ exports[`Test the checkbox component should tick it 1`] = `
 }
 
 <div
+  data-css-1m9hm8a=""
   data-css-h7582n=""
-  data-css-l8kta8=""
 >
   <div
     data-css-h7582n=""
@@ -162,12 +162,12 @@ exports[`Test the checkbox component should tick it 2`] = `
   position: relative;
 }
 
-.css-l8kta8,
-[data-css-l8kta8] {
+.css-1m9hm8a,
+[data-css-1m9hm8a] {
   padding: 10px 15px;
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
-  background-color: darkMarco;
+  background-color: white;
 }
 
 .css-h7582n,
@@ -241,8 +241,8 @@ exports[`Test the checkbox component should tick it 2`] = `
 }
 
 <div
+  data-css-1m9hm8a=""
   data-css-h7582n=""
-  data-css-l8kta8=""
 >
   <div
     data-css-h7582n=""
@@ -327,14 +327,6 @@ exports[`Test the checkbox component should work with children 1`] = `
   border: 3px solid lightGrey;
 }
 
-.css-l8kta8,
-[data-css-l8kta8] {
-  padding: 10px 15px;
-  min-height: 50px;
-  border-bottom: 1px solid #ecf0f1;
-  background-color: darkMarco;
-}
-
 .css-h7582n,
 [data-css-h7582n] {
   box-sizing: border-box;
@@ -394,6 +386,14 @@ exports[`Test the checkbox component should work with children 1`] = `
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #333333;
+}
+
+.css-l8kta8,
+[data-css-l8kta8] {
+  padding: 10px 15px;
+  min-height: 50px;
+  border-bottom: 1px solid #ecf0f1;
+  background-color: darkMarco;
 }
 
 <div

@@ -1,6 +1,6 @@
 {
   "name": "@allthings/elements-build",
-  "version": "1.15.1",
+  "version": "1.16.0",
   "main": "src/index.js",
   "repository": "https://github.com/allthings/elements",
   "author": "Moritz Schwörer <moritz.schwoerer@allthings.me>",
@@ -18,9 +18,9 @@
     "mitt": "1.1.2",
     "neue": "1.0.0",
     "prop-types": "15.6.0",
-    "react-broadcast": "0.6.1",
+    "react-broadcast": "0.6.2",
     "react-intl": "^2.4.0",
-    "react-media": "1.6.1",
+    "react-media": "1.7.0",
     "react-motion": "0.5.2"
   },
   "peerDependencies": {
@@ -64,7 +64,7 @@
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "enzyme-to-json": "3.3.1",
-    "eslint": "4.16.0",
+    "eslint": "4.17.0",
     "eslint-config-logux": "18.0.0",
     "eslint-config-postcss": "2.0.2",
     "eslint-config-prettier": "2.7.0",
@@ -72,7 +72,7 @@
     "eslint-plugin-es5": "1.2.0",
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-jest": "21.7.0",
-    "eslint-plugin-node": "5.2.1",
+    "eslint-plugin-node": "6.0.0",
     "eslint-plugin-promise": "3.6.0",
     "eslint-plugin-react": "7.6.1",
     "eslint-plugin-standard": "3.0.1",
