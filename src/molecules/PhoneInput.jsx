@@ -1,19 +1,24 @@
 import React, { Component } from 'react'
-import { number, func, bool, string } from 'prop-types'
+import { func, bool, string } from 'prop-types'
 import TextInput from './TextInput'
 import countryInfo from './CountryList'
 
 const countryCodes = countryInfo.map(country => country.code.toString())
 
-const findArea = (areaCodes, pureNumber, countryLength, areaLength) => {
+const matchNumber = original => (original ? original.match(/[0-9]/gm) : '')
+
+const removeFormat = original =>
+  matchNumber(original) ? matchNumber(original).join('') : ''
+
+const findArea = (areaCodes, pureNumber, countryCode, areaLength) => {
   // if country has areas property, check if entered area code exists
   if (areaCodes) {
-    const area = pureNumber.substring(countryLength)
-    const zeroExists = area[0] === '0'
+    const areaBeginsZero = areaCodes.find(area => area.split('')[0] === '0')
+    const area = pureNumber.substring(countryCode.length)
+    const zeroExists = !areaBeginsZero && area[0] === '0'
     const offset = zeroExists ? 1 : 0
     const testAreaCode = area.substring(offset, areaLength + offset)
     const areaExists = areaCodes.indexOf(testAreaCode)
-
     return areaExists !== -1
       ? { validAreaCode: testAreaCode, zeroExists }
       : false
@@ -29,8 +34,8 @@ const checkFormat = (countryIndex, pureNumber, areaCode) => {
   const numberInFormat = format
     ? format.split('').reduce((acc, curr) => (curr === 'X' ? acc + 1 : acc), 0)
     : ''
-  const countryCodeString = code ? code.toString() : ''
-  const countryCodeLength = code ? countryCodeString.length : ''
+  const countryCode = code ? code.toString() : ''
+  const countryCodeLength = code ? countryCode.length : ''
   const codeLength = validAreaCode
     ? validAreaCode.length + countryCodeLength
     : countryCodeLength
@@ -45,7 +50,8 @@ const checkFormat = (countryIndex, pureNumber, areaCode) => {
           if (index <= pureNumber.length + numberX) {
             if (letter === 'C') {
               numberX++
-              return zeroExists ? countryCodeString + ' (0)' : countryCodeString
+              console.log('ZERO', zeroExists)
+              return zeroExists ? countryCode + ' (0)' : countryCode
             } else if (letter === 'A') {
               numberX++
               return validAreaCode
@@ -57,9 +63,9 @@ const checkFormat = (countryIndex, pureNumber, areaCode) => {
             return index >= removedCodes.length + numberX ? undefined : letter
           }
         })
-      : pureNumber[countryCodeLength] === '0'
+      : pureNumber[countryCodeLength] === '0' && countryCode !== '39'
         ? [
-            countryCodeString,
+            countryCode,
             ' (0) ',
             validAreaCode,
             removedCodes.substring(
@@ -68,12 +74,13 @@ const checkFormat = (countryIndex, pureNumber, areaCode) => {
             ),
           ]
         : code ? [code, ' ', validAreaCode, removedCodes] : pureNumber
+
   return ['+', ...formattingArea]
 }
 
 const formatInput = (countryIndex, pureNumber) => {
   const { code, areas } = countryInfo[countryIndex] || ''
-  const countryCodeLength = code ? code.toString().length : ''
+  const countryCode = code ? code.toString() : ''
   const areaCodes = areas ? areas.map(area => area.toString()) : ''
   const maxAreaDigits = areaCodes
     ? areaCodes.reduce(
@@ -81,9 +88,10 @@ const formatInput = (countryIndex, pureNumber) => {
         []
       )
     : ''
+
   // if country has area codes, check to see if inputted area code exists
   const loopAreas = [...Array(maxAreaDigits)].map((_, index) =>
-    findArea(areaCodes, pureNumber, countryCodeLength, index + 1)
+    findArea(areaCodes, pureNumber, countryCode, index + 1)
   )
   const validAreaObj = loopAreas.find(areaCode => areaCode !== false)
   // check if format of this country is available
@@ -92,74 +100,93 @@ const formatInput = (countryIndex, pureNumber) => {
   return formatted.join('')
 }
 
-const formattedNum = number => {
-  const matchNumber = number.match(/[0-9]+/gm)
-  const joinedMatch = matchNumber ? matchNumber.join('') : ''
+const formattedNumber = number => {
+  const joinedMatch = removeFormat(number)
   const pureNumber =
-    joinedMatch.substr(0, 2) === '00'
-      ? joinedMatch.substr(2)
+    joinedMatch.substring(0, 2) === '00'
+      ? joinedMatch.substring(2)
       : joinedMatch[0] === '0' ? joinedMatch.substring(1) : joinedMatch
 
-  // check first 3 digits of pureNum to see if a country matches, else return pureNum
+  // check first 3 digits of pureNumber to see if a country matches, else return pureNumber
   const loopThreeDigits = [...Array(3)].map((_, index) =>
     countryCodes.indexOf(pureNumber.substring(0, index + 1))
   )
   const countryIndex = loopThreeDigits.find(countryCode => countryCode !== -1)
   const formatted = formatInput(countryIndex, pureNumber)
+  const offset = !matchNumber(formatted[formatted.length - 1]) ? 1 : 0
+  const formatSubstring = formatted.substring(0, formatted.length - offset)
 
-  return countryIndex === 0 || countryIndex ? formatted : `+${pureNumber}`
+  return countryIndex === 0 || countryIndex ? formatSubstring : `+${pureNumber}`
 }
 
-export default class PhoneInput extends Component {
+/**
+ * PhoneInputs are used to enter phone numbers. Entered information will automatically be formatted according to the country code, where applicable.
+ * Currently country code is formatted for all countries. Area codes are formatted for Switzerland, France, and the United States.
+ *
+ * ```example
+ * <PhoneInput name="phone" required />
+ * ```
+ * ```
+ **/
+
+class PhoneInput extends Component {
   static propTypes = {
-    onChange: func,
-    value: number,
+    /** Indicates that this field is required */
     required: bool,
+    /** The name of this input field */
     name: string.isRequired,
+    /** Called, when the users changes something */
+    onChange: func,
+    /** Prefilled default value (optional) */
+    defaultValue: string,
   }
 
   state = {
     numberEntered: false,
     backspaced: false,
+    deleted: false,
+    value: this.props.defaultValue || '+',
+  }
+
+  componentDidMount = () => {
+    const formatted = formattedNumber(this.textInput.input.value)
+
+    this.setState({ value: formatted })
   }
 
   formatNumber = event => {
-    const { input, input: { value: newNumber } } = this.textInput
-    const { backspaced, numberEntered } = this.state
-    const formatted = formattedNum(newNumber)
+    const { input } = this.textInput
+    const { backspaced, numberEntered, deleted } = this.state
+    const formatted = formattedNumber(removeFormat(event.target.value))
     const { selectionStart } = event.target
 
-    input.value = formatted
+    this.setState({ value: formatted }, () => {
+      const { nonNumber } = this.state
 
-    // differentiate if backspaced or number is entered, then setSelectionRange accordingly
-    if (backspaced) {
-      const nextNumber = formatted.substring(0, backspaced)
-      const nextNumberIndex = nextNumber
-        ? nextNumber
-            .split('')
-            .reduce(
-              (acc, curr, index) =>
-                curr.match(/[0-9]/g) !== null ? [...acc, index] : acc
-            )
-        : ''
-      const position = nextNumberIndex[nextNumberIndex.length - 2] + 1
+      // differentiate if backspaced or number is entered, then setSelectionRange accordingly
+      if (input.value === '+') {
+      } else if (backspaced) {
+        const { backspaced: { end, offset } } = this.state
+        const position = end - nonNumber[0] - nonNumber[1] - offset
 
-      input.setSelectionRange(position, position)
-    } else if (numberEntered) {
-      const nextNumber = formatted.substring(numberEntered).split('')
-      const nextNumberIndex = nextNumber.findIndex(
-        number => number.match(/[0-9]/g) !== null
-      )
-      const position = nextNumberIndex + selectionStart
+        input.setSelectionRange(position, position)
+      } else if (deleted) {
+        input.setSelectionRange(deleted, deleted)
+      } else if (numberEntered) {
+        const nextNumber = formatted.substring(numberEntered).split('')
+        const nextNumberIndex = nextNumber.findIndex(
+          number => matchNumber(number) !== null
+        )
+        const position = nextNumberIndex + selectionStart
 
-      input.setSelectionRange(position, position)
-    }
+        input.setSelectionRange(position, position)
+      }
 
-    const pureNumber = formatted.match(/[0-9]/gm)
-      ? formatted.match(/[0-9]/gm).join('')
-      : ''
-    this.setState({ numberEntered: false, backspaced: false })
-    this.props.onChange && this.props.onChange(pureNumber)
+      const pureNumber = removeFormat(formatted)
+
+      this.setState({ numberEntered: false, backspaced: false, deleted: false })
+      this.props.onChange && this.props.onChange(pureNumber)
+    })
   }
 
   handleKeyDown = event => {
@@ -167,21 +194,47 @@ export default class PhoneInput extends Component {
       input,
       input: { selectionStart: start, selectionEnd: end, value },
     } = this.textInput
-    const { keyCode: key, shiftKey, altKey, ctrlKey, metaKey } = event
-    const nonNumber = value
-      ? value.substring(0, start).replace(/[0-9]/gm, '').length
-      : ''
-    const inputValue = value.match(/[0-9]/gm)
-    const pureNumber = inputValue ? inputValue.join('') : ''
+    const { keyCode: key, shiftKey, altKey, metaKey } = event
 
     // make sure no shifts etc are pressed (to prevent non-numbers being entered)
-    if (!shiftKey && !altKey && !ctrlKey && !metaKey) {
+    if (!shiftKey && !altKey && !metaKey) {
       // if (backspaced || deleted); else if (number is entered)
-      if (key === 8 || key === 46) {
-        input.value = pureNumber
-        if (start !== value.length || key === 46) {
-          this.setState({ backspaced: start })
-          input.setSelectionRange(start - nonNumber, end - nonNumber)
+      if (key === 8) {
+        if (start === end) {
+          const closestNumber = value
+            .substring(0, start)
+            .split('')
+            .reduce(
+              (acc, curr, index) =>
+                matchNumber(curr) !== null
+                  ? {
+                      number: [index, acc.number[0]],
+                      nonNumber: [0, acc.nonNumber[0]],
+                    }
+                  : {
+                      number: acc.number,
+                      nonNumber: [acc.nonNumber[0] + 1, acc.nonNumber[1]],
+                    },
+              { number: [0, 0], nonNumber: [0, 0] }
+            )
+          this.setState({
+            backspaced: { end, offset: 1 },
+            nonNumber: closestNumber.nonNumber,
+          })
+
+          input.setSelectionRange(closestNumber.number[0], end)
+        } else {
+          this.setState({
+            backspaced: { end: start, offset: 0 },
+            nonNumber: [0, 0],
+          })
+        }
+      } else if (key === 46) {
+        if (start === end) {
+          this.setState({ deleted: start })
+          input.setSelectionRange(start, end)
+        } else {
+          this.setState({ deleted: start })
         }
       } else if (
         ((key >= 48 && key <= 57) || (key >= 96 && key <= 105)) &&
@@ -192,16 +245,17 @@ export default class PhoneInput extends Component {
     }
   }
 
-  createRef = node => this.textInput = node
+  createRef = node => (this.textInput = node)
 
   render() {
     const { onChange, ...props } = this.props
+
     return (
       <TextInput
         ref={this.createRef}
         name="phone"
         type="tel"
-        defaultValue="+"
+        value={this.state.value}
         onKeyDown={this.handleKeyDown}
         onChange={this.formatNumber}
         placeholder="Your phone number"
@@ -210,3 +264,5 @@ export default class PhoneInput extends Component {
     )
   }
 }
+
+export default PhoneInput

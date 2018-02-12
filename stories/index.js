@@ -9,6 +9,7 @@ import {
   Text,
   TextInput,
   ThemeProvider,
+  PhoneInput,
 } from '../src/'
 
 storiesOf('FloatingButton', module).add('with text', () => (
@@ -34,3 +35,18 @@ storiesOf('FloatingButton', module).add('with text', () => (
     </FormValidityProvider>
   </ThemeProvider>
 ))
+
+storiesOf('PhoneInput', module).add('with phone', () => {
+
+  return (
+    <ThemeProvider>
+      <Form>
+        <PhoneInput defaultValue="490176" name="phone" id="phone" />
+          <FloatingButton>
+           <Text>get phone input value</Text> 
+          </FloatingButton>
+      </Form>
+    </ThemeProvider>
+  )
+
+})
