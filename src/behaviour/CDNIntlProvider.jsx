@@ -19,11 +19,17 @@ export const loadLanguage = async (
 class CDNIntlProvider extends React.Component {
   static propTypes = {
     children: PropTypes.node,
+    /* Locale you like to get, EN_us, DE_de */
     locale: PropTypes.string.isRequired,
+    /* Optionally pass messages. This will prevent initial loading. */
     messages: PropTypes.object,
+    /* Called when new languages got loaded */
     onDone: PropTypes.func,
+    /* The project ID loading the langauges for */
     project: PropTypes.string.isRequired,
+    /* Stage, can be production and staging */
     stage: PropTypes.oneOf(['prerelease', 'production', 'staging']),
+    /* "Default" by default. Can be any allowed variation string.  */
     variation: PropTypes.string,
   }
 
