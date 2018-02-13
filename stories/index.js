@@ -41,7 +41,7 @@ storiesOf('PhoneInput', module).add('with phone', () => {
   return (
     <ThemeProvider>
       <Form>
-        <PhoneInput defaultValue="490176" name="phone" id="phone" />
+        <PhoneInput placeholder="hello" defaultValue="490176515615" name="phone" id="phone" />
           <FloatingButton>
            <Text>get phone input value</Text> 
           </FloatingButton>

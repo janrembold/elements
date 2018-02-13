@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { func, bool, string } from 'prop-types'
 import TextInput from './TextInput'
+import Text from '../atoms/Text'
 import countryInfo from './CountryList'
 
 const countryCodes = countryInfo.map(country => country.code.toString())
@@ -50,7 +51,6 @@ const checkFormat = (countryIndex, pureNumber, areaCode) => {
           if (index <= pureNumber.length + numberX) {
             if (letter === 'C') {
               numberX++
-              console.log('ZERO', zeroExists)
               return zeroExists ? countryCode + ' (0)' : countryCode
             } else if (letter === 'A') {
               numberX++
@@ -115,7 +115,6 @@ const formattedNumber = number => {
   const formatted = formatInput(countryIndex, pureNumber)
   const offset = !matchNumber(formatted[formatted.length - 1]) ? 1 : 0
   const formatSubstring = formatted.substring(0, formatted.length - offset)
-
   return countryIndex === 0 || countryIndex ? formatSubstring : `+${pureNumber}`
 }
 
@@ -139,6 +138,8 @@ class PhoneInput extends Component {
     onChange: func,
     /** Prefilled default value (optional) */
     defaultValue: string,
+    /** Value of placeholder */
+    placeholder: string,
   }
 
   state = {
@@ -146,12 +147,14 @@ class PhoneInput extends Component {
     backspaced: false,
     deleted: false,
     value: this.props.defaultValue || '+',
+    spanZ: 10,
+    placeholder: this.props.placeholder || 'Tel number starting with country code',
   }
 
   componentDidMount = () => {
     const formatted = formattedNumber(this.textInput.input.value)
-
-    this.setState({ value: formatted })
+    const zIndex = formatted !== '+' ? 0 : 10
+    this.setState({ value: formatted, spanZ: zIndex })
   }
 
   formatNumber = event => {
@@ -167,7 +170,7 @@ class PhoneInput extends Component {
       if (input.value === '+') {
       } else if (backspaced) {
         const { backspaced: { end, offset } } = this.state
-        const position = end - nonNumber[0] - nonNumber[1] - offset
+        const position = end <= input.value.length ? input.value.length : end - nonNumber[0] - nonNumber[1] - offset
 
         input.setSelectionRange(position, position)
       } else if (deleted) {
@@ -231,8 +234,9 @@ class PhoneInput extends Component {
         }
       } else if (key === 46) {
         if (start === end) {
+          const firstNumber = !matchNumber(value[end]) ? 1 + end + value.substring(start).split('').findIndex(number => number.match(/[0-9]/g) !== null) : end
           this.setState({ deleted: start })
-          input.setSelectionRange(start, end)
+          input.setSelectionRange(start, firstNumber)
         } else {
           this.setState({ deleted: start })
         }
@@ -245,22 +249,57 @@ class PhoneInput extends Component {
     }
   }
 
+  handleFocus = () => {
+    this.setState({ spanZ: 0 })
+  }
+
+  handleBlur = () => {
+    if (this.textInput.input.value === '+') {
+      this.setState({ value: '+', spanZ: 10 })
+    }
+  }
+
+  handleClick = () => {
+    this.textInput.input.focus()
+  }
+
   createRef = node => (this.textInput = node)
 
   render() {
     const { onChange, ...props } = this.props
+    const styles = {
+      wrapper: {
+        position: 'relative',
+          cursor: 'text',
+      },
+      span: {
+        position: 'absolute',
+        zIndex: this.state.spanZ,
+        width: '100%',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        marginLeft: '3em',
+      },
+    }
 
     return (
-      <TextInput
-        ref={this.createRef}
-        name="phone"
-        type="tel"
-        value={this.state.value}
-        onKeyDown={this.handleKeyDown}
-        onChange={this.formatNumber}
-        placeholder="Your phone number"
-        {...props}
-      />
+      <div style={styles.wrapper} onClick={this.handleClick}>
+        <div style={styles.span}>
+          <Text style={styles}>{this.state.placeholder}</Text>
+        </div>
+        <TextInput
+          ref={this.createRef}
+          name="phone"
+          type="tel"
+          value={this.state.value}
+          onKeyDown={this.handleKeyDown}
+          onChange={this.formatNumber}
+          onFocus={this.handleFocus}
+          onBlur={this.handleBlur}
+          placeholder=""
+          {...props}
+        />
+      </div>
     )
   }
 }
