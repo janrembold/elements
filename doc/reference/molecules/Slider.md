@@ -18,5 +18,5 @@ Slider give the user a way to select from a limited range of numbers.
 |min **(required)**|number|Minimum selectable value *
 |max **(required)**|number|Maximum selectable value *
 |step|number|Step interval *<br>Default: 0.1
-|value **(required)**|number|Current value to show *
-|onChange **(required)**|func|Callback when the users changes the value *
+|value|number|Current value to show *
+|onChange|func|Callback when the users changes the value *

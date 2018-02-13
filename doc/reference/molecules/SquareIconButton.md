@@ -7,7 +7,7 @@ Button with only an icon. Can be used in toolbars. May also be used
 for back-buttons in the titlebar.
 
 ```example
-<SquareIconButton icon="armchairFilled" color="red" iconColor="white" />
+<SquareIconButton icon="armchair-filled" color="red" iconColor="white" />
 ```
 ## Usage
 | Name        | Type           | Description  |
