@@ -2,6 +2,20 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { IntlProvider } from 'react-intl'
 
+export const loadLanguage = async (
+  resourcePath,
+  project,
+  variation,
+  locale,
+  stage
+) => {
+  const countryCode = locale.split('_')[0]
+  const translations = await fetch(
+    `${resourcePath}/${project}/${stage}/i18n/${countryCode}/${variation}.json`
+  )
+  return translations.json()
+}
+
 class CDNIntlProvider extends React.Component {
   static propTypes = {
     children: PropTypes.node,
@@ -33,7 +47,7 @@ class CDNIntlProvider extends React.Component {
   }
 
   componentWillMount() {
-    !this.props.messages && this.loadLanguages(this.props)
+    !this.props.messages && this.loadLanguage(this.props)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -48,13 +62,14 @@ class CDNIntlProvider extends React.Component {
   }
 
   loadLanguages = async props => {
-    const { locale, project, stage, variation } = props
-    const countryCode = locale.split('_')[0]
-    const { resourcePath } = this.context
-    const translations = await fetch(
-      `${resourcePath}/${project}/${stage}/i18n/${countryCode}/${variation}.json`
+    const { project, variation, locale, stage } = props
+    const messages = await loadLanguage(
+      this.context.resourcePath,
+      project,
+      variation,
+      locale,
+      stage
     )
-    const messages = await translations.json()
     this.setState({
       loaded: true,
       messages,

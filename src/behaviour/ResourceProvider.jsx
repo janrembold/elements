@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+export const RESOURCE_PATH = 'https://static.allthings.me'
+
 /**
  * Elements uses a set of static resources like images or icons.
  * In order to benefit from caching across all apps, these resources are provided by a static asset CDN.
@@ -22,7 +24,7 @@ class ResourceProvider extends React.Component {
   }
 
   static defaultProps = {
-    resourcePath: 'https://static.allthings.me',
+    resourcePath: RESOURCE_PATH,
     children: null,
   }
 
