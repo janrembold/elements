@@ -53,7 +53,7 @@ class CDNIntlProvider extends React.Component {
   }
 
   componentWillMount() {
-    !this.props.messages && this.loadLanguage(this.props)
+    !this.props.messages && this.loadLanguages(this.props)
   }
 
   componentWillReceiveProps(nextProps) {
