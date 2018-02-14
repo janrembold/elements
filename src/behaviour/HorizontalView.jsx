@@ -7,7 +7,7 @@ import { css } from 'glamor'
  * HorizontalView is used to Views in a horizontal row, and will do smooth transitions between them.
  * The HorizontalView will always show the latest item that get's passed in as a children.
  *
- * So for this, it will only show the SceondItem.
+ * So for this, it will only show the SecondItem.
  * ```
  * <HorizontalView>
  *  <FirstItem />
@@ -111,6 +111,7 @@ class HorizontalView extends React.Component {
       >
         {children.map((child, i) => (
           <View
+            // eslint-disable-next-line
             key={i}
             {...css({ width: '100%' })}
             flex="none"
