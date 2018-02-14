@@ -14,8 +14,9 @@ Checkbox are used to give users a way to select or deselect options.
 ## Usage
 | Name        | Type           | Description  |
 | ----------- |:--------------:| ------------:|
-|onChange|func|
-|checked|bool|<br>Default: false
+|checked|bool|True to make it checked<br>Default: false
+|label **(required)**|union|Label of Checkbox
+|labelSize|custom|Text size of the label<br>Default: 'l'
 |name **(required)**|string|
-|label **(required)**|string|
-|labelSize|custom|<br>Default: 'l'
+|onChange|func|
+|backgroundColor|string|Background color of the form item

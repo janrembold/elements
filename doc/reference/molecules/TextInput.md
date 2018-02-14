@@ -7,7 +7,7 @@ TextInputs are used to allow users to enter information like names, numbers, url
 
 ```example
 <TextInput name="email" type="email" placeholder="Your email" required />
-<TextInput lines={5} placeholder="Your question" maxLength={255} minLength={50} />
+<TextInput name="inquiry" lines={5} placeholder="Your question" maxLength={255} minLength={50} />
 ```
 ## Usage
 | Name        | Type           | Description  |
@@ -22,3 +22,4 @@ TextInputs are used to allow users to enter information like names, numbers, url
 |pattern|string|Regular expression to validate against
 |minLength|number|Min number of characters that must be provided
 |maxLength|number|Max number of characters that can be provided
+|backgroundColor|string|Background color of the form item

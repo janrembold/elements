@@ -2,14 +2,34 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { IntlProvider } from 'react-intl'
 
+export const loadLanguage = async (
+  resourcePath,
+  project,
+  variation,
+  locale,
+  stage
+) => {
+  const countryCode = locale.split('_')[0]
+  const translations = await fetch(
+    `${resourcePath}/${project}/${stage}/i18n/${countryCode}/${variation}.json`
+  )
+  return translations.json()
+}
+
 class CDNIntlProvider extends React.Component {
   static propTypes = {
     children: PropTypes.node,
+    /** Locale you like to get, EN_us, DE_de */
     locale: PropTypes.string.isRequired,
+    /** Optionally pass messages. This will prevent initial loading. */
     messages: PropTypes.object,
+    /** Called when new languages got loaded */
     onDone: PropTypes.func,
+    /** The project ID loading the langauges for */
     project: PropTypes.string.isRequired,
+    /** Stage, can be production and staging */
     stage: PropTypes.oneOf(['prerelease', 'production', 'staging']),
+    /** "Default" by default. Can be any allowed variation string.  */
     variation: PropTypes.string,
   }
 
@@ -48,13 +68,14 @@ class CDNIntlProvider extends React.Component {
   }
 
   loadLanguages = async props => {
-    const { locale, project, stage, variation } = props
-    const countryCode = locale.split('_')[0]
-    const { resourcePath } = this.context
-    const translations = await fetch(
-      `${resourcePath}/${project}/${stage}/i18n/${countryCode}/${variation}.json`
+    const { project, variation, locale, stage } = props
+    const messages = await loadLanguage(
+      this.context.resourcePath,
+      project,
+      variation,
+      locale,
+      stage
     )
-    const messages = await translations.json()
     this.setState({
       loaded: true,
       messages,
