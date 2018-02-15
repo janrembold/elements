@@ -22,3 +22,4 @@ TextInputs are used to allow users to enter information like names, numbers, url
 |pattern|string|Regular expression to validate against
 |minLength|number|Min number of characters that must be provided
 |maxLength|number|Max number of characters that can be provided
+|backgroundColor|string|Background color of the form item

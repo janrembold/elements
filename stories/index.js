@@ -11,6 +11,12 @@ import {
   ThemeProvider,
   PhoneInput,
 } from '../src/'
+import HorizontalView from './HorizontalView'
+import createViewportDecorator from './createViewportDecorator'
+
+storiesOf('Animations', module)
+  .addDecorator(createViewportDecorator())
+  .add('HorizontalView', () => <HorizontalView />)
 
 storiesOf('FloatingButton', module).add('with text', () => (
   <ThemeProvider>

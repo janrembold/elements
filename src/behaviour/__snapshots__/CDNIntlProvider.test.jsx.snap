@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check the CDNIntlProvider component should fetch the corresponding locales 1`] = `
+<span>
+  Hallo Welt
+</span>
+`;
+
+exports[`Check the CDNIntlProvider component should fetch the corresponding locales 2`] = `
+<span>
+  Hello World
+</span>
+`;
+
+exports[`Check the CDNIntlProvider component should use the correct stage 1`] = `
+<CDNIntlProvider
+  locale="fr_FR"
+  messages={
+    Object {
+      "test": "Bonjour tout le monde",
+    }
+  }
+  onDone={[Function]}
+  project="app"
+  stage="staging"
+  variation="residential-formal"
+>
+  <FormattedMessage
+    defaultMessage="Default"
+    id="test"
+    values={Object {}}
+  />
+</CDNIntlProvider>
+`;
+
+exports[`Check the CDNIntlProvider component should use the provided locale and do no fetch 1`] = `
+<span>
+  Bonjour tout le monde
+</span>
+`;
