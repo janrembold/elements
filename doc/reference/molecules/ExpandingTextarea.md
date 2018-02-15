@@ -7,7 +7,7 @@ The height of the ExpandingTextarea will expand when the user adds a new line.
 It will take at maximum 25% of the current viewport. (max-height: 25vh)
 
 ```example
-<ExpandingTextarea>
+<ExpandingTextarea
   placeholder="Write somthing..."
   value=""
 />

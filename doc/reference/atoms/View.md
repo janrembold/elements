@@ -14,7 +14,7 @@ For explanation see:
 
 ```example
 <ThemeProvider>
-  <View fill direction="row" alignH="flex-end">
+  <View fill direction="row" alignH="end">
     <Text>Say Hello!</Text>
   </View>
 </ThemeProvider>

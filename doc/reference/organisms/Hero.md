@@ -8,7 +8,7 @@ Heros are used to give users an introduction and quickly explain features.
 ```example
 <ThemeProvider>
     <Hero text="You are my Hero!" img="https://placeimg.com/500/500/people">
-      <View fill direction="row" alignH="space-between" alignV="space-between">
+      <View fill direction="row" alignH="space-between" alignV="stretch">
         <Button backgroundColor="rgba(0,0,0,0.2)" color="white">Thank you</Button>
       </View>
     </Hero>

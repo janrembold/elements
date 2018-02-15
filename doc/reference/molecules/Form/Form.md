@@ -110,4 +110,4 @@ Also see the <a href="/molecules/TextInput/">TextInput</a> for allowed props.
 | Name        | Type           | Description  |
 | ----------- |:--------------:| ------------:|
 |children|node|
-|onSubmit **(required)**|func|
+|onSubmit **(required)**|func|<br>Default: _ => _
