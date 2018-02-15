@@ -169,9 +169,9 @@ class PhoneInput extends Component {
       // differentiate if backspaced or number is entered, then setSelectionRange accordingly
       if (input.value === '+') {
       } else if (backspaced) {
-        const { backspaced: { end, offset } } = this.state
-        const position = end <= input.value.length ? input.value.length : end - nonNumber[0] - nonNumber[1] - offset
-
+        const { backspaced: { end, offset, previousLength } } = this.state
+        const position = previousLength <= input.value.length ? input.value.length : end - nonNumber[0] - nonNumber[1] - offset
+        console.log('position is', end, previousLength, position)
         input.setSelectionRange(position, position)
       } else if (deleted) {
         input.setSelectionRange(deleted, deleted)
@@ -221,14 +221,14 @@ class PhoneInput extends Component {
               { number: [0, 0], nonNumber: [0, 0] }
             )
           this.setState({
-            backspaced: { end, offset: 1 },
+            backspaced: { end, offset: 1, previousLength: value.length },
             nonNumber: closestNumber.nonNumber,
           })
 
           input.setSelectionRange(closestNumber.number[0], end)
         } else {
           this.setState({
-            backspaced: { end: start, offset: 0 },
+            backspaced: { end: start, offset: 0, previousLength: value.length },
             nonNumber: [0, 0],
           })
         }
