@@ -119,12 +119,15 @@ const formattedNumber = number => {
 }
 
 /**
- * PhoneInputs are used to enter phone numbers. Entered information will automatically be formatted according to the country code, where applicable.
- * Currently country code is formatted for all countries. Area codes are formatted for Switzerland, France, and the United States.
+ * PhoneInputs are used to enter international phone numbers - country codes are mandatory.
+ * For non-international numbers, please see our TextInput component.
+ *
+ * Features:
+ * Entered information will automatically be formatted according to the country code.
+ * Currently, area codes are only formatted for Austria, France, Germany, Italy, Portugal, Switzerland, and the United States.
  *
  * ```example
- * <PhoneInput name="phone" required />
- * ```
+ * <PhoneInput name="phone" placeholder="Example Placeholder" defaultValue="4907615555555" required />
  * ```
  **/
 
@@ -148,7 +151,8 @@ class PhoneInput extends Component {
     deleted: false,
     value: this.props.defaultValue || '+',
     spanZ: 10,
-    placeholder: this.props.placeholder || 'Tel number starting with country code',
+    placeholder:
+      this.props.placeholder || 'Tel number starting with country code',
   }
 
   componentDidMount = () => {
@@ -170,7 +174,10 @@ class PhoneInput extends Component {
       if (input.value === '+') {
       } else if (backspaced) {
         const { backspaced: { end, offset, previousLength } } = this.state
-        const position = previousLength <= input.value.length ? input.value.length : end - nonNumber[0] - nonNumber[1] - offset
+        const position =
+          previousLength <= input.value.length
+            ? input.value.length
+            : end - nonNumber[0] - nonNumber[1] - offset
         console.log('position is', end, previousLength, position)
         input.setSelectionRange(position, position)
       } else if (deleted) {
@@ -234,7 +241,14 @@ class PhoneInput extends Component {
         }
       } else if (key === 46) {
         if (start === end) {
-          const firstNumber = !matchNumber(value[end]) ? 1 + end + value.substring(start).split('').findIndex(number => number.match(/[0-9]/g) !== null) : end
+          const firstNumber = !matchNumber(value[end])
+            ? 1 +
+              end +
+              value
+                .substring(start)
+                .split('')
+                .findIndex(number => number.match(/[0-9]/g) !== null)
+            : end
           this.setState({ deleted: start })
           input.setSelectionRange(start, firstNumber)
         } else {
@@ -270,7 +284,7 @@ class PhoneInput extends Component {
     const styles = {
       wrapper: {
         position: 'relative',
-          cursor: 'text',
+        cursor: 'text',
       },
       span: {
         position: 'absolute',
