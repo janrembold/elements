@@ -43,16 +43,19 @@ storiesOf('FloatingButton', module).add('with text', () => (
 ))
 
 storiesOf('PhoneInput', module).add('with phone', () => {
-
   return (
     <ThemeProvider>
       <Form>
-        <PhoneInput placeholder="hello" defaultValue="490176515615" name="phone" id="phone" />
-          <FloatingButton>
-           <Text>get phone input value</Text> 
-          </FloatingButton>
+        <PhoneInput
+          placeholder="hello, this is a placeholder"
+          defaultValue="171438901623"
+          name="phone"
+          id="phone"
+        />
+        <FloatingButton>
+          <Text>get phone input value</Text>
+        </FloatingButton>
       </Form>
     </ThemeProvider>
   )
-
 })

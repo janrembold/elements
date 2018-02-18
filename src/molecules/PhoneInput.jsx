@@ -158,29 +158,48 @@ class PhoneInput extends Component {
   componentDidMount = () => {
     const formatted = formattedNumber(this.textInput.input.value)
     const zIndex = formatted !== '+' ? 0 : 10
+
     this.setState({ value: formatted, spanZ: zIndex })
   }
 
   formatNumber = event => {
     const { input } = this.textInput
-    const { backspaced, numberEntered, deleted } = this.state
-    const formatted = formattedNumber(removeFormat(event.target.value))
+    const {
+      backspaced,
+      backspaced: { end, offset, previous },
+      numberEntered,
+      deleted,
+    } = this.state
     const { selectionStart } = event.target
+    const formatted = formattedNumber(removeFormat(event.target.value))
 
     this.setState({ value: formatted }, () => {
-      const { nonNumber } = this.state
-
+      const beforeSelection = previous ? previous.substring(0, end) : ''
+      const { nonNumber, value } = this.state
       // differentiate if backspaced or number is entered, then setSelectionRange accordingly
-      if (input.value === '+') {
+      if ((value === '+' || beforeSelection === '+') && !numberEntered) {
+        input.setSelectionRange(1, 1)
       } else if (backspaced) {
-        const { backspaced: { end, offset, previousLength } } = this.state
+        const previousSubstring = previous.substring(0, selectionStart)
+        const currentSubstring = input.value.substring(0, selectionStart)
+        const lastNumber = formatted
+          .split('')
+          .findIndex(
+            (_, index) =>
+              removeFormat(formatted.substring(0, index)) ===
+              removeFormat(previousSubstring)
+          )
         const position =
-          previousLength <= input.value.length
-            ? input.value.length
-            : end - nonNumber[0] - nonNumber[1] - offset
-        console.log('position is', end, previousLength, position)
+          previousSubstring === currentSubstring
+            ? selectionStart
+            : previous.length <= value.length && lastNumber !== -1
+              ? lastNumber
+              : previous.length <= value.length
+                ? value.length
+                : end - nonNumber[0] - nonNumber[1] - offset
+
         input.setSelectionRange(position, position)
-      } else if (deleted) {
+      } else if (deleted || deleted === 0) {
         input.setSelectionRange(deleted, deleted)
       } else if (numberEntered) {
         const nextNumber = formatted.substring(numberEntered).split('')
@@ -228,14 +247,14 @@ class PhoneInput extends Component {
               { number: [0, 0], nonNumber: [0, 0] }
             )
           this.setState({
-            backspaced: { end, offset: 1, previousLength: value.length },
+            backspaced: { end, offset: 1, previous: value },
             nonNumber: closestNumber.nonNumber,
           })
 
           input.setSelectionRange(closestNumber.number[0], end)
         } else {
           this.setState({
-            backspaced: { end: start, offset: 0, previousLength: value.length },
+            backspaced: { end: start, offset: 0, previous: value },
             nonNumber: [0, 0],
           })
         }
@@ -277,6 +296,11 @@ class PhoneInput extends Component {
     this.textInput.input.focus()
   }
 
+  handlePaste = event => {
+    const { input: { selectionStart: start } } = this.textInput
+    this.setState({ numberEntered: start })
+  }
+
   createRef = node => (this.textInput = node)
 
   render() {
@@ -308,9 +332,9 @@ class PhoneInput extends Component {
           value={this.state.value}
           onKeyDown={this.handleKeyDown}
           onChange={this.formatNumber}
+          onPaste={this.handlePaste}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
-          placeholder=""
           {...props}
         />
       </div>
