@@ -99,4 +99,35 @@ describe('Check the CDNIntlProvider component', () => {
     expect(wrapper).toMatchSnapshot()
     expect(wrapper.props().stage).toBe(stage)
   })
+  it('should use an alternative fetch method', async () => {
+    const fetchAlternative = fetch.mockResponse(
+      JSON.stringify({ test: 'こんにちは世界' })
+    )
+    const testRenderer = await new Promise((resolve, reject) => {
+      let myRenderer
+      function onDone() {
+        resolve(myRenderer)
+      }
+      const nbm = (
+        <ResourceProvider>
+          <CDNIntlProvider
+          fetchAlternative={fetchAlternative}
+            locale="ja_JP"
+            project="app"
+            variation="residential-formal"
+            onDone={onDone}
+          >
+            <FormattedMessage id="test" defaultMessage="Default" />
+          </CDNIntlProvider>
+        </ResourceProvider>
+      )
+
+      myRenderer = renderer.create(nbm)
+    })
+    expect(fetchAlternative).toHaveBeenCalledWith(
+      'https://static.allthings.me/app/production/i18n/ja/residential-formal.json'
+    )
+    expect(testRenderer).toMatchSnapshot()
+
+  })
 })

@@ -12,8 +12,26 @@ exports[`Check the CDNIntlProvider component should fetch the corresponding loca
 </span>
 `;
 
+exports[`Check the CDNIntlProvider component should use an alternative fetch method 1`] = `
+<span>
+  こんにちは世界
+</span>
+`;
+
 exports[`Check the CDNIntlProvider component should use the correct stage 1`] = `
 <CDNIntlProvider
+  fetchAlternative={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "https://static.allthings.me/app/production/i18n/de/residential-formal.json",
+        ],
+        Array [
+          "https://static.allthings.me/app/production/i18n/en/residential-formal.json",
+        ],
+      ],
+    }
+  }
   locale="fr_FR"
   messages={
     Object {
