@@ -100,7 +100,7 @@ describe('Check the CDNIntlProvider component', () => {
     expect(wrapper.props().stage).toBe(stage)
   })
   it('should use an alternative fetch method', async () => {
-    const fetchAlternative = fetch.mockResponse(
+    const fetchMethod = fetch.mockResponse(
       JSON.stringify({ test: 'こんにちは世界' })
     )
     const testRenderer = await new Promise((resolve, reject) => {
@@ -111,7 +111,7 @@ describe('Check the CDNIntlProvider component', () => {
       const nbm = (
         <ResourceProvider>
           <CDNIntlProvider
-          fetchAlternative={fetchAlternative}
+          fetchAlternative={fetchMethod}
             locale="ja_JP"
             project="app"
             variation="residential-formal"
@@ -124,7 +124,7 @@ describe('Check the CDNIntlProvider component', () => {
 
       myRenderer = renderer.create(nbm)
     })
-    expect(fetchAlternative).toHaveBeenCalledWith(
+    expect(fetchMethod).toHaveBeenCalledWith(
       'https://static.allthings.me/app/production/i18n/ja/residential-formal.json'
     )
     expect(testRenderer).toMatchSnapshot()

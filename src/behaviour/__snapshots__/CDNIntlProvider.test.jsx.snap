@@ -20,7 +20,7 @@ exports[`Check the CDNIntlProvider component should use an alternative fetch met
 
 exports[`Check the CDNIntlProvider component should use the correct stage 1`] = `
 <CDNIntlProvider
-  fetchAlternative={
+  fetchMethod={
     [MockFunction] {
       "calls": Array [
         Array [
