@@ -6,6 +6,9 @@ import fetch from 'jest-fetch-mock'
 import ResourceProvider from './ResourceProvider'
 
 describe('Check the CDNIntlProvider component', () => {
+  beforeEach(() => {
+    fetch.resetMocks()
+  })
   it('should fetch the corresponding locales', async () => {
     const fetchGerman = fetch.mockResponse(
       JSON.stringify({ test: 'Hallo Welt' })
@@ -111,7 +114,7 @@ describe('Check the CDNIntlProvider component', () => {
       const nbm = (
         <ResourceProvider>
           <CDNIntlProvider
-          fetchAlternative={fetchMethod}
+            fetchAlternative={fetchMethod}
             locale="ja_JP"
             project="app"
             variation="residential-formal"
@@ -128,6 +131,5 @@ describe('Check the CDNIntlProvider component', () => {
       'https://static.allthings.me/app/production/i18n/ja/residential-formal.json'
     )
     expect(testRenderer).toMatchSnapshot()
-
   })
 })
