@@ -201,7 +201,7 @@ class PhoneInput extends Component {
         input.setSelectionRange(position, position)
       } else if (deleted || deleted === 0) {
         input.setSelectionRange(deleted, deleted)
-      } else if (numberEntered) {
+      } else if (numberEntered || numberEntered === 0) {
         const nextNumber = formatted.substring(numberEntered).split('')
         const nextNumberIndex = nextNumber.findIndex(
           number => matchNumber(number) !== null
