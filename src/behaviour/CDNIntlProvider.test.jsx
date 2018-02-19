@@ -114,7 +114,7 @@ describe('Check the CDNIntlProvider component', () => {
       const nbm = (
         <ResourceProvider>
           <CDNIntlProvider
-            fetchAlternative={fetchMethod}
+            fetchMethod={fetchMethod}
             locale="ja_JP"
             project="app"
             variation="residential-formal"
