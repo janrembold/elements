@@ -7,10 +7,11 @@ export const loadLanguage = async (
   project,
   variation,
   locale,
-  stage
+  stage,
+  fetchMethod
 ) => {
   const countryCode = locale.split('_')[0]
-  const translations = await fetch(
+  const translations = await fetchMethod(
     `${resourcePath}/${project}/${stage}/i18n/${countryCode}/${variation}.json`
   )
   return translations.json()
@@ -19,6 +20,8 @@ export const loadLanguage = async (
 class CDNIntlProvider extends React.Component {
   static propTypes = {
     children: PropTypes.node,
+    /** Optional alternative fetch like method */
+    fetchMethod: PropTypes.func,
     /** Locale you like to get, EN_us, DE_de */
     locale: PropTypes.string.isRequired,
     /** Optionally pass messages. This will prevent initial loading. */
@@ -34,6 +37,7 @@ class CDNIntlProvider extends React.Component {
   }
 
   static defaultProps = {
+    fetchMethod: fetch,
     onDone: _ => _,
     stage: 'production',
     variation: 'default',
@@ -68,13 +72,15 @@ class CDNIntlProvider extends React.Component {
   }
 
   loadLanguages = async props => {
-    const { project, variation, locale, stage } = props
+    const { project, variation, locale, stage, fetchMethod } = props
+
     const messages = await loadLanguage(
       this.context.resourcePath,
       project,
       variation,
       locale,
-      stage
+      stage,
+      fetchMethod
     )
     this.setState({
       loaded: true,

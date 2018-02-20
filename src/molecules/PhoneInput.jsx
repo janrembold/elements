@@ -207,6 +207,7 @@ class PhoneInput extends Component {
           number => matchNumber(number) !== null
         )
         const position = nextNumberIndex + selectionStart
+
         input.setSelectionRange(position, position)
       }
 
