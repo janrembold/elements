@@ -207,13 +207,16 @@ class PhoneInput extends Component {
           number => matchNumber(number) !== null
         )
         const position = nextNumberIndex + selectionStart
-
         input.setSelectionRange(position, position)
       }
 
       const pureNumber = removeFormat(formatted)
 
-      this.setState({ numberEntered: false, backspaced: false, deleted: false })
+      this.setState({
+        numberEntered: false,
+        backspaced: false,
+        deleted: false,
+      })
       this.props.onChange && this.props.onChange(pureNumber)
     })
   }
@@ -230,6 +233,7 @@ class PhoneInput extends Component {
       // if (backspaced || deleted); else if (number is entered)
       if (key === 8) {
         if (start === end) {
+          event.preventDefault()
           const closestNumber = value
             .substring(0, start)
             .split('')
@@ -246,12 +250,23 @@ class PhoneInput extends Component {
                     },
               { number: [0, 0], nonNumber: [0, 0] }
             )
-          this.setState({
-            backspaced: { end, offset: 1, previous: value },
-            nonNumber: closestNumber.nonNumber,
-          })
-
-          input.setSelectionRange(closestNumber.number[0], end)
+          this.setState(
+            {
+              backspaced: { end, offset: 1, previous: value },
+              nonNumber: closestNumber.nonNumber,
+              value:
+                value.substring(0, closestNumber.number[0]) +
+                value.substring(end),
+            },
+            () => {
+              this.formatNumber({
+                target: {
+                  selectionStart: closestNumber.number[0],
+                  value: this.state.value,
+                },
+              })
+            }
+          )
         } else {
           this.setState({
             backspaced: { end: start, offset: 0, previous: value },
@@ -316,14 +331,17 @@ class PhoneInput extends Component {
         width: '100%',
         top: '50%',
         transform: 'translateY(-50%)',
-        marginLeft: '3em',
+        marginLeft: '1.7em',
+      },
+      placeholder: {
+        opacity: 0.8,
       },
     }
 
     return (
       <div style={styles.wrapper} onClick={this.handleClick}>
         <div style={styles.span}>
-          <Text style={styles}>{this.state.placeholder}</Text>
+          <Text style={styles.placeholder}>{this.state.placeholder}</Text>
         </div>
         <TextInput
           ref={this.createRef}
