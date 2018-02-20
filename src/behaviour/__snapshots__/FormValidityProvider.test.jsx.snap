@@ -18,15 +18,15 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-justify-content: center;
 }
 
-.css-13azwyo,
-[data-css-13azwyo] {
-  position: relative;
-}
-
 .css-1pyiiji,
 [data-css-1pyiiji] {
   position: absolute;
   right: 10px;
+}
+
+.css-13azwyo,
+[data-css-13azwyo] {
+  position: relative;
 }
 
 .css-13pxttz,
@@ -234,11 +234,6 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-justify-content: center;
 }
 
-.css-13azwyo,
-[data-css-13azwyo] {
-  position: relative;
-}
-
 .css-7z5u2j,
 [data-css-7z5u2j] {
   background-color: #c1392b;
@@ -270,6 +265,11 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
 [data-css-1pyiiji] {
   position: absolute;
   right: 10px;
+}
+
+.css-13azwyo,
+[data-css-13azwyo] {
+  position: relative;
 }
 
 .css-13pxttz,
@@ -503,15 +503,15 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-justify-content: center;
 }
 
-.css-13azwyo,
-[data-css-13azwyo] {
-  position: relative;
-}
-
 .css-1pyiiji,
 [data-css-1pyiiji] {
   position: absolute;
   right: 10px;
+}
+
+.css-13azwyo,
+[data-css-13azwyo] {
+  position: relative;
 }
 
 .css-13pxttz,
@@ -719,11 +719,6 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-justify-content: center;
 }
 
-.css-13azwyo,
-[data-css-13azwyo] {
-  position: relative;
-}
-
 .css-7z5u2j,
 [data-css-7z5u2j] {
   background-color: #c1392b;
@@ -755,6 +750,11 @@ exports[`Check FormValidityProvider should click on the button and get a default
 [data-css-1pyiiji] {
   position: absolute;
   right: 10px;
+}
+
+.css-13azwyo,
+[data-css-13azwyo] {
+  position: relative;
 }
 
 .css-13pxttz,

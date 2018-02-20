@@ -9,6 +9,7 @@ import {
   Text,
   TextInput,
   ThemeProvider,
+  PhoneInput,
 } from '../src/'
 import HorizontalView from './HorizontalView'
 import createViewportDecorator from './createViewportDecorator'
@@ -40,3 +41,21 @@ storiesOf('FloatingButton', module).add('with text', () => (
     </FormValidityProvider>
   </ThemeProvider>
 ))
+
+storiesOf('PhoneInput', module).add('with phone', () => {
+  return (
+    <ThemeProvider>
+      <Form>
+        <PhoneInput
+          placeholder="hello, this is a placeholder"
+          defaultValue="171438901623"
+          name="phone"
+          id="phone"
+        />
+        <FloatingButton>
+          <Text>get phone input value</Text>
+        </FloatingButton>
+      </Form>
+    </ThemeProvider>
+  )
+})
