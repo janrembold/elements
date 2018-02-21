@@ -52,8 +52,8 @@ storiesOf('PhoneInput', module).add('with phone', () => {
           name="phone"
           id="phone"
         />
-        <FloatingButton>
-          <Text>get phone input value</Text>
+        <FloatingButton size="l">
+          <Text size="l" color="white">get phone input value</Text>
         </FloatingButton>
       </Form>
     </ThemeProvider>

@@ -15,18 +15,31 @@ const buttonStyle = css({
   border: 0,
 })
 
+const availableSizes = {
+  xs: 30,
+  s: 40,
+  m: 50,
+  l: 60,
+  xl: 70,
+}
+
 class FloatingButton extends React.Component {
   static propTypes = {
     color: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     disabledColor: PropTypes.string.isRequired,
+    size: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl']),
+  }
+
+  static defaultProps = {
+    size: 'l',
   }
 
   render() {
-    const { color, disabled, disabledColor, ...props } = this.props
+    const { color, disabled, disabledColor, size, ...props } = this.props
     return (
       <View>
-        <View style={{ height: 50 }} />
+        <View style={{ height: availableSizes[size] }} />
         <Absolute
           alignH="center"
           alignV="center"
@@ -36,13 +49,12 @@ class FloatingButton extends React.Component {
           {...css({
             backgroundColor: disabled ? disabledColor : color,
             boxShadow: '0px -2px 10px 0px rgba(0, 0, 0, 0.2)',
-            cursor: disabled ? 'default' : 'pointer',
-            height: 50,
+            height: availableSizes[size],
             overflow: 'hidden',
             width: '100%',
           })}
         >
-          <button {...buttonStyle} {...props} />
+          <button {...buttonStyle} {...props} {...css({cursor: disabled ? 'default' : 'pointer'})} />
         </Absolute>
       </View>
     )

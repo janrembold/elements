@@ -2854,9 +2854,9 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-logux@19.0.0:
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-19.0.0.tgz#e7d507710f13bf5c3204bd8196f28aee47aad975"
+eslint-config-logux@21.0.0:
+  version "21.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-21.0.0.tgz#8594de2d5e61cfcbb81f9111a4b6656963942fb4"
   dependencies:
     globals "^11.3.0"
 
@@ -2870,9 +2870,9 @@ eslint-config-prettier@2.7.0:
   dependencies:
     get-stdin "^5.0.1"
 
-eslint-config-standard@10.2.1:
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-10.2.1.tgz#c061e4d066f379dc17cd562c64e819b4dd454591"
+eslint-config-standard@11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-11.0.0.tgz#87ee0d3c9d95382dc761958cbb23da9eea31e0ba"
 
 eslint-import-resolver-node@^0.3.1:
   version "0.3.2"
@@ -2907,9 +2907,9 @@ eslint-plugin-import@2.8.0:
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
 
-eslint-plugin-jest@21.12.1:
-  version "21.12.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.12.1.tgz#0a70b3e2be5172ab558f46bbff02ed11069266d6"
+eslint-plugin-jest@21.12.2:
+  version "21.12.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.12.2.tgz#325f7c6a5078aed51ea087c33c26792337b5ba37"
 
 eslint-plugin-node@6.0.0:
   version "6.0.0"
@@ -2948,9 +2948,9 @@ eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
-eslint@4.17.0:
-  version "4.17.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.17.0.tgz#dc24bb51ede48df629be7031c71d9dc0ee4f3ddf"
+eslint@4.18.0:
+  version "4.18.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.18.0.tgz#ebd0ba795af6dc59aa5cee17938160af5950e051"
   dependencies:
     ajv "^5.3.0"
     babel-code-frame "^6.22.0"
@@ -6163,10 +6163,11 @@ react-intl@^2.4.0:
     intl-relativeformat "^2.0.0"
     invariant "^2.1.1"
 
-react-media@1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/react-media/-/react-media-1.6.1.tgz#84e7986a92356b106dca026363f8f5c88054fe72"
+react-media@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/react-media/-/react-media-1.8.0.tgz#b86d6d62313f95d53af7d06e23d4f49adfb131d3"
   dependencies:
+    invariant "^2.2.2"
     json2mq "^0.2.0"
     prop-types "^15.5.10"
 
