@@ -6,7 +6,7 @@ You can change it in "src/behaviour/HorizontalView.jsx" and run build:docs to up
 HorizontalView is used to Views in a horizontal row, and will do smooth transitions between them.
 The HorizontalView will always show the latest item that get's passed in as a children.
 
-So for this, it will only show the SceondItem.
+So for this, it will only show the SecondItem.
 ```
 <HorizontalView>
  <FirstItem />

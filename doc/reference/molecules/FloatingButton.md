@@ -10,3 +10,4 @@ You can change it in "src/molecules/FloatingButton.jsx" and run build:docs to up
 |color **(required)**|string|
 |disabled|bool|
 |disabledColor **(required)**|string|
+|size|enum|<br>Default: 'l'
