@@ -23,11 +23,29 @@ const availableSizes = {
   xl: 70,
 }
 
+/**
+ * A FloatingButton will stick to the bottom of the viewport all the time.
+ * They make common actions immediately visible and easy to perform with one
+ * click or tap. They can be used for any type of action, including navigation.
+ *
+ *
+ * ```example
+ * <ThemeProvider>
+ *   <FloatingButton>
+ *     <Text size="l" color="white">Hello world</Text>
+ *   </FloatingButton>
+ * </ThemeProvider>
+ * ```
+ */
 class FloatingButton extends React.Component {
   static propTypes = {
+    /** Textcolor of the button */
     color: PropTypes.string.isRequired,
+    /** Disable button state to indicate it's not touchable */
     disabled: PropTypes.bool,
+    /** Textcolor when button is disabled */
     disabledColor: PropTypes.string.isRequired,
+    /** Size of the button (defaults to l) */
     size: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl']),
   }
 
