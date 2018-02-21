@@ -18,14 +18,18 @@ exports[`Floating button renders without error 1`] = `
   -webkit-justify-content: center;
 }
 
-.css-13pxttz,
-[data-css-13pxttz] {
+.css-9gvka,
+[data-css-9gvka] {
   background-color: #3598db;
   box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  height: 50px;
+  height: 60px;
   overflow: hidden;
   width: 100%;
+}
+
+.css-dw3c54,
+[data-css-dw3c54] {
+  cursor: pointer;
 }
 
 .css-4p3ux5,
@@ -72,16 +76,17 @@ exports[`Floating button renders without error 1`] = `
     data-css-4p3ux5=""
     style={
       Object {
-        "height": 50,
+        "height": 60,
       }
     }
   />
   <div
-    data-css-13pxttz=""
     data-css-3fsu53=""
     data-css-8pszjj=""
+    data-css-9gvka=""
   >
     <button
+      data-css-dw3c54=""
       data-css-inzsrf=""
     >
       Hello World
