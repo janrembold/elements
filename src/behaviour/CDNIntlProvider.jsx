@@ -11,7 +11,8 @@ export const loadLanguage = async (
   fetchMethod
 ) => {
   const countryCode = locale.split('_')[0]
-  const translations = await fetchMethod(
+  const localFetch = fetchMethod || fetch
+  const translations = await localFetch(
     `${resourcePath}/${project}/${stage}/i18n/${countryCode}/${variation}.json`
   )
   return translations.json()
@@ -37,7 +38,6 @@ class CDNIntlProvider extends React.Component {
   }
 
   static defaultProps = {
-    fetchMethod: fetch,
     onDone: _ => _,
     stage: 'production',
     variation: 'default',

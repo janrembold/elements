@@ -20,7 +20,6 @@ exports[`Check the CDNIntlProvider component should use an alternative fetch met
 
 exports[`Check the CDNIntlProvider component should use the correct stage 1`] = `
 <CDNIntlProvider
-  fetchMethod={[MockFunction]}
   locale="fr_FR"
   messages={
     Object {
