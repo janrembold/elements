@@ -92,7 +92,7 @@ class TextInput extends React.Component {
     /** The name of this input field */
     name: PropTypes.string.isRequired,
     /** Type, can be: 'tel', 'number', 'text', 'url', 'email' */
-    type: PropTypes.oneOf(['tel', 'number', 'text', 'url', 'email']),
+    type: PropTypes.oneOf(['tel', 'number', 'text', 'url', 'email', 'date', 'datetime-local']),
     /** Called, when the users changes something */
     onChange: PropTypes.func,
     /** The value, makes this component a controlled component */
