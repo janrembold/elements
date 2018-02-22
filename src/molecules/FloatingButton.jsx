@@ -32,7 +32,7 @@ const availableSizes = {
  * ```example
  * <ThemeProvider>
  *   <FloatingButton>
- *     <Text size="l" color="white">Hello world</Text>
+ *     <Text strong color="white">Hello world</Text>
  *   </FloatingButton>
  * </ThemeProvider>
  * ```

@@ -27,7 +27,7 @@ storiesOf('FloatingButton', module).add('with text', () => (
     >
       <Form onSubmit={_ => _}>
         <FloatingButton type="submit" onClick={action('clicked')}>
-          <Text strong size="s" color="white">
+          <Text strong color="white">
             Hello Button
           </Text>
         </FloatingButton>
@@ -52,8 +52,8 @@ storiesOf('PhoneInput', module).add('with phone', () => {
           name="phone"
           id="phone"
         />
-        <FloatingButton size="l">
-          <Text size="l" color="white">get phone input value</Text>
+        <FloatingButton>
+          <Text strong color="white">get phone input value</Text>
         </FloatingButton>
       </Form>
     </ThemeProvider>

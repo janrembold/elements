@@ -11,7 +11,7 @@ click or tap. They can be used for any type of action, including navigation.
 ```example
 <ThemeProvider>
   <FloatingButton>
-    <Text size="l" color="white">Hello world</Text>
+    <Text strong color="white">Hello world</Text>
   </FloatingButton>
 </ThemeProvider>
 ```
