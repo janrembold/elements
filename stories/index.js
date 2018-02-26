@@ -48,7 +48,7 @@ storiesOf('PhoneInput', module).add('with phone', () => {
       <Form>
         <PhoneInput
           placeholder="hello, this is a placeholder"
-          defaultValue="171438901623"
+          defaultValue="49017632"
           name="phone"
           id="phone"
         />

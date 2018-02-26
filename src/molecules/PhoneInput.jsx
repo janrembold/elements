@@ -69,8 +69,13 @@ const checkFormat = (countryIndex, pureNumber, areaCode) => {
             ' (0) ',
             validAreaCode,
             removedCodes.substring(
-              pureNumber.length <= numberInFormat + codeLength + 1 ? 1 : 0,
-              removedCodes.length
+              pureNumber.length <= numberInFormat + codeLength + 1
+                ? 1
+                : pureNumber.length > numberInFormat + codeLength + 1 &&
+                  pureNumber[countryCodeLength] === '0' &&
+                  !validAreaCode
+                  ? 1
+                  : 0
             ),
           ]
         : code ? [code, ' ', validAreaCode, removedCodes] : pureNumber
@@ -113,8 +118,7 @@ const formattedNumber = number => {
   )
   const countryIndex = loopThreeDigits.find(countryCode => countryCode !== -1)
   const formatted = formatInput(countryIndex, pureNumber)
-  const offset = !matchNumber(formatted[formatted.length - 1]) ? 1 : 0
-  const formatSubstring = formatted.substring(0, formatted.length - offset)
+  const formatSubstring = formatted.substring(0, formatted.length)
   return countryIndex === 0 || countryIndex ? formatSubstring : `+${pureNumber}`
 }
 
@@ -197,7 +201,6 @@ class PhoneInput extends Component {
               : previous.length <= value.length
                 ? value.length
                 : end - nonNumber[0] - nonNumber[1] - offset
-
         input.setSelectionRange(position, position)
       } else if (deleted || deleted === 0) {
         input.setSelectionRange(deleted, deleted)
@@ -251,6 +254,7 @@ class PhoneInput extends Component {
                     },
               { number: [0, 0], nonNumber: [0, 0] }
             )
+
           this.setState(
             {
               backspaced: { end, offset: 1, previous: value },
