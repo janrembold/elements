@@ -8,6 +8,7 @@ You can change it in "src/behaviour/CDNIntlProvider.jsx" and run build:docs to u
 | Name        | Type           | Description  |
 | ----------- |:--------------:| ------------:|
 |children|node|
+|fetchMethod|func|Optional alternative fetch like method
 |locale **(required)**|string|Locale you like to get, EN_us, DE_de
 |messages|object|Optionally pass messages. This will prevent initial loading.
 |onDone|func|Called when new languages got loaded<br>Default: _ => _
