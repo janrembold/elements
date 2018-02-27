@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import View from '../atoms/View'
 import Theme from '../behaviour/Theme'
-import 'cross-fetch/polyfill'
+import fetch from 'cross-fetch'
 
 export const Icons = [
   'alarm',
