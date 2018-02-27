@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { func, bool, string } from 'prop-types'
 import TextInput from './TextInput'
 import Text from '../atoms/Text'
-import countryInfo from './CountryList'
+import countryInfo from '../../utils/CountryList'
 
 const countryCodes = countryInfo.map(country => country.code.toString())
 
