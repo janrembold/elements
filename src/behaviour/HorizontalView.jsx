@@ -49,6 +49,7 @@ import { css } from 'glamor'
 class HorizontalView extends React.Component {
   static propTypes = {
     children: PropTypes.array.isRequired,
+    scrollY: PropTypes.bool,
   }
 
   constructor(props, context) {
@@ -81,6 +82,7 @@ class HorizontalView extends React.Component {
         currentChild: nextChildren.length,
       })
     }
+    this.scrollY()
   }
 
   handleTransitionEnd = () => {
@@ -93,9 +95,15 @@ class HorizontalView extends React.Component {
     }
   }
 
+  scrollY = () => {
+    if (this.props.scrollY && window.pageYOffset) {
+      window.scroll(0, 0)
+    }
+  }
+  
   render() {
     const { currentChild, children } = this.state
-    const { children: propsChildren, ...props } = this.props
+    const { children: propsChildren, scrollY, ...props } = this.props
     const translateX = (currentChild - 1) * -100
 
     return (
