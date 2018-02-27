@@ -63,7 +63,8 @@ const checkFormat = (countryIndex, pureNumber, areaCode) => {
             return index >= removedCodes.length + numberX ? undefined : letter
           }
         })
-      : pureNumber[countryCodeLength] === '0' && countryCode !== '39'
+      : //spain's (+39) area codes starts with 0, and keeps the 0 even when calling internationally
+        pureNumber[countryCodeLength] === '0' && countryCode !== '39'
         ? [
             countryCode,
             ' (0) ',
@@ -304,6 +305,14 @@ class PhoneInput extends Component {
 
   handleFocus = () => {
     this.setState({ spanZ: 0 })
+    const { input } = this.textInput
+    console.log(input.value)
+    //time out of 0sec b/c setSelectionRange will only execute properly after focus event
+    setTimeout(() => {
+      input.value === '+'
+        ? !console.log('it should be +!') && input.setSelectionRange(1, 1)
+        : input.setSelectionRange(input.value.length, input.value.length)
+    }, 0)
   }
 
   handleBlur = () => {
