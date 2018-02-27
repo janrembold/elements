@@ -18,7 +18,7 @@ const countryInfo = [
   {
     name: 'Austria',
     code: 43,
-    format: 'C A XXXXXXXXX',
+    format: 'C A XXXXXXXXXX',
     areas: [
       '660',
       '663',
@@ -182,7 +182,7 @@ const countryInfo = [
   {
     name: 'Germany',
     code: 49,
-    format: 'C A XXXXXXXX',
+    format: 'C A XXXXXXXXXX',
     areas: [
       151,
       160,
