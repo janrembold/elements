@@ -6,12 +6,17 @@ exports[`Test the checkbox component should tick it 1`] = `
   position: relative;
 }
 
-.css-8wl8ax,
-[data-css-8wl8ax] {
+.css-1dqgz2l,
+[data-css-1dqgz2l] {
   border-radius: 3px;
   height: 25px;
   width: 25px;
-  border: 3px solid lightGrey;
+  border-width: 3px;
+  border-style: solid;
+  border-color: lightGrey;
+  transition: 250ms;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
 }
 
 .css-1m9hm8a,
@@ -46,6 +51,36 @@ exports[`Test the checkbox component should tick it 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
+.css-1wp5mix,
+[data-css-1wp5mix] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-13tvizl,
+[data-css-13tvizl] {
+  position: relative;
+  bottom: 1px;
+}
+
 .css-4p3ux5,
 [data-css-4p3ux5] {
   box-sizing: border-box;
@@ -53,18 +88,13 @@ exports[`Test the checkbox component should tick it 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-1vj6r0m,
-[data-css-1vj6r0m] {
-  position: absolute;
-  top: 1px;
-  left: 5px;
-}
-
-.css-uef4pa,
-[data-css-uef4pa] {
+.css-t2hdxa,
+[data-css-t2hdxa] {
   position: absolute;
   top: 0;
+  right: 0;
   left: 0;
+  bottom: 0;
 }
 
 .css-kvq3ck,
@@ -92,11 +122,11 @@ exports[`Test the checkbox component should tick it 1`] = `
   >
     <div
       data-css-13azwyo=""
-      data-css-4p3ux5=""
-      data-css-8wl8ax=""
+      data-css-1dqgz2l=""
+      data-css-1wp5mix=""
     >
       <div
-        data-css-1vj6r0m=""
+        data-css-13tvizl=""
         data-css-4p3ux5=""
       >
         <div
@@ -119,7 +149,7 @@ exports[`Test the checkbox component should tick it 1`] = `
       </div>
       <div
         data-css-4p3ux5=""
-        data-css-uef4pa=""
+        data-css-t2hdxa=""
       >
         <input
           checked={false}
@@ -128,6 +158,7 @@ exports[`Test the checkbox component should tick it 1`] = `
           style={
             Object {
               "height": "25px",
+              "margin": 0,
               "opacity": 0,
               "width": "25px",
             }
@@ -194,6 +225,36 @@ exports[`Test the checkbox component should tick it 2`] = `
   -webkit-flex: 0 0 auto;
 }
 
+.css-1wp5mix,
+[data-css-1wp5mix] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-13tvizl,
+[data-css-13tvizl] {
+  position: relative;
+  bottom: 1px;
+}
+
 .css-4p3ux5,
 [data-css-4p3ux5] {
   box-sizing: border-box;
@@ -201,18 +262,13 @@ exports[`Test the checkbox component should tick it 2`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-1vj6r0m,
-[data-css-1vj6r0m] {
-  position: absolute;
-  top: 1px;
-  left: 5px;
-}
-
-.css-uef4pa,
-[data-css-uef4pa] {
+.css-t2hdxa,
+[data-css-t2hdxa] {
   position: absolute;
   top: 0;
+  right: 0;
   left: 0;
+  bottom: 0;
 }
 
 .css-kvq3ck,
@@ -231,13 +287,18 @@ exports[`Test the checkbox component should tick it 2`] = `
   color: #333333;
 }
 
-.css-jn2bq2,
-[data-css-jn2bq2] {
+.css-5qivm3,
+[data-css-5qivm3] {
   border-radius: 3px;
   height: 25px;
   width: 25px;
   background-color: #3598db;
-  border: 0;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #3598db;
+  transition: 250ms;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
 }
 
 <div
@@ -249,11 +310,11 @@ exports[`Test the checkbox component should tick it 2`] = `
   >
     <div
       data-css-13azwyo=""
-      data-css-4p3ux5=""
-      data-css-jn2bq2=""
+      data-css-1wp5mix=""
+      data-css-5qivm3=""
     >
       <div
-        data-css-1vj6r0m=""
+        data-css-13tvizl=""
         data-css-4p3ux5=""
       >
         <div
@@ -276,7 +337,7 @@ exports[`Test the checkbox component should tick it 2`] = `
       </div>
       <div
         data-css-4p3ux5=""
-        data-css-uef4pa=""
+        data-css-t2hdxa=""
       >
         <input
           checked={true}
@@ -285,6 +346,7 @@ exports[`Test the checkbox component should tick it 2`] = `
           style={
             Object {
               "height": "25px",
+              "margin": 0,
               "opacity": 0,
               "width": "25px",
             }
