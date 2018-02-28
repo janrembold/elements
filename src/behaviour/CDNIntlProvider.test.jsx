@@ -2,7 +2,6 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { FormattedMessage } from 'react-intl'
 import CDNIntlProvider from './CDNIntlProvider'
-import fetch from 'jest-fetch-mock'
 import ResourceProvider from './ResourceProvider'
 
 describe('Check the CDNIntlProvider component', () => {
