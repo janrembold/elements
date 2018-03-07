@@ -108,7 +108,7 @@ yalc publish build
 1. Run `yarn` so it will fetch the local repository now.
 1. Go back to `@allthings/elements` repository.
 1. Run `yarn babel:watch`.
-1. Make some changes 🧚‍♀️✨
+1. Make some changes 🧚‍✨
 1. Run `yalc push build`.
 1. Changes will be propagated to all linked projects.
 1. Everytime you do some changes you can run `yalc push build` again.
