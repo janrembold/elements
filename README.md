@@ -89,7 +89,7 @@ If you want to make changes to `@allthings/elements` and see them taking effect 
 
 1. Install [**yalc**](https://github.com/whitecolor/yalc): `yarn global add yalc`
 1. Create a build with `yarn build`.
-1. Publish the build folder `yalc publish build`. Don't worry this will only 'publish' to a local store located the on hard disk (see yalc docs to read more about this).
+1. Publish the build folder `yalc publish build`. Don't worry this will only 'publish' to a local store located on the hard disk (see yalc docs to read more about this).
 
 **tl;dr**
 
@@ -106,10 +106,12 @@ yalc publish build
 
 1. Go to the app, which will consume the local elements repository and execute `yalc add --link @allthings/elements`
 1. Run `yarn` so it will fetch the local repository now.
+1. Go back to `@allthings/elements` repository.
 1. Run `yarn babel:watch`.
-1. Make some changes in `@allthings/elements` repository.
+1. Make some changes 🧚‍♀️✨
 1. Run `yalc push build`.
 1. Changes will be propagated to all linked projects.
+1. Everytime you do some changes you can run `yalc push build` again.
 
 **tl;dr**
 
@@ -117,7 +119,10 @@ yalc publish build
 cd /path/to/project
 yalc add --link @allthings/elements
 yarn
+
+cd /path/to/@allthings/elements
 yarn babel:watch
+# Do some some changes
 yalc push build
 ```
 
@@ -127,8 +132,8 @@ yalc push build
   * Create a folder `.yalc` with the contents of the current local `@allthings/elements` repository.
   * Create a `yalc.lock` file for computational stuff.
   * Modify the `package.json` to load the package from `link:.yalc/@allthings/elements`.
-> 
-> Be sure to not commit any of these changes. Consider adding the created files to `.gitignore`.  
+>
+> Be sure to not commit any of these changes. Consider adding the created files to `.gitignore`.
 > See [`yalc`](https://github.com/whitecolor/yalc#what) for more information.
 
 ### 🏁 Clean up, after you're done
