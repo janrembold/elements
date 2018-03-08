@@ -38,7 +38,7 @@ render(<App />, document.querySelector('#app'))
 
 ## Examples
 
-Are you looking for a full example project to get started?
+Are you looking for some full example projects to get started?
 [Check this out](https://github.com/allthings/elements-example).
 
 ## Documentation

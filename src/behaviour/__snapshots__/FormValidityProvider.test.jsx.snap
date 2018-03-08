@@ -18,10 +18,15 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-justify-content: center;
 }
 
-.css-1pyiiji,
-[data-css-1pyiiji] {
+.css-lwcmpf,
+[data-css-lwcmpf] {
   position: absolute;
-  right: 10px;
+  left: 15px;
+  font-size: 10px;
+  opacity: 0;
+  transition: all .225s ease-out;
+  -webkit-transition: all .225s ease-out;
+  -moz-transition: all .225s ease-out;
 }
 
 .css-13azwyo,
@@ -91,20 +96,22 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   color: white;
 }
 
-.css-18egye,
-[data-css-18egye] {
+.css-ouc013,
+[data-css-ouc013] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
   height: 50px;
   width: 100%;
-  padding: 10px 15px;
-  font-size: 14px;
+  padding: 0 15px;
+  padding-top: 0;
+  transition: all .225s ease-out;
   border: 0;
-}
-
-.css-18egye:invalid:focus,
-[data-css-18egye]:invalid:focus,
-.css-18egye[data-simulate-invalidfocus],
-[data-css-18egye][data-simulate-invalidfocus] {
-  color: red;
+  -webkit-transition: all .225s ease-out;
+  -moz-transition: all .225s ease-out;
 }
 
 .css-dau5wj,
@@ -138,11 +145,11 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 0 0 auto;
 }
 
-.css-1u2d6au,
-[data-css-1u2d6au] {
+.css-b05tpj,
+[data-css-b05tpj] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #626262;
@@ -196,19 +203,26 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
       }
     >
       <div
-        data-css-1pyiiji=""
         data-css-4p3ux5=""
+        data-css-lwcmpf=""
+        style={
+          Object {
+            "opacity": 0,
+            "top": 12,
+          }
+        }
       >
         <div
-          data-css-1u2d6au=""
           data-css-4p3ux5=""
+          data-css-b05tpj=""
         >
+           
           *
         </div>
       </div>
       <input
         aria-required={true}
-        data-css-18egye=""
+        data-css-ouc013=""
         name="email"
         onChange={[Function]}
         onInvalid={[Function]}
@@ -266,10 +280,15 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   border-top: 10px solid #c1392b;
 }
 
-.css-1pyiiji,
-[data-css-1pyiiji] {
+.css-lwcmpf,
+[data-css-lwcmpf] {
   position: absolute;
-  right: 10px;
+  left: 15px;
+  font-size: 10px;
+  opacity: 0;
+  transition: all .225s ease-out;
+  -webkit-transition: all .225s ease-out;
+  -moz-transition: all .225s ease-out;
 }
 
 .css-13azwyo,
@@ -339,20 +358,22 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   color: white;
 }
 
-.css-18egye,
-[data-css-18egye] {
+.css-ouc013,
+[data-css-ouc013] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
   height: 50px;
   width: 100%;
-  padding: 10px 15px;
-  font-size: 14px;
+  padding: 0 15px;
+  padding-top: 0;
+  transition: all .225s ease-out;
   border: 0;
-}
-
-.css-18egye:invalid:focus,
-[data-css-18egye]:invalid:focus,
-.css-18egye[data-simulate-invalidfocus],
-[data-css-18egye][data-simulate-invalidfocus] {
-  color: red;
+  -webkit-transition: all .225s ease-out;
+  -moz-transition: all .225s ease-out;
 }
 
 .css-dau5wj,
@@ -386,11 +407,11 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 0 0 auto;
 }
 
-.css-1u2d6au,
-[data-css-1u2d6au] {
+.css-b05tpj,
+[data-css-b05tpj] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #626262;
@@ -455,6 +476,24 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
     >
       <div
         data-css-4p3ux5=""
+        data-css-lwcmpf=""
+        style={
+          Object {
+            "opacity": 0,
+            "top": 12,
+          }
+        }
+      >
+        <div
+          data-css-4p3ux5=""
+          data-css-b05tpj=""
+        >
+           
+          *
+        </div>
+      </div>
+      <div
+        data-css-4p3ux5=""
         data-css-7z5u2j=""
         onClick={[Function]}
       >
@@ -469,20 +508,9 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
           data-css-h34r0x=""
         />
       </div>
-      <div
-        data-css-1pyiiji=""
-        data-css-4p3ux5=""
-      >
-        <div
-          data-css-1u2d6au=""
-          data-css-4p3ux5=""
-        >
-          *
-        </div>
-      </div>
       <input
         aria-required={true}
-        data-css-18egye=""
+        data-css-ouc013=""
         name="email"
         onChange={[Function]}
         onInvalid={[Function]}
@@ -513,10 +541,15 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-justify-content: center;
 }
 
-.css-1pyiiji,
-[data-css-1pyiiji] {
+.css-lwcmpf,
+[data-css-lwcmpf] {
   position: absolute;
-  right: 10px;
+  left: 15px;
+  font-size: 10px;
+  opacity: 0;
+  transition: all .225s ease-out;
+  -webkit-transition: all .225s ease-out;
+  -moz-transition: all .225s ease-out;
 }
 
 .css-13azwyo,
@@ -586,20 +619,22 @@ exports[`Check FormValidityProvider should click on the button and get a default
   color: white;
 }
 
-.css-18egye,
-[data-css-18egye] {
+.css-ouc013,
+[data-css-ouc013] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
   height: 50px;
   width: 100%;
-  padding: 10px 15px;
-  font-size: 14px;
+  padding: 0 15px;
+  padding-top: 0;
+  transition: all .225s ease-out;
   border: 0;
-}
-
-.css-18egye:invalid:focus,
-[data-css-18egye]:invalid:focus,
-.css-18egye[data-simulate-invalidfocus],
-[data-css-18egye][data-simulate-invalidfocus] {
-  color: red;
+  -webkit-transition: all .225s ease-out;
+  -moz-transition: all .225s ease-out;
 }
 
 .css-dau5wj,
@@ -633,11 +668,11 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 0 0 auto;
 }
 
-.css-1u2d6au,
-[data-css-1u2d6au] {
+.css-b05tpj,
+[data-css-b05tpj] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #626262;
@@ -691,19 +726,26 @@ exports[`Check FormValidityProvider should click on the button and get a default
       }
     >
       <div
-        data-css-1pyiiji=""
         data-css-4p3ux5=""
+        data-css-lwcmpf=""
+        style={
+          Object {
+            "opacity": 0,
+            "top": 12,
+          }
+        }
       >
         <div
-          data-css-1u2d6au=""
           data-css-4p3ux5=""
+          data-css-b05tpj=""
         >
+           
           *
         </div>
       </div>
       <input
         aria-required={true}
-        data-css-18egye=""
+        data-css-ouc013=""
         name="email"
         onChange={[Function]}
         onInvalid={[Function]}
@@ -761,10 +803,15 @@ exports[`Check FormValidityProvider should click on the button and get a default
   border-top: 10px solid #c1392b;
 }
 
-.css-1pyiiji,
-[data-css-1pyiiji] {
+.css-lwcmpf,
+[data-css-lwcmpf] {
   position: absolute;
-  right: 10px;
+  left: 15px;
+  font-size: 10px;
+  opacity: 0;
+  transition: all .225s ease-out;
+  -webkit-transition: all .225s ease-out;
+  -moz-transition: all .225s ease-out;
 }
 
 .css-13azwyo,
@@ -834,20 +881,22 @@ exports[`Check FormValidityProvider should click on the button and get a default
   color: white;
 }
 
-.css-18egye,
-[data-css-18egye] {
+.css-ouc013,
+[data-css-ouc013] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
   height: 50px;
   width: 100%;
-  padding: 10px 15px;
-  font-size: 14px;
+  padding: 0 15px;
+  padding-top: 0;
+  transition: all .225s ease-out;
   border: 0;
-}
-
-.css-18egye:invalid:focus,
-[data-css-18egye]:invalid:focus,
-.css-18egye[data-simulate-invalidfocus],
-[data-css-18egye][data-simulate-invalidfocus] {
-  color: red;
+  -webkit-transition: all .225s ease-out;
+  -moz-transition: all .225s ease-out;
 }
 
 .css-dau5wj,
@@ -881,11 +930,11 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 0 0 auto;
 }
 
-.css-1u2d6au,
-[data-css-1u2d6au] {
+.css-b05tpj,
+[data-css-b05tpj] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #626262;
@@ -950,6 +999,24 @@ exports[`Check FormValidityProvider should click on the button and get a default
     >
       <div
         data-css-4p3ux5=""
+        data-css-lwcmpf=""
+        style={
+          Object {
+            "opacity": 0,
+            "top": 12,
+          }
+        }
+      >
+        <div
+          data-css-4p3ux5=""
+          data-css-b05tpj=""
+        >
+           
+          *
+        </div>
+      </div>
+      <div
+        data-css-4p3ux5=""
         data-css-7z5u2j=""
         onClick={[Function]}
       >
@@ -964,20 +1031,9 @@ exports[`Check FormValidityProvider should click on the button and get a default
           data-css-h34r0x=""
         />
       </div>
-      <div
-        data-css-1pyiiji=""
-        data-css-4p3ux5=""
-      >
-        <div
-          data-css-1u2d6au=""
-          data-css-4p3ux5=""
-        >
-          *
-        </div>
-      </div>
       <input
         aria-required={true}
-        data-css-18egye=""
+        data-css-ouc013=""
         name="email"
         onChange={[Function]}
         onInvalid={[Function]}

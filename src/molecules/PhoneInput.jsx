@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { func, bool, string } from 'prop-types'
 import TextInput from './TextInput'
 import Text from '../atoms/Text'
-import countryInfo from './CountryList'
+import countryInfo from '../utils/CountryList'
 
 const countryCodes = countryInfo.map(country => country.code.toString())
 
@@ -63,14 +63,20 @@ const checkFormat = (countryIndex, pureNumber, areaCode) => {
             return index >= removedCodes.length + numberX ? undefined : letter
           }
         })
-      : pureNumber[countryCodeLength] === '0' && countryCode !== '39'
+      : // spain's (+39) area codes starts with 0, and keeps the 0 even when calling internationally
+        pureNumber[countryCodeLength] === '0' && countryCode !== '39'
         ? [
             countryCode,
             ' (0) ',
             validAreaCode,
             removedCodes.substring(
-              pureNumber.length <= numberInFormat + codeLength + 1 ? 1 : 0,
-              removedCodes.length
+              pureNumber.length <= numberInFormat + codeLength + 1
+                ? 1
+                : pureNumber.length > numberInFormat + codeLength + 1 &&
+                  pureNumber[countryCodeLength] === '0' &&
+                  !validAreaCode
+                  ? 1
+                  : 0
             ),
           ]
         : code ? [code, ' ', validAreaCode, removedCodes] : pureNumber
@@ -113,8 +119,7 @@ const formattedNumber = number => {
   )
   const countryIndex = loopThreeDigits.find(countryCode => countryCode !== -1)
   const formatted = formatInput(countryIndex, pureNumber)
-  const offset = !matchNumber(formatted[formatted.length - 1]) ? 1 : 0
-  const formatSubstring = formatted.substring(0, formatted.length - offset)
+  const formatSubstring = formatted.substring(0, formatted.length)
   return countryIndex === 0 || countryIndex ? formatSubstring : `+${pureNumber}`
 }
 
@@ -197,7 +202,6 @@ class PhoneInput extends Component {
               : previous.length <= value.length
                 ? value.length
                 : end - nonNumber[0] - nonNumber[1] - offset
-
         input.setSelectionRange(position, position)
       } else if (deleted || deleted === 0) {
         input.setSelectionRange(deleted, deleted)
@@ -213,7 +217,11 @@ class PhoneInput extends Component {
 
       const pureNumber = removeFormat(formatted)
 
-      this.setState({ numberEntered: false, backspaced: false, deleted: false })
+      this.setState({
+        numberEntered: false,
+        backspaced: false,
+        deleted: false,
+      })
       this.props.onChange && this.props.onChange(pureNumber)
     })
   }
@@ -230,6 +238,7 @@ class PhoneInput extends Component {
       // if (backspaced || deleted); else if (number is entered)
       if (key === 8) {
         if (start === end) {
+          event.preventDefault()
           const closestNumber = value
             .substring(0, start)
             .split('')
@@ -246,12 +255,24 @@ class PhoneInput extends Component {
                     },
               { number: [0, 0], nonNumber: [0, 0] }
             )
-          this.setState({
-            backspaced: { end, offset: 1, previous: value },
-            nonNumber: closestNumber.nonNumber,
-          })
 
-          input.setSelectionRange(closestNumber.number[0], end)
+          this.setState(
+            {
+              backspaced: { end, offset: 1, previous: value },
+              nonNumber: closestNumber.nonNumber,
+              value:
+                value.substring(0, closestNumber.number[0]) +
+                value.substring(end),
+            },
+            () => {
+              this.formatNumber({
+                target: {
+                  selectionStart: closestNumber.number[0],
+                  value: this.state.value,
+                },
+              })
+            }
+          )
         } else {
           this.setState({
             backspaced: { end: start, offset: 0, previous: value },
@@ -284,6 +305,14 @@ class PhoneInput extends Component {
 
   handleFocus = () => {
     this.setState({ spanZ: 0 })
+    const { input } = this.textInput
+    console.log(input.value)
+    // time out of 0sec b/c setSelectionRange will only execute properly after focus event
+    setTimeout(() => {
+      input.value === '+'
+        ? !console.log('it should be +!') && input.setSelectionRange(1, 1)
+        : input.setSelectionRange(input.value.length, input.value.length)
+    }, 0)
   }
 
   handleBlur = () => {
@@ -316,14 +345,17 @@ class PhoneInput extends Component {
         width: '100%',
         top: '50%',
         transform: 'translateY(-50%)',
-        marginLeft: '3em',
+        marginLeft: '1.7em',
+      },
+      placeholder: {
+        opacity: 0.8,
       },
     }
 
     return (
       <div style={styles.wrapper} onClick={this.handleClick}>
         <div style={styles.span}>
-          <Text style={styles}>{this.state.placeholder}</Text>
+          <Text style={styles.placeholder}>{this.state.placeholder}</Text>
         </div>
         <TextInput
           ref={this.createRef}

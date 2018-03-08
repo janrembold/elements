@@ -42,6 +42,19 @@ function styles(
  *   <Button>Hello you</Button>
  * </ThemeProvider>
  * ```
+ *
+ * To have an icon as button-label, just add the icon-component as children.
+ *
+ * ```example
+ * <Button type="submit">
+ *    <View direction="row">
+ *      Hello with icon
+ *      <View style={{ marginLeft: 10 }}>
+ *        <Icon name="send-filled" size="xs" color="white" />
+ *      </View>
+ *    </View>
+ *  </Button>
+ * ```
  */
 class Button extends React.Component {
   static propTypes = {

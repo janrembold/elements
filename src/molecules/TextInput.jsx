@@ -5,25 +5,28 @@ import { css } from 'glamor'
 import Theme from '../behaviour/Theme'
 import PropTypes from 'prop-types'
 import Relative from '../atoms/Relative'
-import Text from '../atoms/Text'
+import Text, { createTextStyles } from '../atoms/Text'
+import Icon from '../atoms/Icon'
 
 const styles = {
-  input: textColor =>
-    css({
-      height: '50px',
+  input: showLabel =>
+    css(createTextStyles({ size: 'm' }), {
+      boxSizing: 'border-box',
+      height: 50,
       width: '100%',
-      padding: '10px 15px',
-      fontSize: '14px',
+      padding: '0 15px',
+      paddingTop: showLabel ? 10 : 0,
+      transition: 'all .225s ease-out',
       border: 0,
-      ':invalid:focus': {
-        color: 'red',
-      },
     }),
-  area: (textColor, lines) =>
-    css({
+  area: (textColor, lines, showLabel) =>
+    css(createTextStyles({ size: 'm' }), {
+      boxSizing: 'border-box',
+      transition: 'all .225s ease-out',
       height: `calc(30px*${lines})`,
       width: '100%',
       padding: '10px 15px',
+      paddingTop: showLabel ? 20 : 10,
       fontSize: '14px',
       border: 0,
       ':invalid:focus': {
@@ -56,6 +59,13 @@ const styles = {
   required: css({
     position: 'absolute',
     right: 10,
+  }),
+  label: css({
+    position: 'absolute',
+    left: 15,
+    fontSize: 10,
+    opacity: 0,
+    transition: 'all .225s ease-out',
   }),
   placeholder: css({
     position: 'absolute',
@@ -91,8 +101,19 @@ class TextInput extends React.Component {
     required: PropTypes.bool,
     /** The name of this input field */
     name: PropTypes.string.isRequired,
+    /** The label of the input */
+    label: PropTypes.string,
     /** Type, can be: 'tel', 'number', 'text', 'url', 'email' */
-    type: PropTypes.oneOf(['tel', 'number', 'text', 'url', 'email']),
+    type: PropTypes.oneOf([
+      'tel',
+      'number',
+      'text',
+      'url',
+      'email',
+      'password',
+      'date',
+      'datetime-local',
+    ]),
     /** Called, when the users changes something */
     onChange: PropTypes.func,
     /** The value, makes this component a controlled component */
@@ -110,6 +131,7 @@ class TextInput extends React.Component {
   }
 
   state = {
+    value: '',
     visible: true,
     message: null,
     length: (this.props.value && this.props.value.length) || 0,
@@ -142,56 +164,81 @@ class TextInput extends React.Component {
     if (input) {
       this.setState({ length: input.value && input.value.length })
       input.addEventListener('invalid', this.handleInvalid)
-    } else {
+    } else if (this.input) {
       this.input.removeEventListener('invalid', this.handleInvalid)
     }
     this.input = input
   }
 
   handleChange = e => {
-    this.setState({ message: null, length: e.target.value.length })
+    this.setState({
+      value: e.target.value,
+      message: null,
+      length: e.target.value.length,
+    })
     this.props.onChange && this.props.onChange(e)
   }
 
   handleMessageClick = () => this.setState({ message: null })
 
   render() {
-    const { required, backgroundColor, lines, ...props } = this.props
+    const { required, backgroundColor, lines, label, ...props } = this.props
+    const currentValue = this.props.value || this.state.value
+    const labelVisible = currentValue.length > 0
+    const showLabel = label && currentValue.length > 0
+
     return (
       <Theme>
         {({ theme, colorize }) => (
           <ListItem padded={false} backgroundColor={colorize(backgroundColor)}>
             <Relative style={{ width: '100%' }}>
+              <View
+                {...styles.label}
+                style={{
+                  opacity: labelVisible ? 1 : 0,
+                  top: labelVisible ? 8 : 12,
+                }}
+              >
+                <Text color="secondaryText" size="xs">
+                  {label} {required && '*'}
+                </Text>
+              </View>
               {this.state.message && (
                 <InputError onClick={this.handleMessageClick}>
                   {this.state.message}
                 </InputError>
               )}
-              {required && (
-                <View {...styles.required}>
-                  <Text color="secondaryText" size="s">
-                    *
-                  </Text>
-                </View>
-              )}
               {lines === 1 ? (
                 <input
                   ref={this.setInput}
-                  {...styles.input(theme.secondaryText)}
-                  onInvalid={this.handleInvalid}
+                  {...styles.input(showLabel)}
                   placeholder="Your text"
                   required={required}
                   aria-required={required}
                   {...props}
                   onChange={this.handleChange}
+                  onInvalid={this.handleInvalid}
                 />
               ) : (
                 <textarea
-                  {...styles.area(theme.secondaryText, lines)}
+                  {...styles.area(theme.secondaryText, lines, showLabel)}
                   {...props}
                   onChange={this.handleChange}
                 />
               )}
+              {this.input &&
+                this.input.validity &&
+                this.input.validity.valid && (
+                  <View
+                    style={{
+                      position: 'absolute',
+                      top: 16,
+                      right: 15,
+                    }}
+                  >
+                    <Icon name="checkFilled" size="xs" color="lightGrey" />
+                  </View>
+                )}
               {props.maxLength && (
                 <View {...styles.placeholder}>
                   <Text color="secondaryText" size="s">

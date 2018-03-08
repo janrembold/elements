@@ -24,6 +24,32 @@ const availableSizes = {
   giant: 24,
 }
 
+export const createTextStyles = ({
+  block,
+  italic,
+  strong,
+  size,
+  underline,
+  lineThrough,
+  align,
+  autoBreak,
+}) => {
+  return css({
+    display: block ? 'block' : 'inline',
+    fontFamily: '"Open Sans", Helvetica, Arial, sans-serif',
+    fontStyle: italic && 'italic',
+    fontWeight: strong && '600',
+    fontSize: availableSizes[size],
+    textDecoration:
+      (underline && 'underline') || (lineThrough && 'line-through'),
+    textAlign: align,
+    whiteSpace: autoBreak && 'pre-wrap',
+    wordBreak: autoBreak && 'break-word',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
+  })
+}
+
 /**
  * Text will be used for everywhere a text appears.
  * The only exception is in molecules that already provide the
@@ -77,19 +103,15 @@ class Text extends React.Component {
       ...props
     } = this.props
 
-    const styles = css({
-      display: block ? 'block' : 'inline',
-      fontFamily: '"Open Sans", Helvetica, Arial, sans-serif',
-      fontStyle: italic && 'italic',
-      fontWeight: strong && '600',
-      fontSize: availableSizes[size],
-      textDecoration:
-        (underline && 'underline') || (lineThrough && 'line-through'),
-      textAlign: align,
-      whiteSpace: autoBreak && 'pre-wrap',
-      wordBreak: autoBreak && 'break-word',
-      WebkitFontSmoothing: 'antialiased',
-      MozOsxFontSmoothing: 'grayscale',
+    const styles = createTextStyles({
+      block,
+      italic,
+      strong,
+      size,
+      underline,
+      lineThrough,
+      align,
+      autoBreak,
     })
 
     return (

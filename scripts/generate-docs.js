@@ -11,9 +11,11 @@ const globber = promisify(glob)
 function propToRow(props) {
   return propName => {
     const { required, description, defaultValue, type } = props[propName]
-    return `|${propName}${required ? ' **(required)**' : ''}|${type.name}|${
-      description ? description : ''
-    }${defaultValue ? `<br>Default: ${defaultValue.value}` : ''}`
+    return `|${propName}${required ? ' **(required)**' : ''}|${
+      type.name
+    }|${description || ''}${
+      defaultValue ? `<br>Default: ${defaultValue.value}` : ''
+    }`
   }
 }
 const jo = (async function() {

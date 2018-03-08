@@ -54,6 +54,7 @@ const styles = {
  *   </NotificationBubbleManager>
  * )
  * ```
+ *
  */
 class NotificationBubble extends React.Component {
   static propTypes = {
@@ -72,7 +73,10 @@ class NotificationBubble extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({ visible: false }), 2000)
+    setTimeout(
+      () => this.setState({ visible: false }),
+      2750
+    )
   }
 
   handleRest = () => this.state.visible === false && this.props.onTimeout()

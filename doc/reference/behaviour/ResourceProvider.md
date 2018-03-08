@@ -10,5 +10,5 @@ Whenever you like to use Icons or Illustrations, you need to use the ResouceProv
 ## Usage
 | Name        | Type           | Description  |
 | ----------- |:--------------:| ------------:|
-|resourcePath **(required)**|string|<br>Default: 'https://static.allthings.me'
-|children **(required)**|node|<br>Default: null
+|resourcePath|string|<br>Default: 'https://static.allthings.me'
+|children **(required)**|node|
