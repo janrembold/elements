@@ -7,6 +7,7 @@ import {
   Checkbox,
   TitleBar,
   SquareIconButton,
+  PhoneInput,
   Text,
   SimpleLayout,
   List,
@@ -36,6 +37,12 @@ export default class FormStory extends React.Component {
                       label="First- and last name"
                       name="name"
                       placeholder="What's your first name?"
+                      required
+                    />
+                    <PhoneInput
+                      label="Phone"
+                      name="firstname"
+                      placeholder="Whats you number dude?"
                       required
                     />
                     <TextInput

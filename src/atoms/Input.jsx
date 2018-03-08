@@ -125,6 +125,8 @@ class TextInput extends React.Component {
     minLength: PropTypes.number,
     /** Max number of characters that can be provided */
     maxLength: PropTypes.number,
+    /** Called with the input field a reference */
+    onInputRef: PropTypes.func,
   }
 
   state = {
@@ -137,6 +139,7 @@ class TextInput extends React.Component {
   static defaultProps = {
     required: false,
     lines: 1,
+    onInputRef: _ => _,
     type: 'text',
   }
 
@@ -165,6 +168,7 @@ class TextInput extends React.Component {
       this.input.removeEventListener('invalid', this.handleInvalid)
     }
     this.input = input
+    this.props.onInputRef(input)
   }
 
   handleChange = e => {
@@ -179,7 +183,7 @@ class TextInput extends React.Component {
   handleMessageClick = () => this.setState({ message: null })
 
   render() {
-    const { required, backgroundColor, lines, label, ...props } = this.props
+    const { required, onInputRef, lines, label, ...props } = this.props
     const currentValue = this.props.value || this.state.value
     const labelVisible = currentValue.length > 0
     const showLabel = label && currentValue.length > 0
@@ -220,6 +224,7 @@ class TextInput extends React.Component {
                 <textarea
                   {...styles.area(theme.secondaryText, lines, showLabel)}
                   {...props}
+                  ref={onInputRef}
                   onChange={this.handleChange}
                 />
               )}
