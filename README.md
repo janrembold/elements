@@ -147,4 +147,18 @@ yarn
 
 #### ⚠️ Note:
 
-If you're using server side rendering alongside with `webpack-node-externals`, be sure to add everything elements related to the whitelist: `externals({ whitelist: [/^@allthings\/elements/] })`
+##### webpack externals:
+If you're using server side rendering alongside with `webpack-node-externals`, be sure to add everything elements related to the whitelist: 
+
+```js
+// webpack.config.js
+{
+  externals: externals({ whitelist: [/^@allthings\/elements/] }),
+  // ...
+}
+```
+
+##### Serverless with `serverless-webpack`
+It seems that `serverless-webpack` does not recognize the `link:` format in, as [it doesn't support yarn *yet*](https://github.com/serverless-heaven/serverless-webpack/issues/286).
+
+Rather than using `yalc add --link @allthings/elements` you should use `yalc add @allthings/elements`.
