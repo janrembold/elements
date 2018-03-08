@@ -1,6 +1,6 @@
 # [@allthings/elements](https://github.com/allthings/elements)
 
-<img alt="npm version" src="https://badge.fury.io/js/%40allthings%2Felements.svg"> [![Build Status](https://travis-ci.org/allthings/elements.svg?branch=master)](https://travis-ci.org/allthings/elements) [![Greenkeeper badge](https://badges.greenkeeper.io/allthings/elements.svg)](https://greenkeeper.io/)
+<img alt="npm version" src="https://badge.fury.io/js/%40allthings%2Felements.svg"> [![Build Status](https://travis-ci.org/allthings/elements.svg?branch=master)](https://travis-ci.org/allthings/elements) [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
 
 
 
