@@ -41,9 +41,9 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.2.16",
-    "@storybook/addon-links": "^3.2.16",
-    "@storybook/react": "^3.2.16",
+    "@storybook/addon-actions": "3.3.14",
+    "@storybook/addon-links": "3.3.14",
+    "@storybook/react": "3.3.14",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-eslint": "8.2.2",
@@ -83,10 +83,10 @@
     "markdown-extract": "1.0.2",
     "path": "0.12.7",
     "prettier": "1.11.1",
-    "react": ">=0.14.0 <17.0.0",
+    "react": "16.2.0",
     "react-docgen": "2.20.1",
-    "react-dom": ">=0.14.0 <17.0.0",
-    "react-test-renderer": ">=0.14.0 <17.0.0",
+    "react-dom": "16.2.0",
+    "react-test-renderer": "16.2.0",
     "rimraf": "2.6.2"
   },
   "prettier": {
