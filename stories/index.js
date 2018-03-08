@@ -11,6 +11,7 @@ import {
   ThemeProvider,
   PhoneInput,
 } from '../src/'
+import DialogStory from './DialogStory'
 import HorizontalView from './HorizontalView'
 import FormStory from './FormStory'
 import createViewportDecorator from './createViewportDecorator'
@@ -22,6 +23,10 @@ storiesOf('Animations', module)
 storiesOf('Forms', module)
   .addDecorator(createViewportDecorator())
   .add('SimpelForm', () => <FormStory />)
+
+storiesOf('Dialogs', module)
+  .addDecorator(createViewportDecorator())
+  .add('Dialog', () => <DialogStory />)
 
 storiesOf('FloatingButton', module).add('with text', () => (
   <ThemeProvider>
