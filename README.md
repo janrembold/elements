@@ -129,9 +129,9 @@ yalc push build
 
 > What does `yalc add --link` do?
 >
-  * Create a folder `.yalc` with the contents of the current local `@allthings/elements` repository.
-  * Create a `yalc.lock` file for computational stuff.
-  * Modify the `package.json` to load the package from `link:.yalc/@allthings/elements`.
+>  * Create a folder `.yalc` with the contents of the current local `@allthings/elements` repository.
+>  * Create a `yalc.lock` file for computational stuff.
+>  * Modify the `package.json` to load the package from `link:.yalc/@allthings/elements`.
 >
 > Be sure to not commit any of these changes. Consider adding the created files to `.gitignore`.
 > See [`yalc`](https://github.com/whitecolor/yalc#what) for more information.
