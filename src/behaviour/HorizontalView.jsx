@@ -99,27 +99,29 @@ class HorizontalView extends React.Component {
     const translateX = (currentChild - 1) * -100
 
     return (
-      <View
-        direction="row"
-        flex="flex"
-        {...css({
-          transform: `translate3d(${translateX}%, 0, 0)`,
-          transition: '.5s',
-        })}
-        onTransitionEnd={this.handleTransitionEnd}
-        {...props}
-      >
-        {children.map((child, i) => (
-          <View
-            // eslint-disable-next-line
-            key={i}
-            {...css({ width: '100%' })}
-            flex="none"
-            direction="column"
-          >
-            {child}
-          </View>
-        ))}
+      <View {...css({ overflow: 'hidden' })}>
+        <View
+          direction="row"
+          flex="flex"
+          {...css({
+            transform: `translate3d(${translateX}%, 0, 0)`,
+            transition: '.5s',
+          })}
+          onTransitionEnd={this.handleTransitionEnd}
+          {...props}
+        >
+          {children.map((child, i) => (
+            <View
+              // eslint-disable-next-line
+              key={i}
+              {...css({ width: '100%' })}
+              flex="none"
+              direction="column"
+            >
+              {child}
+            </View>
+          ))}
+        </View>
       </View>
     )
   }
