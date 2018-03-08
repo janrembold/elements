@@ -1,6 +1,6 @@
 {
   "name": "@allthings/elements-build",
-  "version": "1.22.1",
+  "version": "1.23.0",
   "main": "src/index.js",
   "repository": "https://github.com/allthings/elements",
   "author": "Moritz Schwörer <moritz.schwoerer@allthings.me>",
@@ -101,6 +101,9 @@
     "bail": true,
     "collectCoverage": true,
     "setupTestFrameworkScriptFile": "<rootDir>/bootstrap-jest.js",
-    "snapshotSerializers": ["enzyme-to-json/serializer", "jest-glamor-react"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer",
+      "jest-glamor-react"
+    ]
   }
 }
