@@ -20,7 +20,7 @@ const styles = {
         background: 'white',
         boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.5)',
         zIndex: 9999,
-        display: active ? 'block' : 'none',
+        // display: active ? 'block' : 'none',
         marginTop: active ? 30 : 0,
         opacity:  active ? 1 : 0,
         transition: 'all .225s ease-out',
@@ -42,7 +42,7 @@ const styles = {
 
 
 /**
- * Dialogs can be used to group related content
+ * Dialogs can be used to show relevant content in a modal
  *
  * ```example
  * <Dialog>
@@ -68,6 +68,7 @@ class Dialog extends React.Component {
   static propTypes = {
     /** True to make it active */
     active: PropTypes.bool,
+    waitForTransitionEnd: true,
   }
   state = {
     active: this.props.active,
@@ -76,17 +77,30 @@ class Dialog extends React.Component {
     active: false,
   }
 
-  handleClose = () => this.setState({ active: false })
+  handleClose = () => this.setState({ active: false, waitForTransitionEnd: true })
+
+  handleTransitionEnd = (active) => {
+    if (this.state.waitForTransitionEnd) {
+      console.log(this.state.waitForTransitionEnd)
+      this.setState({ waitForTransitionEnd: false })
+    }
+    // we need to 'display: none' the backdrop and the dialog AFTER the css transition finished
+    // we need to 'display: block' the backdrop and the dialog BEFORE the css transition begins
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ active: nextProps.active })
+  }
 
   render() {
     const { children, ...props } = this.props
     const { active } = this.state
     return (
       <Fragment>
-        <View {...styles.dialog(active)} {...props}>
+        <View {...styles.dialog(active)} {...props} onTransitionEnd={this.handleTransitionEnd(active)}>
           {children}
         </View>
-        <View {...styles.backdrop(active)} onClick={this.handleClose} />
+        <View {...styles.backdrop(active)} onClick={this.handleClose} onTransitionEnd={this.handleTransitionEnd(active)} />
       </Fragment>
     )
   }

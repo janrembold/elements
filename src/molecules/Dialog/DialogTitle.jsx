@@ -5,19 +5,30 @@ import View from '../../atoms/View'
 import { css } from 'glamor'
 
 const styles = {
-  container: css({
-    position: 'relative',
-  }),
+  title: padding =>
+    css({
+      padding: padding ? padding : '15px 15px 0 15px',
+      position: 'relative',
+    }),
 }
 
-const DialogTitle = ({ children, ...props }) => (
-  <View {...styles.container} {...props}>
-    {children}
-  </View>
-)
-
-DialogTitle.propTypes = {
-  children: PropTypes.node,
+class DialogTitle extends React.Component {
+  static propTypes = {
+    /** True to make it active */
+    padding: PropTypes.string,
+    children: PropTypes.node,
+  }
+  static defaultProps = {
+    padding: false,
+  }
+  render() {
+    const { children, ...props } = this.props
+    return (
+      <View {...styles.title(...props.padding)} {...props}>
+        {children}
+      </View>
+    )
+  }
 }
 
 export default DialogTitle
