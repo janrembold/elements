@@ -14,7 +14,7 @@ if (typeof window !== `undefined`) {
   ])
 }
 
-const availableSizes = {
+export const availableSizes = {
   xs: 10,
   s: 12,
   m: 13,

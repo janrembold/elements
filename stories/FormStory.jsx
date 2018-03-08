@@ -33,13 +33,12 @@ export default class FormStory extends React.Component {
                 <Card>
                   <List>
                     <TextInput
-                      label="First name"
-                      name="firstname"
+                      label="First- and last name"
+                      name="name"
                       placeholder="What's your first name?"
                       required
                     />
                     <TextInput
-                      label="Last name"
                       name="firstname"
                       placeholder="What's your last name?"
                       required
