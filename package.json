@@ -67,7 +67,7 @@
     "eslint": "4.18.2",
     "eslint-config-logux": "21.0.0",
     "eslint-config-postcss": "2.0.2",
-    "eslint-config-prettier": "2.7.0",
+    "eslint-config-prettier": "2.9.0",
     "eslint-config-standard": "11.0.0",
     "eslint-plugin-es5": "1.2.0",
     "eslint-plugin-import": "2.9.0",
