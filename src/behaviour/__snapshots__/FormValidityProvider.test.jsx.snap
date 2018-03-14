@@ -219,8 +219,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
         aria-required={true}
         data-css-ouc013=""
         name="email"
-        onChange={[Function]}
         onInvalid={[Function]}
+        onKeyUp={[Function]}
         placeholder="Your email"
         required={true}
         type="email"
@@ -502,8 +502,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
         aria-required={true}
         data-css-ouc013=""
         name="email"
-        onChange={[Function]}
         onInvalid={[Function]}
+        onKeyUp={[Function]}
         placeholder="Your email"
         required={true}
         type="email"
@@ -732,8 +732,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
         aria-required={true}
         data-css-ouc013=""
         name="email"
-        onChange={[Function]}
         onInvalid={[Function]}
+        onKeyUp={[Function]}
         placeholder="Your email"
         required={true}
         type="email"
@@ -1015,8 +1015,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
         aria-required={true}
         data-css-ouc013=""
         name="email"
-        onChange={[Function]}
         onInvalid={[Function]}
+        onKeyUp={[Function]}
         placeholder="Your email"
         required={true}
         type="email"
