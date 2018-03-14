@@ -34,6 +34,8 @@ Array [
 ]
 `;
 
+exports[`Check the CDNIntlProvider component should pick up if hyrdated 1`] = `"<span id=\\"__ELEMENTS_INTL__\\" style=\\"display:none\\" data-state=\\"{&quot;test&quot;:&quot;Bonjour tout le monde et ala&quot;}\\"></span><span>Bonjour tout le monde et ala</span>"`;
+
 exports[`Check the CDNIntlProvider component should use the correct stage 1`] = `
 <CDNIntlProvider
   locale="fr_FR"

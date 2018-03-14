@@ -50,7 +50,6 @@ class CDNIntlProvider extends React.Component {
     this.state = {
       messages,
     }
-
     if (!messages && typeof document !== 'undefined') {
       const container = document.getElementById('__ELEMENTS_INTL__')
       if (container) {
@@ -103,7 +102,7 @@ class CDNIntlProvider extends React.Component {
       <IntlProvider locale={countryCode} messages={messages}>
         <Fragment>
           {this.renderSideEffect(messages)}
-          {this.props.children}
+          {messages && this.props.children}
         </Fragment>
       </IntlProvider>
     )
