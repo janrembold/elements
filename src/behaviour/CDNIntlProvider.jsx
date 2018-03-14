@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { Fragment } from 'react'
 import { IntlProvider } from 'react-intl'
 import 'cross-fetch/polyfill'
 
@@ -47,14 +47,16 @@ class CDNIntlProvider extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      loaded: typeof props.messages !== 'undefined',
-      messages: props.messages,
-    }
-  }
+    if (typeof document !== 'undefined') {
+      const container = document.getElementById('__ELEMENTS_INTL__')
 
-  componentWillMount() {
-    !this.props.messages && this.loadLanguages(this.props)
+      const stateString = container.getAttribute('data-state')
+      this.state = { messages: JSON.parse(stateString) }
+      this.isClient = true
+    } else {
+      this.state = { messages: this.props.messages }
+      this.isClient = false
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -69,7 +71,7 @@ class CDNIntlProvider extends React.Component {
   }
 
   loadLanguages = async props => {
-    const { project, variation, locale, stage } = props
+    const { project, variation, locale, stage, onDone } = props
 
     const messages = await loadLanguage(
       this.context.resourcePath,
@@ -78,22 +80,30 @@ class CDNIntlProvider extends React.Component {
       locale,
       stage
     )
-    this.setState({
-      loaded: true,
-      messages,
-    })
-    props.onDone()
+
+    this.setState({ messages }, onDone)
   }
+
+  renderSideEffect = messages => (
+    <span
+      suppressHydrationWarning
+      id="__ELEMENTS_INTL__"
+      style={{ display: 'none' }}
+      data-state={!this.isClient && messages && JSON.stringify(messages)}
+    />
+  )
 
   render() {
     const countryCode = this.props.locale.split('_')[0]
+    const { messages } = this.state
 
     return (
-      this.state.loaded && (
-        <IntlProvider locale={countryCode} messages={this.state.messages}>
+      <IntlProvider locale={countryCode} messages={messages}>
+        <Fragment>
+          {this.renderSideEffect(messages)}
           {this.props.children}
-        </IntlProvider>
-      )
+        </Fragment>
+      </IntlProvider>
     )
   }
 }
