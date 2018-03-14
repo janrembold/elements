@@ -217,8 +217,8 @@ class TextInput extends React.Component {
                   required={required}
                   aria-required={required}
                   {...props}
-                  onChange={this.handleChange}
                   onInvalid={this.handleInvalid}
+                  onKeyUp={this.handleChange}
                 />
               ) : (
                 <textarea

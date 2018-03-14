@@ -81,7 +81,7 @@ const checkFormat = (countryIndex, pureNumber, areaCode) => {
           ]
         : code ? [code, ' ', validAreaCode, removedCodes] : pureNumber
 
-  return [...formattingArea]
+  return ['+', ...formattingArea]
 }
 
 const formatInput = (countryIndex, pureNumber) => {
@@ -120,7 +120,7 @@ const formattedNumber = number => {
   const countryIndex = loopThreeDigits.find(countryCode => countryCode !== -1)
   const formatted = formatInput(countryIndex, pureNumber)
   const formatSubstring = formatted.substring(0, formatted.length)
-  return countryIndex === 0 || countryIndex ? formatSubstring : pureNumber
+  return countryIndex === 0 || pureNumber ? formatSubstring : pureNumber
 }
 
 /**
@@ -156,15 +156,13 @@ class PhoneInput extends Component {
     deleted: false,
     value: this.props.defaultValue,
     spanZ: 10,
-    placeholder:
-      this.props.placeholder || 'Tel number starting with country code',
+    placeholder: '+',
   }
 
   componentDidMount = () => {
     const formatted = formattedNumber(this.textInput.value)
-    const zIndex = formatted !== '+' ? 0 : 10
 
-    this.setState({ value: formatted, spanZ: zIndex })
+    this.setState({ value: formatted, spanZ: formatted ? 0 : 10 })
   }
 
   formatNumber = event => {
@@ -215,14 +213,13 @@ class PhoneInput extends Component {
         input.setSelectionRange(position, position)
       }
 
-      const pureNumber = removeFormat(formatted)
-
       this.setState({
         numberEntered: false,
         backspaced: false,
         deleted: false,
+        spanZ: input.value ? 0 : 10,
       })
-      this.props.onChange && this.props.onChange(pureNumber)
+      this.props.onChange && this.props.onChange(removeFormat(formatted))
     })
   }
 
@@ -302,30 +299,19 @@ class PhoneInput extends Component {
   }
 
   handleFocus = () => {
-    this.setState({ spanZ: 0 })
-    const input = this.textInput
+    const { value } = this.textInput
+    this.setState({ spanZ: value ? 0 : 10 })
     // time out of 0sec b/c setSelectionRange will only execute properly after focus event
     setTimeout(() => {
-      input.value === '+'
-        ? input.setSelectionRange(1, 1)
-        : input.setSelectionRange(input.value.length, input.value.length)
+      const cursorPosition = value === '+' ? 1 : value.length
+      this.textInput.setSelectionRange(cursorPosition, cursorPosition)
     }, 0)
   }
 
-  handleBlur = () => {
-    if (this.textInput.value === '+') {
-      this.setState({ value: '+', spanZ: 10 })
-    }
-  }
+  handleBlur = () =>
+    this.textInput.value || this.setState({ spanZ: 10, value: '' })
 
-  handleClick = () => {
-    this.textInput.focus()
-  }
-
-  handlePaste = event => {
-    const { selectionStart: start } = this.textInput
-    this.setState({ numberEntered: start })
-  }
+  handleClick = () => this.textInput.focus()
 
   createRef = node => (this.textInput = node)
 
@@ -335,36 +321,33 @@ class PhoneInput extends Component {
       wrapper: {
         position: 'relative',
         cursor: 'text',
+        width: '100%',
       },
       span: {
+        marginLeft: '5px',
         userSelect: 'none',
         position: 'absolute',
         zIndex: this.state.spanZ,
         width: '100%',
-        top: 'calc(50% + 5px)',
+        top: '50%',
         transform: 'translateY(-50%)',
-        marginLeft: '1.7em',
-      },
-      placeholder: {
-        opacity: 0.7,
       },
     }
 
     return (
       <div style={styles.wrapper} onClick={this.handleClick}>
-        <div style={styles.span}>
-          <Text style={styles.placeholder} size="m" />
-        </div>
+        <Text style={styles.span} size="m">
+          {this.state.placeholder}
+        </Text>
         <Input
           onInputRef={this.createRef}
           name="phone"
           type="tel"
-          placeholder={this.state.placeholder}
           value={this.state.value}
           onKeyDown={this.handleKeyDown}
           onChange={this.formatNumber}
-          onPaste={this.handlePaste}
           onFocus={this.handleFocus}
+          onBlur={this.handleBlur}
           {...props}
         />
       </div>
