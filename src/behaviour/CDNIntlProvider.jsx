@@ -44,18 +44,21 @@ class CDNIntlProvider extends React.Component {
     resourcePath: PropTypes.string,
   }
 
-  constructor(props) {
-    super(props)
+  constructor(props, context) {
+    super(props, context)
+    const messages = props.messages
+    this.state = {
+      messages,
+    }
 
-    if (typeof document !== 'undefined') {
+    if (!messages && typeof document !== 'undefined') {
       const container = document.getElementById('__ELEMENTS_INTL__')
-
-      const stateString = container.getAttribute('data-state')
-      this.state = { messages: JSON.parse(stateString) }
-      this.isClient = true
-    } else {
-      this.state = { messages: this.props.messages }
-      this.isClient = false
+      if (container) {
+        const stateString = container.getAttribute('data-state')
+        this.state = { messages: JSON.parse(stateString) }
+      } else {
+        this.loadLanguages(props)
+      }
     }
   }
 
@@ -86,10 +89,9 @@ class CDNIntlProvider extends React.Component {
 
   renderSideEffect = messages => (
     <span
-      suppressHydrationWarning
       id="__ELEMENTS_INTL__"
       style={{ display: 'none' }}
-      data-state={!this.isClient && messages && JSON.stringify(messages)}
+      data-state={messages && JSON.stringify(messages)}
     />
   )
 
