@@ -34,6 +34,8 @@ class SquareIconButton extends React.Component {
   static propTypes = {
     icon: PropTypes.string.isRequired,
     color: color,
+    /** Size of the icon child component (check <Icon />) **/
+    iconSize: PropTypes.string,
     iconColor: PropTypes.string,
     onClick: PropTypes.func,
   }
@@ -41,10 +43,11 @@ class SquareIconButton extends React.Component {
   static defaultProps = {
     color: 'transparent',
     iconColor: 'lightBlack',
+    iconSize: 's',
   }
 
   render() {
-    const { icon, color, iconColor, onClick } = this.props
+    const { icon, color, iconColor, iconSize, onClick } = this.props
     return (
       <View
         {...box(colorCode(color), onClick)}
@@ -53,7 +56,7 @@ class SquareIconButton extends React.Component {
         alignV="center"
         onClick={onClick}
       >
-        <Icon color={iconColor} size="s" name={icon} />
+        <Icon color={iconColor} size={iconSize} name={icon} />
       </View>
     )
   }

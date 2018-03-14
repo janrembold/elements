@@ -14,5 +14,6 @@ for back-buttons in the titlebar.
 | ----------- |:--------------:| ------------:|
 |icon **(required)**|string|
 |color|custom|<br>Default: 'transparent'
+|iconSize|string|Size of the icon child component (check <Icon />) *<br>Default: 's'
 |iconColor|string|<br>Default: 'lightBlack'
 |onClick|func|
