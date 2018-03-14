@@ -33,6 +33,6 @@ const ShowNotification = () => (
 ## Usage
 | Name        | Type           | Description  |
 | ----------- |:--------------:| ------------:|
-|color **(required)**|string|<br>Default: 'primary'
+|color|string|<br>Default: 'primary'
 |children **(required)**|node|
-|onTimeout **(required)**|func|<br>Default: _ => _
+|onTimeout|func|<br>Default: _ => _

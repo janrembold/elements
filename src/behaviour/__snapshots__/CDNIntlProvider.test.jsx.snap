@@ -12,12 +12,6 @@ exports[`Check the CDNIntlProvider component should fetch the corresponding loca
 </span>
 `;
 
-exports[`Check the CDNIntlProvider component should use an alternative fetch method 1`] = `
-<span>
-  こんにちは世界
-</span>
-`;
-
 exports[`Check the CDNIntlProvider component should use the correct stage 1`] = `
 <CDNIntlProvider
   locale="fr_FR"

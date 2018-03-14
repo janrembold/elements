@@ -1,18 +1,17 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { IntlProvider } from 'react-intl'
+import 'cross-fetch/polyfill'
 
 export const loadLanguage = async (
   resourcePath,
   project,
   variation,
   locale,
-  stage,
-  fetchMethod
+  stage
 ) => {
   const countryCode = locale.split('_')[0]
-  const localFetch = fetchMethod || fetch
-  const translations = await localFetch(
+  const translations = await fetch(
     `${resourcePath}/${project}/${stage}/i18n/${countryCode}/${variation}.json`
   )
   return translations.json()
@@ -21,8 +20,6 @@ export const loadLanguage = async (
 class CDNIntlProvider extends React.Component {
   static propTypes = {
     children: PropTypes.node,
-    /** Optional alternative fetch like method */
-    fetchMethod: PropTypes.func,
     /** Locale you like to get, EN_us, DE_de */
     locale: PropTypes.string.isRequired,
     /** Optionally pass messages. This will prevent initial loading. */
@@ -72,15 +69,14 @@ class CDNIntlProvider extends React.Component {
   }
 
   loadLanguages = async props => {
-    const { project, variation, locale, stage, fetchMethod } = props
+    const { project, variation, locale, stage } = props
 
     const messages = await loadLanguage(
       this.context.resourcePath,
       project,
       variation,
       locale,
-      stage,
-      fetchMethod
+      stage
     )
     this.setState({
       loaded: true,

@@ -12,4 +12,4 @@ https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation#Valida
 | Name        | Type           | Description  |
 | ----------- |:--------------:| ------------:|
 |validity|shape|<br>Default: {}
-|children **(required)**|node|<br>Default: null
+|children|node|<br>Default: null

@@ -17,7 +17,10 @@ const styles = {
       height: '25px',
       width: '25px',
       backgroundColor: checked && background,
-      border: checked ? 0 : '3px solid lightGrey',
+      borderWidth: 3,
+      borderStyle: 'solid',
+      borderColor: checked ? background : 'lightGrey',
+      transition: '250ms',
     }),
   text: css({
     width: 200,
@@ -77,21 +80,31 @@ class Checkbox extends React.Component {
         {({ theme, colorize }) => (
           <ListItem backgroundColor={colorize(backgroundColor)}>
             <View direction="row" alignV="center">
-              <Relative {...styles.checkbox(theme.primary, realChecked)}>
-                <Absolute top={1} left={5}>
+              <Relative
+                direction="row"
+                alignV="center"
+                alignH="center"
+                {...styles.checkbox(theme.primary, realChecked)}
+              >
+                <Relative bottom={1}>
                   <Icon
                     name="check-filled"
                     size={14}
                     color={`rgba(255,255,255,${realChecked ? '1' : '0.3'})`}
                   />
-                </Absolute>
-                <Absolute top={0} left={0}>
+                </Relative>
+                <Absolute top={0} left={0} right={0} bottom={0}>
                   <input
                     type="checkbox"
                     checked={realChecked}
                     id={name}
                     value={realChecked}
-                    style={{ opacity: 0, width: '25px', height: '25px' }}
+                    style={{
+                      opacity: 0,
+                      width: '25px',
+                      height: '25px',
+                      margin: 0,
+                    }}
                     onChange={changeHandler}
                     {...props}
                   />

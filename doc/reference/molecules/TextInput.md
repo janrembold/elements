@@ -15,6 +15,7 @@ TextInputs are used to allow users to enter information like names, numbers, url
 |defaultValue|string|The default value to put into the component, without making it controlled
 |required|bool|Indicates that this field is required<br>Default: false
 |name **(required)**|string|The name of this input field
+|label|string|The label of the input
 |type|enum|Type, can be: 'tel', 'number', 'text', 'url', 'email'<br>Default: 'text'
 |onChange|func|Called, when the users changes something
 |value|string|The value, makes this component a controlled component

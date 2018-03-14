@@ -25,7 +25,6 @@ class ResourceProvider extends React.Component {
 
   static defaultProps = {
     resourcePath: RESOURCE_PATH,
-    children: null,
   }
 
   render() {

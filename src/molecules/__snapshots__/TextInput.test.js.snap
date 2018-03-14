@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput renders 1`] = `
+.css-lwcmpf,
+[data-css-lwcmpf] {
+  position: absolute;
+  left: 15px;
+  font-size: 10px;
+  opacity: 0;
+  transition: all .225s ease-out;
+  -webkit-transition: all .225s ease-out;
+  -moz-transition: all .225s ease-out;
+}
+
+.css-ouc013,
+[data-css-ouc013] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  padding-top: 0;
+  transition: all .225s ease-out;
+  border: 0;
+  -webkit-transition: all .225s ease-out;
+  -moz-transition: all .225s ease-out;
+}
+
+.css-dau5wj,
+[data-css-dau5wj] {
+  min-height: 50px;
+  border-bottom: 1px solid #ecf0f1;
+  background-color: white;
+}
+
+.css-h7582n,
+[data-css-h7582n] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-13azwyo,
+[data-css-13azwyo] {
+  position: relative;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-b05tpj,
+[data-css-b05tpj] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #626262;
+}
+
+<div
+  data-css-dau5wj=""
+  data-css-h7582n=""
+>
+  <div
+    data-css-13azwyo=""
+    data-css-4p3ux5=""
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      data-css-4p3ux5=""
+      data-css-lwcmpf=""
+      style={
+        Object {
+          "opacity": 0,
+          "top": 12,
+        }
+      }
+    >
+      <div
+        data-css-4p3ux5=""
+        data-css-b05tpj=""
+      >
+        E-Mail
+         
+        *
+      </div>
+    </div>
+    <input
+      aria-required={true}
+      data-css-ouc013=""
+      name="email"
+      onChange={[Function]}
+      onInvalid={[Function]}
+      placeholder="E-Mail"
+      required={true}
+      type="email"
+    />
+  </div>
+</div>
+`;
