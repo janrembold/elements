@@ -201,7 +201,7 @@ class Input extends React.Component {
                 }}
               >
                 <Text color="secondaryText" size="xs">
-                  {label} {required && '*'}
+                  {label} {required && label && '*'}
                 </Text>
               </View>
               {this.state.message && (
