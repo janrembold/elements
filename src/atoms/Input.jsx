@@ -92,7 +92,7 @@ InputError.propTypes = {
  * <TextInput name="inquiry" lines={5} placeholder="Your question" maxLength={255} minLength={50} />
  * ```
  */
-class TextInput extends React.Component {
+class Input extends React.Component {
   static propTypes = {
     /** The default value to put into the component, without making it controlled */
     defaultValue: PropTypes.string,
@@ -256,9 +256,9 @@ class TextInput extends React.Component {
   }
 }
 
-TextInput.contextTypes = {
+Input.contextTypes = {
   validity: PropTypes.object,
   STATES: PropTypes.array,
 }
 
-export default TextInput
+export default Input
