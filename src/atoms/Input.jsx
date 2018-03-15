@@ -15,13 +15,13 @@ const styles = {
       width: '100%',
       padding: '0 15px',
       paddingTop: showLabel ? 10 : 0,
-      transition: 'all .225s ease-out',
+      transition: 'padding-top .225s ease-out',
       border: 0,
     }),
   area: (textColor, lines, showLabel) =>
     css(createTextStyles({ size: 'm' }), {
       boxSizing: 'border-box',
-      transition: 'all .225s ease-out',
+      transition: 'padding-top .225s ease-out',
       height: `calc(30px*${lines})`,
       width: '100%',
       padding: '10px 15px',
