@@ -179,7 +179,7 @@ class TextInput extends React.Component {
   handleMessageClick = () => this.setState({ message: null })
 
   render() {
-    const { required, backgroundColor, lines, label, ...props } = this.props
+    const { required, lines, label, ...props } = this.props
     const currentValue = this.props.value || this.state.value
     const labelVisible = currentValue.length > 0
     const showLabel = label && currentValue.length > 0
