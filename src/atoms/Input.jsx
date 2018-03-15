@@ -183,7 +183,7 @@ class Input extends React.Component {
   handleMessageClick = () => this.setState({ message: null })
 
   render() {
-    const { required, onInputRef, lines, label, ...props } = this.props
+    const { required, onInputRef, lines, label, pattern, ...props } = this.props
     const currentValue = this.props.value || this.state.value
     const labelVisible = currentValue.length > 0
     const showLabel = label && currentValue.length > 0
@@ -219,6 +219,7 @@ class Input extends React.Component {
                   {...props}
                   onInvalid={this.handleInvalid}
                   onKeyUp={this.handleChange}
+                  pattern={pattern}
                 />
               ) : (
                 <textarea
@@ -228,15 +229,17 @@ class Input extends React.Component {
                   onChange={this.handleChange}
                 />
               )}
-              {this.input &&
+              {pattern &&
+                this.input &&
                 this.input.validity &&
                 this.input.validity.valid && (
                   <View
-                    style={{
+                    {...css({
                       position: 'absolute',
                       top: 16,
                       right: 15,
-                    }}
+                      pointerEvents: 'none',
+                    })}
                   >
                     <Icon name="checkFilled" size="xs" color="lightGrey" />
                   </View>
