@@ -213,7 +213,6 @@ class Input extends React.Component {
                 <input
                   ref={this.setInput}
                   {...styles.input(showLabel)}
-                  placeholder="Your text"
                   required={required}
                   aria-required={required}
                   {...props}
