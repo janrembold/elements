@@ -123,8 +123,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 0 0 auto;
 }
 
-.css-ouc013,
-[data-css-ouc013] {
+.css-vio80f,
+[data-css-vio80f] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -135,10 +135,10 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   width: 100%;
   padding: 0 15px;
   padding-top: 0;
-  transition: all .225s ease-out;
+  transition: padding-top .225s ease-out;
   border: 0;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
 }
 
 .css-b05tpj,
@@ -212,12 +212,11 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
           data-css-b05tpj=""
         >
            
-          *
         </div>
       </div>
       <input
         aria-required={true}
-        data-css-ouc013=""
+        data-css-vio80f=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
@@ -380,8 +379,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 0 0 auto;
 }
 
-.css-ouc013,
-[data-css-ouc013] {
+.css-vio80f,
+[data-css-vio80f] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -392,10 +391,10 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   width: 100%;
   padding: 0 15px;
   padding-top: 0;
-  transition: all .225s ease-out;
+  transition: padding-top .225s ease-out;
   border: 0;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
 }
 
 .css-b05tpj,
@@ -479,7 +478,6 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
           data-css-b05tpj=""
         >
            
-          *
         </div>
       </div>
       <div
@@ -500,7 +498,7 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
       </div>
       <input
         aria-required={true}
-        data-css-ouc013=""
+        data-css-vio80f=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
@@ -636,8 +634,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 0 0 auto;
 }
 
-.css-ouc013,
-[data-css-ouc013] {
+.css-vio80f,
+[data-css-vio80f] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -648,10 +646,10 @@ exports[`Check FormValidityProvider should click on the button and get a default
   width: 100%;
   padding: 0 15px;
   padding-top: 0;
-  transition: all .225s ease-out;
+  transition: padding-top .225s ease-out;
   border: 0;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
 }
 
 .css-b05tpj,
@@ -725,12 +723,11 @@ exports[`Check FormValidityProvider should click on the button and get a default
           data-css-b05tpj=""
         >
            
-          *
         </div>
       </div>
       <input
         aria-required={true}
-        data-css-ouc013=""
+        data-css-vio80f=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
@@ -893,8 +890,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 0 0 auto;
 }
 
-.css-ouc013,
-[data-css-ouc013] {
+.css-vio80f,
+[data-css-vio80f] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -905,10 +902,10 @@ exports[`Check FormValidityProvider should click on the button and get a default
   width: 100%;
   padding: 0 15px;
   padding-top: 0;
-  transition: all .225s ease-out;
+  transition: padding-top .225s ease-out;
   border: 0;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
 }
 
 .css-b05tpj,
@@ -992,7 +989,6 @@ exports[`Check FormValidityProvider should click on the button and get a default
           data-css-b05tpj=""
         >
            
-          *
         </div>
       </div>
       <div
@@ -1013,7 +1009,7 @@ exports[`Check FormValidityProvider should click on the button and get a default
       </div>
       <input
         aria-required={true}
-        data-css-ouc013=""
+        data-css-vio80f=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
