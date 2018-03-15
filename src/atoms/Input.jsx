@@ -186,7 +186,7 @@ class TextInput extends React.Component {
     const { required, onInputRef, lines, label, ...props } = this.props
     const currentValue = this.props.value || this.state.value
     const labelVisible = currentValue.length > 0
-    const showLabel = label && currentValue.length > 0s
+    const showLabel = label && currentValue.length > 0
 
     return (
       <Theme>
