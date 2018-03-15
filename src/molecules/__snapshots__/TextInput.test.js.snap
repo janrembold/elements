@@ -12,24 +12,6 @@ exports[`TextInput renders 1`] = `
   -moz-transition: all .225s ease-out;
 }
 
-.css-ouc013,
-[data-css-ouc013] {
-  display: inline;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
-  height: 50px;
-  width: 100%;
-  padding: 0 15px;
-  padding-top: 0;
-  transition: all .225s ease-out;
-  border: 0;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
-}
-
 .css-dau5wj,
 [data-css-dau5wj] {
   min-height: 50px;
@@ -59,6 +41,24 @@ exports[`TextInput renders 1`] = `
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -webkit-flex: 0 0 auto;
+}
+
+.css-ouc013,
+[data-css-ouc013] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  padding-top: 0;
+  transition: all .225s ease-out;
+  border: 0;
+  -webkit-transition: all .225s ease-out;
+  -moz-transition: all .225s ease-out;
 }
 
 .css-13azwyo,
@@ -119,8 +119,8 @@ exports[`TextInput renders 1`] = `
       aria-required={true}
       data-css-ouc013=""
       name="email"
-      onChange={[Function]}
       onInvalid={[Function]}
+      onKeyUp={[Function]}
       placeholder="E-Mail"
       required={true}
       type="email"
