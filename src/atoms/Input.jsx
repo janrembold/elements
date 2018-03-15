@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import View from '../atoms/View'
 import { css } from 'glamor'
 import Theme from '../behaviour/Theme'
@@ -191,67 +191,65 @@ class Input extends React.Component {
     return (
       <Theme>
         {({ theme, colorize }) => (
-          <Fragment>
-            <Relative style={{ width: '100%' }}>
-              <View
-                {...styles.label}
-                style={{
-                  opacity: labelVisible ? 1 : 0,
-                  top: labelVisible ? 8 : 12,
-                }}
-              >
-                <Text color="secondaryText" size="xs">
-                  {label} {required && label && '*'}
-                </Text>
-              </View>
-              {this.state.message && (
-                <InputError onClick={this.handleMessageClick}>
-                  {this.state.message}
-                </InputError>
-              )}
-              {lines === 1 ? (
-                <input
-                  ref={this.setInput}
-                  {...styles.input(showLabel)}
-                  required={required}
-                  aria-required={required}
-                  {...props}
-                  onInvalid={this.handleInvalid}
-                  onKeyUp={this.handleChange}
-                  pattern={pattern}
-                />
-              ) : (
-                <textarea
-                  {...styles.area(theme.secondaryText, lines, showLabel)}
-                  {...props}
-                  ref={onInputRef}
-                  onChange={this.handleChange}
-                />
-              )}
-              {pattern &&
-                this.input &&
-                this.input.validity &&
-                this.input.validity.valid && (
-                  <View
-                    {...css({
-                      position: 'absolute',
-                      top: 16,
-                      right: 15,
-                      pointerEvents: 'none',
-                    })}
-                  >
-                    <Icon name="checkFilled" size="xs" color="lightGrey" />
-                  </View>
-                )}
-              {props.maxLength && (
-                <View {...styles.placeholder}>
-                  <Text color="secondaryText" size="s">
-                    {this.state.length}/{props.maxLength}
-                  </Text>
+          <Relative style={{ width: '100%' }}>
+            <View
+              {...styles.label}
+              style={{
+                opacity: labelVisible ? 1 : 0,
+                top: labelVisible ? 8 : 12,
+              }}
+            >
+              <Text color="secondaryText" size="xs">
+                {label} {required && label && '*'}
+              </Text>
+            </View>
+            {this.state.message && (
+              <InputError onClick={this.handleMessageClick}>
+                {this.state.message}
+              </InputError>
+            )}
+            {lines === 1 ? (
+              <input
+                ref={this.setInput}
+                {...styles.input(showLabel)}
+                required={required}
+                aria-required={required}
+                {...props}
+                onInvalid={this.handleInvalid}
+                onKeyUp={this.handleChange}
+                pattern={pattern}
+              />
+            ) : (
+              <textarea
+                {...styles.area(theme.secondaryText, lines, showLabel)}
+                {...props}
+                ref={onInputRef}
+                onChange={this.handleChange}
+              />
+            )}
+            {pattern &&
+              this.input &&
+              this.input.validity &&
+              this.input.validity.valid && (
+                <View
+                  {...css({
+                    position: 'absolute',
+                    top: 16,
+                    right: 15,
+                    pointerEvents: 'none',
+                  })}
+                >
+                  <Icon name="checkFilled" size="xs" color="lightGrey" />
                 </View>
               )}
-            </Relative>
-          </Fragment>
+            {props.maxLength && (
+              <View {...styles.placeholder}>
+                <Text color="secondaryText" size="s">
+                  {this.state.length}/{props.maxLength}
+                </Text>
+              </View>
+            )}
+          </Relative>
         )}
       </Theme>
     )
