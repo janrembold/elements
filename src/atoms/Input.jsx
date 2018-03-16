@@ -192,17 +192,19 @@ class Input extends React.Component {
       <Theme>
         {({ theme, colorize }) => (
           <Relative style={{ width: '100%' }}>
-            <View
-              {...styles.label}
-              style={{
-                opacity: labelVisible ? 1 : 0,
-                top: labelVisible ? 8 : 12,
-              }}
-            >
-              <Text color="secondaryText" size="xs">
-                {label} {required && label && '*'}
-              </Text>
-            </View>
+            {label && (
+              <View
+                {...styles.label}
+                style={{
+                  opacity: labelVisible ? 1 : 0,
+                  top: labelVisible ? 8 : 12,
+                }}
+              >
+                <Text color="secondaryText" size="xs">
+                  {label} {required && '*'}
+                </Text>
+              </View>
+            )}
             {this.state.message && (
               <InputError onClick={this.handleMessageClick}>
                 {this.state.message}
