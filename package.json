@@ -88,6 +88,7 @@
     "react": "16.2.0",
     "react-docgen": "2.20.1",
     "react-dom": "16.2.0",
+    "react-generate-props": "0.3.0",
     "react-test-renderer": "16.2.0",
     "rimraf": "2.6.2"
   },
