@@ -1,6 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input component should render with all props 1`] = `
+.css-7z5u2j,
+[data-css-7z5u2j] {
+  background-color: #c1392b;
+  position: absolute;
+  bottom: 100%;
+  left: 0px;
+  z-index: 40;
+  width: 100%;
+  padding: 12px 15px 15px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 1px rgba(0,0,0,.25);
+}
+
+.css-h34r0x,
+[data-css-h34r0x] {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -10px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #c1392b;
+}
+
 .css-lwcmpf,
 [data-css-lwcmpf] {
   position: absolute;
@@ -59,6 +86,16 @@ exports[`Input component should render with all props 1`] = `
   color: #626262;
 }
 
+.css-1xcgwwg,
+[data-css-1xcgwwg] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+}
+
 .css-1u2d6au,
 [data-css-1u2d6au] {
   display: block;
@@ -96,6 +133,22 @@ exports[`Input component should render with all props 1`] = `
        
       *
     </div>
+  </div>
+  <div
+    data-css-4p3ux5=""
+    data-css-7z5u2j=""
+    onClick={[Function]}
+  >
+    <div
+      data-css-1xcgwwg=""
+      data-css-4p3ux5=""
+    >
+      node
+    </div>
+    <div
+      data-css-4p3ux5=""
+      data-css-h34r0x=""
+    />
   </div>
   <input
     aria-required={true}
