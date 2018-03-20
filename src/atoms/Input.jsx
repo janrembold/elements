@@ -127,31 +127,20 @@ class Input extends React.Component {
     maxLength: PropTypes.number,
     /** Called with the input field a reference */
     onInputRef: PropTypes.func,
-    /** An error can be passed to the input field, for example for server side errors */
-    error: PropTypes.node,
-    /** Is called when the error should not be displayed anymore */
-    onRequestErrorClose: PropTypes.func,
   }
 
   state = {
     value: '',
     visible: true,
-    message: this.props.error,
+    message: null,
     length: (this.props.value && this.props.value.length) || 0,
   }
 
   static defaultProps = {
     required: false,
     lines: 1,
-    onInputRef: () => {},
-    onRequestErrorClose: () => {},
+    onInputRef: _ => _,
     type: 'text',
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (this.props.error !== nextProps.error) {
-      this.setState({ message: nextProps.error })
-    }
   }
 
   handleInvalid = e => {
@@ -191,22 +180,10 @@ class Input extends React.Component {
     this.props.onChange && this.props.onChange(e)
   }
 
-  handleMessageClick = () => {
-    this.setState({ message: null })
-    this.props.onRequestErrorClose()
-  }
+  handleMessageClick = () => this.setState({ message: null })
 
   render() {
-    const {
-      required,
-      onInputRef,
-      lines,
-      label,
-      pattern,
-      error,
-      onRequestErrorClose,
-      ...props
-    } = this.props
+    const { required, onInputRef, lines, label, pattern, ...props } = this.props
     const currentValue = this.props.value || this.state.value
     const labelVisible = currentValue.length > 0
     const showLabel = label && currentValue.length > 0
