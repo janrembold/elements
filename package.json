@@ -85,10 +85,10 @@
     "markdown-extract": "1.0.2",
     "path": "0.12.7",
     "prettier": "1.11.1",
-    "react": "16.2.0",
+    "react": "16.3.1",
     "react-docgen": "2.20.1",
-    "react-dom": "16.2.0",
-    "react-test-renderer": "16.2.0",
+    "react-dom": "16.3.1",
+    "react-test-renderer": "16.3.1",
     "rimraf": "2.6.2"
   },
   "prettier": {
