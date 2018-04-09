@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component should render with all props 1`] = `
+.css-lwcmpf,
+[data-css-lwcmpf] {
+  position: absolute;
+  left: 15px;
+  font-size: 10px;
+  opacity: 0;
+  transition: all .225s ease-out;
+  -webkit-transition: all .225s ease-out;
+  -moz-transition: all .225s ease-out;
+}
+
+.css-z169em,
+[data-css-z169em] {
+  position: absolute;
+  bottom: 2px;
+  right: 15px;
+}
+
+.css-injevu,
+[data-css-injevu] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  padding-top: 10px;
+  transition: padding-top .225s ease-out;
+  border: 0;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
+}
+
+.css-13azwyo,
+[data-css-13azwyo] {
+  position: relative;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-b05tpj,
+[data-css-b05tpj] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #626262;
+}
+
+.css-1u2d6au,
+[data-css-1u2d6au] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #626262;
+}
+
+<div
+  data-css-13azwyo=""
+  data-css-4p3ux5=""
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <div
+    data-css-4p3ux5=""
+    data-css-lwcmpf=""
+    style={
+      Object {
+        "opacity": 1,
+        "top": 8,
+      }
+    }
+  >
+    <div
+      data-css-4p3ux5=""
+      data-css-b05tpj=""
+    >
+      string
+       
+      *
+    </div>
+  </div>
+  <input
+    aria-required={true}
+    data-css-injevu=""
+    defaultValue="string"
+    maxLength={1}
+    minLength={1}
+    name="string"
+    onChange={[Function]}
+    onInvalid={[Function]}
+    onKeyUp={[Function]}
+    pattern="string"
+    required={true}
+    type="text"
+    value="string"
+  />
+  <div
+    data-css-4p3ux5=""
+    data-css-z169em=""
+  >
+    <div
+      data-css-1u2d6au=""
+      data-css-4p3ux5=""
+    >
+      6
+      /
+      1
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Input component should render with required props only 1`] = `
+.css-13azwyo,
+[data-css-13azwyo] {
+  position: relative;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-vio80f,
+[data-css-vio80f] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  padding-top: 0;
+  transition: padding-top .225s ease-out;
+  border: 0;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
+}
+
+<div
+  data-css-13azwyo=""
+  data-css-4p3ux5=""
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <input
+    aria-required={false}
+    data-css-vio80f=""
+    name="string"
+    onInvalid={[Function]}
+    onKeyUp={[Function]}
+    pattern={undefined}
+    required={false}
+    type="text"
+  />
+</div>
+`;

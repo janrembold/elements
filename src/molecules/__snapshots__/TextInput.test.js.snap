@@ -43,8 +43,8 @@ exports[`TextInput renders 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-ouc013,
-[data-css-ouc013] {
+.css-vio80f,
+[data-css-vio80f] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -55,10 +55,10 @@ exports[`TextInput renders 1`] = `
   width: 100%;
   padding: 0 15px;
   padding-top: 0;
-  transition: all .225s ease-out;
+  transition: padding-top .225s ease-out;
   border: 0;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
 }
 
 .css-13azwyo,
@@ -117,10 +117,11 @@ exports[`TextInput renders 1`] = `
     </div>
     <input
       aria-required={true}
-      data-css-ouc013=""
+      data-css-vio80f=""
       name="email"
       onInvalid={[Function]}
       onKeyUp={[Function]}
+      pattern={undefined}
       placeholder="E-Mail"
       required={true}
       type="email"

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import View from '../atoms/View'
 import { css } from 'glamor'
 import Theme from '../behaviour/Theme'
@@ -15,13 +15,13 @@ const styles = {
       width: '100%',
       padding: '0 15px',
       paddingTop: showLabel ? 10 : 0,
-      transition: 'all .225s ease-out',
+      transition: 'padding-top .225s ease-out',
       border: 0,
     }),
   area: (textColor, lines, showLabel) =>
     css(createTextStyles({ size: 'm' }), {
       boxSizing: 'border-box',
-      transition: 'all .225s ease-out',
+      transition: 'padding-top .225s ease-out',
       height: `calc(30px*${lines})`,
       width: '100%',
       padding: '10px 15px',
@@ -92,7 +92,7 @@ InputError.propTypes = {
  * <TextInput name="inquiry" lines={5} placeholder="Your question" maxLength={255} minLength={50} />
  * ```
  */
-class TextInput extends React.Component {
+class Input extends React.Component {
   static propTypes = {
     /** The default value to put into the component, without making it controlled */
     defaultValue: PropTypes.string,
@@ -183,7 +183,7 @@ class TextInput extends React.Component {
   handleMessageClick = () => this.setState({ message: null })
 
   render() {
-    const { required, onInputRef, lines, label, ...props } = this.props
+    const { required, onInputRef, lines, label, pattern, ...props } = this.props
     const currentValue = this.props.value || this.state.value
     const labelVisible = currentValue.length > 0
     const showLabel = label && currentValue.length > 0
@@ -191,8 +191,8 @@ class TextInput extends React.Component {
     return (
       <Theme>
         {({ theme, colorize }) => (
-          <Fragment>
-            <Relative style={{ width: '100%' }}>
+          <Relative style={{ width: '100%' }}>
+            {label && (
               <View
                 {...styles.label}
                 style={{
@@ -204,61 +204,63 @@ class TextInput extends React.Component {
                   {label} {required && '*'}
                 </Text>
               </View>
-              {this.state.message && (
-                <InputError onClick={this.handleMessageClick}>
-                  {this.state.message}
-                </InputError>
-              )}
-              {lines === 1 ? (
-                <input
-                  ref={this.setInput}
-                  {...styles.input(showLabel)}
-                  placeholder="Your text"
-                  required={required}
-                  aria-required={required}
-                  {...props}
-                  onInvalid={this.handleInvalid}
-                  onKeyUp={this.handleChange}
-                />
-              ) : (
-                <textarea
-                  {...styles.area(theme.secondaryText, lines, showLabel)}
-                  {...props}
-                  ref={onInputRef}
-                  onChange={this.handleChange}
-                />
-              )}
-              {this.input &&
-                this.input.validity &&
-                this.input.validity.valid && (
-                  <View
-                    style={{
-                      position: 'absolute',
-                      top: 16,
-                      right: 15,
-                    }}
-                  >
-                    <Icon name="checkFilled" size="xs" color="lightGrey" />
-                  </View>
-                )}
-              {props.maxLength && (
-                <View {...styles.placeholder}>
-                  <Text color="secondaryText" size="s">
-                    {this.state.length}/{props.maxLength}
-                  </Text>
+            )}
+            {this.state.message && (
+              <InputError onClick={this.handleMessageClick}>
+                {this.state.message}
+              </InputError>
+            )}
+            {lines === 1 ? (
+              <input
+                ref={this.setInput}
+                {...styles.input(showLabel)}
+                required={required}
+                aria-required={required}
+                {...props}
+                onInvalid={this.handleInvalid}
+                onKeyUp={this.handleChange}
+                pattern={pattern}
+              />
+            ) : (
+              <textarea
+                {...styles.area(theme.secondaryText, lines, showLabel)}
+                {...props}
+                ref={onInputRef}
+                onChange={this.handleChange}
+              />
+            )}
+            {pattern &&
+              this.input &&
+              this.input.validity &&
+              this.input.validity.valid && (
+                <View
+                  {...css({
+                    position: 'absolute',
+                    top: 16,
+                    right: 15,
+                    pointerEvents: 'none',
+                  })}
+                >
+                  <Icon name="checkFilled" size="xs" color="lightGrey" />
                 </View>
               )}
-            </Relative>
-          </Fragment>
+            {props.maxLength && (
+              <View {...styles.placeholder}>
+                <Text color="secondaryText" size="s">
+                  {this.state.length}/{props.maxLength}
+                </Text>
+              </View>
+            )}
+          </Relative>
         )}
       </Theme>
     )
   }
 }
 
-TextInput.contextTypes = {
+Input.contextTypes = {
   validity: PropTypes.object,
   STATES: PropTypes.array,
 }
 
-export default TextInput
+export default Input

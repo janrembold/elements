@@ -18,17 +18,6 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-justify-content: center;
 }
 
-.css-lwcmpf,
-[data-css-lwcmpf] {
-  position: absolute;
-  left: 15px;
-  font-size: 10px;
-  opacity: 0;
-  transition: all .225s ease-out;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
-}
-
 .css-13azwyo,
 [data-css-13azwyo] {
   position: relative;
@@ -123,8 +112,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 0 0 auto;
 }
 
-.css-ouc013,
-[data-css-ouc013] {
+.css-vio80f,
+[data-css-vio80f] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -135,20 +124,10 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   width: 100%;
   padding: 0 15px;
   padding-top: 0;
-  transition: all .225s ease-out;
+  transition: padding-top .225s ease-out;
   border: 0;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
-}
-
-.css-b05tpj,
-[data-css-b05tpj] {
-  display: block;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 10px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #626262;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
 }
 
 <form
@@ -197,27 +176,9 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
         }
       }
     >
-      <div
-        data-css-4p3ux5=""
-        data-css-lwcmpf=""
-        style={
-          Object {
-            "opacity": 0,
-            "top": 12,
-          }
-        }
-      >
-        <div
-          data-css-4p3ux5=""
-          data-css-b05tpj=""
-        >
-           
-          *
-        </div>
-      </div>
       <input
         aria-required={true}
-        data-css-ouc013=""
+        data-css-vio80f=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
@@ -275,17 +236,6 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   border-top: 10px solid #c1392b;
 }
 
-.css-lwcmpf,
-[data-css-lwcmpf] {
-  position: absolute;
-  left: 15px;
-  font-size: 10px;
-  opacity: 0;
-  transition: all .225s ease-out;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
-}
-
 .css-13azwyo,
 [data-css-13azwyo] {
   position: relative;
@@ -380,8 +330,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 0 0 auto;
 }
 
-.css-ouc013,
-[data-css-ouc013] {
+.css-vio80f,
+[data-css-vio80f] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -392,20 +342,10 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   width: 100%;
   padding: 0 15px;
   padding-top: 0;
-  transition: all .225s ease-out;
+  transition: padding-top .225s ease-out;
   border: 0;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
-}
-
-.css-b05tpj,
-[data-css-b05tpj] {
-  display: block;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 10px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #626262;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
 }
 
 .css-1xcgwwg,
@@ -466,24 +406,6 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
     >
       <div
         data-css-4p3ux5=""
-        data-css-lwcmpf=""
-        style={
-          Object {
-            "opacity": 0,
-            "top": 12,
-          }
-        }
-      >
-        <div
-          data-css-4p3ux5=""
-          data-css-b05tpj=""
-        >
-           
-          *
-        </div>
-      </div>
-      <div
-        data-css-4p3ux5=""
         data-css-7z5u2j=""
         onClick={[Function]}
       >
@@ -500,7 +422,7 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
       </div>
       <input
         aria-required={true}
-        data-css-ouc013=""
+        data-css-vio80f=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
@@ -529,17 +451,6 @@ exports[`Check FormValidityProvider should click on the button and get a default
   border: 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-}
-
-.css-lwcmpf,
-[data-css-lwcmpf] {
-  position: absolute;
-  left: 15px;
-  font-size: 10px;
-  opacity: 0;
-  transition: all .225s ease-out;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
 }
 
 .css-13azwyo,
@@ -636,8 +547,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 0 0 auto;
 }
 
-.css-ouc013,
-[data-css-ouc013] {
+.css-vio80f,
+[data-css-vio80f] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -648,20 +559,10 @@ exports[`Check FormValidityProvider should click on the button and get a default
   width: 100%;
   padding: 0 15px;
   padding-top: 0;
-  transition: all .225s ease-out;
+  transition: padding-top .225s ease-out;
   border: 0;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
-}
-
-.css-b05tpj,
-[data-css-b05tpj] {
-  display: block;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 10px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #626262;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
 }
 
 <form
@@ -710,27 +611,9 @@ exports[`Check FormValidityProvider should click on the button and get a default
         }
       }
     >
-      <div
-        data-css-4p3ux5=""
-        data-css-lwcmpf=""
-        style={
-          Object {
-            "opacity": 0,
-            "top": 12,
-          }
-        }
-      >
-        <div
-          data-css-4p3ux5=""
-          data-css-b05tpj=""
-        >
-           
-          *
-        </div>
-      </div>
       <input
         aria-required={true}
-        data-css-ouc013=""
+        data-css-vio80f=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
@@ -788,17 +671,6 @@ exports[`Check FormValidityProvider should click on the button and get a default
   border-top: 10px solid #c1392b;
 }
 
-.css-lwcmpf,
-[data-css-lwcmpf] {
-  position: absolute;
-  left: 15px;
-  font-size: 10px;
-  opacity: 0;
-  transition: all .225s ease-out;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
-}
-
 .css-13azwyo,
 [data-css-13azwyo] {
   position: relative;
@@ -893,8 +765,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 0 0 auto;
 }
 
-.css-ouc013,
-[data-css-ouc013] {
+.css-vio80f,
+[data-css-vio80f] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -905,20 +777,10 @@ exports[`Check FormValidityProvider should click on the button and get a default
   width: 100%;
   padding: 0 15px;
   padding-top: 0;
-  transition: all .225s ease-out;
+  transition: padding-top .225s ease-out;
   border: 0;
-  -webkit-transition: all .225s ease-out;
-  -moz-transition: all .225s ease-out;
-}
-
-.css-b05tpj,
-[data-css-b05tpj] {
-  display: block;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 10px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #626262;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
 }
 
 .css-1xcgwwg,
@@ -979,24 +841,6 @@ exports[`Check FormValidityProvider should click on the button and get a default
     >
       <div
         data-css-4p3ux5=""
-        data-css-lwcmpf=""
-        style={
-          Object {
-            "opacity": 0,
-            "top": 12,
-          }
-        }
-      >
-        <div
-          data-css-4p3ux5=""
-          data-css-b05tpj=""
-        >
-           
-          *
-        </div>
-      </div>
-      <div
-        data-css-4p3ux5=""
         data-css-7z5u2j=""
         onClick={[Function]}
       >
@@ -1013,7 +857,7 @@ exports[`Check FormValidityProvider should click on the button and get a default
       </div>
       <input
         aria-required={true}
-        data-css-ouc013=""
+        data-css-vio80f=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
