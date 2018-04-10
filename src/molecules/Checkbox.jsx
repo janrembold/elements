@@ -86,13 +86,11 @@ class Checkbox extends React.Component {
                 alignH="center"
                 {...styles.checkbox(theme.primary, realChecked)}
               >
-                <Relative bottom={1}>
-                  <Icon
-                    name="check-filled"
-                    size={14}
-                    color={`rgba(255,255,255,${realChecked ? '1' : '0.3'})`}
-                  />
-                </Relative>
+                {realChecked && (
+                  <Relative bottom={1}>
+                    <Icon name="check-filled" size={14} color="#fff" />
+                  </Relative>
+                )}
                 <Absolute top={0} left={0} right={0} bottom={0}>
                   <input
                     type="checkbox"
