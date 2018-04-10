@@ -32,6 +32,7 @@ class SimpleLayout extends React.PureComponent {
   static propTypes = {
     children: PropTypes.node,
     backgroundColor: color,
+    flex: PropTypes.string,
     follow: PropTypes.bool,
     padded: PropTypes.oneOfType([
       PropTypes.bool,
@@ -43,6 +44,7 @@ class SimpleLayout extends React.PureComponent {
 
   static defaultProps = {
     backgroundColor: 'background',
+    flex: 'flex',
   }
 
   state = {
@@ -110,7 +112,7 @@ class SimpleLayout extends React.PureComponent {
   }
 
   render() {
-    const { children, backgroundColor, padded } = this.props
+    const { children, backgroundColor, padded, flex } = this.props
 
     return (
       <Theme>
@@ -122,7 +124,7 @@ class SimpleLayout extends React.PureComponent {
             {value => (
               <View
                 direction="column"
-                flex="flex"
+                flex={flex}
                 onTouchStart={this.handleTouchStart}
                 onTouchMove={this.handleTouchMove}
                 onTouchEnd={this.handleTouchEnd}
