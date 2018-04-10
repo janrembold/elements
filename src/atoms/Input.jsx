@@ -17,6 +17,13 @@ const styles = {
       paddingTop: showLabel ? 10 : 0,
       transition: 'padding-top .225s ease-out',
       border: 0,
+      '&:-webkit-autofill ~ div': {
+        opacity: '1 !important',
+        top: 8,
+      },
+      '&:-webkit-autofill': {
+        paddingTop: '10px !important',
+      },
     }),
   area: (textColor, lines, showLabel) =>
     css(createTextStyles({ size: 'm' }), {
@@ -192,19 +199,6 @@ class Input extends React.Component {
       <Theme>
         {({ theme, colorize }) => (
           <Relative style={{ width: '100%' }}>
-            {label && (
-              <View
-                {...styles.label}
-                style={{
-                  opacity: labelVisible ? 1 : 0,
-                  top: labelVisible ? 8 : 12,
-                }}
-              >
-                <Text color="secondaryText" size="xs">
-                  {label} {required && '*'}
-                </Text>
-              </View>
-            )}
             {this.state.message && (
               <InputError onClick={this.handleMessageClick}>
                 {this.state.message}
@@ -228,6 +222,19 @@ class Input extends React.Component {
                 ref={onInputRef}
                 onChange={this.handleChange}
               />
+            )}
+            {label && (
+              <View
+                {...styles.label}
+                style={{
+                  opacity: labelVisible ? 1 : 0,
+                  top: labelVisible ? 8 : 12,
+                }}
+              >
+                <Text color="secondaryText" size="xs">
+                  {label} {required && '*'}
+                </Text>
+              </View>
             )}
             {pattern &&
               this.input &&
