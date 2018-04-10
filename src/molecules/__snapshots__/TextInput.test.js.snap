@@ -43,8 +43,8 @@ exports[`TextInput renders 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-vio80f,
-[data-css-vio80f] {
+.css-1p58qxm,
+[data-css-1p58qxm] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -59,6 +59,19 @@ exports[`TextInput renders 1`] = `
   border: 0;
   -webkit-transition: padding-top .225s ease-out;
   -moz-transition: padding-top .225s ease-out;
+}
+
+.css-1p58qxm:-webkit-autofill ~ div,
+[data-css-1p58qxm]:-webkit-autofill ~ div {
+  opacity: 1 !important;
+  top: 8px;
+}
+
+.css-1p58qxm:-webkit-autofill,
+[data-css-1p58qxm]:-webkit-autofill,
+.css-1p58qxm[data-simulate-webkitautofill],
+[data-css-1p58qxm][data-simulate-webkitautofill] {
+  padding-top: 10px !important;
 }
 
 .css-13azwyo,
@@ -96,6 +109,17 @@ exports[`TextInput renders 1`] = `
       }
     }
   >
+    <input
+      aria-required={true}
+      data-css-1p58qxm=""
+      name="email"
+      onInvalid={[Function]}
+      onKeyUp={[Function]}
+      pattern={undefined}
+      placeholder="E-Mail"
+      required={true}
+      type="email"
+    />
     <div
       data-css-4p3ux5=""
       data-css-lwcmpf=""
@@ -115,17 +139,6 @@ exports[`TextInput renders 1`] = `
         *
       </div>
     </div>
-    <input
-      aria-required={true}
-      data-css-vio80f=""
-      name="email"
-      onInvalid={[Function]}
-      onKeyUp={[Function]}
-      pattern={undefined}
-      placeholder="E-Mail"
-      required={true}
-      type="email"
-    />
   </div>
 </div>
 `;

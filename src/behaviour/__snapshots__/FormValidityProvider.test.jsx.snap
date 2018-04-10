@@ -112,8 +112,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 0 0 auto;
 }
 
-.css-vio80f,
-[data-css-vio80f] {
+.css-1p58qxm,
+[data-css-1p58qxm] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -128,6 +128,19 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   border: 0;
   -webkit-transition: padding-top .225s ease-out;
   -moz-transition: padding-top .225s ease-out;
+}
+
+.css-1p58qxm:-webkit-autofill ~ div,
+[data-css-1p58qxm]:-webkit-autofill ~ div {
+  opacity: 1 !important;
+  top: 8px;
+}
+
+.css-1p58qxm:-webkit-autofill,
+[data-css-1p58qxm]:-webkit-autofill,
+.css-1p58qxm[data-simulate-webkitautofill],
+[data-css-1p58qxm][data-simulate-webkitautofill] {
+  padding-top: 10px !important;
 }
 
 <form
@@ -178,7 +191,7 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
     >
       <input
         aria-required={true}
-        data-css-vio80f=""
+        data-css-1p58qxm=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
@@ -330,8 +343,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 0 0 auto;
 }
 
-.css-vio80f,
-[data-css-vio80f] {
+.css-1p58qxm,
+[data-css-1p58qxm] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -346,6 +359,19 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   border: 0;
   -webkit-transition: padding-top .225s ease-out;
   -moz-transition: padding-top .225s ease-out;
+}
+
+.css-1p58qxm:-webkit-autofill ~ div,
+[data-css-1p58qxm]:-webkit-autofill ~ div {
+  opacity: 1 !important;
+  top: 8px;
+}
+
+.css-1p58qxm:-webkit-autofill,
+[data-css-1p58qxm]:-webkit-autofill,
+.css-1p58qxm[data-simulate-webkitautofill],
+[data-css-1p58qxm][data-simulate-webkitautofill] {
+  padding-top: 10px !important;
 }
 
 .css-1xcgwwg,
@@ -422,7 +448,7 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
       </div>
       <input
         aria-required={true}
-        data-css-vio80f=""
+        data-css-1p58qxm=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
@@ -547,8 +573,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 0 0 auto;
 }
 
-.css-vio80f,
-[data-css-vio80f] {
+.css-1p58qxm,
+[data-css-1p58qxm] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -563,6 +589,19 @@ exports[`Check FormValidityProvider should click on the button and get a default
   border: 0;
   -webkit-transition: padding-top .225s ease-out;
   -moz-transition: padding-top .225s ease-out;
+}
+
+.css-1p58qxm:-webkit-autofill ~ div,
+[data-css-1p58qxm]:-webkit-autofill ~ div {
+  opacity: 1 !important;
+  top: 8px;
+}
+
+.css-1p58qxm:-webkit-autofill,
+[data-css-1p58qxm]:-webkit-autofill,
+.css-1p58qxm[data-simulate-webkitautofill],
+[data-css-1p58qxm][data-simulate-webkitautofill] {
+  padding-top: 10px !important;
 }
 
 <form
@@ -613,7 +652,7 @@ exports[`Check FormValidityProvider should click on the button and get a default
     >
       <input
         aria-required={true}
-        data-css-vio80f=""
+        data-css-1p58qxm=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
@@ -765,8 +804,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 0 0 auto;
 }
 
-.css-vio80f,
-[data-css-vio80f] {
+.css-1p58qxm,
+[data-css-1p58qxm] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -781,6 +820,19 @@ exports[`Check FormValidityProvider should click on the button and get a default
   border: 0;
   -webkit-transition: padding-top .225s ease-out;
   -moz-transition: padding-top .225s ease-out;
+}
+
+.css-1p58qxm:-webkit-autofill ~ div,
+[data-css-1p58qxm]:-webkit-autofill ~ div {
+  opacity: 1 !important;
+  top: 8px;
+}
+
+.css-1p58qxm:-webkit-autofill,
+[data-css-1p58qxm]:-webkit-autofill,
+.css-1p58qxm[data-simulate-webkitautofill],
+[data-css-1p58qxm][data-simulate-webkitautofill] {
+  padding-top: 10px !important;
 }
 
 .css-1xcgwwg,
@@ -857,7 +909,7 @@ exports[`Check FormValidityProvider should click on the button and get a default
       </div>
       <input
         aria-required={true}
-        data-css-vio80f=""
+        data-css-1p58qxm=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
