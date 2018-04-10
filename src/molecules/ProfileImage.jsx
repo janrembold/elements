@@ -119,7 +119,7 @@ ProfileImage.propTypes = {
   children: PropTypes.node,
   image: PropTypes.string,
   showBorder: PropTypes.bool,
-  size: PropTypes.oneOf(['xs', 's', 'small', 'm', 'medium', 'l', 'big']),
+  size: PropTypes.oneOf(['xs', 's', 'm', 'l']),
 }
 
 export default ProfileImage
