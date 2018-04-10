@@ -32,8 +32,12 @@ const styles = {
 }
 
 const sizeMap = {
+  xs: 18,
+  s: 29,
   small: 29,
+  m: 40,
   medium: 40,
+  l: 225,
   big: 225,
 }
 
@@ -115,7 +119,7 @@ ProfileImage.propTypes = {
   children: PropTypes.node,
   image: PropTypes.string,
   showBorder: PropTypes.bool,
-  size: PropTypes.oneOf(['small', 'medium', 'big']),
+  size: PropTypes.oneOf(['xs', 's', 'small', 'm', 'medium', 'l', 'big']),
 }
 
 export default ProfileImage
