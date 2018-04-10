@@ -75,19 +75,6 @@ exports[`Test the checkbox component should tick it 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-13tvizl,
-[data-css-13tvizl] {
-  position: relative;
-  bottom: 1px;
-}
-
-.css-4p3ux5,
-[data-css-4p3ux5] {
-  box-sizing: border-box;
-  flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-}
-
 .css-t2hdxa,
 [data-css-t2hdxa] {
   position: absolute;
@@ -95,6 +82,13 @@ exports[`Test the checkbox component should tick it 1`] = `
   right: 0;
   left: 0;
   bottom: 0;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
 }
 
 .css-kvq3ck,
@@ -125,28 +119,6 @@ exports[`Test the checkbox component should tick it 1`] = `
       data-css-1dqgz2l=""
       data-css-1wp5mix=""
     >
-      <div
-        data-css-13tvizl=""
-        data-css-4p3ux5=""
-      >
-        <div
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": undefined,
-            }
-          }
-          data-css-4p3ux5=""
-          size={14}
-          style={
-            Object {
-              "fill": "rgba(255,255,255,0.3)",
-              "height": 14,
-              "stroke": false,
-              "width": 14,
-            }
-          }
-        />
-      </div>
       <div
         data-css-4p3ux5=""
         data-css-t2hdxa=""
@@ -249,19 +221,6 @@ exports[`Test the checkbox component should tick it 2`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-13tvizl,
-[data-css-13tvizl] {
-  position: relative;
-  bottom: 1px;
-}
-
-.css-4p3ux5,
-[data-css-4p3ux5] {
-  box-sizing: border-box;
-  flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-}
-
 .css-t2hdxa,
 [data-css-t2hdxa] {
   position: absolute;
@@ -269,6 +228,13 @@ exports[`Test the checkbox component should tick it 2`] = `
   right: 0;
   left: 0;
   bottom: 0;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
 }
 
 .css-kvq3ck,
@@ -301,6 +267,12 @@ exports[`Test the checkbox component should tick it 2`] = `
   -moz-transition: 250ms;
 }
 
+.css-13tvizl,
+[data-css-13tvizl] {
+  position: relative;
+  bottom: 1px;
+}
+
 <div
   data-css-1m9hm8a=""
   data-css-h7582n=""
@@ -327,7 +299,7 @@ exports[`Test the checkbox component should tick it 2`] = `
           size={14}
           style={
             Object {
-              "fill": "rgba(255,255,255,1)",
+              "fill": "#fff",
               "height": 14,
               "stroke": false,
               "width": 14,
@@ -442,19 +414,6 @@ exports[`Test the checkbox component should work with children 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-13tvizl,
-[data-css-13tvizl] {
-  position: relative;
-  bottom: 1px;
-}
-
-.css-4p3ux5,
-[data-css-4p3ux5] {
-  box-sizing: border-box;
-  flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-}
-
 .css-t2hdxa,
 [data-css-t2hdxa] {
   position: absolute;
@@ -462,6 +421,13 @@ exports[`Test the checkbox component should work with children 1`] = `
   right: 0;
   left: 0;
   bottom: 0;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
 }
 
 .css-kvq3ck,
@@ -500,28 +466,6 @@ exports[`Test the checkbox component should work with children 1`] = `
       data-css-1dqgz2l=""
       data-css-1wp5mix=""
     >
-      <div
-        data-css-13tvizl=""
-        data-css-4p3ux5=""
-      >
-        <div
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": undefined,
-            }
-          }
-          data-css-4p3ux5=""
-          size={14}
-          style={
-            Object {
-              "fill": "rgba(255,255,255,0.3)",
-              "height": 14,
-              "stroke": false,
-              "width": 14,
-            }
-          }
-        />
-      </div>
       <div
         data-css-4p3ux5=""
         data-css-t2hdxa=""
