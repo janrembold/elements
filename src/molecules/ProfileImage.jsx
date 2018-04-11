@@ -86,8 +86,8 @@ const ProfileImage = ({
   children,
   ...restProps
 }) => {
-  const width = sizeMap[size]
-  const height = sizeMap[size]
+  const width = typeof size === 'number' ? size : sizeMap[size]
+  const height = typeof size === 'number' ? size : sizeMap[size]
   const pointerStyle = onClick ? { ':hover': { cursor: 'pointer' } } : {}
 
   return (
@@ -119,7 +119,10 @@ ProfileImage.propTypes = {
   children: PropTypes.node,
   image: PropTypes.string,
   showBorder: PropTypes.bool,
-  size: PropTypes.oneOf(['xs', 's', 'm', 'l']),
+  size: PropTypes.oneOfType([
+    PropTypes.oneOf(['xs', 's', 'm', 'l']),
+    PropTypes.number,
+  ]),
 }
 
 export default ProfileImage
