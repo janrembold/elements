@@ -19,7 +19,7 @@ const styles = {
       border: 0,
       '&:-webkit-autofill ~ div': {
         opacity: '1 !important',
-        top: 8,
+        top: '8px !important',
       },
       '&:-webkit-autofill': {
         paddingTop: '10px !important',

@@ -43,8 +43,8 @@ exports[`TextInput renders 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-1p58qxm,
-[data-css-1p58qxm] {
+.css-14qrzmk,
+[data-css-14qrzmk] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -61,16 +61,16 @@ exports[`TextInput renders 1`] = `
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-1p58qxm:-webkit-autofill ~ div,
-[data-css-1p58qxm]:-webkit-autofill ~ div {
+.css-14qrzmk:-webkit-autofill ~ div,
+[data-css-14qrzmk]:-webkit-autofill ~ div {
   opacity: 1 !important;
-  top: 8px;
+  top: 8px !important;
 }
 
-.css-1p58qxm:-webkit-autofill,
-[data-css-1p58qxm]:-webkit-autofill,
-.css-1p58qxm[data-simulate-webkitautofill],
-[data-css-1p58qxm][data-simulate-webkitautofill] {
+.css-14qrzmk:-webkit-autofill,
+[data-css-14qrzmk]:-webkit-autofill,
+.css-14qrzmk[data-simulate-webkitautofill],
+[data-css-14qrzmk][data-simulate-webkitautofill] {
   padding-top: 10px !important;
 }
 
@@ -111,7 +111,7 @@ exports[`TextInput renders 1`] = `
   >
     <input
       aria-required={true}
-      data-css-1p58qxm=""
+      data-css-14qrzmk=""
       name="email"
       onInvalid={[Function]}
       onKeyUp={[Function]}

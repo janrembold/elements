@@ -19,8 +19,8 @@ exports[`Input component should render with all props 1`] = `
   right: 15px;
 }
 
-.css-114gx16,
-[data-css-114gx16] {
+.css-10rv4m6,
+[data-css-10rv4m6] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -37,16 +37,16 @@ exports[`Input component should render with all props 1`] = `
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-114gx16:-webkit-autofill ~ div,
-[data-css-114gx16]:-webkit-autofill ~ div {
+.css-10rv4m6:-webkit-autofill ~ div,
+[data-css-10rv4m6]:-webkit-autofill ~ div {
   opacity: 1 !important;
-  top: 8px;
+  top: 8px !important;
 }
 
-.css-114gx16:-webkit-autofill,
-[data-css-114gx16]:-webkit-autofill,
-.css-114gx16[data-simulate-webkitautofill],
-[data-css-114gx16][data-simulate-webkitautofill] {
+.css-10rv4m6:-webkit-autofill,
+[data-css-10rv4m6]:-webkit-autofill,
+.css-10rv4m6[data-simulate-webkitautofill],
+[data-css-10rv4m6][data-simulate-webkitautofill] {
   padding-top: 10px !important;
 }
 
@@ -93,7 +93,7 @@ exports[`Input component should render with all props 1`] = `
 >
   <input
     aria-required={true}
-    data-css-114gx16=""
+    data-css-10rv4m6=""
     defaultValue="string"
     maxLength={1}
     minLength={1}
@@ -154,8 +154,8 @@ exports[`Input component should render with required props only 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-1p58qxm,
-[data-css-1p58qxm] {
+.css-14qrzmk,
+[data-css-14qrzmk] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -172,16 +172,16 @@ exports[`Input component should render with required props only 1`] = `
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-1p58qxm:-webkit-autofill ~ div,
-[data-css-1p58qxm]:-webkit-autofill ~ div {
+.css-14qrzmk:-webkit-autofill ~ div,
+[data-css-14qrzmk]:-webkit-autofill ~ div {
   opacity: 1 !important;
-  top: 8px;
+  top: 8px !important;
 }
 
-.css-1p58qxm:-webkit-autofill,
-[data-css-1p58qxm]:-webkit-autofill,
-.css-1p58qxm[data-simulate-webkitautofill],
-[data-css-1p58qxm][data-simulate-webkitautofill] {
+.css-14qrzmk:-webkit-autofill,
+[data-css-14qrzmk]:-webkit-autofill,
+.css-14qrzmk[data-simulate-webkitautofill],
+[data-css-14qrzmk][data-simulate-webkitautofill] {
   padding-top: 10px !important;
 }
 
@@ -196,7 +196,7 @@ exports[`Input component should render with required props only 1`] = `
 >
   <input
     aria-required={false}
-    data-css-1p58qxm=""
+    data-css-14qrzmk=""
     name="string"
     onInvalid={[Function]}
     onKeyUp={[Function]}
