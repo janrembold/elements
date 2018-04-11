@@ -110,7 +110,7 @@ class SimpleLayout extends React.PureComponent {
   }
 
   render() {
-    const { children, backgroundColor, padded } = this.props
+    const { children, backgroundColor, padded, ...props } = this.props
 
     return (
       <Theme>
@@ -135,6 +135,7 @@ class SimpleLayout extends React.PureComponent {
                 onScroll={this.handleScroll}
                 // for e2e-tests, to scroll down on pages (id is taken for cross browser selector compat)
                 id="scroll-container"
+                {...props}
               >
                 {children}
               </View>
