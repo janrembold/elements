@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { Fragment } from 'react'
 import { IntlProvider } from 'react-intl'
 import 'cross-fetch/polyfill'
 
@@ -44,17 +44,21 @@ class CDNIntlProvider extends React.Component {
     resourcePath: PropTypes.string,
   }
 
-  constructor(props) {
-    super(props)
-
+  constructor(props, context) {
+    super(props, context)
+    const messages = props.messages
     this.state = {
-      loaded: typeof props.messages !== 'undefined',
-      messages: props.messages,
+      messages,
     }
-  }
-
-  componentWillMount() {
-    !this.props.messages && this.loadLanguages(this.props)
+    if (!messages && typeof document !== 'undefined') {
+      const container = document.getElementById('__ELEMENTS_INTL__')
+      if (container) {
+        const stateString = container.getAttribute('data-state')
+        this.state = { messages: JSON.parse(stateString) }
+      } else {
+        this.loadLanguages(props)
+      }
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -69,7 +73,7 @@ class CDNIntlProvider extends React.Component {
   }
 
   loadLanguages = async props => {
-    const { project, variation, locale, stage } = props
+    const { project, variation, locale, stage, onDone } = props
 
     const messages = await loadLanguage(
       this.context.resourcePath,
@@ -78,22 +82,29 @@ class CDNIntlProvider extends React.Component {
       locale,
       stage
     )
-    this.setState({
-      loaded: true,
-      messages,
-    })
-    props.onDone()
+
+    this.setState({ messages }, onDone)
   }
+
+  renderSideEffect = messages => (
+    <span
+      id="__ELEMENTS_INTL__"
+      style={{ display: 'none' }}
+      data-state={messages && JSON.stringify(messages)}
+    />
+  )
 
   render() {
     const countryCode = this.props.locale.split('_')[0]
+    const { messages } = this.state
 
     return (
-      this.state.loaded && (
-        <IntlProvider locale={countryCode} messages={this.state.messages}>
-          {this.props.children}
-        </IntlProvider>
-      )
+      <IntlProvider locale={countryCode} messages={messages}>
+        <Fragment>
+          {this.renderSideEffect(messages)}
+          {messages && this.props.children}
+        </Fragment>
+      </IntlProvider>
     )
   }
 }

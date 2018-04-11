@@ -1,4 +1,6 @@
 import React from 'react'
+import { renderToString } from 'react-dom/server'
+import { hydrate } from 'react-dom'
 import renderer from 'react-test-renderer'
 import { FormattedMessage } from 'react-intl'
 import CDNIntlProvider from './CDNIntlProvider'
@@ -103,5 +105,39 @@ describe('Check the CDNIntlProvider component', () => {
     )
     expect(wrapper).toMatchSnapshot()
     expect(wrapper.props().stage).toBe(stage)
+  })
+
+  it('should pick up if hyrdated', ok => {
+    const div = document.createElement('div')
+
+    const dom = renderToString(
+      <ResourceProvider>
+        <CDNIntlProvider
+          messages={{ test: 'Bonjour tout le monde et ala' }}
+          locale="fr_FR"
+          project="app"
+          variation="residential-formal"
+        >
+          <FormattedMessage id="test" defaultMessage="Default" />
+        </CDNIntlProvider>
+      </ResourceProvider>
+    )
+
+    div.innerHTML = dom
+    document.body.appendChild(div)
+
+    hydrate(
+      <ResourceProvider>
+        <CDNIntlProvider
+          locale="fr_FR"
+          project="app"
+          variation="residential-formal"
+        >
+          <FormattedMessage id="test" defaultMessage="Default" />
+        </CDNIntlProvider>
+      </ResourceProvider>,
+      div,
+      () => expect(div.innerHTML).toMatchSnapshot() & ok()
+    )
   })
 })
