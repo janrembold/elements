@@ -32,7 +32,6 @@ class SimpleLayout extends React.PureComponent {
   static propTypes = {
     children: PropTypes.node,
     backgroundColor: color,
-    flex: PropTypes.string,
     follow: PropTypes.bool,
     padded: PropTypes.oneOfType([
       PropTypes.bool,
@@ -44,7 +43,6 @@ class SimpleLayout extends React.PureComponent {
 
   static defaultProps = {
     backgroundColor: 'background',
-    flex: 'flex',
   }
 
   state = {
@@ -112,7 +110,7 @@ class SimpleLayout extends React.PureComponent {
   }
 
   render() {
-    const { children, backgroundColor, padded, flex } = this.props
+    const { children, backgroundColor, padded, ...props } = this.props
 
     return (
       <Theme>
@@ -124,7 +122,7 @@ class SimpleLayout extends React.PureComponent {
             {value => (
               <View
                 direction="column"
-                flex={flex}
+                flex="flex"
                 onTouchStart={this.handleTouchStart}
                 onTouchMove={this.handleTouchMove}
                 onTouchEnd={this.handleTouchEnd}
@@ -137,6 +135,7 @@ class SimpleLayout extends React.PureComponent {
                 onScroll={this.handleScroll}
                 // for e2e-tests, to scroll down on pages (id is taken for cross browser selector compat)
                 id="scroll-container"
+                {...props}
               >
                 {children}
               </View>
