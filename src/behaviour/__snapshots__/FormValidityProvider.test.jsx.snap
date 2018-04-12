@@ -112,8 +112,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 0 0 auto;
 }
 
-.css-14qrzmk,
-[data-css-14qrzmk] {
+.css-1e4vpa5,
+[data-css-1e4vpa5] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -130,17 +130,34 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-14qrzmk:-webkit-autofill ~ div,
-[data-css-14qrzmk]:-webkit-autofill ~ div {
+.css-1e4vpa5:-webkit-autofill ~ .label,
+[data-css-1e4vpa5]:-webkit-autofill ~ .label {
   opacity: 1 !important;
   top: 8px !important;
 }
 
-.css-14qrzmk:-webkit-autofill,
-[data-css-14qrzmk]:-webkit-autofill,
-.css-14qrzmk[data-simulate-webkitautofill],
-[data-css-14qrzmk][data-simulate-webkitautofill] {
+.css-1e4vpa5:-webkit-autofill ~ .checkmark,
+[data-css-1e4vpa5]:-webkit-autofill ~ .checkmark {
+  opacity: 1 !important;
+}
+
+.css-1e4vpa5:-webkit-autofill,
+[data-css-1e4vpa5]:-webkit-autofill,
+.css-1e4vpa5[data-simulate-webkitautofill],
+[data-css-1e4vpa5][data-simulate-webkitautofill] {
   padding-top: 10px !important;
+}
+
+.css-1gnizwt,
+[data-css-1gnizwt] {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  pointer-events: none;
+  transition: opacity .225s;
+  opacity: 0;
+  -webkit-transition: opacity .225s;
+  -moz-transition: opacity .225s;
 }
 
 <form
@@ -191,7 +208,7 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
     >
       <input
         aria-required={true}
-        data-css-14qrzmk=""
+        data-css-1e4vpa5=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
@@ -199,6 +216,29 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
         required={true}
         type="email"
       />
+      <div
+        className="checkmark"
+        data-css-1gnizwt=""
+        data-css-4p3ux5=""
+      >
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+          data-css-4p3ux5=""
+          size="xs"
+          style={
+            Object {
+              "fill": "lightGrey",
+              "height": 16,
+              "stroke": false,
+              "width": 16,
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </form>
@@ -343,8 +383,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 0 0 auto;
 }
 
-.css-14qrzmk,
-[data-css-14qrzmk] {
+.css-1e4vpa5,
+[data-css-1e4vpa5] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -361,17 +401,34 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-14qrzmk:-webkit-autofill ~ div,
-[data-css-14qrzmk]:-webkit-autofill ~ div {
+.css-1e4vpa5:-webkit-autofill ~ .label,
+[data-css-1e4vpa5]:-webkit-autofill ~ .label {
   opacity: 1 !important;
   top: 8px !important;
 }
 
-.css-14qrzmk:-webkit-autofill,
-[data-css-14qrzmk]:-webkit-autofill,
-.css-14qrzmk[data-simulate-webkitautofill],
-[data-css-14qrzmk][data-simulate-webkitautofill] {
+.css-1e4vpa5:-webkit-autofill ~ .checkmark,
+[data-css-1e4vpa5]:-webkit-autofill ~ .checkmark {
+  opacity: 1 !important;
+}
+
+.css-1e4vpa5:-webkit-autofill,
+[data-css-1e4vpa5]:-webkit-autofill,
+.css-1e4vpa5[data-simulate-webkitautofill],
+[data-css-1e4vpa5][data-simulate-webkitautofill] {
   padding-top: 10px !important;
+}
+
+.css-1gnizwt,
+[data-css-1gnizwt] {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  pointer-events: none;
+  transition: opacity .225s;
+  opacity: 0;
+  -webkit-transition: opacity .225s;
+  -moz-transition: opacity .225s;
 }
 
 .css-1xcgwwg,
@@ -448,7 +505,7 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
       </div>
       <input
         aria-required={true}
-        data-css-14qrzmk=""
+        data-css-1e4vpa5=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
@@ -456,6 +513,29 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
         required={true}
         type="email"
       />
+      <div
+        className="checkmark"
+        data-css-1gnizwt=""
+        data-css-4p3ux5=""
+      >
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+          data-css-4p3ux5=""
+          size="xs"
+          style={
+            Object {
+              "fill": "lightGrey",
+              "height": 16,
+              "stroke": false,
+              "width": 16,
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </form>
@@ -573,8 +653,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 0 0 auto;
 }
 
-.css-14qrzmk,
-[data-css-14qrzmk] {
+.css-1e4vpa5,
+[data-css-1e4vpa5] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -591,17 +671,34 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-14qrzmk:-webkit-autofill ~ div,
-[data-css-14qrzmk]:-webkit-autofill ~ div {
+.css-1e4vpa5:-webkit-autofill ~ .label,
+[data-css-1e4vpa5]:-webkit-autofill ~ .label {
   opacity: 1 !important;
   top: 8px !important;
 }
 
-.css-14qrzmk:-webkit-autofill,
-[data-css-14qrzmk]:-webkit-autofill,
-.css-14qrzmk[data-simulate-webkitautofill],
-[data-css-14qrzmk][data-simulate-webkitautofill] {
+.css-1e4vpa5:-webkit-autofill ~ .checkmark,
+[data-css-1e4vpa5]:-webkit-autofill ~ .checkmark {
+  opacity: 1 !important;
+}
+
+.css-1e4vpa5:-webkit-autofill,
+[data-css-1e4vpa5]:-webkit-autofill,
+.css-1e4vpa5[data-simulate-webkitautofill],
+[data-css-1e4vpa5][data-simulate-webkitautofill] {
   padding-top: 10px !important;
+}
+
+.css-1gnizwt,
+[data-css-1gnizwt] {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  pointer-events: none;
+  transition: opacity .225s;
+  opacity: 0;
+  -webkit-transition: opacity .225s;
+  -moz-transition: opacity .225s;
 }
 
 <form
@@ -652,7 +749,7 @@ exports[`Check FormValidityProvider should click on the button and get a default
     >
       <input
         aria-required={true}
-        data-css-14qrzmk=""
+        data-css-1e4vpa5=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
@@ -660,6 +757,29 @@ exports[`Check FormValidityProvider should click on the button and get a default
         required={true}
         type="email"
       />
+      <div
+        className="checkmark"
+        data-css-1gnizwt=""
+        data-css-4p3ux5=""
+      >
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+          data-css-4p3ux5=""
+          size="xs"
+          style={
+            Object {
+              "fill": "lightGrey",
+              "height": 16,
+              "stroke": false,
+              "width": 16,
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </form>
@@ -804,8 +924,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 0 0 auto;
 }
 
-.css-14qrzmk,
-[data-css-14qrzmk] {
+.css-1e4vpa5,
+[data-css-1e4vpa5] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -822,17 +942,34 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-14qrzmk:-webkit-autofill ~ div,
-[data-css-14qrzmk]:-webkit-autofill ~ div {
+.css-1e4vpa5:-webkit-autofill ~ .label,
+[data-css-1e4vpa5]:-webkit-autofill ~ .label {
   opacity: 1 !important;
   top: 8px !important;
 }
 
-.css-14qrzmk:-webkit-autofill,
-[data-css-14qrzmk]:-webkit-autofill,
-.css-14qrzmk[data-simulate-webkitautofill],
-[data-css-14qrzmk][data-simulate-webkitautofill] {
+.css-1e4vpa5:-webkit-autofill ~ .checkmark,
+[data-css-1e4vpa5]:-webkit-autofill ~ .checkmark {
+  opacity: 1 !important;
+}
+
+.css-1e4vpa5:-webkit-autofill,
+[data-css-1e4vpa5]:-webkit-autofill,
+.css-1e4vpa5[data-simulate-webkitautofill],
+[data-css-1e4vpa5][data-simulate-webkitautofill] {
   padding-top: 10px !important;
+}
+
+.css-1gnizwt,
+[data-css-1gnizwt] {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  pointer-events: none;
+  transition: opacity .225s;
+  opacity: 0;
+  -webkit-transition: opacity .225s;
+  -moz-transition: opacity .225s;
 }
 
 .css-1xcgwwg,
@@ -909,7 +1046,7 @@ exports[`Check FormValidityProvider should click on the button and get a default
       </div>
       <input
         aria-required={true}
-        data-css-14qrzmk=""
+        data-css-1e4vpa5=""
         name="email"
         onInvalid={[Function]}
         onKeyUp={[Function]}
@@ -917,6 +1054,29 @@ exports[`Check FormValidityProvider should click on the button and get a default
         required={true}
         type="email"
       />
+      <div
+        className="checkmark"
+        data-css-1gnizwt=""
+        data-css-4p3ux5=""
+      >
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+          data-css-4p3ux5=""
+          size="xs"
+          style={
+            Object {
+              "fill": "lightGrey",
+              "height": 16,
+              "stroke": false,
+              "width": 16,
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </form>
