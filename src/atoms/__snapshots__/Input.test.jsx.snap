@@ -124,6 +124,7 @@ exports[`Input component should render with all props 1`] = `
     value="string"
   />
   <div
+    className="label"
     data-css-4p3ux5=""
     data-css-lwcmpf=""
     style={

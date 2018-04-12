@@ -244,6 +244,7 @@ class Input extends React.Component {
             )}
             {label && (
               <View
+                className="label"
                 {...styles.label}
                 style={{
                   opacity: labelVisible ? 1 : 0,
