@@ -21,7 +21,7 @@ storiesOf('Animations', module)
 
 storiesOf('Forms', module)
   .addDecorator(createViewportDecorator())
-  .add('SimpelForm', () => <FormStory />)
+  .add('SimpleForm', () => <FormStory />)
 
 storiesOf('FloatingButton', module).add('with text', () => (
   <ThemeProvider>

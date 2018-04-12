@@ -54,6 +54,7 @@ export default class FormStory extends React.Component {
                       name="email"
                       label="E-Mail"
                       type="email"
+                      pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
                       placeholder="E-Mail"
                       required
                     />
