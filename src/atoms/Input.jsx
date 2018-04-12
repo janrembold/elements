@@ -17,9 +17,12 @@ const styles = {
       paddingTop: showLabel ? 10 : 0,
       transition: 'padding-top .225s ease-out',
       border: 0,
-      '&:-webkit-autofill ~ div': {
+      '&:-webkit-autofill ~ .label': {
         opacity: '1 !important',
         top: '8px !important',
+      },
+      '&:-webkit-autofill ~ .checkmark': {
+        opacity: '1 !important',
       },
       '&:-webkit-autofill': {
         paddingTop: '10px !important',
@@ -233,6 +236,7 @@ class Input extends React.Component {
             ) : (
               <textarea
                 {...styles.area(theme.secondaryText, lines, showLabel)}
+                required={required}
                 {...props}
                 ref={onInputRef}
                 onChange={this.handleChange}
