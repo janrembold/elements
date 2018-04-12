@@ -62,6 +62,15 @@ const styles = {
     borderRight: '10px solid transparent',
     borderTop: '10px solid #c1392b',
   }),
+  checkmark: show =>
+    css({
+      position: 'absolute',
+      top: 16,
+      right: 15,
+      pointerEvents: 'none',
+      transition: 'opacity .225s',
+      opacity: show ? 1 : 0,
+    }),
   required: css({
     position: 'absolute',
     right: 10,
@@ -195,6 +204,12 @@ class Input extends React.Component {
     const labelVisible = currentValue.length > 0
     const showLabel = label && currentValue.length > 0
 
+    const isCheckmarkActive =
+      (pattern || props.minLength || props.maxLength || required) &&
+      this.input &&
+      this.input.validity &&
+      this.input.validity.valid
+
     return (
       <Theme>
         {({ theme, colorize }) => (
@@ -236,21 +251,14 @@ class Input extends React.Component {
                 </Text>
               </View>
             )}
-            {pattern &&
-              this.input &&
-              this.input.validity &&
-              this.input.validity.valid && (
-                <View
-                  {...css({
-                    position: 'absolute',
-                    top: 16,
-                    right: 15,
-                    pointerEvents: 'none',
-                  })}
-                >
-                  <Icon name="checkFilled" size="xs" color="lightGrey" />
-                </View>
-              )}
+
+            <View
+              className="checkmark"
+              {...styles.checkmark(isCheckmarkActive)}
+            >
+              <Icon name="check-filled" size="xs" color="lightGrey" />
+            </View>
+
             {props.maxLength && (
               <View {...styles.placeholder}>
                 <Text color="secondaryText" size="s">
