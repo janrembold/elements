@@ -19,8 +19,8 @@ exports[`Input component should render with all props 1`] = `
   right: 15px;
 }
 
-.css-10rv4m6,
-[data-css-10rv4m6] {
+.css-188vfvu,
+[data-css-188vfvu] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -37,17 +37,34 @@ exports[`Input component should render with all props 1`] = `
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-10rv4m6:-webkit-autofill ~ div,
-[data-css-10rv4m6]:-webkit-autofill ~ div {
+.css-188vfvu:-webkit-autofill ~ .label,
+[data-css-188vfvu]:-webkit-autofill ~ .label {
   opacity: 1 !important;
   top: 8px !important;
 }
 
-.css-10rv4m6:-webkit-autofill,
-[data-css-10rv4m6]:-webkit-autofill,
-.css-10rv4m6[data-simulate-webkitautofill],
-[data-css-10rv4m6][data-simulate-webkitautofill] {
+.css-188vfvu:-webkit-autofill ~ .checkmark,
+[data-css-188vfvu]:-webkit-autofill ~ .checkmark {
+  opacity: 1 !important;
+}
+
+.css-188vfvu:-webkit-autofill,
+[data-css-188vfvu]:-webkit-autofill,
+.css-188vfvu[data-simulate-webkitautofill],
+[data-css-188vfvu][data-simulate-webkitautofill] {
   padding-top: 10px !important;
+}
+
+.css-1gnizwt,
+[data-css-1gnizwt] {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  pointer-events: none;
+  transition: opacity .225s;
+  opacity: 0;
+  -webkit-transition: opacity .225s;
+  -moz-transition: opacity .225s;
 }
 
 .css-13azwyo,
@@ -93,7 +110,7 @@ exports[`Input component should render with all props 1`] = `
 >
   <input
     aria-required={true}
-    data-css-10rv4m6=""
+    data-css-188vfvu=""
     defaultValue="string"
     maxLength={1}
     minLength={1}
@@ -107,6 +124,7 @@ exports[`Input component should render with all props 1`] = `
     value="string"
   />
   <div
+    className="label"
     data-css-4p3ux5=""
     data-css-lwcmpf=""
     style={
@@ -126,6 +144,29 @@ exports[`Input component should render with all props 1`] = `
     </div>
   </div>
   <div
+    className="checkmark"
+    data-css-1gnizwt=""
+    data-css-4p3ux5=""
+  >
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      data-css-4p3ux5=""
+      size="xs"
+      style={
+        Object {
+          "fill": "lightGrey",
+          "height": 16,
+          "stroke": false,
+          "width": 16,
+        }
+      }
+    />
+  </div>
+  <div
     data-css-4p3ux5=""
     data-css-z169em=""
   >
@@ -142,6 +183,18 @@ exports[`Input component should render with all props 1`] = `
 `;
 
 exports[`Input component should render with required props only 1`] = `
+.css-1gnizwt,
+[data-css-1gnizwt] {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  pointer-events: none;
+  transition: opacity .225s;
+  opacity: 0;
+  -webkit-transition: opacity .225s;
+  -moz-transition: opacity .225s;
+}
+
 .css-13azwyo,
 [data-css-13azwyo] {
   position: relative;
@@ -154,8 +207,8 @@ exports[`Input component should render with required props only 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-14qrzmk,
-[data-css-14qrzmk] {
+.css-1e4vpa5,
+[data-css-1e4vpa5] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -172,16 +225,21 @@ exports[`Input component should render with required props only 1`] = `
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-14qrzmk:-webkit-autofill ~ div,
-[data-css-14qrzmk]:-webkit-autofill ~ div {
+.css-1e4vpa5:-webkit-autofill ~ .label,
+[data-css-1e4vpa5]:-webkit-autofill ~ .label {
   opacity: 1 !important;
   top: 8px !important;
 }
 
-.css-14qrzmk:-webkit-autofill,
-[data-css-14qrzmk]:-webkit-autofill,
-.css-14qrzmk[data-simulate-webkitautofill],
-[data-css-14qrzmk][data-simulate-webkitautofill] {
+.css-1e4vpa5:-webkit-autofill ~ .checkmark,
+[data-css-1e4vpa5]:-webkit-autofill ~ .checkmark {
+  opacity: 1 !important;
+}
+
+.css-1e4vpa5:-webkit-autofill,
+[data-css-1e4vpa5]:-webkit-autofill,
+.css-1e4vpa5[data-simulate-webkitautofill],
+[data-css-1e4vpa5][data-simulate-webkitautofill] {
   padding-top: 10px !important;
 }
 
@@ -196,7 +254,7 @@ exports[`Input component should render with required props only 1`] = `
 >
   <input
     aria-required={false}
-    data-css-14qrzmk=""
+    data-css-1e4vpa5=""
     name="string"
     onInvalid={[Function]}
     onKeyUp={[Function]}
@@ -204,5 +262,28 @@ exports[`Input component should render with required props only 1`] = `
     required={false}
     type="text"
   />
+  <div
+    className="checkmark"
+    data-css-1gnizwt=""
+    data-css-4p3ux5=""
+  >
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      data-css-4p3ux5=""
+      size="xs"
+      style={
+        Object {
+          "fill": "lightGrey",
+          "height": 16,
+          "stroke": false,
+          "width": 16,
+        }
+      }
+    />
+  </div>
 </div>
 `;
