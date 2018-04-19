@@ -25,7 +25,9 @@ describe('Check the CDNIntlProvider component', () => {
 
     const testRenderer = await new Promise(resolve => {
       let myRenderer
-      const onDone = () => resolve(myRenderer)
+      function onDone() {
+        resolve(myRenderer)
+      }
       const nbm = (
         <ResourceProvider>
           <BrokenCDNIntlProvider
