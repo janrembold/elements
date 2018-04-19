@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 import { IntlProvider } from 'react-intl'
-import 'cross-fetch/polyfill'
+import fetch from 'cross-fetch'
 
 export const loadLanguage = async (
+  myFetch,
   resourcePath,
   project,
   variation,
@@ -11,7 +12,7 @@ export const loadLanguage = async (
   stage
 ) => {
   const countryCode = locale.split('_')[0]
-  const translations = await fetch(
+  const translations = await myFetch(
     `${resourcePath}/${project}/${stage}/i18n/${countryCode}/${variation}.json`
   )
   return translations.json()
@@ -76,6 +77,7 @@ class CDNIntlProvider extends React.Component {
     const { project, variation, locale, stage, onDone } = props
 
     const messages = await loadLanguage(
+      fetch,
       this.context.resourcePath,
       project,
       variation,
@@ -102,7 +104,7 @@ class CDNIntlProvider extends React.Component {
       <IntlProvider locale={countryCode} messages={messages}>
         <Fragment>
           {this.renderSideEffect(messages)}
-          {messages && this.props.children}
+          {this.props.children}
         </Fragment>
       </IntlProvider>
     )
