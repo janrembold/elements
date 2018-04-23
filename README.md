@@ -36,13 +36,15 @@ function App() {
 render(<App />, document.querySelector('#app'))
 ```
 
-**Note**:
+**Notes:**
 
 `@allthings/elements` uses `fetch` and expects it to be globally available. For example [`cross-fetch`](https://github.com/lquixada/cross-fetch) can be used at the entry point of the app:
 
 ```
 import 'cross-fetch/polyfill'
 ```
+
+If you want to use the component `CDNIntlProvider` make sure to also install [`react-intl`](https://github.com/yahoo/react-intl).
 
 ## Examples
 
