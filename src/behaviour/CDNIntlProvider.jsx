@@ -7,8 +7,7 @@ export const loadLanguage = async (
   project,
   variation,
   locale,
-  stage,
-  // myFetch = fetch
+  stage
 ) => {
   const countryCode = locale.split('_')[0]
   const translations = await fetch(
@@ -102,7 +101,7 @@ class CDNIntlProvider extends React.Component {
       <IntlProvider locale={countryCode} messages={messages}>
         <Fragment>
           {this.renderSideEffect(messages)}
-          {this.props.children}
+          {messages && this.props.children}
         </Fragment>
       </IntlProvider>
     )
