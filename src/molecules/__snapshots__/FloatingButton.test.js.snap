@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Floating button renders without error 1`] = `
-.css-inzsrf,
-[data-css-inzsrf] {
+.css-0,
+[data-css-0] {
   width: 100%;
   display: -webkit-box;
   display: -moz-box;
@@ -18,8 +18,8 @@ exports[`Floating button renders without error 1`] = `
   -webkit-justify-content: center;
 }
 
-.css-13pxttz,
-[data-css-13pxttz] {
+.css-1,
+[data-css-1] {
   background-color: #3598db;
   box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -28,21 +28,21 @@ exports[`Floating button renders without error 1`] = `
   width: 100%;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-2,
+[data-css-2] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-8pszjj,
-[data-css-8pszjj] {
+.css-3,
+[data-css-3] {
   position: absolute;
   bottom: 0;
 }
 
-.css-3fsu53,
-[data-css-3fsu53] {
+.css-4,
+[data-css-4] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -66,10 +66,10 @@ exports[`Floating button renders without error 1`] = `
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-2=""
 >
   <div
-    data-css-4p3ux5=""
+    data-css-2=""
     style={
       Object {
         "height": 50,
@@ -77,12 +77,12 @@ exports[`Floating button renders without error 1`] = `
     }
   />
   <div
-    data-css-13pxttz=""
-    data-css-3fsu53=""
-    data-css-8pszjj=""
+    data-css-1=""
+    data-css-4=""
+    data-css-3=""
   >
     <button
-      data-css-inzsrf=""
+      data-css-0=""
     >
       Hello World
     </button>

@@ -7,16 +7,12 @@ import CDNIntlProvider from './CDNIntlProvider'
 import ResourceProvider from './ResourceProvider'
 
 describe('Check the CDNIntlProvider component', () => {
-  beforeEach(() => {
-    fetch.resetMocks()
-  })
+  beforeEach(fetch.resetMocks)
 
   it('should fetch the corresponding locales', async () => {
-    const fetchGerman = fetch.mockResponse(
-      JSON.stringify({ test: 'Hallo Welt' })
-    )
+    fetch.mockResponseOnce(JSON.stringify({ test: 'Hallo Welt' }))
 
-    const testRenderer = await new Promise((resolve, reject) => {
+    const testRenderer = await new Promise(resolve => {
       let myRenderer
       function onDone() {
         resolve(myRenderer)
@@ -37,16 +33,11 @@ describe('Check the CDNIntlProvider component', () => {
       myRenderer = renderer.create(nbm)
     })
 
-    expect(fetchGerman).toHaveBeenCalledWith(
-      'https://static.allthings.me/app/production/i18n/de/residential-formal.json'
-    )
     expect(testRenderer).toMatchSnapshot()
 
-    const fetchEnglish = fetch.mockResponse(
-      JSON.stringify({ test: 'Hello World' })
-    )
+    fetch.mockResponseOnce(JSON.stringify({ test: 'Hello World' }))
 
-    await new Promise((resolve, reject) => {
+    await new Promise(resolve => {
       const nbm = (
         <ResourceProvider>
           <CDNIntlProvider
@@ -63,10 +54,16 @@ describe('Check the CDNIntlProvider component', () => {
       testRenderer.update(nbm)
     })
 
-    expect(fetchEnglish).toHaveBeenCalledWith(
+    expect(testRenderer).toMatchSnapshot()
+
+    expect(fetch.mock.calls.length).toEqual(2)
+    expect(fetch.mock.calls[0][0]).toEqual(
+      'https://static.allthings.me/app/production/i18n/de/residential-formal.json'
+    )
+    expect(fetch.mock.calls[1][0]).toEqual(
       'https://static.allthings.me/app/production/i18n/en/residential-formal.json'
     )
-    expect(testRenderer).toMatchSnapshot()
+
   })
 
   it('should use the provided locale and do no fetch', () => {

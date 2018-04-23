@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Circle renders without error 1`] = `
-.css-1jzdjv2,
-[data-css-1jzdjv2] {
+.css-0,
+[data-css-0] {
   background-color: pink;
   border-radius: 50%;
   height: 5px;
@@ -12,8 +12,8 @@ exports[`Circle renders without error 1`] = `
   -moz-transition: background-color 120ms linear;
 }
 
-.css-yirehu,
-[data-css-yirehu] {
+.css-1,
+[data-css-1] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -37,7 +37,7 @@ exports[`Circle renders without error 1`] = `
 }
 
 <div
-  data-css-1jzdjv2=""
-  data-css-yirehu=""
+  data-css-0=""
+  data-css-1=""
 />
 `;

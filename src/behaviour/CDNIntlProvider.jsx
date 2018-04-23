@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 import { IntlProvider } from 'react-intl'
-import 'cross-fetch/polyfill'
 
 export const loadLanguage = async (
   resourcePath,

@@ -36,6 +36,14 @@ function App() {
 render(<App />, document.querySelector('#app'))
 ```
 
+**Note**:
+
+`@allthings/elements` uses `fetch` and expects it to be globally available. For example [`cross-fetch`](https://github.com/lquixada/cross-fetch) can be used at the entry point of the app:
+
+```
+import 'cross-fetch/polyfill'
+```
+
 ## Examples
 
 Are you looking for some full example projects to get started?
