@@ -4,12 +4,12 @@ import { IntlProvider } from 'react-intl'
 import fetch from 'cross-fetch'
 
 export const loadLanguage = async (
-  myFetch,
   resourcePath,
   project,
   variation,
   locale,
-  stage
+  stage,
+  myFetch = fetch
 ) => {
   const countryCode = locale.split('_')[0]
   const translations = await myFetch(
@@ -77,7 +77,6 @@ class CDNIntlProvider extends React.Component {
     const { project, variation, locale, stage, onDone } = props
 
     const messages = await loadLanguage(
-      fetch,
       this.context.resourcePath,
       project,
       variation,
