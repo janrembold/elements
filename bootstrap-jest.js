@@ -2,6 +2,7 @@ import { configure, shallow, render, mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { createSerializer } from 'enzyme-to-json'
 import renderer from 'react-test-renderer'
+import fetch from 'jest-fetch-mock'
 
 // Adapter for React 16.
 configure({ adapter: new Adapter() })
@@ -10,6 +11,7 @@ configure({ adapter: new Adapter() })
 expect.addSnapshotSerializer(createSerializer({ mode: 'deep' }))
 
 // Avoid annoying imports in all the tests.
+global.fetch = fetch
 global.mount = mount
 global.render = render
 global.renderer = renderer

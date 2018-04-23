@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 import { IntlProvider } from 'react-intl'
-import fetch from 'cross-fetch'
 
 export const loadLanguage = async (
   resourcePath,
@@ -9,10 +8,10 @@ export const loadLanguage = async (
   variation,
   locale,
   stage,
-  myFetch = fetch
+  // myFetch = fetch
 ) => {
   const countryCode = locale.split('_')[0]
-  const translations = await myFetch(
+  const translations = await fetch(
     `${resourcePath}/${project}/${stage}/i18n/${countryCode}/${variation}.json`
   )
   return translations.json()

@@ -2294,13 +2294,6 @@ cross-env@5.1.4:
     cross-spawn "^5.1.0"
     is-windows "^1.0.0"
 
-cross-fetch@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-2.1.0.tgz#7d4ea7e10a4f3bb73d5c2f0a3791ec3752d39b50"
-  dependencies:
-    node-fetch "2.1.1"
-    whatwg-fetch "2.0.3"
-
 cross-spawn@5.1.0, cross-spawn@^5.0.1, cross-spawn@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
@@ -4301,7 +4294,7 @@ isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
 
-isomorphic-fetch@^2.1.1:
+isomorphic-fetch@^2.1.1, isomorphic-fetch@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   dependencies:
@@ -4474,6 +4467,12 @@ jest-environment-node@^22.4.3:
   dependencies:
     jest-mock "^22.4.3"
     jest-util "^22.4.3"
+
+jest-fetch-mock@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/jest-fetch-mock/-/jest-fetch-mock-1.5.0.tgz#5fdc27c790efd3b4eae8b2453fe13c4b75b5f541"
+  dependencies:
+    isomorphic-fetch "^2.2.1"
 
 jest-get-type@^21.2.0:
   version "21.2.0"
@@ -5284,10 +5283,6 @@ node-dir@^0.1.10:
   resolved "https://registry.yarnpkg.com/node-dir/-/node-dir-0.1.17.tgz#5f5665d93351335caabef8f1c554516cf5f1e4e5"
   dependencies:
     minimatch "^3.0.2"
-
-node-fetch@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.1.1.tgz#369ca70b82f50c86496104a6c776d274f4e4a2d4"
 
 node-fetch@^1.0.1:
   version "1.7.3"
@@ -7862,7 +7857,7 @@ whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3:
   dependencies:
     iconv-lite "0.4.19"
 
-whatwg-fetch@2.0.3, whatwg-fetch@>=0.10.0:
+whatwg-fetch@>=0.10.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
 

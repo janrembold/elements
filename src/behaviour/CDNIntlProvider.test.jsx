@@ -7,21 +7,10 @@ import CDNIntlProvider from './CDNIntlProvider'
 import ResourceProvider from './ResourceProvider'
 
 describe('Check the CDNIntlProvider component', () => {
+  beforeEach(fetch.resetMocks)
+
   it('should fetch the corresponding locales', async () => {
-    const mockFetch = jest.fn()
-    const mockJson = jest.fn()
-    jest.doMock('cross-fetch', () => {
-      mockJson
-        .mockResolvedValueOnce({ test: 'Hallo Welt' })
-        .mockResolvedValueOnce({ test: 'Hello World' })
-      mockFetch.mockResolvedValue({ json: mockJson })
-      return mockFetch
-    })
-
-    jest.resetModules()
-    jest.resetAllMocks()
-
-    const BrokenCDNIntlProvider = require('./CDNIntlProvider').default
+    fetch.mockResponseOnce(JSON.stringify({ test: 'Hallo Welt' }))
 
     const testRenderer = await new Promise(resolve => {
       let myRenderer
@@ -30,46 +19,51 @@ describe('Check the CDNIntlProvider component', () => {
       }
       const nbm = (
         <ResourceProvider>
-          <BrokenCDNIntlProvider
+          <CDNIntlProvider
             locale="de_DE"
             project="app"
             variation="residential-formal"
             onDone={onDone}
           >
             <FormattedMessage id="test" defaultMessage="Default" />
-          </BrokenCDNIntlProvider>
+          </CDNIntlProvider>
         </ResourceProvider>
       )
 
       myRenderer = renderer.create(nbm)
     })
 
-    expect(mockFetch).toHaveBeenCalledWith(
-      'https://static.allthings.me/app/production/i18n/de/residential-formal.json'
-    )
     expect(testRenderer).toMatchSnapshot()
+
+    fetch.mockResponseOnce(JSON.stringify({ test: 'Hello World' }))
 
     await new Promise(resolve => {
       const nbm = (
         <ResourceProvider>
-          <BrokenCDNIntlProvider
+          <CDNIntlProvider
             locale="en_US"
             project="app"
             variation="residential-formal"
             onDone={resolve}
           >
             <FormattedMessage id="test" defaultMessage="Default" />
-          </BrokenCDNIntlProvider>
+          </CDNIntlProvider>
         </ResourceProvider>
       )
 
       testRenderer.update(nbm)
     })
 
-    expect(mockFetch).toHaveBeenCalledWith(
+    expect(testRenderer).toMatchSnapshot()
+
+    expect(fetch.mock.calls.length).toEqual(2)
+    expect(fetch.mock.calls[0][0]).toEqual(
+      'https://static.allthings.me/app/production/i18n/de/residential-formal.json'
+    )
+    expect(fetch.mock.calls[1][0]).toEqual(
       'https://static.allthings.me/app/production/i18n/en/residential-formal.json'
     )
-    expect(testRenderer).toMatchSnapshot()
+
   })
 
   it('should use the provided locale and do no fetch', () => {
