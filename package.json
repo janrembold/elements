@@ -17,13 +17,13 @@
     "neue": "1.0.0",
     "prop-types": "15.6.1",
     "react-broadcast": "0.6.2",
-    "react-intl": "^2.4.0",
     "react-media": "1.8.0",
     "react-motion": "0.5.2"
   },
   "peerDependencies": {
     "react": ">=0.14.0 <17.0.0",
-    "react-dom": ">=0.14.0 <17.0.0"
+    "react-dom": ">=0.14.0 <17.0.0",
+    "react-intl": "<3.0.0"
   },
   "scripts": {
     "create:release": "yarn lint && yarn test && yarn version && git push --tags origin HEAD && yarn build && cd build && yarn publish",
