@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextInput renders 1`] = `
-.css-lwcmpf,
-[data-css-lwcmpf] {
+.css-0,
+[data-css-0] {
   position: absolute;
   left: 15px;
   font-size: 10px;
@@ -12,15 +12,15 @@ exports[`TextInput renders 1`] = `
   -moz-transition: all .225s ease-out;
 }
 
-.css-dau5wj,
-[data-css-dau5wj] {
+.css-1,
+[data-css-1] {
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-h7582n,
-[data-css-h7582n] {
+.css-2,
+[data-css-2] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -43,8 +43,8 @@ exports[`TextInput renders 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-1e4vpa5,
-[data-css-1e4vpa5] {
+.css-3,
+[data-css-3] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -61,26 +61,26 @@ exports[`TextInput renders 1`] = `
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-1e4vpa5:-webkit-autofill ~ .label,
-[data-css-1e4vpa5]:-webkit-autofill ~ .label {
+.css-3:-webkit-autofill ~ .label,
+[data-css-3]:-webkit-autofill ~ .label {
   opacity: 1 !important;
   top: 8px !important;
 }
 
-.css-1e4vpa5:-webkit-autofill ~ .checkmark,
-[data-css-1e4vpa5]:-webkit-autofill ~ .checkmark {
+.css-3:-webkit-autofill ~ .checkmark,
+[data-css-3]:-webkit-autofill ~ .checkmark {
   opacity: 1 !important;
 }
 
-.css-1e4vpa5:-webkit-autofill,
-[data-css-1e4vpa5]:-webkit-autofill,
-.css-1e4vpa5[data-simulate-webkitautofill],
-[data-css-1e4vpa5][data-simulate-webkitautofill] {
+.css-3:-webkit-autofill,
+[data-css-3]:-webkit-autofill,
+.css-3[data-simulate-webkitautofill],
+[data-css-3][data-simulate-webkitautofill] {
   padding-top: 10px !important;
 }
 
-.css-1gnizwt,
-[data-css-1gnizwt] {
+.css-7,
+[data-css-7] {
   position: absolute;
   top: 16px;
   right: 15px;
@@ -91,20 +91,20 @@ exports[`TextInput renders 1`] = `
   -moz-transition: opacity .225s;
 }
 
-.css-13azwyo,
-[data-css-13azwyo] {
+.css-8,
+[data-css-8] {
   position: relative;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-9,
+[data-css-9] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-b05tpj,
-[data-css-b05tpj] {
+.css-10,
+[data-css-10] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 10px;
@@ -114,12 +114,12 @@ exports[`TextInput renders 1`] = `
 }
 
 <div
-  data-css-dau5wj=""
-  data-css-h7582n=""
+  data-css-1=""
+  data-css-2=""
 >
   <div
-    data-css-13azwyo=""
-    data-css-4p3ux5=""
+    data-css-8=""
+    data-css-9=""
     style={
       Object {
         "width": "100%",
@@ -128,7 +128,7 @@ exports[`TextInput renders 1`] = `
   >
     <input
       aria-required={true}
-      data-css-1e4vpa5=""
+      data-css-3=""
       name="email"
       onInvalid={[Function]}
       onKeyUp={[Function]}
@@ -139,8 +139,8 @@ exports[`TextInput renders 1`] = `
     />
     <div
       className="label"
-      data-css-4p3ux5=""
-      data-css-lwcmpf=""
+      data-css-9=""
+      data-css-0=""
       style={
         Object {
           "opacity": 0,
@@ -149,8 +149,8 @@ exports[`TextInput renders 1`] = `
       }
     >
       <div
-        data-css-4p3ux5=""
-        data-css-b05tpj=""
+        data-css-9=""
+        data-css-10=""
       >
         E-Mail
          
@@ -159,8 +159,8 @@ exports[`TextInput renders 1`] = `
     </div>
     <div
       className="checkmark"
-      data-css-1gnizwt=""
-      data-css-4p3ux5=""
+      data-css-7=""
+      data-css-9=""
     >
       <div
         dangerouslySetInnerHTML={
@@ -168,7 +168,7 @@ exports[`TextInput renders 1`] = `
             "__html": undefined,
           }
         }
-        data-css-4p3ux5=""
+        data-css-9=""
         size="xs"
         style={
           Object {

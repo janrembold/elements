@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Logo renders correctly 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-90no0s,
-[data-css-90no0s] {
+.css-1,
+[data-css-1] {
   background-image: url(/static/img/allthings-logo.svg);
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
   onClick={undefined}
   style={
     Object {
@@ -25,8 +25,8 @@ exports[`Logo renders correctly 1`] = `
 >
   <div
     alt="Allthings"
-    data-css-4p3ux5=""
-    data-css-90no0s=""
+    data-css-0=""
+    data-css-1=""
     height="100%"
     width="100%"
   />

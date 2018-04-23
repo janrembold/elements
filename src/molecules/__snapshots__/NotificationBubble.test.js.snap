@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NotificationBubble renders without error 1`] = `
-.css-1uw148h,
-[data-css-1uw148h] {
+.css-0,
+[data-css-0] {
   z-index: 200;
   position: fixed;
   bottom: 50px;
@@ -16,21 +16,21 @@ exports[`NotificationBubble renders without error 1`] = `
   -webkit-transform: translate(-50%, 0);
 }
 
-.css-13ph0e0,
-[data-css-13ph0e0] {
+.css-1,
+[data-css-1] {
   width: 200px;
   margin-left: 20px;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-2,
+[data-css-2] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-h7582n,
-[data-css-h7582n] {
+.css-3,
+[data-css-3] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -53,8 +53,8 @@ exports[`NotificationBubble renders without error 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-ms4fmp,
-[data-css-ms4fmp] {
+.css-4,
+[data-css-4] {
   box-sizing: border-box;
   align-content: stretch;
   align-items: stretch;
@@ -77,8 +77,8 @@ exports[`NotificationBubble renders without error 1`] = `
   -webkit-flex: 1 1 70%;
 }
 
-.css-16gi3pi,
-[data-css-16gi3pi] {
+.css-5,
+[data-css-5] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -90,8 +90,8 @@ exports[`NotificationBubble renders without error 1`] = `
   color: #ffffff;
 }
 
-.css-17pfsf1,
-[data-css-17pfsf1] {
+.css-6,
+[data-css-6] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -115,11 +115,11 @@ exports[`NotificationBubble renders without error 1`] = `
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-2=""
 >
   <div
-    data-css-1uw148h=""
-    data-css-h7582n=""
+    data-css-0=""
+    data-css-3=""
     style={
       Object {
         "backgroundColor": "#3598db",
@@ -128,12 +128,12 @@ exports[`NotificationBubble renders without error 1`] = `
     }
   >
     <div
-      data-css-13ph0e0=""
-      data-css-ms4fmp=""
+      data-css-1=""
+      data-css-4=""
     >
       <div
-        data-css-16gi3pi=""
-        data-css-4p3ux5=""
+        data-css-5=""
+        data-css-2=""
         style={
           Object {
             "width": "100%",
@@ -144,7 +144,7 @@ exports[`NotificationBubble renders without error 1`] = `
       </div>
     </div>
     <div
-      data-css-17pfsf1=""
+      data-css-6=""
     >
       <div
         dangerouslySetInnerHTML={
@@ -152,7 +152,7 @@ exports[`NotificationBubble renders without error 1`] = `
             "__html": undefined,
           }
         }
-        data-css-4p3ux5=""
+        data-css-2=""
         size={32.5}
         style={
           Object {
