@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardButton renders custom color 1`] = `
-.css-yd6zvg,
-[data-css-yd6zvg] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -26,25 +26,25 @@ exports[`CardButton renders custom color 1`] = `
   -webkit-flex: 1;
 }
 
-.css-keghjr,
-[data-css-keghjr] {
+.css-1,
+[data-css-1] {
   background-color: #f0f0f0;
   transition: 500ms ease-in-out;
   -webkit-transition: 500ms ease-in-out;
   -moz-transition: 500ms ease-in-out;
 }
 
-.css-keghjr:hover,
-[data-css-keghjr]:hover,
-.css-keghjr[data-simulate-hover],
-[data-css-keghjr][data-simulate-hover] {
+.css-1:hover,
+[data-css-1]:hover,
+.css-1[data-simulate-hover],
+[data-css-1][data-simulate-hover] {
   cursor: pointer;
   background: #d9d9d9;
 }
 
 <div
-  data-css-keghjr=""
-  data-css-yd6zvg=""
+  data-css-1=""
+  data-css-0=""
   onClick={[Function]}
 >
   Click me
@@ -52,24 +52,24 @@ exports[`CardButton renders custom color 1`] = `
 `;
 
 exports[`CardButton renders without error 1`] = `
-.css-7wo8x0,
-[data-css-7wo8x0] {
+.css-0,
+[data-css-0] {
   background-color: #3598db;
   transition: 500ms ease-in-out;
   -webkit-transition: 500ms ease-in-out;
   -moz-transition: 500ms ease-in-out;
 }
 
-.css-7wo8x0:hover,
-[data-css-7wo8x0]:hover,
-.css-7wo8x0[data-simulate-hover],
-[data-css-7wo8x0][data-simulate-hover] {
+.css-0:hover,
+[data-css-0]:hover,
+.css-0[data-simulate-hover],
+[data-css-0][data-simulate-hover] {
   cursor: pointer;
   background: #227dbf;
 }
 
-.css-yd6zvg,
-[data-css-yd6zvg] {
+.css-4,
+[data-css-4] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -94,8 +94,8 @@ exports[`CardButton renders without error 1`] = `
 }
 
 <div
-  data-css-7wo8x0=""
-  data-css-yd6zvg=""
+  data-css-0=""
+  data-css-4=""
   onClick={[Function]}
 >
   Click me

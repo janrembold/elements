@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text renders correctly 1`] = `
-.css-18icfsk,
-[data-css-18icfsk] {
+.css-0,
+[data-css-0] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -11,15 +11,15 @@ exports[`Text renders correctly 1`] = `
   color: #333333;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-1,
+[data-css-1] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
 <div
-  data-css-18icfsk=""
-  data-css-4p3ux5=""
+  data-css-0=""
+  data-css-1=""
 />
 `;
