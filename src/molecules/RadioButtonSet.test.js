@@ -10,7 +10,10 @@ const THEME = {
 const selection = [
   { key: 'b', value: 'blue pill' },
   { key: 'r', value: 'red pill' },
+  { key: 'g', value: 'green' },
 ]
+
+const defaultVal = 'green'
 
 test('First radio-button should be selected', () => {
   const wrapper = mount(
@@ -18,7 +21,7 @@ test('First radio-button should be selected', () => {
       <RadioButtonSet
         name="color"
         selection={selection}
-        defaultValue="blue pill"
+        defaultValue={defaultVal}
       />
     </ThemeProvider>
   )
@@ -30,7 +33,15 @@ test('First radio-button should be selected', () => {
       .first()
       .text()
   ).toEqual(selection[0].value)
-  expect(input.prop('checked')).toBeFalsy()
+  // Select other.
+  input.simulate('change')
+  expect(
+    wrapper
+      .find('label')
+      .last()
+      .text()
+  ).toEqual(defaultVal)
+  expect(input.prop('defaultChecked')).toBeFalsy()
   // Select other.
   input.simulate('change')
   // Re-render in order to get it checked.
@@ -40,7 +51,7 @@ test('First radio-button should be selected', () => {
     wrapper
       .find('input')
       .first()
-      .prop('checked')
+      .prop('defaultChecked')
   ).toBeTruthy()
   wrapper.unmount()
 })
