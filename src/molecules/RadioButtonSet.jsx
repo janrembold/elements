@@ -16,8 +16,8 @@ const styles = {
     }),
   radioElement: num =>
     css({
-      marginRight: num > 2 ? 0 : 40,
-      width: num > 2 ? '100%' : 'auto',
+      marginRight: 40,
+      width: 'auto',
     }),
   radio: primaryColor =>
     css({
@@ -36,12 +36,34 @@ const styles = {
  *
  * ```example
  *
- * const values = [
+ * const gender = [
  *    { key: m, value: 'male' },
  *    { key: f, value: 'female' },
  * ]
  *
- * <RadioButtonSet name="gender" selection={values} defaultValue="male" required />
+ * <RadioButtonSet name="gender" selection={gender} defaultValue="male" required />
+ *
+ *
+ * const sizes = [
+ *    { key: s, value: 'short' },
+ *    { key: m, value: 'medium' },
+ *    { key: l, value: 'large' },
+ *    { key: xl, value: 'x-large' },
+ * ]
+ *
+ * <RadioButtonSet
+ *    name="sizes"
+ *    selection={sizes}
+ *    defaultValue="large"
+ *    radioSetStyles={css({
+ *                   margin: '0 50px',
+ *                 })}
+ *    radioElementStyles={css({
+ *                   width: '100%',
+ *                   backgroundColor: '#f00',
+ *                 })}
+ *    required
+ * />
  * ```
  */
 class RadioButtonSet extends React.Component {
@@ -50,7 +72,7 @@ class RadioButtonSet extends React.Component {
     defaultValue: PropTypes.string,
     /** The name of this input field */
     name: PropTypes.string.isRequired,
-    /** Called, when the users changes something */
+    /** Called when a radio button is clicked */
     onChange: PropTypes.func,
     /** an array of key/values */
     selection: PropTypes.array.isRequired,
@@ -58,6 +80,10 @@ class RadioButtonSet extends React.Component {
     backgroundColor: PropTypes.string,
     /** Text size of the label one of xs,s,m,l,xl */
     labelSize: Text.propTypes.size,
+    /** css object, that overwrites the default styles of the radio set */
+    radioSetStyles: PropTypes.object,
+    /** css object, that overwrites the default styles of a single radio element */
+    radioElementStyles: PropTypes.object,
   }
 
   static defaultProps = {
@@ -86,22 +112,29 @@ class RadioButtonSet extends React.Component {
       defaultValue,
       onChange,
       labelSize,
+      radioSetStyles,
+      radioElementStyles,
       ...props
     } = this.props
-
     return (
       <Theme>
         {({ theme, colorize }) => (
           <ListItem
+            alignV="start"
             padded={false}
             backgroundColor={colorize(backgroundColor)}
             direction={`${selection.length > 2 ? 'column' : 'row'}`}
             {...styles.radioWrapper(selection.length)}
+            {...radioSetStyles}
           >
             {selection.map(sel => {
               const realChecked = sel.value === this.state.selected
               return (
-                <View key={sel.key} {...styles.radioElement(selection.length)}>
+                <View
+                  key={sel.key}
+                  {...styles.radioElement(selection.length)}
+                  {...radioElementStyles}
+                >
                   {
                     <Relative direction="row" alignV="center" alignH="center">
                       <label htmlFor={sel.value}>

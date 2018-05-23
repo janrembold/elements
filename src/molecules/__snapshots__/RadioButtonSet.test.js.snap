@@ -6,10 +6,10 @@ exports[`First radio-button should be selected 1`] = `
   padding: 15px 15px;
 }
 
-.css-nafmqm,
-[data-css-nafmqm] {
-  margin-right: 0;
-  width: 100%;
+.css-1oaqer5,
+[data-css-1oaqer5] {
+  margin-right: 40px;
+  width: auto;
 }
 
 .css-1glg3ss,
@@ -25,11 +25,11 @@ exports[`First radio-button should be selected 1`] = `
   background-color: white;
 }
 
-.css-1qrxrti,
-[data-css-1qrxrti] {
+.css-ln5kxm,
+[data-css-ln5kxm] {
   box-sizing: border-box;
-  align-content: center;
-  align-items: center;
+  align-content: flex-start;
+  align-items: flex-start;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -38,9 +38,9 @@ exports[`First radio-button should be selected 1`] = `
   flex-direction: column;
   justify-content: flex-start;
   flex: 0 0 auto;
-  -webkit-align-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
+  -webkit-align-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -196,13 +196,13 @@ exports[`First radio-button should be selected 1`] = `
 }
 
 <div
-  data-css-1qrxrti=""
   data-css-bycrzc=""
   data-css-dau5wj=""
+  data-css-ln5kxm=""
 >
   <div
+    data-css-1oaqer5=""
     data-css-4p3ux5=""
-    data-css-nafmqm=""
   >
     <div
       data-css-13azwyo=""
@@ -264,8 +264,8 @@ exports[`First radio-button should be selected 1`] = `
     </div>
   </div>
   <div
+    data-css-1oaqer5=""
     data-css-4p3ux5=""
-    data-css-nafmqm=""
   >
     <div
       data-css-13azwyo=""
@@ -327,8 +327,8 @@ exports[`First radio-button should be selected 1`] = `
     </div>
   </div>
   <div
+    data-css-1oaqer5=""
     data-css-4p3ux5=""
-    data-css-nafmqm=""
   >
     <div
       data-css-13azwyo=""
@@ -399,10 +399,10 @@ exports[`First radio-button should be selected 2`] = `
   padding: 15px 15px;
 }
 
-.css-nafmqm,
-[data-css-nafmqm] {
-  margin-right: 0;
-  width: 100%;
+.css-1oaqer5,
+[data-css-1oaqer5] {
+  margin-right: 40px;
+  width: auto;
 }
 
 .css-1glg3ss,
@@ -418,11 +418,11 @@ exports[`First radio-button should be selected 2`] = `
   background-color: white;
 }
 
-.css-1qrxrti,
-[data-css-1qrxrti] {
+.css-ln5kxm,
+[data-css-ln5kxm] {
   box-sizing: border-box;
-  align-content: center;
-  align-items: center;
+  align-content: flex-start;
+  align-items: flex-start;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -431,9 +431,9 @@ exports[`First radio-button should be selected 2`] = `
   flex-direction: column;
   justify-content: flex-start;
   flex: 0 0 auto;
-  -webkit-align-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
+  -webkit-align-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -589,13 +589,13 @@ exports[`First radio-button should be selected 2`] = `
 }
 
 <div
-  data-css-1qrxrti=""
   data-css-bycrzc=""
   data-css-dau5wj=""
+  data-css-ln5kxm=""
 >
   <div
+    data-css-1oaqer5=""
     data-css-4p3ux5=""
-    data-css-nafmqm=""
   >
     <div
       data-css-13azwyo=""
@@ -658,8 +658,8 @@ exports[`First radio-button should be selected 2`] = `
     </div>
   </div>
   <div
+    data-css-1oaqer5=""
     data-css-4p3ux5=""
-    data-css-nafmqm=""
   >
     <div
       data-css-13azwyo=""
@@ -721,8 +721,8 @@ exports[`First radio-button should be selected 2`] = `
     </div>
   </div>
   <div
+    data-css-1oaqer5=""
     data-css-4p3ux5=""
-    data-css-nafmqm=""
   >
     <div
       data-css-13azwyo=""
