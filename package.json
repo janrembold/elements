@@ -64,7 +64,7 @@
     "enzyme-adapter-react-16": "1.1.1",
     "enzyme-to-json": "3.3.4",
     "eslint": "4.19.1",
-    "eslint-config-logux": "21.0.0",
+    "eslint-config-logux": "23.0.0",
     "eslint-config-postcss": "3.0.1",
     "eslint-config-prettier": "2.9.0",
     "eslint-config-standard": "11.0.0",

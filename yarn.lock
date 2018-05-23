@@ -2976,11 +2976,11 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-logux@21.0.0:
-  version "21.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-21.0.0.tgz#8594de2d5e61cfcbb81f9111a4b6656963942fb4"
+eslint-config-logux@23.0.0:
+  version "23.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-23.0.0.tgz#b5c1c8a88f277dd5fad55436f9ca94916c60ac7e"
   dependencies:
-    globals "^11.3.0"
+    globals "^11.5.0"
 
 eslint-config-postcss@3.0.1:
   version "3.0.1"
@@ -3669,9 +3669,13 @@ global@^4.3.2:
     min-document "^2.19.0"
     process "~0.5.1"
 
-globals@^11.0.1, globals@^11.1.0, globals@^11.3.0:
+globals@^11.0.1, globals@^11.1.0:
   version "11.3.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.3.0.tgz#e04fdb7b9796d8adac9c8f64c14837b2313378b0"
+
+globals@^11.5.0:
+  version "11.5.0"
+  resolved "https://registry.yarnpkg.com/globals/-/globals-11.5.0.tgz#6bc840de6771173b191f13d3a9c94d441ee92642"
 
 globals@^9.18.0:
   version "9.18.0"
