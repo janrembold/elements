@@ -17,7 +17,7 @@ const styles = {
   radioElement: num =>
     css({
       marginRight: num > 2 ? 0 : 40,
-      width: `${num > 2 ? '100%' : 'auto'}`,
+      width: num > 2 ? '100%' : 'auto',
     }),
   radio: primaryColor =>
     css({
