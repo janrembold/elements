@@ -84,6 +84,8 @@ class RadioButtonSet extends React.Component {
     radioSetStyles: PropTypes.object,
     /** css object, that overwrites the default styles of a single radio element */
     radioElementStyles: PropTypes.object,
+    /** Mark if the RadioButton is required */
+    required: PropTypes.bool.isRequired,
   }
 
   static defaultProps = {
