@@ -1,32 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`First radio-button should be selected 1`] = `
-.css-bycrzc,
-[data-css-bycrzc] {
+.css-0,
+[data-css-0] {
   padding: 15px 15px;
 }
 
-.css-1oaqer5,
-[data-css-1oaqer5] {
+.css-1,
+[data-css-1] {
   margin-right: 40px;
   width: auto;
 }
 
-.css-1glg3ss,
-[data-css-1glg3ss] {
+.css-2,
+[data-css-2] {
   opacity: 0;
   margin: 0;
 }
 
-.css-dau5wj,
-[data-css-dau5wj] {
+.css-3,
+[data-css-3] {
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-ln5kxm,
-[data-css-ln5kxm] {
+.css-4,
+[data-css-4] {
   box-sizing: border-box;
   align-content: flex-start;
   align-items: flex-start;
@@ -49,20 +49,20 @@ exports[`First radio-button should be selected 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-5,
+[data-css-5] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-13azwyo,
-[data-css-13azwyo] {
+.css-6,
+[data-css-6] {
   position: relative;
 }
 
-.css-1wp5mix,
-[data-css-1wp5mix] {
+.css-7,
+[data-css-7] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -85,14 +85,14 @@ exports[`First radio-button should be selected 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-15nlvew,
-[data-css-15nlvew] {
+.css-8,
+[data-css-8] {
   position: relative;
   top: 10px;
 }
 
-.css-1fb3v1,
-[data-css-1fb3v1] {
+.css-9,
+[data-css-9] {
   background-color: lightGrey;
   border-radius: 50%;
   height: 20px;
@@ -102,8 +102,8 @@ exports[`First radio-button should be selected 1`] = `
   -moz-transition: background-color 120ms linear;
 }
 
-.css-yirehu,
-[data-css-yirehu] {
+.css-10,
+[data-css-10] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -126,8 +126,8 @@ exports[`First radio-button should be selected 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-tg7yw3,
-[data-css-tg7yw3] {
+.css-11,
+[data-css-11] {
   background-color: white;
   border-radius: 50%;
   height: 16px;
@@ -137,8 +137,8 @@ exports[`First radio-button should be selected 1`] = `
   -moz-transition: background-color 120ms linear;
 }
 
-.css-6vdmzy,
-[data-css-6vdmzy] {
+.css-12,
+[data-css-12] {
   background-color: white;
   border-radius: 50%;
   height: 10px;
@@ -148,14 +148,14 @@ exports[`First radio-button should be selected 1`] = `
   -moz-transition: background-color 120ms linear;
 }
 
-.css-cnrz83,
-[data-css-cnrz83] {
+.css-13,
+[data-css-13] {
   position: relative;
   top: -10px;
 }
 
-.css-18icfsk,
-[data-css-18icfsk] {
+.css-14,
+[data-css-14] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -164,8 +164,8 @@ exports[`First radio-button should be selected 1`] = `
   color: #333333;
 }
 
-.css-t2hdxa,
-[data-css-t2hdxa] {
+.css-15,
+[data-css-15] {
   position: absolute;
   top: 0;
   right: 0;
@@ -173,8 +173,8 @@ exports[`First radio-button should be selected 1`] = `
   bottom: 0;
 }
 
-.css-1oik81d,
-[data-css-1oik81d] {
+.css-16,
+[data-css-16] {
   background-color: #3598db;
   border-radius: 50%;
   height: 20px;
@@ -184,8 +184,8 @@ exports[`First radio-button should be selected 1`] = `
   -moz-transition: background-color 120ms linear;
 }
 
-.css-ogitno,
-[data-css-ogitno] {
+.css-17,
+[data-css-17] {
   background-color: #3598db;
   border-radius: 50%;
   height: 10px;
@@ -196,43 +196,43 @@ exports[`First radio-button should be selected 1`] = `
 }
 
 <div
-  data-css-bycrzc=""
-  data-css-dau5wj=""
-  data-css-ln5kxm=""
+  data-css-0=""
+  data-css-3=""
+  data-css-4=""
 >
   <div
-    data-css-1oaqer5=""
-    data-css-4p3ux5=""
+    data-css-1=""
+    data-css-5=""
   >
     <div
-      data-css-13azwyo=""
-      data-css-1wp5mix=""
+      data-css-6=""
+      data-css-7=""
     >
       <label
         htmlFor="blue pill"
       >
         <div
-          data-css-15nlvew=""
-          data-css-4p3ux5=""
+          data-css-8=""
+          data-css-5=""
         >
           <div
-            data-css-1fb3v1=""
-            data-css-yirehu=""
+            data-css-9=""
+            data-css-10=""
           >
             <div
-              data-css-tg7yw3=""
-              data-css-yirehu=""
+              data-css-11=""
+              data-css-10=""
             >
               <div
-                data-css-6vdmzy=""
-                data-css-yirehu=""
+                data-css-12=""
+                data-css-10=""
               />
             </div>
           </div>
         </div>
         <div
-          data-css-4p3ux5=""
-          data-css-cnrz83=""
+          data-css-5=""
+          data-css-13=""
           style={
             Object {
               "marginLeft": 30,
@@ -240,18 +240,18 @@ exports[`First radio-button should be selected 1`] = `
           }
         >
           <div
-            data-css-18icfsk=""
-            data-css-4p3ux5=""
+            data-css-14=""
+            data-css-5=""
           >
             blue pill
           </div>
         </div>
         <div
-          data-css-4p3ux5=""
-          data-css-t2hdxa=""
+          data-css-5=""
+          data-css-15=""
         >
           <input
-            data-css-1glg3ss=""
+            data-css-2=""
             id="blue pill"
             name="color"
             onChange={[Function]}
@@ -264,38 +264,38 @@ exports[`First radio-button should be selected 1`] = `
     </div>
   </div>
   <div
-    data-css-1oaqer5=""
-    data-css-4p3ux5=""
+    data-css-1=""
+    data-css-5=""
   >
     <div
-      data-css-13azwyo=""
-      data-css-1wp5mix=""
+      data-css-6=""
+      data-css-7=""
     >
       <label
         htmlFor="red pill"
       >
         <div
-          data-css-15nlvew=""
-          data-css-4p3ux5=""
+          data-css-8=""
+          data-css-5=""
         >
           <div
-            data-css-1fb3v1=""
-            data-css-yirehu=""
+            data-css-9=""
+            data-css-10=""
           >
             <div
-              data-css-tg7yw3=""
-              data-css-yirehu=""
+              data-css-11=""
+              data-css-10=""
             >
               <div
-                data-css-6vdmzy=""
-                data-css-yirehu=""
+                data-css-12=""
+                data-css-10=""
               />
             </div>
           </div>
         </div>
         <div
-          data-css-4p3ux5=""
-          data-css-cnrz83=""
+          data-css-5=""
+          data-css-13=""
           style={
             Object {
               "marginLeft": 30,
@@ -303,18 +303,18 @@ exports[`First radio-button should be selected 1`] = `
           }
         >
           <div
-            data-css-18icfsk=""
-            data-css-4p3ux5=""
+            data-css-14=""
+            data-css-5=""
           >
             red pill
           </div>
         </div>
         <div
-          data-css-4p3ux5=""
-          data-css-t2hdxa=""
+          data-css-5=""
+          data-css-15=""
         >
           <input
-            data-css-1glg3ss=""
+            data-css-2=""
             id="red pill"
             name="color"
             onChange={[Function]}
@@ -327,38 +327,38 @@ exports[`First radio-button should be selected 1`] = `
     </div>
   </div>
   <div
-    data-css-1oaqer5=""
-    data-css-4p3ux5=""
+    data-css-1=""
+    data-css-5=""
   >
     <div
-      data-css-13azwyo=""
-      data-css-1wp5mix=""
+      data-css-6=""
+      data-css-7=""
     >
       <label
         htmlFor="green"
       >
         <div
-          data-css-15nlvew=""
-          data-css-4p3ux5=""
+          data-css-8=""
+          data-css-5=""
         >
           <div
-            data-css-1oik81d=""
-            data-css-yirehu=""
+            data-css-16=""
+            data-css-10=""
           >
             <div
-              data-css-tg7yw3=""
-              data-css-yirehu=""
+              data-css-11=""
+              data-css-10=""
             >
               <div
-                data-css-ogitno=""
-                data-css-yirehu=""
+                data-css-17=""
+                data-css-10=""
               />
             </div>
           </div>
         </div>
         <div
-          data-css-4p3ux5=""
-          data-css-cnrz83=""
+          data-css-5=""
+          data-css-13=""
           style={
             Object {
               "marginLeft": 30,
@@ -366,18 +366,18 @@ exports[`First radio-button should be selected 1`] = `
           }
         >
           <div
-            data-css-18icfsk=""
-            data-css-4p3ux5=""
+            data-css-14=""
+            data-css-5=""
           >
             green
           </div>
         </div>
         <div
-          data-css-4p3ux5=""
-          data-css-t2hdxa=""
+          data-css-5=""
+          data-css-15=""
         >
           <input
-            data-css-1glg3ss=""
+            data-css-2=""
             defaultChecked="checked"
             id="green"
             name="color"
@@ -394,32 +394,32 @@ exports[`First radio-button should be selected 1`] = `
 `;
 
 exports[`First radio-button should be selected 2`] = `
-.css-bycrzc,
-[data-css-bycrzc] {
+.css-0,
+[data-css-0] {
   padding: 15px 15px;
 }
 
-.css-1oaqer5,
-[data-css-1oaqer5] {
+.css-1,
+[data-css-1] {
   margin-right: 40px;
   width: auto;
 }
 
-.css-1glg3ss,
-[data-css-1glg3ss] {
+.css-2,
+[data-css-2] {
   opacity: 0;
   margin: 0;
 }
 
-.css-dau5wj,
-[data-css-dau5wj] {
+.css-3,
+[data-css-3] {
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-ln5kxm,
-[data-css-ln5kxm] {
+.css-4,
+[data-css-4] {
   box-sizing: border-box;
   align-content: flex-start;
   align-items: flex-start;
@@ -442,20 +442,20 @@ exports[`First radio-button should be selected 2`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-5,
+[data-css-5] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-13azwyo,
-[data-css-13azwyo] {
+.css-6,
+[data-css-6] {
   position: relative;
 }
 
-.css-1wp5mix,
-[data-css-1wp5mix] {
+.css-7,
+[data-css-7] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -478,14 +478,14 @@ exports[`First radio-button should be selected 2`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-15nlvew,
-[data-css-15nlvew] {
+.css-8,
+[data-css-8] {
   position: relative;
   top: 10px;
 }
 
-.css-1fb3v1,
-[data-css-1fb3v1] {
+.css-9,
+[data-css-9] {
   background-color: lightGrey;
   border-radius: 50%;
   height: 20px;
@@ -495,8 +495,8 @@ exports[`First radio-button should be selected 2`] = `
   -moz-transition: background-color 120ms linear;
 }
 
-.css-yirehu,
-[data-css-yirehu] {
+.css-10,
+[data-css-10] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -519,8 +519,8 @@ exports[`First radio-button should be selected 2`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-tg7yw3,
-[data-css-tg7yw3] {
+.css-11,
+[data-css-11] {
   background-color: white;
   border-radius: 50%;
   height: 16px;
@@ -530,8 +530,8 @@ exports[`First radio-button should be selected 2`] = `
   -moz-transition: background-color 120ms linear;
 }
 
-.css-6vdmzy,
-[data-css-6vdmzy] {
+.css-12,
+[data-css-12] {
   background-color: white;
   border-radius: 50%;
   height: 10px;
@@ -541,14 +541,14 @@ exports[`First radio-button should be selected 2`] = `
   -moz-transition: background-color 120ms linear;
 }
 
-.css-cnrz83,
-[data-css-cnrz83] {
+.css-13,
+[data-css-13] {
   position: relative;
   top: -10px;
 }
 
-.css-18icfsk,
-[data-css-18icfsk] {
+.css-14,
+[data-css-14] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -557,8 +557,8 @@ exports[`First radio-button should be selected 2`] = `
   color: #333333;
 }
 
-.css-t2hdxa,
-[data-css-t2hdxa] {
+.css-15,
+[data-css-15] {
   position: absolute;
   top: 0;
   right: 0;
@@ -566,8 +566,8 @@ exports[`First radio-button should be selected 2`] = `
   bottom: 0;
 }
 
-.css-1oik81d,
-[data-css-1oik81d] {
+.css-16,
+[data-css-16] {
   background-color: #3598db;
   border-radius: 50%;
   height: 20px;
@@ -577,8 +577,8 @@ exports[`First radio-button should be selected 2`] = `
   -moz-transition: background-color 120ms linear;
 }
 
-.css-ogitno,
-[data-css-ogitno] {
+.css-17,
+[data-css-17] {
   background-color: #3598db;
   border-radius: 50%;
   height: 10px;
@@ -589,43 +589,43 @@ exports[`First radio-button should be selected 2`] = `
 }
 
 <div
-  data-css-bycrzc=""
-  data-css-dau5wj=""
-  data-css-ln5kxm=""
+  data-css-0=""
+  data-css-3=""
+  data-css-4=""
 >
   <div
-    data-css-1oaqer5=""
-    data-css-4p3ux5=""
+    data-css-1=""
+    data-css-5=""
   >
     <div
-      data-css-13azwyo=""
-      data-css-1wp5mix=""
+      data-css-6=""
+      data-css-7=""
     >
       <label
         htmlFor="blue pill"
       >
         <div
-          data-css-15nlvew=""
-          data-css-4p3ux5=""
+          data-css-8=""
+          data-css-5=""
         >
           <div
-            data-css-1oik81d=""
-            data-css-yirehu=""
+            data-css-16=""
+            data-css-10=""
           >
             <div
-              data-css-tg7yw3=""
-              data-css-yirehu=""
+              data-css-11=""
+              data-css-10=""
             >
               <div
-                data-css-ogitno=""
-                data-css-yirehu=""
+                data-css-17=""
+                data-css-10=""
               />
             </div>
           </div>
         </div>
         <div
-          data-css-4p3ux5=""
-          data-css-cnrz83=""
+          data-css-5=""
+          data-css-13=""
           style={
             Object {
               "marginLeft": 30,
@@ -633,18 +633,18 @@ exports[`First radio-button should be selected 2`] = `
           }
         >
           <div
-            data-css-18icfsk=""
-            data-css-4p3ux5=""
+            data-css-14=""
+            data-css-5=""
           >
             blue pill
           </div>
         </div>
         <div
-          data-css-4p3ux5=""
-          data-css-t2hdxa=""
+          data-css-5=""
+          data-css-15=""
         >
           <input
-            data-css-1glg3ss=""
+            data-css-2=""
             defaultChecked="checked"
             id="blue pill"
             name="color"
@@ -658,38 +658,38 @@ exports[`First radio-button should be selected 2`] = `
     </div>
   </div>
   <div
-    data-css-1oaqer5=""
-    data-css-4p3ux5=""
+    data-css-1=""
+    data-css-5=""
   >
     <div
-      data-css-13azwyo=""
-      data-css-1wp5mix=""
+      data-css-6=""
+      data-css-7=""
     >
       <label
         htmlFor="red pill"
       >
         <div
-          data-css-15nlvew=""
-          data-css-4p3ux5=""
+          data-css-8=""
+          data-css-5=""
         >
           <div
-            data-css-1fb3v1=""
-            data-css-yirehu=""
+            data-css-9=""
+            data-css-10=""
           >
             <div
-              data-css-tg7yw3=""
-              data-css-yirehu=""
+              data-css-11=""
+              data-css-10=""
             >
               <div
-                data-css-6vdmzy=""
-                data-css-yirehu=""
+                data-css-12=""
+                data-css-10=""
               />
             </div>
           </div>
         </div>
         <div
-          data-css-4p3ux5=""
-          data-css-cnrz83=""
+          data-css-5=""
+          data-css-13=""
           style={
             Object {
               "marginLeft": 30,
@@ -697,18 +697,18 @@ exports[`First radio-button should be selected 2`] = `
           }
         >
           <div
-            data-css-18icfsk=""
-            data-css-4p3ux5=""
+            data-css-14=""
+            data-css-5=""
           >
             red pill
           </div>
         </div>
         <div
-          data-css-4p3ux5=""
-          data-css-t2hdxa=""
+          data-css-5=""
+          data-css-15=""
         >
           <input
-            data-css-1glg3ss=""
+            data-css-2=""
             id="red pill"
             name="color"
             onChange={[Function]}
@@ -721,38 +721,38 @@ exports[`First radio-button should be selected 2`] = `
     </div>
   </div>
   <div
-    data-css-1oaqer5=""
-    data-css-4p3ux5=""
+    data-css-1=""
+    data-css-5=""
   >
     <div
-      data-css-13azwyo=""
-      data-css-1wp5mix=""
+      data-css-6=""
+      data-css-7=""
     >
       <label
         htmlFor="green"
       >
         <div
-          data-css-15nlvew=""
-          data-css-4p3ux5=""
+          data-css-8=""
+          data-css-5=""
         >
           <div
-            data-css-1fb3v1=""
-            data-css-yirehu=""
+            data-css-9=""
+            data-css-10=""
           >
             <div
-              data-css-tg7yw3=""
-              data-css-yirehu=""
+              data-css-11=""
+              data-css-10=""
             >
               <div
-                data-css-6vdmzy=""
-                data-css-yirehu=""
+                data-css-12=""
+                data-css-10=""
               />
             </div>
           </div>
         </div>
         <div
-          data-css-4p3ux5=""
-          data-css-cnrz83=""
+          data-css-5=""
+          data-css-13=""
           style={
             Object {
               "marginLeft": 30,
@@ -760,18 +760,18 @@ exports[`First radio-button should be selected 2`] = `
           }
         >
           <div
-            data-css-18icfsk=""
-            data-css-4p3ux5=""
+            data-css-14=""
+            data-css-5=""
           >
             green
           </div>
         </div>
         <div
-          data-css-4p3ux5=""
-          data-css-t2hdxa=""
+          data-css-5=""
+          data-css-15=""
         >
           <input
-            data-css-1glg3ss=""
+            data-css-2=""
             id="green"
             name="color"
             onChange={[Function]}
