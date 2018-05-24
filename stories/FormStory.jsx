@@ -15,6 +15,7 @@ import {
   TextInput,
   ResourceProvider,
   Form,
+  RadioButtonSet,
 } from '../src'
 
 export default class FormStory extends React.Component {
@@ -78,6 +79,16 @@ export default class FormStory extends React.Component {
                       label="Hereby I accept the terms & blablabla"
                       labelSize="s"
                     />
+
+                    <ListItem>
+                      <RadioButtonSet
+                        selection={[
+                          { key: 'A', value: 'A' },
+                          { key: 'B', value: 'B' },
+                          { key: 'C', value: 'C' },
+                        ]}
+                      />
+                    </ListItem>
 
                     <ListItem alignH="center">
                       <Button type="submit">Create my account</Button>
