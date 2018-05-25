@@ -4523,9 +4523,9 @@ jest-environment-node@^22.4.1:
     jest-mock "^22.4.3"
     jest-util "^22.4.3"
 
-jest-fetch-mock@1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/jest-fetch-mock/-/jest-fetch-mock-1.6.1.tgz#e485517f6c526db957b5649943b4a9707fc9aa3e"
+jest-fetch-mock@1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/jest-fetch-mock/-/jest-fetch-mock-1.6.2.tgz#dcdbf137459f0a94fb0a76ec832fed84d3153610"
   dependencies:
     isomorphic-fetch "^2.2.1"
     promise-polyfill "^7.1.1"
