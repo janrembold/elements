@@ -43,7 +43,7 @@
     "@storybook/addon-links": "3.4.6",
     "@storybook/react": "3.4.6",
     "babel-cli": "6.26.0",
-    "babel-core": "6.26.0",
+    "babel-core": "6.26.3",
     "babel-eslint": "8.2.3",
     "babel-plugin-add-react-displayname": "0.0.5",
     "babel-plugin-react-docgen": "1.9.0",
