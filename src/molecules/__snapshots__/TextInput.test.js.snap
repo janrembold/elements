@@ -132,7 +132,6 @@ exports[`TextInput renders 1`] = `
       name="email"
       onInvalid={[Function]}
       onKeyUp={[Function]}
-      pattern={undefined}
       placeholder="E-Mail"
       required={true}
       type="email"
