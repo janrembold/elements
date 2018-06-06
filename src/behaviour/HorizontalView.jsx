@@ -99,7 +99,7 @@ class HorizontalView extends React.Component {
     const translateX = (currentChild - 1) * -100
 
     return (
-      <View {...css({ overflow: 'hidden' })}>
+      <View flex="flex" {...css({ overflow: 'hidden' })}>
         <View
           direction="row"
           flex="flex"
