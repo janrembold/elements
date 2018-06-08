@@ -79,7 +79,7 @@
     "glob": "7.1.2",
     "html-entities": "1.2.1",
     "jest": "23.1.0",
-    "jest-fetch-mock": "1.6.2",
+    "jest-fetch-mock": "1.6.3",
     "jest-glamor-react": "4.3.0",
     "markdown-extract": "1.0.2",
     "path": "0.12.7",
