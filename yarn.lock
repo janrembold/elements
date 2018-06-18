@@ -4829,9 +4829,9 @@ jest-environment-node@^23.1.0:
     jest-mock "^23.1.0"
     jest-util "^23.1.0"
 
-jest-fetch-mock@1.6.4:
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/jest-fetch-mock/-/jest-fetch-mock-1.6.4.tgz#73fc486cb17c9547dbf256eed1a826ee5f215761"
+jest-fetch-mock@1.6.5:
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/jest-fetch-mock/-/jest-fetch-mock-1.6.5.tgz#178fa1a937ef6f61fb8e8483b6d4602b17e0d96d"
   dependencies:
     "@types/jest" "^23.0.0"
     isomorphic-fetch "^2.2.1"
