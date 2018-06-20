@@ -19,13 +19,15 @@ function styles(
   color,
   disabled,
   disabledColor,
-  disabledBackgroundColor
+  disabledBackgroundColor,
+  stretch
 ) {
   return css({
     ...baseStyle,
     background: disabled ? disabledBackgroundColor : backgroundColor,
     color: disabled ? disabledColor : color,
     cursor: disabled ? 'not-allowed' : 'pointer',
+    width: stretch ? '100%' : 'auto',
   })
 }
 
@@ -68,6 +70,8 @@ class Button extends React.Component {
     disabled: PropTypes.bool,
     /** Color of the button, theme primary color by default */
     backgroundColor: PropTypes.string,
+    /** Makes width 100% */
+    stretch: PropTypes.bool,
     /** Textcolor of the button (deprecated) */
     color: color,
     /** Textcolor when button is disabled (deprecated) */
@@ -88,14 +92,15 @@ class Button extends React.Component {
 
   render() {
     const {
-      children,
-      type,
-      disabled,
       backgroundColor,
+      children,
       color,
-      disabledColor,
-      disabledBackgroundColor,
       css: cssProp,
+      disabled,
+      disabledBackgroundColor,
+      disabledColor,
+      stretch,
+      type,
       ...restProps
     } = this.props
 
@@ -105,7 +110,8 @@ class Button extends React.Component {
         color,
         disabled,
         disabledColor,
-        disabledBackgroundColor
+        disabledBackgroundColor,
+        stretch
       ),
       cssProp
     )
@@ -118,7 +124,11 @@ class Button extends React.Component {
         name={restProps.name || type || null}
         onClick={this.handleClick}
       >
-        {typeof children === 'string' ? <Text color={color}>{children}</Text> : children}
+        {typeof children === 'string' ? (
+          <Text color={color}>{children}</Text>
+        ) : (
+          children
+        )}
       </button>
     )
   }
