@@ -47,7 +47,7 @@ class SquareIconButton extends React.Component {
   }
 
   render() {
-    const { icon, color, iconColor, iconSize, onClick, ...restProps } = this.props
+    const { icon, color, iconColor, iconSize, onClick, ...props } = this.props
     return (
       <View
         {...box(colorCode(color), onClick)}
@@ -55,7 +55,7 @@ class SquareIconButton extends React.Component {
         alignH="center"
         alignV="center"
         onClick={onClick}
-        {...restProps}
+        {...props}
       >
         <Icon color={iconColor} size={iconSize} name={icon} />
       </View>
