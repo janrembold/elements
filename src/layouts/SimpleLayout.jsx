@@ -110,7 +110,7 @@ class SimpleLayout extends React.PureComponent {
   }
 
   render() {
-    const { children, backgroundColor, padded, ...props } = this.props
+    const { children, backgroundColor, padded, onScrollEnd, ...props } = this.props
 
     return (
       <Theme>
