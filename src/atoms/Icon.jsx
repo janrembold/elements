@@ -32,6 +32,7 @@ export const Icons = [
   'calendar-check-filled',
   'camera',
   'camera-filled',
+  'comment',
   'car',
   'car-filled',
   'chat',
