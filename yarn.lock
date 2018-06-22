@@ -6748,9 +6748,9 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-broadcast@0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/react-broadcast/-/react-broadcast-0.7.0.tgz#e0f70c208293bacc43eb1fff1971806076c756b6"
+react-broadcast@0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/react-broadcast/-/react-broadcast-0.7.1.tgz#732c1f4d3c9dbb9dbf0b92540c7c2490fb746dfb"
   dependencies:
     prop-types "^15.6.0"
     warning "^3.0.0"
