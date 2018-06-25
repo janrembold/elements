@@ -76,7 +76,7 @@ const styles = {
 }
 
 /**
- * ChatBubble are used to show conversations between to or more users.
+ * ChatBubbles are used to show conversations between two or more users.
  *
  * ```example
  * <ThemeProvider>

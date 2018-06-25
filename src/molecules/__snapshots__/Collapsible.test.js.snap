@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component Collapsible renders properly 1`] = `
+.css-0,
+[data-css-0] {
+  border-bottom: 1px solid #ecf0f1;
+  width: 100%;
+}
+
+.css-1,
+[data-css-1] {
+  background-color: white;
+  cursor: pointer;
+}
+
+.css-2,
+[data-css-2] {
+  height: 50px;
+  padding: 0 20px;
+  width: calc(100% - 50px);
+}
+
+.css-3,
+[data-css-3] {
+  width: 50px;
+  height: 50px;
+}
+
+.css-4,
+[data-css-4] {
+  padding: 3px 5px 8px 5px;
+  border-radius: 2px;
+  outline: none;
+}
+
+.css-4:focus,
+[data-css-4]:focus,
+.css-4[data-simulate-focus],
+[data-css-4][data-simulate-focus] {
+  border: 2px solid rgba(89, 186, 247, 0.5);
+}
+
+.css-8,
+[data-css-8] {
+  transition-property: height;
+  transition: height 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  overflow: hidden;
+  transform-origin: top;
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -webkit-transition: height 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -moz-transition: height 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -webkit-transform-origin: top;
+}
+
+.css-9,
+[data-css-9] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-10,
+[data-css-10] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  flex: 0 0 auto;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-11,
+[data-css-11] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-12,
+[data-css-12] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-13,
+[data-css-13] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-14,
+[data-css-14] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+<div
+  data-css-9=""
+  data-css-0=""
+>
+  <div
+    data-css-1=""
+    data-css-10=""
+    onClick={[Function]}
+  >
+    <div
+      data-css-2=""
+      data-css-11=""
+    >
+      <div
+        data-css-13=""
+        data-css-12=""
+        style={
+          Object {
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+            "whiteSpace": "nowrap",
+            "width": "100%",
+          }
+        }
+      >
+        string
+      </div>
+    </div>
+    <div
+      data-css-3=""
+      data-css-14=""
+    >
+      <div
+        data-css-4=""
+        data-css-13=""
+        onKeyPress={[Function]}
+        tabIndex={1}
+      >
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+          data-css-13=""
+          size={10}
+          style={
+            Object {
+              "fill": "lightGreyIntense",
+              "height": 10,
+              "stroke": false,
+              "width": 10,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    data-css-13=""
+    data-css-8=""
+  >
+    <p>
+      Test child
+    </p>
+  </div>
+</div>
+`;
