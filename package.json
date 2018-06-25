@@ -78,7 +78,7 @@
     "fs-extra": "6.0.1",
     "glob": "7.1.2",
     "html-entities": "1.2.1",
-    "jest": "23.1.0",
+    "jest": "23.2.0",
     "jest-fetch-mock": "1.6.5",
     "jest-glamor-react": "4.3.0",
     "markdown-extract": "1.0.2",
