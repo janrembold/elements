@@ -105,15 +105,15 @@ class Collapsible extends React.Component {
   state = { collapsed: this.props.initiallyCollapsed }
 
   componentDidMount() {
-    if (this.childRef.current) {
-      if (!this.props.initiallyCollapsed) {
-        this.childRef.current.style.height = `${
-          this.childRef.current.scrollHeight
-        }px`
-      } else {
-        this.childRef.current.style.height = `0px`
-      }
+    // if (this.childRef.current) {
+    if (!this.props.initiallyCollapsed) {
+      this.childRef.current.style.height = `${
+        this.childRef.current.scrollHeight
+      }px`
+    } else {
+      this.childRef.current.style.height = `0px`
     }
+    // }
   }
 
   childRef = React.createRef()
