@@ -4,7 +4,7 @@ import { css } from 'glamor'
 import { View, Text } from '../'
 
 /**
- *   A ReadMore is a simple container, to show / hide content. It will automatically decide whether to show the `read more` link or not.
+ *   A ReadMore is a simple container, to show / (hide) content. It will automatically decide whether to show the `read more` link or not.
  * ```example
 <Card>
   <ListItem>
@@ -60,6 +60,7 @@ class ReadMore extends React.Component {
   childRef = React.createRef()
 
   toggleCollapse = () => {
+    console.log(this.childRef)
     const { current } = this.childRef
     if (!this.state.collapsed) {
       current.style.height = this.props.defaultHeight
@@ -76,8 +77,6 @@ class ReadMore extends React.Component {
 
   toggleCollapseLink = () => {
     const { current } = this.childRef
-    console.log(current.style.height, current.scrollHeight)
-    console.log(window.innerHeight)
 
     let defaultWrapperHeight = 0
     let elHeight = current.scrollHeight
