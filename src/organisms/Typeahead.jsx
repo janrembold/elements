@@ -194,6 +194,8 @@ class Typeahead extends React.Component {
           {showResults &&
             options.slice(0, nrResults).map((option, index) => (
               <ListItem
+                onRef={this.listElementRefs[index]}
+                tabIndex={0}
                 key={index}
                 onClick={() =>
                   this.handleSelectItem({
@@ -201,20 +203,21 @@ class Typeahead extends React.Component {
                     label: option[configuration.label],
                   })
                 }
-                backgroundColor={
-                  selectedElements.findIndex(
-                    selected => option[configuration.value] === selected.value
-                  ) > -1
-                    ? ColorPalette.whiteIntense
-                    : ColorPalette.white
-                }
                 {...css({
                   width,
+                  backgroundColor:
+                    selectedElements.findIndex(
+                      selected => option[configuration.value] === selected.value
+                    ) > -1
+                      ? ColorPalette.lightGreyIntense
+                      : ColorPalette.white,
+                  ':focus': {
+                    backgroundColor: ColorPalette.whiteIntense,
+                    outline: 'none',
+                  },
                 })}
               >
-                <Text onRef={this.listElementRefs[index]} tabIndex={0}>
-                  {option[configuration.label]}
-                </Text>
+                <Text>{option[configuration.label]}</Text>
               </ListItem>
             ))}
         </View>
