@@ -23,9 +23,10 @@ class TypeaheadStory extends React.Component {
               selectCallback={selectedElements =>
                 this.setState({ selectedElements })
               }
+              nrResults={5}
             />
             <Text align="center" {...css({ margin: '20px 0px 80px 0px' })}>
-              Listing the selected elements is the parent's responmsibility
+              Listing the selected elements is the parent's responsibility
             </Text>
             <View direction="row" wrap="wrap">
               {selectedElements.map((element, index) => (
