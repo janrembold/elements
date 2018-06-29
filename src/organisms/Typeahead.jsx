@@ -6,43 +6,35 @@ import { ColorPalette } from '@allthings/colors'
 
 class Typeahead extends React.Component {
   static propTypes = {
-    configuration: PropTypes.object,
+    configuration: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      value: PropTypes.string.isRequired,
+    }),
     width: PropTypes.string,
-    selectCallback: PropTypes.func,
-    // deleteElement: PropTypes.func,
+    options: PropTypes.array,
     multiselect: PropTypes.bool,
     nrResults: PropTypes.number,
+    onInputChange: PropTypes.func,
+    onSelect: PropTypes.func,
+    loading: PropTypes.bool,
   }
 
   static defaultProps = {
     width: '100%',
-    selectCallback: () => {},
+    options: [],
     configuration: { label: 'name', value: 'name' },
     multiselect: false,
+    onInputChange: () => {},
+    onSelect: () => {},
   }
 
   constructor(props) {
     super(props)
     this.state = {
       input: '',
-      options: [],
       selectedElements: [],
       focusIndex: -1,
-    }
-    this.xhr = new XMLHttpRequest()
-    this.xhr.onreadystatechange = () => {
-      var DONE = 4
-      var OK = 200
-      if (this.xhr.readyState === DONE) {
-        if (this.xhr.status === OK) {
-          this.setState({
-            options: JSON.parse(this.xhr.responseText),
-            loading: false,
-          })
-        } else {
-          this.setState({ options: [], focusIndex: -1, loading: false })
-        }
-      }
+      showResults: false,
     }
     this.inputRef = React.createRef()
     this.listRef = React.createRef()
@@ -60,27 +52,14 @@ class Typeahead extends React.Component {
     document.removeEventListener('mousedown', this.handleClickOutside)
   }
 
-  refetch = input => {
-    this.setState({ loading: true })
-    this.xhr.open('GET', `https://restcountries.eu/rest/v2/name/${input}`)
-    this.xhr.send(null)
+  handleInputChange = e => {
+    this.props.onInputChange(e.target.value)
+    this.setState({ input: e.target.value, showResults: true })
   }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.input !== prevState.input) {
-      if (this.state.input) {
-        this.refetch(this.state.input)
-      } else {
-        this.setState({ options: [], focusIndex: -1 })
-      }
-    }
-  }
-
-  handleInputChange = e => this.setState({ input: e.target.value })
 
   handleSelectItem = clickedElement => {
     const { selectedElements } = this.state
-    const { selectCallback, multiselect } = this.props
+    const { multiselect, onSelect } = this.props
     const index = selectedElements.findIndex(
       selected => clickedElement.value === selected.value
     )
@@ -90,6 +69,7 @@ class Typeahead extends React.Component {
       newSelectedElements = [...selectedElements]
       newSelectedElements.splice(index, 1)
       this.setState({ selectedElements: newSelectedElements })
+      onSelect(newSelectedElements)
     } else {
       // adding element
       newSelectedElements = multiselect
@@ -97,45 +77,47 @@ class Typeahead extends React.Component {
         : [clickedElement]
       this.setState(state => ({
         selectedElements: newSelectedElements,
-        options: multiselect ? state.options : [],
         focusIndex: multiselect ? state.focusIndex : -1,
       }))
+      onSelect(newSelectedElements)
       if (!multiselect) {
         // give back focus to the input field
         this.inputRef.current.focus()
       }
     }
-    // signal the new array to the parent
-    selectCallback(newSelectedElements)
   }
 
   handleClickOutside = e => {
     if (this.listRef.current && !this.listRef.current.contains(e.target)) {
-      this.setState({ options: [], focusIndex: -1 })
+      this.setState({ showResults: false, focusIndex: -1 })
     }
   }
 
   clearInput = () => this.setState({ input: '' })
 
   onKeyDown = e => {
-    const { configuration, nrResults } = this.props
-    const { options, focusIndex, input } = this.state
+    const { configuration, nrResults, options, multiselect } = this.props
+    const { focusIndex } = this.state
     if (e.keyCode === 27) {
       // escape
-      this.setState({ options: [], focusIndex: -1 })
+      this.setState({ showResults: false, focusIndex: -1 })
       this.inputRef.current.focus()
     } else if (options.length > 0 && e.keyCode === 40) {
       // arrow down
+      const lowerBorder =
+        nrResults > options.length ? options.length : nrResults
       const newFocusIndex =
-        focusIndex >= nrResults - 1 ? nrResults - 1 : focusIndex + 1
+        focusIndex >= lowerBorder - 1 ? lowerBorder - 1 : focusIndex + 1
       this.setState({
         focusIndex: newFocusIndex,
       })
       this.listElementRefs[newFocusIndex].current.focus()
     } else if (options.length > 0 && e.keyCode === 38) {
       // arrow up
-      if (focusIndex === 0) {
+      if (focusIndex === -1) {
+      } else if (focusIndex === 0) {
         this.inputRef.current.focus()
+        this.setState({ focusIndex: -1 })
       } else {
         this.setState({ focusIndex: focusIndex - 1 })
         this.listElementRefs[focusIndex - 1].current.focus()
@@ -148,8 +130,11 @@ class Typeahead extends React.Component {
           value: option[configuration.value],
           label: option[configuration.label],
         })
-      } else if (options.length === 0 && input) {
-        this.refetch(input)
+        this.setState(state => ({
+          showResults: multiselect ? state.showResults : false,
+        }))
+      } else if (focusIndex === -1) {
+        this.setState({ showResults: true })
       }
     }
   }
@@ -158,12 +143,12 @@ class Typeahead extends React.Component {
   onInputFocus = () =>
     !this.state.input &&
     this.state.selectedElements.length === 0 &&
-    this.refetch('x') // just for testing, this should be empty string
+    this.setState({ showResults: true })
 
   render() {
-    const { configuration, width, nrResults } = this.props
-    const { options, loading, selectedElements, input } = this.state
-    const showSpinner = loading && !(options.length > 0)
+    const { configuration, width, nrResults, options, loading } = this.props
+    const { selectedElements, input, showResults } = this.state
+    const showSpinner = loading && !options.length
     return (
       <View
         direction="column"
@@ -206,7 +191,7 @@ class Typeahead extends React.Component {
             boxShadow: '0px 5px 5px rgba(0, 0, 0, 0.4)',
           })}
         >
-          {!showSpinner &&
+          {showResults &&
             options.slice(0, nrResults).map((option, index) => (
               <ListItem
                 key={index}
