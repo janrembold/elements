@@ -10,7 +10,7 @@ import {
 import { css } from 'glamor'
 
 const NR_RESULTS = 5
-const MULTISELECT = true
+const MULTISELECT = false
 class TypeaheadStory extends React.Component {
   constructor(props) {
     super(props)
@@ -71,8 +71,12 @@ class TypeaheadStory extends React.Component {
               onInputChange={this.onInputChange}
               loading={loading}
               onSelect={this.onSelectElement}
-              multiselect={true}
+              multiselect={MULTISELECT}
+              tabIndex={1}
             />
+            <Text align="center" {...css({ margin: '320px 0px 0px 0px' })}>
+              Note: Listing the selected elements is the parent's responsibility
+            </Text>
             <View direction="row" wrap="wrap">
               {selectedElements.map((element, index) => (
                 <Pill
@@ -82,10 +86,6 @@ class TypeaheadStory extends React.Component {
                 />
               ))}
             </View>
-
-            <Text align="center" {...css({ margin: '20px 0px 10px 0px' })}>
-              Note: Listing the selected elements is the parent's responsibility
-            </Text>
           </View>
         </ResourceProvider>
       </ThemeProvider>

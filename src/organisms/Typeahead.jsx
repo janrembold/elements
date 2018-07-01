@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View, ListSpinner, Text, ListItem, Icon } from '../'
+import { View, Text, ListItem, Icon } from '../'
 import { css } from 'glamor'
 import { ColorPalette } from '@allthings/colors'
 
@@ -16,7 +16,7 @@ class Typeahead extends React.Component {
     nrResults: PropTypes.number,
     onInputChange: PropTypes.func,
     onSelect: PropTypes.func,
-    loading: PropTypes.bool,
+    tabIndex: PropTypes.number,
   }
 
   static defaultProps = {
@@ -26,6 +26,7 @@ class Typeahead extends React.Component {
     multiselect: false,
     onInputChange: () => {},
     onSelect: () => {},
+    tabIndex: -1,
   }
 
   constructor(props) {
@@ -78,6 +79,7 @@ class Typeahead extends React.Component {
       this.setState(state => ({
         selectedElements: newSelectedElements,
         focusIndex: multiselect ? state.focusIndex : -1,
+        input: multiselect ? state.input : clickedElement.label,
       }))
       onSelect(newSelectedElements)
       if (!multiselect) {
@@ -96,6 +98,7 @@ class Typeahead extends React.Component {
   clearInput = () => this.setState({ input: '' })
 
   onKeyDown = e => {
+    e.stopPropagation()
     const { configuration, nrResults, options, multiselect } = this.props
     const { focusIndex } = this.state
     if (e.keyCode === 27) {
@@ -124,8 +127,8 @@ class Typeahead extends React.Component {
       }
     } else if (e.keyCode === 13) {
       // enter
+      const option = this.visiblePartOfOptions()[focusIndex]
       if (focusIndex < nrResults && focusIndex > -1) {
-        const option = options.slice(0, nrResults)[focusIndex]
         this.handleSelectItem({
           value: option[configuration.value],
           label: option[configuration.label],
@@ -139,6 +142,17 @@ class Typeahead extends React.Component {
     }
   }
 
+  visiblePartOfOptions = () => this.props.options.slice(0, this.props.nrResults)
+
+  onKeyDownClear = e => {
+    if (e.keyCode === 13) {
+      // enter
+      e.stopPropagation()
+      this.clearInput()
+      this.inputRef.current.focus()
+    }
+  }
+
   // to see something on focus
   onInputFocus = () =>
     !this.state.input &&
@@ -146,9 +160,8 @@ class Typeahead extends React.Component {
     this.setState({ showResults: true })
 
   render() {
-    const { configuration, width, nrResults, options, loading } = this.props
+    const { configuration, width, tabIndex } = this.props
     const { selectedElements, input, showResults } = this.state
-    const showSpinner = loading && !options.length
     return (
       <View
         direction="column"
@@ -161,9 +174,11 @@ class Typeahead extends React.Component {
               position: 'absolute',
               zIndex: '2200',
               cursor: 'pointer',
-              top: 18,
+              top: 15,
               right: 10,
             }}
+            tabIndex={tabIndex === -1 ? -1 : tabIndex + 1}
+            onKeyDown={this.onKeyDownClear}
           >
             <Icon
               name="trash"
@@ -178,48 +193,63 @@ class Typeahead extends React.Component {
           onFocus={this.onInputFocus}
           value={input}
           ref={this.inputRef}
-          {...css({ height: 43, textIndent: 22 })}
+          tabIndex={tabIndex}
+          {...css({ height: 43, textIndent: 22, border: 'none' })}
         />
-        {showSpinner && <ListSpinner {...css({ marginTop: '10px' })} />}
         <View
           direction="column"
           onRef={this.listRef}
           {...css({
             position: 'absolute',
-            top: '50px',
+            top: '46px',
             zIndex: 1000,
             boxShadow: '0px 5px 5px rgba(0, 0, 0, 0.4)',
           })}
         >
           {showResults &&
-            options.slice(0, nrResults).map((option, index) => (
-              <ListItem
-                onRef={this.listElementRefs[index]}
-                tabIndex={0}
-                key={index}
-                onClick={() =>
-                  this.handleSelectItem({
-                    value: option[configuration.value],
-                    label: option[configuration.label],
-                  })
-                }
-                {...css({
-                  width,
-                  backgroundColor:
-                    selectedElements.findIndex(
-                      selected => option[configuration.value] === selected.value
-                    ) > -1
-                      ? ColorPalette.lightGreyIntense
+            this.visiblePartOfOptions().map((option, index) => {
+              const isSelected =
+                selectedElements.findIndex(
+                  selected => option[configuration.value] === selected.value
+                ) > -1
+              return (
+                <ListItem
+                  onRef={this.listElementRefs[index]}
+                  tabIndex={tabIndex + 2 + index}
+                  key={index}
+                  onClick={() =>
+                    this.handleSelectItem({
+                      value: option[configuration.value],
+                      label: option[configuration.label],
+                    })
+                  }
+                  onKeyDown={e => {
+                    if (e.keyCode === 13) {
+                      // enter
+                      e.stopPropagation()
+                      this.handleSelectItem({
+                        value: option[configuration.value],
+                        label: option[configuration.label],
+                      })
+                    }
+                  }}
+                  {...css({
+                    width,
+                    backgroundColor: isSelected
+                      ? ColorPalette.lightGrey
                       : ColorPalette.white,
-                  ':focus': {
-                    backgroundColor: ColorPalette.whiteIntense,
-                    outline: 'none',
-                  },
-                })}
-              >
-                <Text>{option[configuration.label]}</Text>
-              </ListItem>
-            ))}
+                    ':focus': {
+                      backgroundColor: isSelected
+                        ? ColorPalette.lightGreyIntense
+                        : ColorPalette.whiteIntense,
+                      outline: 'none',
+                    },
+                  })}
+                >
+                  <Text>{option[configuration.label]}</Text>
+                </ListItem>
+              )
+            })}
         </View>
       </View>
     )
