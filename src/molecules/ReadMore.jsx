@@ -36,42 +36,41 @@ class ReadMore extends React.Component {
     initiallyCollapsed: PropTypes.bool,
     readMoreLabel: PropTypes.string,
     defaultHeight: PropTypes.oneOfType(PropTypes.string, PropTypes.number),
-    toggleCallback: PropTypes.func,
+    onToggle: PropTypes.func,
   }
 
   static defaultProps = {
     initiallyCollapsed: true,
     readMoreLabel: 'Read more...',
     defaultHeight: '20vh',
-    toggleCallback: () => {},
+    onToggle: () => {},
   }
 
   state = { collapsed: this.props.initiallyCollapsed }
 
   componentDidMount() {
     this.toggleCollapseLink()
-    window.addEventListener('resize', this.toggleCollapseLink.bind(this))
+    window.addEventListener('resize', this.toggleCollapseLink)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.toggleCollapseLink.bind(this))
+    window.removeEventListener('resize', this.toggleCollapseLink)
   }
 
   childRef = React.createRef()
 
   toggleCollapse = () => {
-    console.log(this.childRef)
     const { current } = this.childRef
     if (!this.state.collapsed) {
       current.style.height = this.props.defaultHeight
       this.setState({ collapsed: true })
       // signal new state for the parent
-      this.props.toggleCallback(true)
+      this.props.onToggle(true)
     } else {
       current.style.height = `${current.scrollHeight}px`
       this.setState({ collapsed: false })
       // signal new state for the parent
-      this.props.toggleCallback(false)
+      this.props.onToggle(false)
     }
   }
 
@@ -101,14 +100,13 @@ class ReadMore extends React.Component {
     // Let's check whether we should show the Read More link or not
     if (elHeight < defaultWrapperHeight) {
       current.style.height = `${elHeight}px`
-      this.props.toggleCallback(false)
+      this.props.onToggle(false)
       this.setState({ collapsed: false })
     } else {
       current.style.height = `${defaultWrapperHeight}px`
-      this.props.toggleCallback(true)
+      this.props.onToggle(true)
       this.setState({ collapsed: true })
     }
-    // console.log('elHeight', elHeight, 'wrapperHeight', defaultWrapperHeight)
   }
 
   render() {
@@ -139,12 +137,6 @@ class ReadMore extends React.Component {
               cursor: 'pointer',
               paddingTop: this.state.collapsed ? 35 : 10,
               marginTop: this.state.collapsed ? -30 : 0,
-              background: 'transparent',
-              // eslint-disable-next-line no-dupe-keys
-              background: `-moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 100%)`,
-              // eslint-disable-next-line no-dupe-keys
-              background: `-webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 57%,rgba(255,255,255,1) 100%)`,
-              // eslint-disable-next-line no-dupe-keys
               background: `linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 57%,rgba(255,255,255,1) 100%)`,
             })}
           >
