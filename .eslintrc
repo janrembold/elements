@@ -14,7 +14,8 @@
     "it": true,
     "jest": true,
     "mount": true,
-    "shallow": true
+    "shallow": true,
+    "MutationObserver": true
   },
   "parser": "babel-eslint",
   "plugins": ["react", "jest", "import"],
