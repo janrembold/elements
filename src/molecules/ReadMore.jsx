@@ -63,21 +63,25 @@ class ReadMore extends React.Component {
     // I'm not sure about the right place for this functionality tho since it's
     // maybe better to be implemented into the mother component? Or maybe provide
     // a withObserver method?
-    const { current } = this.childRef
-    this.observer = new MutationObserver(this.toggleCollapseLink)
-    this.observer.observe(current, {
-      attributes: false,
-      characterData: false,
-      childList: true,
-      subtree: true,
-      attributeOldValue: false,
-      characterDataOldValue: false,
-    })
+    if(window.MutationObserver){
+      const { current } = this.childRef
+      this.observer = new MutationObserver(this.toggleCollapseLink)
+      this.observer.observe(current, {
+        attributes: false,
+        characterData: false,
+        childList: true,
+        subtree: true,
+        attributeOldValue: false,
+        characterDataOldValue: false,
+      })
+    }
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.toggleCollapseLink)
-    this.observer.disconnect()
+    if(window.MutationObserver){
+      this.observer.disconnect()
+    }
   }
 
   childRef = React.createRef()
