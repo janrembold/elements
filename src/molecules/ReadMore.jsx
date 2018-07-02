@@ -36,6 +36,7 @@ class ReadMore extends React.Component {
     initiallyCollapsed: PropTypes.bool,
     readMoreLabel: PropTypes.string,
     defaultHeight: PropTypes.oneOfType(PropTypes.string, PropTypes.number),
+    threshold: PropTypes.number,
     onToggle: PropTypes.func,
   }
 
@@ -43,6 +44,7 @@ class ReadMore extends React.Component {
     initiallyCollapsed: true,
     readMoreLabel: 'Read more...',
     defaultHeight: '20vh',
+    threshold: 0, // We fance a treshold value of 80 very often...
     onToggle: () => {},
   }
 
@@ -123,6 +125,7 @@ class ReadMore extends React.Component {
     } else {
       defaultWrapperHeight = this.props.defaultHeight
     }
+    defaultWrapperHeight = defaultWrapperHeight + this.props.threshold
 
     // Let's check whether we should show the Read More link or not
     if (elHeight < defaultWrapperHeight) {
