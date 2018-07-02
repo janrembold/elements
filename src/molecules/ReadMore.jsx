@@ -49,6 +49,16 @@ class ReadMore extends React.Component {
   state = { collapsed: this.props.initiallyCollapsed }
 
   componentDidMount() {
+    // @todo: We should watch here for Dom changes and trigger the collapse ALSO
+    // on DOM changes - see -> https://github.com/jcgertig/react-mutation-observer
+    // -
+    // Especially stuff like dangerouslySetInnerHTML is of course NOT triggering
+    // collapse correctly (it's simply not handled by the react lifecycle)
+    // -> https://stackoverflow.com/questions/44550462/reactjs-callback-for-dangerouslysetinnerhtml-complete
+    // -
+    // I'm not sure about the right place for this functionality tho since it's
+    // maybe better to be implemented into the mother component? Or maybe provide
+    // a withObserver method?
     this.toggleCollapseLink()
     window.addEventListener('resize', this.toggleCollapseLink)
   }
