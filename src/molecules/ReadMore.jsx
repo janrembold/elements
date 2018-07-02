@@ -47,7 +47,6 @@ class ReadMore extends React.Component {
   }
 
   state = { collapsed: this.props.initiallyCollapsed }
-  observer = null
 
   componentDidMount() {
     this.toggleCollapseLink()
@@ -85,6 +84,7 @@ class ReadMore extends React.Component {
   }
 
   childRef = React.createRef()
+  observer = null
 
   toggleCollapse = () => {
     const { current } = this.childRef
@@ -105,7 +105,7 @@ class ReadMore extends React.Component {
     const { current } = this.childRef
 
     let defaultWrapperHeight = 0
-    let elHeight = current.scrollHeight
+    const elHeight = current.scrollHeight
 
     // Let's check for viewport dimensions in here and convert them to px...
     const regex = /(vw|vh)$/
