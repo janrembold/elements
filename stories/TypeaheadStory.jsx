@@ -69,7 +69,6 @@ class TypeaheadStory extends React.Component {
               nrResults={NR_RESULTS}
               options={options}
               onInputChange={this.onInputChange}
-              loading={loading}
               onSelect={this.onSelectElement}
               multiselect={MULTISELECT}
               tabIndex={1}

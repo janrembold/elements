@@ -80,6 +80,7 @@ class Typeahead extends React.Component {
         selectedElements: newSelectedElements,
         focusIndex: multiselect ? state.focusIndex : -1,
         input: multiselect ? state.input : clickedElement.label,
+        showResults: multiselect ? state.showResults : false,
       }))
       onSelect(newSelectedElements)
       if (!multiselect) {
@@ -142,7 +143,14 @@ class Typeahead extends React.Component {
     }
   }
 
-  visiblePartOfOptions = () => this.props.options.slice(0, this.props.nrResults)
+  visiblePartOfOptions = () =>
+    this.props.options
+      .filter(option =>
+        option[this.props.configuration.label]
+          .toLowerCase()
+          .includes(this.state.input.toLowerCase())
+      )
+      .slice(0, this.props.nrResults)
 
   onKeyDownClear = e => {
     if (e.keyCode === 13) {
