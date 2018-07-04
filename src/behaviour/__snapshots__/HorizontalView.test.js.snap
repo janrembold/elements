@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HorizontalView behaviors should render non-arrays 1`] = `
+.css-rdsogp,
+[data-css-rdsogp] {
+  overflow: hidden;
+}
+
+.css-qtahyn,
+[data-css-qtahyn] {
+  transform: translate3d(-200%, 0, 0);
+  transition: .5s;
+  -webkit-transform: translate3d(-200%, 0, 0);
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+}
+
+.css-63oe3q,
+[data-css-63oe3q] {
+  width: 100%;
+}
+
+<View
+  alignH="start"
+  alignV="stretch"
+  data-css-rdsogp=""
+  fill={false}
+  flex="flex"
+  onRef={[Function]}
+>
+  <View
+    alignH="start"
+    alignV="stretch"
+    data-css-qtahyn=""
+    direction="row"
+    fill={false}
+    flex="flex"
+    onRef={[Function]}
+    onTransitionEnd={[Function]}
+  >
+    <View
+      alignH="start"
+      alignV="stretch"
+      data-css-63oe3q=""
+      direction="column"
+      fill={false}
+      flex="none"
+      key="0/.0"
+      onRef={[Function]}
+    >
+      <Text
+        block={true}
+        color="text"
+        id="first"
+        size="l"
+      >
+        Text 1
+      </Text>
+    </View>
+    <View
+      alignH="start"
+      alignV="stretch"
+      data-css-63oe3q=""
+      direction="column"
+      fill={false}
+      flex="none"
+      key="1/.1"
+      onRef={[Function]}
+    >
+      <Text
+        block={true}
+        color="text"
+        id="second"
+        size="l"
+      >
+        Text 2
+      </Text>
+    </View>
+    <View
+      alignH="start"
+      alignV="stretch"
+      data-css-63oe3q=""
+      direction="column"
+      fill={false}
+      flex="none"
+      key="2/.2"
+      onRef={[Function]}
+    />
+  </View>
+</View>
+`;
+
+exports[`HorizontalView behaviors should render with array too 1`] = `
+.css-rdsogp,
+[data-css-rdsogp] {
+  overflow: hidden;
+}
+
+.css-63oe3q,
+[data-css-63oe3q] {
+  width: 100%;
+}
+
+.css-16zohb8,
+[data-css-16zohb8] {
+  transform: translate3d(-100%, 0, 0);
+  transition: .5s;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+}
+
+.css-9n9wv3,
+[data-css-9n9wv3] {
+  box-sizing: border-box;
+  flex: 1;
+  -webkit-flex: 1;
+}
+
+.css-drjoks,
+[data-css-drjoks] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 1;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 1;
+}
+
+.css-iar4wy,
+[data-css-iar4wy] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-18icfsk,
+[data-css-18icfsk] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-4p3ux5,
+[data-css-4p3ux5] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+<div
+  data-css-9n9wv3=""
+  data-css-rdsogp=""
+>
+  <div
+    data-css-16zohb8=""
+    data-css-drjoks=""
+    onTransitionEnd={[Function]}
+  >
+    <div
+      data-css-63oe3q=""
+      data-css-iar4wy=""
+    >
+      <div
+        data-css-18icfsk=""
+        data-css-4p3ux5=""
+        id="first"
+      >
+        Text 1
+      </div>
+    </div>
+    <div
+      data-css-63oe3q=""
+      data-css-iar4wy=""
+    >
+      <div
+        data-css-18icfsk=""
+        data-css-4p3ux5=""
+        id="second"
+      >
+        Text 2
+      </div>
+    </div>
+  </div>
+</div>
+`;
