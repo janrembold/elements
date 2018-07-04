@@ -110,7 +110,7 @@ class HorizontalView extends React.Component {
           onTransitionEnd={this.handleTransitionEnd}
           {...props}
         >
-          {children.map((child, i) => (
+          {React.Children.map(children, (child, i) => (
             <View
               // eslint-disable-next-line
               key={i}
