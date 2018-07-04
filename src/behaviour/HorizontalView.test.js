@@ -21,7 +21,7 @@ describe('HorizontalView behaviors', () => {
     wrapper.unmount()
   })
   it('should render with array too', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <HorizontalView>
         {[
           <Text id="first" key="first">
