@@ -17,6 +17,7 @@ class Typeahead extends React.Component {
     onInputChange: PropTypes.func,
     onSelect: PropTypes.func,
     tabIndex: PropTypes.number,
+    placeholder: PropTypes.string,
   }
 
   static defaultProps = {
@@ -27,6 +28,7 @@ class Typeahead extends React.Component {
     onInputChange: () => {},
     onSelect: () => {},
     tabIndex: -1,
+    placeholder: '',
   }
 
   constructor(props) {
@@ -80,12 +82,15 @@ class Typeahead extends React.Component {
         selectedElements: newSelectedElements,
         focusIndex: multiselect ? state.focusIndex : -1,
         input: multiselect ? state.input : clickedElement.label,
-        showResults: multiselect ? state.showResults : false,
+        showResults:
+          !console.log(multiselect ? state.showResults : false) && multiselect
+            ? state.showResults
+            : false,
       }))
       onSelect(newSelectedElements)
       if (!multiselect) {
         // give back focus to the input field
-        this.inputRef.current.focus()
+        // this.inputRef.current.focus()
       }
     }
   }
@@ -99,7 +104,7 @@ class Typeahead extends React.Component {
   clearInput = () => this.setState({ input: '' })
 
   onKeyDown = e => {
-    e.stopPropagation()
+    e.stopPropagation() // dont let any keypress out if typeahead is focused
     const { configuration, nrResults, options, multiselect } = this.props
     const { focusIndex } = this.state
     if (e.keyCode === 27) {
@@ -162,38 +167,35 @@ class Typeahead extends React.Component {
   }
 
   // to see something on focus
-  onInputFocus = () =>
-    !this.state.input &&
-    this.state.selectedElements.length === 0 &&
-    this.setState({ showResults: true })
+  onInputFocus = () => this.setState({ showResults: true })
 
   render() {
-    const { configuration, width, tabIndex } = this.props
+    const { configuration, width, tabIndex, placeholder } = this.props
     const { selectedElements, input, showResults } = this.state
     return (
       <View
         direction="column"
-        {...css({ position: 'relative' })}
+        {...css({ position: 'relative', width })}
         onKeyDown={this.onKeyDown}
+        onKeyUp={e => e.stopPropagation()} // dont let out any keypress events if typeahead or children are focused
       >
         {input && (
           <View
             style={{
               position: 'absolute',
-              zIndex: '2200',
+              zIndex: 2,
               cursor: 'pointer',
-              top: 15,
-              right: 10,
+              top: 3,
+              right: 3,
+              width: 30,
+              height: '85%',
+              padding: '12px 9px',
             }}
             tabIndex={tabIndex === -1 ? -1 : tabIndex + 1}
             onKeyDown={this.onKeyDownClear}
+            onClick={this.clearInput}
           >
-            <Icon
-              name="trash"
-              size="xs"
-              color="black"
-              onClick={this.clearInput}
-            />
+            <Icon name="remove-light-filled" size="xxs" color="black" />
           </View>
         )}
         <input
@@ -202,16 +204,33 @@ class Typeahead extends React.Component {
           value={input}
           ref={this.inputRef}
           tabIndex={tabIndex}
-          {...css({ height: 43, textIndent: 22, border: 'none' })}
+          {...css({
+            height: 43,
+            width,
+            textIndent: 22,
+            fontWeight: 600,
+            fontFamily: "'Open Sans', Helvetica, Arial, sans-serif",
+            fontSize: 14,
+            border: 'none',
+            backgroundColor: ColorPalette.lightGrey,
+            borderRadius: '2px',
+          })}
+          placeholder={placeholder}
         />
         <View
           direction="column"
           onRef={this.listRef}
           {...css({
+            width,
             position: 'absolute',
             top: '46px',
-            zIndex: 1000,
+            zIndex: 100,
             boxShadow: '0px 5px 5px rgba(0, 0, 0, 0.4)',
+            maxHeight: 300,
+            overflowY:
+              showResults && this.visiblePartOfOptions().length > 0
+                ? 'auto'
+                : 'hidden',
           })}
         >
           {showResults &&
@@ -224,7 +243,7 @@ class Typeahead extends React.Component {
                 <ListItem
                   onRef={this.listElementRefs[index]}
                   tabIndex={tabIndex + 2 + index}
-                  key={index}
+                  key={option[configuration.value]}
                   onClick={() =>
                     this.handleSelectItem({
                       value: option[configuration.value],
@@ -234,13 +253,13 @@ class Typeahead extends React.Component {
                   onKeyDown={e => {
                     if (e.keyCode === 13) {
                       // enter
-                      e.stopPropagation()
                       this.handleSelectItem({
                         value: option[configuration.value],
                         label: option[configuration.label],
                       })
                     }
                   }}
+                  onKeyUp={e => e.stopPropagation()} // dont let out any keypress events if typeahead or children are focused
                   {...css({
                     width,
                     backgroundColor: isSelected
