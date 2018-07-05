@@ -35,6 +35,7 @@ exports[`HorizontalView behaviors should render non-arrays 1`] = `
     direction="row"
     fill={false}
     flex="flex"
+    id="horizontal"
     onRef={[Function]}
     onTransitionEnd={[Function]}
   >

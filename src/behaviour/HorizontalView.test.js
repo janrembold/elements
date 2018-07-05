@@ -21,7 +21,7 @@ describe('HorizontalView behaviors', () => {
       </HorizontalView>
     )
     expect(wrapper).toMatchSnapshot()
-    expect(wrapper.find('#horizontal').children()).to.have.length(2)
+    expect(wrapper.find('#horizontal').children()).toHaveLength(2)
     expect(wrapper.find('#first').exists()).toEqual(true)
     expect(wrapper.find('#third').exists()).toEqual(false)
     wrapper.unmount()
