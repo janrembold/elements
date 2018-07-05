@@ -4,7 +4,7 @@ import Text from '../atoms/Text'
 
 describe('HorizontalView behaviors', () => {
   it('should render non-arrays', () => {
-    const condition = false
+    let condition = false
     const wrapper = shallow(
       <HorizontalView id="horizontal">
         <Text id="first" key="first">
@@ -21,13 +21,13 @@ describe('HorizontalView behaviors', () => {
       </HorizontalView>
     )
     expect(wrapper).toMatchSnapshot()
-    console.log('what is chidlren?', wrapper.find('#horizontal').children())
-    expect(wrapper.find('#horizontal').children()).toHaveLength(2)
-    expect(wrapper.find('#first').exists()).toEqual(true)
+    expect(wrapper.find(Text)).toHaveLength(2)
     expect(wrapper.find('#third').exists()).toEqual(false)
+
     wrapper.unmount()
   })
   it('should render with array too', () => {
+    let condition = false
     const wrapper = shallow(
       <HorizontalView>
         {[
@@ -37,13 +37,18 @@ describe('HorizontalView behaviors', () => {
           <Text id="second" key="second">
             Text 2
           </Text>,
-          undefined,
+          condition && (
+            <Text id="third" key="third">
+              Text 3
+            </Text>
+          ),
         ]}
       </HorizontalView>
     )
     expect(wrapper).toMatchSnapshot()
-    expect(wrapper.find('#second').exists()).toEqual(true)
-    expect(wrapper.find('#first').exists()).toEqual(false)
+    expect(wrapper.find(Text)).toHaveLength(2)
+    expect(wrapper.find('#third').exists()).toEqual(false)
+
     wrapper.unmount()
   })
 })
