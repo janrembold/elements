@@ -13,11 +13,7 @@ describe('HorizontalView behaviors', () => {
         <Text id="second" key="second">
           Text 2
         </Text>
-        {condition && (
-          <Text id="third" key="third">
-            Text 3
-          </Text>
-        )}
+        {undefined}
       </HorizontalView>
     )
     expect(wrapper).toMatchSnapshot()
