@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test the checkbox component should tick it 1`] = `
-.css-0,
-[data-css-0] {
+.css-13azwyo,
+[data-css-13azwyo] {
   position: relative;
 }
 
-.css-1,
-[data-css-1] {
+.css-1dqgz2l,
+[data-css-1dqgz2l] {
   border-radius: 3px;
   height: 25px;
   width: 25px;
@@ -19,16 +19,16 @@ exports[`Test the checkbox component should tick it 1`] = `
   -moz-transition: 250ms;
 }
 
-.css-2,
-[data-css-2] {
+.css-1m9hm8a,
+[data-css-1m9hm8a] {
   padding: 10px 15px;
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-3,
-[data-css-3] {
+.css-h7582n,
+[data-css-h7582n] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -51,8 +51,8 @@ exports[`Test the checkbox component should tick it 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-4,
-[data-css-4] {
+.css-1wp5mix,
+[data-css-1wp5mix] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -75,8 +75,8 @@ exports[`Test the checkbox component should tick it 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-5,
-[data-css-5] {
+.css-t2hdxa,
+[data-css-t2hdxa] {
   position: absolute;
   top: 0;
   right: 0;
@@ -84,21 +84,21 @@ exports[`Test the checkbox component should tick it 1`] = `
   bottom: 0;
 }
 
-.css-6,
-[data-css-6] {
+.css-4p3ux5,
+[data-css-4p3ux5] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-7,
-[data-css-7] {
+.css-kvq3ck,
+[data-css-kvq3ck] {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.css-8,
-[data-css-8] {
+.css-18icfsk,
+[data-css-18icfsk] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -108,20 +108,20 @@ exports[`Test the checkbox component should tick it 1`] = `
 }
 
 <div
-  data-css-2=""
-  data-css-3=""
+  data-css-1m9hm8a=""
+  data-css-h7582n=""
 >
   <div
-    data-css-3=""
+    data-css-h7582n=""
   >
     <div
-      data-css-0=""
-      data-css-1=""
-      data-css-4=""
+      data-css-13azwyo=""
+      data-css-1dqgz2l=""
+      data-css-1wp5mix=""
     >
       <div
-        data-css-6=""
-        data-css-5=""
+        data-css-4p3ux5=""
+        data-css-t2hdxa=""
       >
         <input
           checked={false}
@@ -145,12 +145,12 @@ exports[`Test the checkbox component should tick it 1`] = `
     htmlFor="a"
   >
     <div
-      data-css-6=""
-      data-css-7=""
+      data-css-4p3ux5=""
+      data-css-kvq3ck=""
     >
       <div
-        data-css-8=""
-        data-css-6=""
+        data-css-18icfsk=""
+        data-css-4p3ux5=""
       >
         I am a nice checkbox!
       </div>
@@ -160,21 +160,21 @@ exports[`Test the checkbox component should tick it 1`] = `
 `;
 
 exports[`Test the checkbox component should tick it 2`] = `
-.css-0,
-[data-css-0] {
+.css-13azwyo,
+[data-css-13azwyo] {
   position: relative;
 }
 
-.css-1,
-[data-css-1] {
+.css-1m9hm8a,
+[data-css-1m9hm8a] {
   padding: 10px 15px;
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-2,
-[data-css-2] {
+.css-h7582n,
+[data-css-h7582n] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -197,8 +197,8 @@ exports[`Test the checkbox component should tick it 2`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-3,
-[data-css-3] {
+.css-1wp5mix,
+[data-css-1wp5mix] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -221,8 +221,8 @@ exports[`Test the checkbox component should tick it 2`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-4,
-[data-css-4] {
+.css-t2hdxa,
+[data-css-t2hdxa] {
   position: absolute;
   top: 0;
   right: 0;
@@ -230,21 +230,21 @@ exports[`Test the checkbox component should tick it 2`] = `
   bottom: 0;
 }
 
-.css-5,
-[data-css-5] {
+.css-4p3ux5,
+[data-css-4p3ux5] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-6,
-[data-css-6] {
+.css-kvq3ck,
+[data-css-kvq3ck] {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.css-7,
-[data-css-7] {
+.css-18icfsk,
+[data-css-18icfsk] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -253,8 +253,8 @@ exports[`Test the checkbox component should tick it 2`] = `
   color: #333333;
 }
 
-.css-8,
-[data-css-8] {
+.css-5qivm3,
+[data-css-5qivm3] {
   border-radius: 3px;
   height: 25px;
   width: 25px;
@@ -267,27 +267,27 @@ exports[`Test the checkbox component should tick it 2`] = `
   -moz-transition: 250ms;
 }
 
-.css-9,
-[data-css-9] {
+.css-13tvizl,
+[data-css-13tvizl] {
   position: relative;
   bottom: 1px;
 }
 
 <div
-  data-css-1=""
-  data-css-2=""
+  data-css-1m9hm8a=""
+  data-css-h7582n=""
 >
   <div
-    data-css-2=""
+    data-css-h7582n=""
   >
     <div
-      data-css-0=""
-      data-css-3=""
-      data-css-8=""
+      data-css-13azwyo=""
+      data-css-1wp5mix=""
+      data-css-5qivm3=""
     >
       <div
-        data-css-9=""
-        data-css-5=""
+        data-css-13tvizl=""
+        data-css-4p3ux5=""
       >
         <div
           dangerouslySetInnerHTML={
@@ -295,7 +295,7 @@ exports[`Test the checkbox component should tick it 2`] = `
               "__html": undefined,
             }
           }
-          data-css-5=""
+          data-css-4p3ux5=""
           size={14}
           style={
             Object {
@@ -308,8 +308,8 @@ exports[`Test the checkbox component should tick it 2`] = `
         />
       </div>
       <div
-        data-css-5=""
-        data-css-4=""
+        data-css-4p3ux5=""
+        data-css-t2hdxa=""
       >
         <input
           checked={true}
@@ -333,12 +333,12 @@ exports[`Test the checkbox component should tick it 2`] = `
     htmlFor="a"
   >
     <div
-      data-css-5=""
-      data-css-6=""
+      data-css-4p3ux5=""
+      data-css-kvq3ck=""
     >
       <div
-        data-css-7=""
-        data-css-5=""
+        data-css-18icfsk=""
+        data-css-4p3ux5=""
       >
         I am a nice checkbox!
       </div>
@@ -348,13 +348,13 @@ exports[`Test the checkbox component should tick it 2`] = `
 `;
 
 exports[`Test the checkbox component should work with children 1`] = `
-.css-0,
-[data-css-0] {
+.css-13azwyo,
+[data-css-13azwyo] {
   position: relative;
 }
 
-.css-1,
-[data-css-1] {
+.css-1dqgz2l,
+[data-css-1dqgz2l] {
   border-radius: 3px;
   height: 25px;
   width: 25px;
@@ -366,8 +366,8 @@ exports[`Test the checkbox component should work with children 1`] = `
   -moz-transition: 250ms;
 }
 
-.css-2,
-[data-css-2] {
+.css-h7582n,
+[data-css-h7582n] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -390,8 +390,8 @@ exports[`Test the checkbox component should work with children 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-3,
-[data-css-3] {
+.css-1wp5mix,
+[data-css-1wp5mix] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -414,8 +414,8 @@ exports[`Test the checkbox component should work with children 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-4,
-[data-css-4] {
+.css-t2hdxa,
+[data-css-t2hdxa] {
   position: absolute;
   top: 0;
   right: 0;
@@ -423,21 +423,21 @@ exports[`Test the checkbox component should work with children 1`] = `
   bottom: 0;
 }
 
-.css-5,
-[data-css-5] {
+.css-4p3ux5,
+[data-css-4p3ux5] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-6,
-[data-css-6] {
+.css-kvq3ck,
+[data-css-kvq3ck] {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.css-7,
-[data-css-7] {
+.css-18icfsk,
+[data-css-18icfsk] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -446,8 +446,8 @@ exports[`Test the checkbox component should work with children 1`] = `
   color: #333333;
 }
 
-.css-8,
-[data-css-8] {
+.css-l8kta8,
+[data-css-l8kta8] {
   padding: 10px 15px;
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
@@ -455,20 +455,20 @@ exports[`Test the checkbox component should work with children 1`] = `
 }
 
 <div
-  data-css-2=""
-  data-css-8=""
+  data-css-h7582n=""
+  data-css-l8kta8=""
 >
   <div
-    data-css-2=""
+    data-css-h7582n=""
   >
     <div
-      data-css-0=""
-      data-css-1=""
-      data-css-3=""
+      data-css-13azwyo=""
+      data-css-1dqgz2l=""
+      data-css-1wp5mix=""
     >
       <div
-        data-css-5=""
-        data-css-4=""
+        data-css-4p3ux5=""
+        data-css-t2hdxa=""
       >
         <input
           checked={false}
@@ -492,12 +492,12 @@ exports[`Test the checkbox component should work with children 1`] = `
     htmlFor="a"
   >
     <div
-      data-css-5=""
-      data-css-6=""
+      data-css-4p3ux5=""
+      data-css-kvq3ck=""
     >
       <div
-        data-css-7=""
-        data-css-5=""
+        data-css-18icfsk=""
+        data-css-4p3ux5=""
       >
         <h1>
           test

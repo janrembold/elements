@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pill renders with custom color 1`] = `
-.css-0,
-[data-css-0] {
+.css-4p3ux5,
+[data-css-4p3ux5] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-1,
-[data-css-1] {
+.css-7xie1s,
+[data-css-7xie1s] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -19,8 +19,8 @@ exports[`Pill renders with custom color 1`] = `
   color: #ffffff;
 }
 
-.css-2,
-[data-css-2] {
+.css-16z60nk,
+[data-css-16z60nk] {
   background-color: #e84c3d;
   display: inline-block;
   border-radius: 10px;
@@ -29,12 +29,12 @@ exports[`Pill renders with custom color 1`] = `
 }
 
 <div
-  data-css-2=""
-  data-css-0=""
+  data-css-16z60nk=""
+  data-css-4p3ux5=""
 >
   <div
-    data-css-0=""
-    data-css-1=""
+    data-css-4p3ux5=""
+    data-css-7xie1s=""
   >
     Important message
   </div>
@@ -42,8 +42,8 @@ exports[`Pill renders with custom color 1`] = `
 `;
 
 exports[`Pill renders without error 1`] = `
-.css-0,
-[data-css-0] {
+.css-9j98ks,
+[data-css-9j98ks] {
   background-color: #3598db;
   display: inline-block;
   border-radius: 10px;
@@ -51,15 +51,15 @@ exports[`Pill renders without error 1`] = `
   cursor: default;
 }
 
-.css-1,
-[data-css-1] {
+.css-4p3ux5,
+[data-css-4p3ux5] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-2,
-[data-css-2] {
+.css-7xie1s,
+[data-css-7xie1s] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -70,12 +70,12 @@ exports[`Pill renders without error 1`] = `
 }
 
 <div
-  data-css-1=""
-  data-css-0=""
+  data-css-4p3ux5=""
+  data-css-9j98ks=""
 >
   <div
-    data-css-1=""
-    data-css-2=""
+    data-css-4p3ux5=""
+    data-css-7xie1s=""
   >
     Important message
   </div>
