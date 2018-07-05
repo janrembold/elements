@@ -13,10 +13,15 @@ describe('HorizontalView behaviors', () => {
         <Text id="second" key="second">
           Text 2
         </Text>
-        {undefined}
+        {condition && (
+          <Text id="third" key="third">
+            Text 3
+          </Text>
+        )}
       </HorizontalView>
     )
     expect(wrapper).toMatchSnapshot()
+    console.log('what is chidlren?', wrapper.find('#horizontal').children())
     expect(wrapper.find('#horizontal').children()).toHaveLength(2)
     expect(wrapper.find('#first').exists()).toEqual(true)
     expect(wrapper.find('#third').exists()).toEqual(false)
