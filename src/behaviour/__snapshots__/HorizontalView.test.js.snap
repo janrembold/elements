@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HorizontalView behaviors should render non-arrays 1`] = `
-.css-rdsogp,
-[data-css-rdsogp] {
+.css-0,
+[data-css-0] {
   overflow: hidden;
 }
 
-.css-qtahyn,
-[data-css-qtahyn] {
+.css-1,
+[data-css-1] {
   transform: translate3d(-200%, 0, 0);
   transition: .5s;
   -webkit-transform: translate3d(-200%, 0, 0);
@@ -15,15 +15,15 @@ exports[`HorizontalView behaviors should render non-arrays 1`] = `
   -moz-transition: .5s;
 }
 
-.css-63oe3q,
-[data-css-63oe3q] {
+.css-2,
+[data-css-2] {
   width: 100%;
 }
 
 <View
   alignH="start"
   alignV="stretch"
-  data-css-rdsogp=""
+  data-css-0=""
   fill={false}
   flex="flex"
   onRef={[Function]}
@@ -31,7 +31,7 @@ exports[`HorizontalView behaviors should render non-arrays 1`] = `
   <View
     alignH="start"
     alignV="stretch"
-    data-css-qtahyn=""
+    data-css-1=""
     direction="row"
     fill={false}
     flex="flex"
@@ -42,7 +42,7 @@ exports[`HorizontalView behaviors should render non-arrays 1`] = `
     <View
       alignH="start"
       alignV="stretch"
-      data-css-63oe3q=""
+      data-css-2=""
       direction="column"
       fill={false}
       flex="none"
@@ -62,7 +62,7 @@ exports[`HorizontalView behaviors should render non-arrays 1`] = `
     <View
       alignH="start"
       alignV="stretch"
-      data-css-63oe3q=""
+      data-css-2=""
       direction="column"
       fill={false}
       flex="none"
@@ -82,7 +82,7 @@ exports[`HorizontalView behaviors should render non-arrays 1`] = `
     <View
       alignH="start"
       alignV="stretch"
-      data-css-63oe3q=""
+      data-css-2=""
       direction="column"
       fill={false}
       flex="none"
@@ -94,13 +94,13 @@ exports[`HorizontalView behaviors should render non-arrays 1`] = `
 `;
 
 exports[`HorizontalView behaviors should render with array too 1`] = `
-.css-rdsogp,
-[data-css-rdsogp] {
+.css-0,
+[data-css-0] {
   overflow: hidden;
 }
 
-.css-qtahyn,
-[data-css-qtahyn] {
+.css-1,
+[data-css-1] {
   transform: translate3d(-200%, 0, 0);
   transition: .5s;
   -webkit-transform: translate3d(-200%, 0, 0);
@@ -108,15 +108,15 @@ exports[`HorizontalView behaviors should render with array too 1`] = `
   -moz-transition: .5s;
 }
 
-.css-63oe3q,
-[data-css-63oe3q] {
+.css-2,
+[data-css-2] {
   width: 100%;
 }
 
 <View
   alignH="start"
   alignV="stretch"
-  data-css-rdsogp=""
+  data-css-0=""
   fill={false}
   flex="flex"
   onRef={[Function]}
@@ -124,7 +124,7 @@ exports[`HorizontalView behaviors should render with array too 1`] = `
   <View
     alignH="start"
     alignV="stretch"
-    data-css-qtahyn=""
+    data-css-1=""
     direction="row"
     fill={false}
     flex="flex"
@@ -134,7 +134,7 @@ exports[`HorizontalView behaviors should render with array too 1`] = `
     <View
       alignH="start"
       alignV="stretch"
-      data-css-63oe3q=""
+      data-css-2=""
       direction="column"
       fill={false}
       flex="none"
@@ -154,7 +154,7 @@ exports[`HorizontalView behaviors should render with array too 1`] = `
     <View
       alignH="start"
       alignV="stretch"
-      data-css-63oe3q=""
+      data-css-2=""
       direction="column"
       fill={false}
       flex="none"
@@ -174,7 +174,7 @@ exports[`HorizontalView behaviors should render with array too 1`] = `
     <View
       alignH="start"
       alignV="stretch"
-      data-css-63oe3q=""
+      data-css-2=""
       direction="column"
       fill={false}
       flex="none"

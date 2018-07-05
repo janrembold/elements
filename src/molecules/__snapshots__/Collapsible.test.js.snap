@@ -1,47 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input component Collapsible renders properly 1`] = `
-.css-tziwal,
-[data-css-tziwal] {
+.css-0,
+[data-css-0] {
   border-bottom: 1px solid #ecf0f1;
   width: 100%;
 }
 
-.css-4bx01r,
-[data-css-4bx01r] {
+.css-1,
+[data-css-1] {
   background-color: white;
   cursor: pointer;
 }
 
-.css-1eav4r6,
-[data-css-1eav4r6] {
+.css-2,
+[data-css-2] {
   height: 50px;
   padding: 0 20px;
   width: calc(100% - 50px);
 }
 
-.css-1di7qz,
-[data-css-1di7qz] {
+.css-3,
+[data-css-3] {
   width: 50px;
   height: 50px;
 }
 
-.css-1l7pri3,
-[data-css-1l7pri3] {
+.css-4,
+[data-css-4] {
   padding: 3px 5px 8px 5px;
   border-radius: 2px;
   outline: none;
 }
 
-.css-1l7pri3:focus,
-[data-css-1l7pri3]:focus,
-.css-1l7pri3[data-simulate-focus],
-[data-css-1l7pri3][data-simulate-focus] {
+.css-4:focus,
+[data-css-4]:focus,
+.css-4[data-simulate-focus],
+[data-css-4][data-simulate-focus] {
   border: 2px solid rgba(89, 186, 247, 0.5);
 }
 
-.css-dbct2k,
-[data-css-dbct2k] {
+.css-8,
+[data-css-8] {
   transition-property: height;
   transition: height 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   overflow: hidden;
@@ -53,8 +53,8 @@ exports[`Input component Collapsible renders properly 1`] = `
   -webkit-transform-origin: top;
 }
 
-.css-iar4wy,
-[data-css-iar4wy] {
+.css-9,
+[data-css-9] {
   box-sizing: border-box;
   align-content: stretch;
   align-items: stretch;
@@ -77,8 +77,8 @@ exports[`Input component Collapsible renders properly 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-f86ip,
-[data-css-f86ip] {
+.css-10,
+[data-css-10] {
   box-sizing: border-box;
   align-content: stretch;
   align-items: stretch;
@@ -102,8 +102,8 @@ exports[`Input component Collapsible renders properly 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-h7582n,
-[data-css-h7582n] {
+.css-11,
+[data-css-11] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -126,8 +126,8 @@ exports[`Input component Collapsible renders properly 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-rbl5we,
-[data-css-rbl5we] {
+.css-12,
+[data-css-12] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -137,15 +137,15 @@ exports[`Input component Collapsible renders properly 1`] = `
   color: #333333;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-13,
+[data-css-13] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-1wp5mix,
-[data-css-1wp5mix] {
+.css-14,
+[data-css-14] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -169,21 +169,21 @@ exports[`Input component Collapsible renders properly 1`] = `
 }
 
 <div
-  data-css-iar4wy=""
-  data-css-tziwal=""
+  data-css-9=""
+  data-css-0=""
 >
   <div
-    data-css-4bx01r=""
-    data-css-f86ip=""
+    data-css-1=""
+    data-css-10=""
     onClick={[Function]}
   >
     <div
-      data-css-1eav4r6=""
-      data-css-h7582n=""
+      data-css-2=""
+      data-css-11=""
     >
       <div
-        data-css-4p3ux5=""
-        data-css-rbl5we=""
+        data-css-13=""
+        data-css-12=""
         style={
           Object {
             "overflow": "hidden",
@@ -197,12 +197,12 @@ exports[`Input component Collapsible renders properly 1`] = `
       </div>
     </div>
     <div
-      data-css-1di7qz=""
-      data-css-1wp5mix=""
+      data-css-3=""
+      data-css-14=""
     >
       <div
-        data-css-1l7pri3=""
-        data-css-4p3ux5=""
+        data-css-4=""
+        data-css-13=""
         onKeyPress={[Function]}
         tabIndex={1}
       >
@@ -212,7 +212,7 @@ exports[`Input component Collapsible renders properly 1`] = `
               "__html": undefined,
             }
           }
-          data-css-4p3ux5=""
+          data-css-13=""
           size={10}
           style={
             Object {
@@ -227,8 +227,8 @@ exports[`Input component Collapsible renders properly 1`] = `
     </div>
   </div>
   <div
-    data-css-4p3ux5=""
-    data-css-dbct2k=""
+    data-css-13=""
+    data-css-8=""
   >
     <p>
       Test child
