@@ -10,7 +10,7 @@ import {
 import { css } from 'glamor'
 
 const NR_RESULTS = 5
-const MULTISELECT = false
+const MULTISELECT = true
 class TypeaheadStory extends React.Component {
   constructor(props) {
     super(props)

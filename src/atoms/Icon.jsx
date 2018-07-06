@@ -212,8 +212,6 @@ export default class Icon extends React.Component {
 
   getSize = () => {
     switch (this.props.size) {
-      case 'xxs':
-        return 12
       case 'xs':
         return 16
       case 's':

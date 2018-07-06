@@ -18,6 +18,7 @@ class Typeahead extends React.Component {
     onSelect: PropTypes.func,
     tabIndex: PropTypes.number,
     placeholder: PropTypes.string,
+    preselected: PropTypes.array,
   }
 
   static defaultProps = {
@@ -28,14 +29,15 @@ class Typeahead extends React.Component {
     onInputChange: () => {},
     onSelect: () => {},
     tabIndex: -1,
-    placeholder: '',
+    placeholder: 'search',
+    preselected: [],
   }
 
   constructor(props) {
     super(props)
     this.state = {
       input: '',
-      selectedElements: [],
+      selectedElements: props.preselected,
       focusIndex: -1,
       showResults: false,
     }
@@ -195,7 +197,7 @@ class Typeahead extends React.Component {
             onKeyDown={this.onKeyDownClear}
             onClick={this.clearInput}
           >
-            <Icon name="remove-light-filled" size="xxs" color="black" />
+            <Icon name="remove-light-filled" size={12} color="black" />
           </View>
         )}
         <input
@@ -262,18 +264,22 @@ class Typeahead extends React.Component {
                   onKeyUp={e => e.stopPropagation()} // dont let out any keypress events if typeahead or children are focused
                   {...css({
                     width,
-                    backgroundColor: isSelected
-                      ? ColorPalette.lightGrey
-                      : ColorPalette.white,
+                    backgroundColor: ColorPalette.white,
                     ':focus': {
-                      backgroundColor: isSelected
-                        ? ColorPalette.lightGreyIntense
-                        : ColorPalette.whiteIntense,
+                      backgroundColor: ColorPalette.whiteIntense,
                       outline: 'none',
                     },
                   })}
                 >
                   <Text>{option[configuration.label]}</Text>
+                  {isSelected && (
+                    <Icon
+                      size={12}
+                      color="green"
+                      name="check-filled"
+                      {...css({ marginLeft: 14, marginBottom: 7 })}
+                    />
+                  )}
                 </ListItem>
               )
             })}
