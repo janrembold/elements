@@ -92,26 +92,26 @@ class Collapsible extends React.Component {
     initiallyCollapsed: PropTypes.bool,
     hasBottomBorder: PropTypes.bool,
     tabIndex: PropTypes.number,
-    toggleCallback: PropTypes.func,
+    onToggle: PropTypes.func,
   }
 
   static defaultProps = {
     initiallyCollapsed: true,
     hasBottomBorder: false,
-    tabindex: -1,
-    toggleCallback: () => {},
+    tabIndex: null,
+    onToggle: () => {},
   }
 
   state = { collapsed: this.props.initiallyCollapsed }
 
   componentDidMount() {
-    if (this.childRef.current) {
+    const { current } = this.childRef
+
+    if (current) {
       if (!this.props.initiallyCollapsed) {
-        this.childRef.current.style.height = `${
-          this.childRef.current.scrollHeight
-        }px`
+        current.style.height = `${current.scrollHeight}px`
       } else {
-        this.childRef.current.style.height = `0px`
+        current.style.height = `0px`
       }
     }
   }
@@ -124,12 +124,12 @@ class Collapsible extends React.Component {
       current.style.height = '0px'
       this.setState({ collapsed: true })
       // signal new state for the parent
-      this.props.toggleCallback(true)
+      this.props.onToggle(true)
     } else {
       current.style.height = `${current.scrollHeight}px`
       this.setState({ collapsed: false })
       // signal new state for the parent
-      this.props.toggleCallback(false)
+      this.props.onToggle(false)
     }
   }
 
@@ -215,7 +215,7 @@ class Collapsible extends React.Component {
           {...css({
             transitionProperty: 'height',
             transition: 'height 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-            overflow: 'hidden',
+            overflow: this.state.collapsed && 'hidden',
             transformOrigin: 'top',
           })}
         >
