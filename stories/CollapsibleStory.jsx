@@ -20,12 +20,7 @@ class DynamicCollapsible extends React.Component {
     return (
       <Collapsible {...this.props}>
         <View {...css({ padding: '0px 20px 10px 20px' })}>
-          {this.state.items.map((item, i) => (
-            <Text block key={i}>
-              {item}
-            </Text>
-          ))}
-          <View direction="row" alignH="space-between">
+          <View direction="row" alignH="space-around">
             <Button
               onClick={() =>
                 this.setState(({ items }) => ({
@@ -45,6 +40,11 @@ class DynamicCollapsible extends React.Component {
               Remove item
             </Button>
           </View>
+          {this.state.items.map((item, i) => (
+            <Text block key={i}>
+              {item}
+            </Text>
+          ))}
         </View>
       </Collapsible>
     )
