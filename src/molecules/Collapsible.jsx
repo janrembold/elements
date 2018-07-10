@@ -85,6 +85,8 @@ import { ColorPalette, alpha } from '@allthings/colors'
  *  ```
  **/
 
+const tick = () => new Promise(resolve => setTimeout(resolve, 0))
+
 class Collapsible extends React.Component {
   static propTypes = {
     title: PropTypes.string,
@@ -107,13 +109,14 @@ class Collapsible extends React.Component {
     overflow: this.props.initiallyCollapsed ? 'hidden' : null,
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const { current } = this.childRef
 
     if (current) {
       if (!this.props.initiallyCollapsed) {
         current.style.height = `${current.scrollHeight}px`
-        setTimeout(() => (current.style.height = 'auto'), 0)
+        await tick()
+        current.style.height = 'auto'
       } else {
         current.style.height = `0px`
       }
@@ -122,12 +125,12 @@ class Collapsible extends React.Component {
 
   childRef = React.createRef()
 
-  toggleCollapse = () => {
+  toggleCollapse = async () => {
     const { current } = this.childRef
     if (current.style.height !== '0px') {
       current.style.height = `${current.scrollHeight}px`
-      setTimeout(() => (current.style.height = '0px'), 0)
-
+      await tick()
+      current.style.height = '0px'
       this.setState({ collapsed: true, overflow: 'hidden' })
       // signal new state for the parent
       this.props.onToggle(true)

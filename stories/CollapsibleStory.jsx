@@ -19,7 +19,7 @@ class DynamicCollapsible extends React.Component {
   render() {
     return (
       <Collapsible {...this.props}>
-        <View {...css({ padding: '5px 10px 10px 10px' })}>
+        <View {...css({ padding: '0px 20px 10px 20px' })}>
           {this.state.items.map((item, i) => (
             <Text block key={i}>
               {item}
