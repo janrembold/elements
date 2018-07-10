@@ -229,6 +229,7 @@ exports[`Input component Collapsible renders properly 1`] = `
   <div
     data-css-13=""
     data-css-8=""
+    onTransitionEnd={[Function]}
   >
     <p>
       Test child
