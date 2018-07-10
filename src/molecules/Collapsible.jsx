@@ -85,6 +85,8 @@ import { ColorPalette, alpha } from '@allthings/colors'
  *  ```
  **/
 
+const tick = () => new Promise(resolve => setTimeout(resolve, 0))
+
 class Collapsible extends React.Component {
   static propTypes = {
     title: PropTypes.string,
@@ -102,14 +104,19 @@ class Collapsible extends React.Component {
     onToggle: () => {},
   }
 
-  state = { collapsed: this.props.initiallyCollapsed }
+  state = {
+    collapsed: this.props.initiallyCollapsed,
+    overflow: this.props.initiallyCollapsed ? 'hidden' : null,
+  }
 
-  componentDidMount() {
+  async componentDidMount() {
     const { current } = this.childRef
 
     if (current) {
       if (!this.props.initiallyCollapsed) {
         current.style.height = `${current.scrollHeight}px`
+        await tick()
+        current.style.height = 'auto'
       } else {
         current.style.height = `0px`
       }
@@ -118,11 +125,13 @@ class Collapsible extends React.Component {
 
   childRef = React.createRef()
 
-  toggleCollapse = () => {
+  toggleCollapse = async () => {
     const { current } = this.childRef
     if (current.style.height !== '0px') {
+      current.style.height = `${current.scrollHeight}px`
+      await tick()
       current.style.height = '0px'
-      this.setState({ collapsed: true })
+      this.setState({ collapsed: true, overflow: 'hidden' })
       // signal new state for the parent
       this.props.onToggle(true)
     } else {
@@ -133,17 +142,25 @@ class Collapsible extends React.Component {
     }
   }
 
+  handleTransitionEnd = () => {
+    if (!this.state.collapsed) {
+      this.childRef.current.style.height = 'auto'
+      this.setState({ overflow: null })
+    }
+  }
+
   onKeyPress = e => e.key === 'Enter' && this.toggleCollapse()
 
   render() {
     const { title, children, hasBottomBorder, tabIndex } = this.props
+
+    const { collapsed, overflow } = this.state
     return (
       <View
         direction="column"
         {...css({
-          borderBottom: hasBottomBorder
-            ? `1px solid ${ColorPalette.lightGrey}`
-            : '',
+          borderBottom:
+            hasBottomBorder && `1px solid ${ColorPalette.lightGrey}`,
           width: '100%',
         })}
       >
@@ -200,9 +217,7 @@ class Collapsible extends React.Component {
               tabIndex={tabIndex}
             >
               <Icon
-                name={
-                  this.state.collapsed ? 'arrow-down-filled' : 'arrow-up-filled'
-                }
+                name={collapsed ? 'arrow-down-filled' : 'arrow-up-filled'}
                 size={10}
                 color="lightGreyIntense"
               />
@@ -212,10 +227,11 @@ class Collapsible extends React.Component {
         {/* Child */}
         <View
           onRef={this.childRef}
+          onTransitionEnd={this.handleTransitionEnd}
           {...css({
             transitionProperty: 'height',
             transition: 'height 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-            overflow: this.state.collapsed && 'hidden',
+            overflow,
             transformOrigin: 'top',
           })}
         >
