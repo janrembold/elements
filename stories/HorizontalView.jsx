@@ -43,13 +43,15 @@ export default class HorizontalViewStory extends React.Component {
             </TitleBar>
             <View direction="row" flex="flex">
               <HorizontalView>
-                <Text id="first" key="first">
-                  Text 1
-                </Text>
-                <Text id="second" key="second">
-                  Text 2
-                </Text>
-                {undefined}
+                {Array(this.state.level)
+                  .fill({})
+                  .map((_, i) => (
+                    <CardList key={i} direction="column">
+                      <ListItem>
+                        <Text>{`Test ${i}`}</Text>
+                      </ListItem>
+                    </CardList>
+                  ))}
               </HorizontalView>
             </View>
             <View direction="row" alignH="space-around" style={{ margin: 15 }}>
