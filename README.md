@@ -30,7 +30,9 @@ function App() {
 render(<App />, document.querySelector('#app'))
 ```
 
-**Notes:**
+### Notes:
+
+**fetch**
 
 `@allthings/elements` uses `fetch` and expects it to be globally available. For example [`cross-fetch`](https://github.com/lquixada/cross-fetch) can be used at the entry point of the app:
 
@@ -38,7 +40,17 @@ render(<App />, document.querySelector('#app'))
 import 'cross-fetch/polyfill'
 ```
 
-If you want to use the component `CDNIntlProvider` make sure to also install [`react-intl`](https://github.com/yahoo/react-intl).
+**i18n**
+
+The `CDNIntlProvider` fetches translations from the Allthings CDN.
+
+If you want to use the component make sure to also install the peer dependency [`react-intl`](https://github.com/yahoo/react-intl).
+
+We don't export the `CDNIntlProvider` from the index file, so it's necessary to import it directly from its destination:
+
+```
+import CDNIntlProvider from '@allthings/elements/behaviour/CDNIntlProvider'
+```
 
 ## Examples
 
