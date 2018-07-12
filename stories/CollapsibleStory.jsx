@@ -9,6 +9,47 @@ import {
   Icon,
 } from '../src/'
 import { css } from 'glamor'
+import Button from '../src/molecules/Button'
+
+class DynamicCollapsible extends React.Component {
+  state = {
+    items: ['Item 1', 'Item 2'],
+  }
+
+  render() {
+    return (
+      <Collapsible {...this.props}>
+        <View {...css({ padding: '0px 20px 10px 20px' })}>
+          <View direction="row" alignH="space-around">
+            <Button
+              onClick={() =>
+                this.setState(({ items }) => ({
+                  items: [...items, `Item ${items.length + 1}`],
+                }))
+              }
+            >
+              Add item
+            </Button>
+            <Button
+              onClick={() =>
+                this.setState(({ items }) => ({
+                  items: items.slice(0, -1),
+                }))
+              }
+            >
+              Remove item
+            </Button>
+          </View>
+          {this.state.items.map((item, i) => (
+            <Text block key={i}>
+              {item}
+            </Text>
+          ))}
+        </View>
+      </Collapsible>
+    )
+  }
+}
 
 const CollapsibleStory = () => (
   <ThemeProvider>
@@ -86,6 +127,11 @@ const CollapsibleStory = () => (
             </View>
           </View>
         </Collapsible>
+        <DynamicCollapsible
+          title="Dynamic height"
+          initiallyCollapsed={false}
+          hasBottomBorder
+        />
         <Collapsible
           title="Profile Picture"
           hasBottomBorder

@@ -14,7 +14,6 @@ import HorizontalView from './HorizontalView'
 import FormStory from './FormStory'
 import createViewportDecorator from './createViewportDecorator'
 import CollapsibleStory from './CollapsibleStory'
-import TypeaheadStory from './TypeaheadStory'
 
 storiesOf('Animations', module)
   .addDecorator(createViewportDecorator())
@@ -49,24 +48,26 @@ storiesOf('FloatingButton', module)
       </FormValidityProvider>
     </ThemeProvider>
   ))
+
+storiesOf('PhoneInput', module)
+  .addDecorator(createViewportDecorator())
+  .add('with phone', () => {
+    return (
+      <ThemeProvider>
+        <Form>
+          <PhoneInput
+            placeholder="hello, this is a placeholder"
+            defaultValue="49017632"
+            name="phone"
+            id="phone"
+          />
+          <FloatingButton>
+            <Text>get phone input value</Text>
+          </FloatingButton>
+        </Form>
+      </ThemeProvider>
+    )
+  })
 storiesOf('Containers', module)
   .addDecorator(createViewportDecorator())
-  .add('Collapsible', () => <CollapsibleStory />)
-storiesOf('Inputs', module)
-  .addDecorator(createViewportDecorator())
-  .add('PhoneInput', () => (
-    <ThemeProvider>
-      <Form>
-        <PhoneInput
-          placeholder="hello, this is a placeholder"
-          defaultValue="49017632"
-          name="phone"
-          id="phone"
-        />
-        <FloatingButton>
-          <Text>get phone input value</Text>
-        </FloatingButton>
-      </Form>
-    </ThemeProvider>
-  ))
-  .add('Typeahead', () => <TypeaheadStory />)
+  .add('Collapsible', CollapsibleStory)
