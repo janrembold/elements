@@ -230,7 +230,7 @@ class Input extends React.Component {
                 aria-required={required}
                 {...props}
                 onInvalid={this.handleInvalid}
-                onKeyUp={this.handleChange}
+                onChange={this.handleChange}
                 pattern={pattern}
               />
             ) : (

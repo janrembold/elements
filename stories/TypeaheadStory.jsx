@@ -1,90 +1,49 @@
 import React from 'react'
-import {
-  Typeahead,
-  Text,
-  View,
-  Pill,
-  ThemeProvider,
-  ResourceProvider,
-} from '../src/'
+import { View, ThemeProvider, Typeahead, ResourceProvider } from '../src/'
 import { css } from 'glamor'
+import Text from '../src/atoms/Text'
 
-const NR_RESULTS = 5
-const MULTISELECT = true
+import Names from './data/names'
+import Movies from './data/movies'
+const delay = time => new Promise(resolve => setTimeout(resolve, time))
+
 class TypeaheadStory extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      options: [],
-      input: '',
-      selectedElements: [],
-      focusIndex: -1,
-      loading: false,
-    }
-    this.xhr = new XMLHttpRequest()
-    this.xhr.onreadystatechange = () => {
-      var DONE = 4
-      var OK = 200
-      if (this.xhr.readyState === DONE) {
-        if (this.xhr.status === OK) {
-          this.setState({
-            options: JSON.parse(this.xhr.responseText),
-            loading: false,
-          })
-        } else {
-          this.setState({ options: [], focusIndex: -1, loading: false })
-        }
-      }
-    }
+  state = {
+    inputValue: '',
+    movies: [],
+    isLoading: false,
   }
 
-  componentDidMount() {
-    this.refetch('x')
-  }
+  onInputChange = value => this.setState({ inputValue: value })
 
-  onInputChange = input => {
-    input ? this.refetch(input) : this.refetch('x')
+  refetch = async () => {
+    this.setState({ isLoading: true })
+    await delay(1000)
+    this.setState({ movies: Movies, isLoading: false })
   }
-
-  refetch = input => {
-    this.setState({ loading: true })
-    this.xhr.open('GET', `https://restcountries.eu/rest/v2/name/${input}`)
-    this.xhr.send(null)
-  }
-
-  onSelectElement = selectedElements => this.setState({ selectedElements })
 
   render() {
-    const { selectedElements, options, loading } = this.state
+    const { movies, isLoading } = this.state
     return (
       <ThemeProvider>
         <ResourceProvider>
-          <View direction="column">
-            <Text align="center" {...css({ margin: '20px 0px 10px 0px' })}>
-              {MULTISELECT ? 'Multiselect' : 'Single Select'}
+          <View direction="column" {...css({ padding: '10px 20px' })}>
+            <Text strong style={{ margin: '15px 0' }}>
+              Static:
+            </Text>
+            <Typeahead placeholder="Select an agent" items={Names} />
+
+            <Text strong style={{ margin: '15px 0' }}>
+              Fetch from (fake) remote:
             </Text>
             <Typeahead
-              configuration={{ value: 'name', label: 'name' }}
-              width="320px"
-              nrResults={NR_RESULTS}
-              options={options}
-              onInputChange={this.onInputChange}
-              onSelect={this.onSelectElement}
-              multiselect={MULTISELECT}
-              tabIndex={1}
+              placeholder="Select your favorite movie"
+              onSelect={item => console.log('Selected', item)}
+              onInputValueChange={this.onInputChange}
+              onOpen={this.refetch}
+              isLoading={isLoading}
+              items={movies}
             />
-            <Text align="center" {...css({ margin: '320px 0px 0px 0px' })}>
-              Note: Listing the selected elements is the parent's responsibility
-            </Text>
-            <View direction="row" wrap="wrap">
-              {selectedElements.map((element, index) => (
-                <Pill
-                  key={index}
-                  label={element.label}
-                  {...css({ margin: 4 })}
-                />
-              ))}
-            </View>
           </View>
         </ResourceProvider>
       </ThemeProvider>
