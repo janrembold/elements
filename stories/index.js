@@ -14,10 +14,12 @@ import HorizontalView from './HorizontalView'
 import FormStory from './FormStory'
 import createViewportDecorator from './createViewportDecorator'
 import CollapsibleStory from './CollapsibleStory'
+import SimpleLayoutStory from './SimpleLayoutStory'
 
 storiesOf('Animations', module)
   .addDecorator(createViewportDecorator())
   .add('HorizontalView', () => <HorizontalView />)
+  .add('SimpleLayout', () => <SimpleLayoutStory />)
 
 storiesOf('Forms', module)
   .addDecorator(createViewportDecorator())

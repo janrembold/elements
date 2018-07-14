@@ -16,14 +16,13 @@ const simple = backgroundColor =>
     height: '100%',
   })
 
-const paddedCss = (paddedVertical, paddedHorizontal, additionalPaddingTop) =>
+const paddedCss = (paddedVertical, paddedHorizontal, pullDown) =>
   css({
+    transform: `translateY(${pullDown}px)`,
     [createMQ('tablet', 'desktop')]: {
       paddingLeft: paddedHorizontal && '25px',
       paddingRight: paddedHorizontal && '25px',
-      paddingTop: paddedVertical
-        ? `calc(25px + ${additionalPaddingTop}px)`
-        : additionalPaddingTop,
+      paddingTop: paddedVertical && '25px',
       paddingBottom: paddedVertical && '25px',
     },
   })
@@ -110,7 +109,14 @@ class SimpleLayout extends React.PureComponent {
   }
 
   render() {
-    const { children, backgroundColor, padded, onScrollEnd, onPullDown, ...props } = this.props
+    const {
+      children,
+      backgroundColor,
+      padded,
+      onScrollEnd,
+      onPullDown,
+      ...props
+    } = this.props
 
     return (
       <Theme>
