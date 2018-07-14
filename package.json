@@ -14,7 +14,8 @@
     "prop-types": "15.6.2",
     "react-broadcast": "0.7.1",
     "react-media": "1.8.0",
-    "react-motion": "0.5.2"
+    "react-motion": "0.5.2",
+    "react-text-mask": "5.4.2"
   },
   "peerDependencies": {
     "react": ">=0.14.0 <17.0.0",
