@@ -4,8 +4,10 @@ import { css } from 'glamor'
 import { View, Icon, Text } from '../'
 import { ColorPalette, alpha } from '@allthings/colors'
 
+const tick = () => new Promise(resolve => setTimeout(resolve, 0))
+
 /**
- *   A Collapsible is a simple container, that makes it possible to change between collapsed and extended states, and this way hiding and showing the children passed in.
+ * A Collapsible is a simple container, that makes it possible to change between collapsed and extended states, and this way hiding and showing the children passed in.
  * ```example
  * <ThemeProvider>
  *   <ResourceProvider>
@@ -82,11 +84,8 @@ import { ColorPalette, alpha } from '@allthings/colors'
  *     </Card>
  *   </ResourceProvider>
  * </ThemeProvider>
- *  ```
+ * ```
  **/
-
-const tick = () => new Promise(resolve => setTimeout(resolve, 0))
-
 class Collapsible extends React.Component {
   static propTypes = {
     title: PropTypes.string,
