@@ -12,6 +12,7 @@ import {
 } from '../src/'
 import HorizontalView from './HorizontalView'
 import FormStory from './FormStory'
+import CreditCardStory from './CreditCardStory'
 import createViewportDecorator from './createViewportDecorator'
 import CollapsibleStory from './CollapsibleStory'
 
@@ -56,6 +57,7 @@ storiesOf('PhoneInput', module)
       <ThemeProvider>
         <Form>
           <PhoneInput
+            label="Pwnnumber"
             placeholder="hello, this is a placeholder"
             defaultValue="49017632"
             name="phone"
@@ -68,6 +70,10 @@ storiesOf('PhoneInput', module)
       </ThemeProvider>
     )
   })
+
+storiesOf('CreditCardInput', module)
+  .addDecorator(createViewportDecorator())
+  .add('with credit card', () => <CreditCardStory />)
 storiesOf('Containers', module)
   .addDecorator(createViewportDecorator())
   .add('Collapsible', CollapsibleStory)
