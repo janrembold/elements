@@ -4,35 +4,15 @@ import View from '../atoms/View'
 import Input from '../atoms/Input'
 import MaskedInput from 'react-text-mask'
 
+// prettier-ignore
+const maskNumber = [
+  /\d/, /\d/, /\d/, /\d/, ' ',
+  /\d/, /\d/, /\d/, /\d/, ' ',
+  /\d/, /\d/, /\d/, /\d/, ' ',
+  /\d/, /\d/, /\d/, /\d/,
+]
 const maskCVC = [/\d/, /\d/, /\d/]
 const maskExp = [/\d/, /\d/, '/', /\d/, /\d/]
-const maskNumber = [
-  /\d/,
-  /\d/,
-  /\d/,
-  /\d/,
-  ' ',
-  /\d/,
-  /\d/,
-  /\d/,
-  /\d/,
-  ' ',
-  /\d/,
-  /\d/,
-  /\d/,
-  /\d/,
-  ' ',
-  /\d/,
-  /\d/,
-  /\d/,
-  /\d/,
-]
-
-const styles = {
-  wrapper: {
-    width: '100%',
-  },
-}
 
 /**
  * CreditCardInput is used to enter credit card details.
@@ -49,86 +29,54 @@ class CreditCardInput extends Component {
     onChange: func,
   }
 
-  renderNumber = (ref, maskedProps) => {
-    const { onChange, ...props } = this.props
-    return (
-      <Input
-        label="Credit card number"
-        placeholder="Credit card number"
-        onInputRef={ref}
-        name="cardnumber"
-        onKeyDown={this.handleKeyDown}
-        onChange={this.formatNumber}
-        onFocus={this.handleFocus}
-        onBlur={this.handleBlur}
-        autoComplete="cc-number"
-        {...maskedProps}
-        {...props}
-      />
-    )
-  }
+  renderNumber = (ref, maskedProps) => (
+    <Input
+      label="Credit card number"
+      placeholder="Credit card number"
+      onInputRef={ref}
+      name="cardnumber"
+      autoComplete="cc-number"
+      {...maskedProps}
+    />
+  )
 
-  renderExp = (ref, maskedProps) => {
-    const { onChange, ...props } = this.props
-    return (
-      <Input
-        label="Date"
-        placeholder="Date"
-        onInputRef={ref}
-        name="cc-exp"
-        onKeyDown={this.handleKeyDown}
-        onChange={this.formatNumber}
-        onFocus={this.handleFocus}
-        onBlur={this.handleBlur}
-        autoComplete="cc-exp"
-        {...maskedProps}
-        {...props}
-      />
-    )
-  }
+  renderCVC = (ref, maskedProps) => (
+    <Input
+      label="CVC"
+      placeholder="CVC"
+      onInputRef={ref}
+      name="cvc"
+      autoComplete="cc-csc"
+      {...maskedProps}
+    />
+  )
 
-  renderCVC = (ref, maskedProps) => {
-    const { onChange, ...props } = this.props
-    return (
-      <Input
-        label="CVC"
-        placeholder="CVC"
-        onInputRef={ref}
-        name="cvc"
-        onKeyDown={this.handleKeyDown}
-        onChange={this.formatNumber}
-        onFocus={this.handleFocus}
-        onBlur={this.handleBlur}
-        autoComplete="cc-csc"
-        {...maskedProps}
-        {...props}
-      />
-    )
-  }
+  renderExp = (ref, maskedProps) => (
+    <Input
+      label="Date"
+      placeholder="Date"
+      onInputRef={ref}
+      name="cc-exp"
+      autoComplete="cc-exp"
+      {...maskedProps}
+    />
+  )
 
   render() {
     return (
-      <View style={styles.wrapper} direction="row">
+      <View fill direction="row">
         <View flex={55} style={{ minWidth: '165px' }}>
           <MaskedInput
-            placeholderChar={'\u2000'}
             mask={maskNumber}
             render={this.renderNumber}
+            guide={false}
           />
         </View>
         <View flex={25} style={{ minWidth: '65px' }}>
-          <MaskedInput
-            placeholderChar={'\u2000'}
-            mask={maskCVC}
-            render={this.renderCVC}
-          />
+          <MaskedInput mask={maskCVC} render={this.renderCVC} guide={false} />
         </View>
         <View flex={25} style={{ minWidth: '65px' }}>
-          <MaskedInput
-            placeholderChar={'\u2000'}
-            mask={maskExp}
-            render={this.renderExp}
-          />
+          <MaskedInput mask={maskExp} render={this.renderExp} guide={false} />
         </View>
       </View>
     )
