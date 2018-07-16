@@ -13,6 +13,7 @@ import {
 } from '../src/'
 import HorizontalView from './HorizontalView'
 import FormStory from './FormStory'
+import RadioButtonSetStory from './RadioButtonSetStory'
 import createViewportDecorator from './createViewportDecorator'
 
 storiesOf('Animations', module)
@@ -45,6 +46,10 @@ storiesOf('FloatingButton', module).add('with text', () => (
       </Form>
     </FormValidityProvider>
   </ThemeProvider>
+))
+
+storiesOf('RadioButtonSet', module).add('Composable radio buttons', () => (
+  <RadioButtonSetStory />
 ))
 
 storiesOf('PhoneInput', module).add('with phone', () => {
