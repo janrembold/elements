@@ -5,8 +5,9 @@ import {
   ResourceProvider,
   SimpleLayout,
   Spinner,
-  Hero,
+  View,
   Inset,
+  SlideIn,
 } from '../src/'
 
 class SimpleLayoutStory extends React.Component {
@@ -20,7 +21,7 @@ class SimpleLayoutStory extends React.Component {
   }
 
   fetchText = async () => {
-    this.setState({ loading: true, text: '' })
+    this.setState({ loading: true })
     const response = await fetch(
       'https://baconipsum.com/api/?type=meat-and-filler'
     )
@@ -38,12 +39,20 @@ class SimpleLayoutStory extends React.Component {
     return (
       <ThemeProvider>
         <ResourceProvider>
-          <SimpleLayout onPullDown={this.fetchText}>
-            <Hero />
-            <Inset vertical>
-              {loading && <Spinner />}
-              {text && <Text>{text}</Text>}
-            </Inset>
+          <SimpleLayout onPullDown={this.fetchText} padded>
+            {loading && (
+              <View direction="row" alignH="center">
+                <Inset>
+                  <Spinner />
+                </Inset>
+              </View>
+            )}
+            {text && (
+              <Text strong block>
+                Pull down to load a new Text.{' '}
+              </Text>
+            )}
+            {text && <Text>{text}</Text>}
           </SimpleLayout>
         </ResourceProvider>
       </ThemeProvider>
