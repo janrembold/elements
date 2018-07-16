@@ -39,7 +39,7 @@ class Checkmark extends React.Component {
             {...props}
           >
             {checked && (
-              <Icon size={style.size} name="CheckFilledIcon" color="white" />
+              <Icon size={style.size} name="check-filled" color="white" />
             )}
           </Circle>
         )}

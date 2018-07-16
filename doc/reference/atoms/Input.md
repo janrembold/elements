@@ -2,7 +2,7 @@
 This is an auto-generated markdown. 
 You can change it in "src/atoms/Input.jsx" and run build:docs to update this file.
 -->
-# TextInput
+# Input
 TextInputs are used to allow users to enter information like names, numbers, urls, email addresses or passwords.
 
 ```example
@@ -23,3 +23,4 @@ TextInputs are used to allow users to enter information like names, numbers, url
 |pattern|string|Regular expression to validate against
 |minLength|number|Min number of characters that must be provided
 |maxLength|number|Max number of characters that can be provided
+|onInputRef|func|Called with the input field a reference<br>Default: _ => _

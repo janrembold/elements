@@ -38,9 +38,12 @@ const jo = (async function() {
       })
     )
     files = files.filter(file => !!file)
-    files = files.map(({ file, docs }) => ({
-      file,
-      docs: `<!-- 
+    files = files.map(({ file, docs }) => {
+      console.log('Generating docs for', file)
+
+      return {
+        file,
+        docs: `<!-- 
 This is an auto-generated markdown. 
 You can change it in "${file}" and run build:docs to update this file.
 -->
@@ -50,14 +53,15 @@ ${docs.description}
 | Name        | Type           | Description  |
 | ----------- |:--------------:| ------------:|
 ${
-        docs.props
-          ? Object.keys(docs.props)
-              .map(propToRow(docs.props))
-              .join('\n')
-          : '*No properties to pass*'
-      }
+          docs.props
+            ? Object.keys(docs.props)
+                .map(propToRow(docs.props))
+                .join('\n')
+            : '*No properties to pass*'
+        }
 `,
-    }))
+      }
+    })
 
     const write = await Promise.all(
       files.map(({ file, docs }) => {

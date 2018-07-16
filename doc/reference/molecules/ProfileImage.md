@@ -17,4 +17,4 @@ The ProfileImage is always used to show a profile image to the user.
 |children|node|
 |image|string|
 |showBorder|bool|<br>Default: true
-|size|enum|<br>Default: 'medium'
+|size|union|<br>Default: 'medium'
