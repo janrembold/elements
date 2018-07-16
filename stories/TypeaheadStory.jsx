@@ -5,25 +5,45 @@ import Text from '../src/atoms/Text'
 
 import Names from './data/names'
 import Movies from './data/movies'
+
+const debounce = (callback, time = 200, interval) => (...args) =>
+  clearTimeout(interval, (interval = setTimeout(() => callback(...args), time)))
+
 const delay = time => new Promise(resolve => setTimeout(resolve, time))
 
 class TypeaheadStory extends React.Component {
   state = {
     inputValue: '',
     movies: [],
-    isLoading: false,
+    selectedMovie: null,
   }
 
-  onInputChange = value => this.setState({ inputValue: value })
+  fetch = async () => {
+    // In the meantime an item was selected and
+    // therefore an input change was triggered: Abort!
+    if (this.state.selectedMovie) return
 
-  refetch = async () => {
-    this.setState({ isLoading: true })
-    await delay(1000)
-    this.setState({ movies: Movies, isLoading: false })
+    // simulate an API
+    await delay(750)
+
+    const { inputValue } = this.state
+    const movies =
+      inputValue === ''
+        ? Movies.slice(0, 10)
+        : Movies.filter(m => m.label.toLowerCase().includes(inputValue))
+
+    this.setState({ movies })
+  }
+
+  debouncedFetch = debounce(this.fetch)
+
+  onInputChange = value => {
+    this.setState({ inputValue: value })
+    value !== '' && this.debouncedFetch()
   }
 
   render() {
-    const { movies, isLoading } = this.state
+    const { movies } = this.state
     return (
       <ThemeProvider>
         <ResourceProvider>
@@ -31,17 +51,15 @@ class TypeaheadStory extends React.Component {
             <Text strong style={{ margin: '15px 0' }}>
               Static:
             </Text>
-            <Typeahead placeholder="Select an agent" items={Names} />
+            <Typeahead placeholder="Select an agent." items={Names} autoOpen />
 
             <Text strong style={{ margin: '15px 0' }}>
               Fetch from (fake) remote:
             </Text>
             <Typeahead
-              placeholder="Select your favorite movie"
-              onSelect={item => console.log('Selected', item)}
+              placeholder="Select your favorite movie. Start typing…"
+              onSelect={item => this.setState({ selectedMovie: item })}
               onInputValueChange={this.onInputChange}
-              onOpen={this.refetch}
-              isLoading={isLoading}
               items={movies}
             />
           </View>

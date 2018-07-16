@@ -25,6 +25,7 @@ export default class Typeahead extends React.Component {
         label: PropTypes.node.isRequired,
       })
     ).isRequired,
+    autoOpen: PropTypes.bool,
     onSelect: PropTypes.func,
     onInputValueChange: PropTypes.func,
     onOpen: PropTypes.func,
@@ -41,9 +42,13 @@ export default class Typeahead extends React.Component {
   }
 
   getHintText = (inputValue, itemText) => {
-    const escaped = escapeRegex(inputValue)
-    if (new RegExp(`^${escaped}`, 'i').test(itemText)) {
-      const [, restText] = itemText.split(new RegExp(escaped, 'i'))
+    if (itemText.toLowerCase().startsWith(inputValue.toLowerCase())) {
+      const escaped = escapeRegex(inputValue)
+      const restText = itemText
+        .split(new RegExp(`(${escaped})`, 'i'))
+        .slice(2)
+        .join('')
+
       return inputValue + restText
     }
 
@@ -81,7 +86,6 @@ export default class Typeahead extends React.Component {
             highlightedIndex === index
               ? alpha(ColorPalette.background.bright, 0.5, true)
               : ColorPalette.background.white,
-          fontWeight: selectedItem === item ? 'bold' : 'normal',
         },
       })}
     >
@@ -96,6 +100,7 @@ export default class Typeahead extends React.Component {
       menuHeight,
       onInputValueChange,
       onSelect,
+      autoOpen,
       isLoading,
     } = this.props
 
@@ -121,14 +126,12 @@ export default class Typeahead extends React.Component {
           selectHighlightedItem,
           clearSelection,
         }) => {
-          const showOpen = isOpen && !isLoading
-          const filtered = selectedItem
-            ? items
-            : items.filter(
-                item =>
-                  !inputValue ||
-                  item.label.toLowerCase().includes(inputValue.toLowerCase())
-              )
+          const filtered = items.filter(
+            item =>
+              !inputValue ||
+              item.label.toLowerCase().includes(inputValue.toLowerCase())
+          )
+          const showOpen = isOpen && !isLoading && filtered.length > 0
 
           // Opt for <div> here because we don't want to mess with downshifts
           // getRootProps and refKey, which is kind of strange
@@ -145,19 +148,27 @@ export default class Typeahead extends React.Component {
                 boxShadow: showOpen && '1px 1px 3px rgba(29, 29, 29, 0.125)',
               })}
             >
-              <Relative>
-                <Absolute
-                  top={0}
-                  left={0}
-                  {...css({
+              <Relative
+                {...css({
+                  ':after': selectedItem && {
+                    content: `''`,
+                    pointerEvents: 'none',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    bottom: 0,
                     width: '100%',
-                  })}
-                >
+                    background:
+                      'linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(192,192,192,0) 52%,rgba(244,244,244,0) 66%,rgba(255,255,255,0.6) 81%,rgba(255,255,255,1) 88%,rgba(255,255,255,1) 100%)',
+                  },
+                })}
+              >
+                <Absolute top={0} left={0} {...css({ width: '100%' })}>
                   <Input
                     tabIndex={-1}
                     name="hint"
                     value={
-                      inputValue && filtered.length > 0
+                      inputValue && !selectedItem && filtered.length > 0
                         ? this.getHintText(inputValue, filtered[0].label)
                         : ''
                     }
@@ -171,7 +182,7 @@ export default class Typeahead extends React.Component {
                   />
                 </Absolute>
                 <Input
-                  onClick={toggleMenu}
+                  onClick={autoOpen ? toggleMenu : undefined}
                   name="typed"
                   placeholder={placeholder}
                   {...getInputProps({
@@ -215,6 +226,7 @@ export default class Typeahead extends React.Component {
                         padding: 10,
                         cursor: 'pointer',
                         transform: 'translateY(-3px)',
+                        zIndex: 1,
                       })}
                     >
                       <Icon
