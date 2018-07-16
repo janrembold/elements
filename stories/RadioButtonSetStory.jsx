@@ -47,11 +47,12 @@ export default class RadioButtonSetStory extends React.Component {
                     <ListItem>
                       <RadioButtonSet
                         name="colors"
-                        direction="vertical"
+                        direction="horizontal"
                         required
                       >
                         <RadioButton value="white">white</RadioButton>
                         <RadioButton value="black">black</RadioButton>
+                        <RadioButton value="yellow">yellow</RadioButton>
                       </RadioButtonSet>
                     </ListItem>
                   </List>

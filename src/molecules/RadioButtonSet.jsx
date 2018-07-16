@@ -96,11 +96,11 @@ class RadioButtonSet extends React.Component {
     this.props.direction === DIRECTION_HORIZONTAL ? 'row' : 'column'
 
   render() {
-    const { children, label, required, name, ...props } = this.props
+    const { children, label, required, name, direction, ...props } = this.props
     const { value } = this.state
 
-    const direction =
-      this.props.direction === DIRECTION_AUTO
+    const dir =
+      direction === DIRECTION_AUTO
         ? this.getAutoDirection()
         : this.getDirection()
 
@@ -126,7 +126,7 @@ class RadioButtonSet extends React.Component {
               alignH="space-between"
               alignV="start"
               style={{ width: '100%' }}
-              direction={direction}
+              direction={dir}
               {...props}
             >
               {React.Children.map(children, child => {
