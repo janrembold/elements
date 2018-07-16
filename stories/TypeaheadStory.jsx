@@ -16,6 +16,7 @@ class TypeaheadStory extends React.Component {
     inputValue: '',
     movies: [],
     selectedMovie: null,
+    loading: false,
   }
 
   fetch = async () => {
@@ -23,6 +24,7 @@ class TypeaheadStory extends React.Component {
     // therefore an input change was triggered: Abort!
     if (this.state.selectedMovie) return
 
+    this.setState({ loading: true })
     // simulate an API
     await delay(750)
 
@@ -32,7 +34,7 @@ class TypeaheadStory extends React.Component {
         ? Movies.slice(0, 10)
         : Movies.filter(m => m.label.toLowerCase().includes(inputValue))
 
-    this.setState({ movies })
+    this.setState({ movies, loading: false })
   }
 
   debouncedFetch = debounce(this.fetch)
@@ -61,6 +63,7 @@ class TypeaheadStory extends React.Component {
               onSelect={item => this.setState({ selectedMovie: item })}
               onInputValueChange={this.onInputChange}
               items={movies}
+              isLoading={this.state.loading}
             />
           </View>
         </ResourceProvider>

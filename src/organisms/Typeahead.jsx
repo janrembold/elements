@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Downshift from 'downshift'
+import matchSorter from 'match-sorter'
 import { alpha, ColorPalette } from '@allthings/colors'
 import { css, keyframes } from 'glamor'
+
 import Relative from '../atoms/Relative'
 import Absolute from '../atoms/Absolute'
 import { Input, List, ListItem, Text } from '../index'
@@ -17,7 +19,7 @@ const bounceAnim = keyframes('bounce', {
   '60%': { transform: 'translateY(-10px)' },
 })
 
-export default class Typeahead extends React.Component {
+export default class Typeahead extends React.PureComponent {
   static propTypes = {
     items: PropTypes.arrayOf(
       PropTypes.shape({
@@ -33,12 +35,18 @@ export default class Typeahead extends React.Component {
     isLoading: PropTypes.bool,
     menuHeight: PropTypes.number,
     placeholder: PropTypes.string,
+    limit: PropTypes.number,
   }
 
   static defaultProps = {
     menuHeight: 300,
     onOpen: () => {},
     onClose: () => {},
+    limit: 20,
+  }
+
+  state = {
+    showScrollArrow: false,
   }
 
   getHintText = (inputValue, itemText) => {
@@ -67,12 +75,15 @@ export default class Typeahead extends React.Component {
     }
   }
 
-  handleStateChange = (changes, rest) => {
+  handleStateChange = changes => {
     if (changes.isOpen === true) this.props.onOpen()
     if (changes.isOpen === false) this.props.onClose()
+    if (changes.hasOwnProperty('inputValue')) {
+      this.showArrowIfNecessary()
+    }
   }
 
-  createRenderListItem = ({ getItemProps, highlightedIndex, selectedItem }) => (
+  createRenderListItem = ({ getItemProps, highlightedIndex }) => (
     item,
     index
   ) => (
@@ -93,6 +104,23 @@ export default class Typeahead extends React.Component {
     </ListItem>
   )
 
+  showArrowIfNecessary = () =>
+    this.listRef &&
+    this.setState({
+      showScrollArrow: this.listRef.scrollHeight > this.props.menuHeight,
+    })
+
+  setListRef = el => {
+    this.listRef = el
+    this.showArrowIfNecessary()
+  }
+
+  handleListScroll = e => {
+    if (this.state.showScrollArrow && e.target.scrollTop > 0) {
+      this.setState({ showScrollArrow: false })
+    }
+  }
+
   render() {
     const {
       placeholder,
@@ -102,7 +130,10 @@ export default class Typeahead extends React.Component {
       onSelect,
       autoOpen,
       isLoading,
+      limit,
     } = this.props
+
+    const { showScrollArrow } = this.state
 
     return (
       <Downshift
@@ -126,11 +157,10 @@ export default class Typeahead extends React.Component {
           selectHighlightedItem,
           clearSelection,
         }) => {
-          const filtered = items.filter(
-            item =>
-              !inputValue ||
-              item.label.toLowerCase().includes(inputValue.toLowerCase())
-          )
+          const filtered = matchSorter(items, inputValue, {
+            keys: ['label'],
+          }).slice(0, limit)
+
           const showOpen = isOpen && !isLoading && filtered.length > 0
 
           // Opt for <div> here because we don't want to mess with downshifts
@@ -182,13 +212,13 @@ export default class Typeahead extends React.Component {
                   />
                 </Absolute>
                 <Input
-                  onClick={autoOpen ? toggleMenu : undefined}
+                  onClick={autoOpen && !selectedItem ? toggleMenu : undefined}
                   name="typed"
                   placeholder={placeholder}
                   {...getInputProps({
                     onKeyDown: e => {
                       if (
-                        (e.key === 'Tab' || e.key === 'ArrowRight') &&
+                        ['Tab', 'ArrowRight', 'End'].includes(e.key) &&
                         highlightedIndex !== null &&
                         showOpen
                       ) {
@@ -239,19 +269,9 @@ export default class Typeahead extends React.Component {
                 </Absolute>
               </Relative>
               <Relative>
-                {false &&
-                  showOpen && (
-                    <Absolute bottom={15} right={15}>
-                      <Icon
-                        name="arrow-down"
-                        color="black"
-                        size="xs"
-                        {...css({ animation: `${bounceAnim} 2500ms 2` })}
-                      />
-                    </Absolute>
-                  )}
                 {showOpen && (
                   <List
+                    onRef={this.setListRef}
                     {...getMenuProps()}
                     {...css({
                       maxHeight: menuHeight,
@@ -262,6 +282,7 @@ export default class Typeahead extends React.Component {
                       boxShadow:
                         showOpen && '1px 1px 3px rgba(29, 29, 29, 0.125)',
                     })}
+                    onScroll={this.handleListScroll}
                   >
                     {filtered.map(
                       this.createRenderListItem({
@@ -270,6 +291,16 @@ export default class Typeahead extends React.Component {
                         selectedItem,
                       })
                     )}
+                    <Absolute bottom={15} right={15}>
+                      {showScrollArrow && (
+                        <Icon
+                          name="arrow-down"
+                          color="black"
+                          size="xs"
+                          {...css({ animation: `${bounceAnim} 2500ms 2` })}
+                        />
+                      )}
+                    </Absolute>
                   </List>
                 )}
               </Relative>
