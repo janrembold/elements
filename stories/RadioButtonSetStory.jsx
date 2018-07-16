@@ -44,6 +44,16 @@ export default class RadioButtonSetStory extends React.Component {
                         <RadioButton value="medium">medium</RadioButton>
                       </RadioButtonSet>
                     </ListItem>
+                    <ListItem>
+                      <RadioButtonSet
+                        name="colors"
+                        direction="vertical"
+                        required
+                      >
+                        <RadioButton value="white">white</RadioButton>
+                        <RadioButton value="black">black</RadioButton>
+                      </RadioButtonSet>
+                    </ListItem>
                   </List>
                 </Card>
               </Form>
