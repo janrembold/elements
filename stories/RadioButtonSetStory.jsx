@@ -35,7 +35,11 @@ export default class RadioButtonSetStory extends React.Component {
                 <Card>
                   <List>
                     <ListItem>
-                      <RadioButtonSet name="sizes" required>
+                      <RadioButtonSet
+                        name="sizes"
+                        defaultValue="medium"
+                        required
+                      >
                         <RadioButton value="short">short</RadioButton>
                         <RadioButton value="medium">medium</RadioButton>
                       </RadioButtonSet>

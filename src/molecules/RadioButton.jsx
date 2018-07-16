@@ -63,7 +63,7 @@ class RadioButton extends React.Component {
     /** Label of the radio button */
     children: PropTypes.node,
     /** The referenced input field */
-    inputRef: PropTypes.inputRef,
+    inputRef: PropTypes.func,
   }
 
   static defaultProps = {
@@ -114,7 +114,7 @@ class RadioButton extends React.Component {
         {({ theme, colorize }) => (
           <View {...styles.radioElement} {...props}>
             <Relative direction="row" alignV="center" alignH="center">
-              <View htmlElement="label" htmlFor={realId}>
+              <label>
                 <Relative top={10}>
                   <Circle
                     color={`${
@@ -156,7 +156,7 @@ class RadioButton extends React.Component {
                     onChange={this.handleChange}
                   />
                 </Absolute>
-              </View>
+              </label>
             </Relative>
           </View>
         )}

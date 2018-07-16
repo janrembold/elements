@@ -111,6 +111,7 @@ class RadioButtonSet extends React.Component {
             {label && (
               <View
                 className="label"
+                {...styles.label}
                 style={{
                   opacity: 1,
                   top: 8,
