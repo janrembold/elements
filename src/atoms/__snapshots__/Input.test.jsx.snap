@@ -258,7 +258,6 @@ exports[`Input component should render with required props only 1`] = `
     name="string"
     onInvalid={[Function]}
     onKeyUp={[Function]}
-    pattern={undefined}
     required={false}
     type="text"
   />

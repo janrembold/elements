@@ -65,22 +65,24 @@ class HorizontalView extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    const oldChildren = this.props.children
-    const nextChildren = nextProps.children
+  static getDerivedStateFromProps(
+    { children: nextProps },
+    { children: previousState }
+  ) {
+    const [oldChildren, nextChildren] = [previousState, nextProps].map(
+      children => children.filter(child => React.isValidElement(child))
+    )
 
-    if (nextChildren.length < oldChildren.length) {
-      this.setState({
-        nextChildren,
-        waitForTransitionEnd: true,
-        currentChild: nextChildren.length,
-      })
-    } else {
-      this.setState({
-        children: nextChildren,
-        currentChild: nextChildren.length,
-      })
-    }
+    return nextChildren.length < oldChildren.length
+      ? {
+          nextChildren,
+          waitForTransitionEnd: true,
+          currentChild: nextChildren.length,
+        }
+      : {
+          children: nextChildren,
+          currentChild: nextChildren.length,
+        }
   }
 
   handleTransitionEnd = () => {
@@ -99,7 +101,7 @@ class HorizontalView extends React.Component {
     const translateX = (currentChild - 1) * -100
 
     return (
-      <View {...css({ overflow: 'hidden' })}>
+      <View flex="flex" {...css({ overflow: 'hidden' })}>
         <View
           direction="row"
           flex="flex"
@@ -110,7 +112,7 @@ class HorizontalView extends React.Component {
           onTransitionEnd={this.handleTransitionEnd}
           {...props}
         >
-          {children.map((child, i) => (
+          {React.Children.map(children, (child, i) => (
             <View
               // eslint-disable-next-line
               key={i}

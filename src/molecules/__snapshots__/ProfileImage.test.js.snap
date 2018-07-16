@@ -47,7 +47,6 @@ exports[`Profile image with source renders correctly 1`] = `
 
 <div
   data-css-1=""
-  onClick={undefined}
 >
   <div
     alt=""
@@ -86,7 +85,6 @@ exports[`Profile image without source renders correctly 1`] = `
 
 <div
   data-css-0=""
-  onClick={undefined}
 >
   <svg
     style={
