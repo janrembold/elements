@@ -18,7 +18,7 @@ const maskExp = [/\d/, /\d/, '/', /\d/, /\d/]
  * CreditCardInput is used to enter credit card details.
  *
  * ```example
- * <PhoneInput name="phone" placeholder="Example Placeholder" defaultValue="4907615555555" required />
+ * <CreditCardInput />
  * ```
  **/
 class CreditCardInput extends Component {

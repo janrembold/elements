@@ -6,7 +6,7 @@ You can change it in "src/molecules/CreditCardInput.jsx" and run build:docs to u
 CreditCardInput is used to enter credit card details.
 
 ```example
-<PhoneInput name="phone" placeholder="Example Placeholder" defaultValue="4907615555555" required />
+<CreditCardInput />
 ```
 ## Usage
 | Name        | Type           | Description  |
