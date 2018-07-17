@@ -28,10 +28,18 @@ exports[`CardButton renders custom color 1`] = `
 
 .css-1,
 [data-css-1] {
+  border: none;
   background-color: #f0f0f0;
-  transition: 500ms ease-in-out;
-  -webkit-transition: 500ms ease-in-out;
-  -moz-transition: 500ms ease-in-out;
+  overflow: visible;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  transition: background 500ms ease-in-out;
+  -webkit-transition: background 500ms ease-in-out;
+  -moz-transition: background 500ms ease-in-out;
 }
 
 .css-1:hover,
@@ -42,22 +50,31 @@ exports[`CardButton renders custom color 1`] = `
   background: #d9d9d9;
 }
 
-<div
+<button
   data-css-1=""
   data-css-0=""
   onClick={[Function]}
+  type="button"
 >
   Click me
-</div>
+</button>
 `;
 
 exports[`CardButton renders without error 1`] = `
 .css-0,
 [data-css-0] {
+  border: none;
   background-color: #3598db;
-  transition: 500ms ease-in-out;
-  -webkit-transition: 500ms ease-in-out;
-  -moz-transition: 500ms ease-in-out;
+  overflow: visible;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  transition: background 500ms ease-in-out;
+  -webkit-transition: background 500ms ease-in-out;
+  -moz-transition: background 500ms ease-in-out;
 }
 
 .css-0:hover,
@@ -93,11 +110,12 @@ exports[`CardButton renders without error 1`] = `
   -webkit-flex: 1;
 }
 
-<div
+<button
   data-css-0=""
   data-css-4=""
   onClick={[Function]}
+  type="button"
 >
   Click me
-</div>
+</button>
 `;
