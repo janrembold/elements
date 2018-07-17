@@ -28,7 +28,7 @@ export default class FileSelector extends React.Component {
     children: () => {},
   }
 
-  previews = []
+  previews = new Map()
 
   componentWillUnmount() {
     this.clearPreviews()
@@ -49,7 +49,7 @@ export default class FileSelector extends React.Component {
 
   clearPreviews = () => {
     this.previews.forEach(window.URL.revokeObjectURL)
-    this.previews = []
+    this.previews.clear()
   }
 
   clear = () => {
@@ -64,14 +64,19 @@ export default class FileSelector extends React.Component {
       const files = [...this.state.files]
       files.splice(index, 1)
       this.setState({ files })
+      this.previews.has(file) && this.previews.delete(file)
     }
   }
 
   getPreview = file => {
-    const url = window.URL.createObjectURL(file)
-    this.previews.push(url)
-
-    return url
+    if (this.previews.has(file)) {
+      return this.previews.get(file)
+    } else {
+      console.log('creating new preview')
+      const url = window.URL.createObjectURL(file)
+      this.previews.set(file, url)
+      return url
+    }
   }
 
   render() {
