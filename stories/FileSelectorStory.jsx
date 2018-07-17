@@ -10,7 +10,7 @@ import CardFooter from '../src/molecules/Card/CardFooter'
 import View from '../src/atoms/View'
 import FileSelector from '../src/organisms/FileSelector'
 import Relative from '../src/atoms/Relative'
-import Inset from '../src/atoms/Inset'
+import { action } from '@storybook/addon-actions'
 
 const imageOverlayStyle = css({
   margin: 5,
@@ -41,7 +41,7 @@ const imageStyle = css({
 
 const FileSelectorStory = () => (
   <ThemeProvider>
-    <Form onSubmit={(_, data) => console.log(data.myImages)}>
+    <Form onSubmit={action('submit')}>
       <FileSelector name="myImages" multiple accept="image/*">
         {({ files, openDialog, getPreview, removeFile, clear }) => (
           <Card>
