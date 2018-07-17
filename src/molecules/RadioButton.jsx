@@ -29,19 +29,10 @@ const styles = {
  * Like gender (male / female) or sizes (s,m,l,xl)
  *
  * ```example
- *
- * const gender = [
- *    { key: m, value: 'male' },
- *    { key: f, value: 'female' },
- * ]
- *
- * <RadioButtonSet name="gender" defaultValue="male" required />
- *
- * <RadioButton
- *    name="sizes"
- *    defaultValue="large"
- *    required
- * />
+ * <RadioButtonSet name="gender" defaultValue="male" required>
+ *   <RadioButton value="female">Female</RadioButton>
+ *   <RadioButton value="male">Male</RadioButton>
+ * </RadioButtonSet>
  * ```
  */
 class RadioButton extends React.Component {
