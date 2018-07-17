@@ -1,20 +1,27 @@
 import React from 'react'
+import RadioButton from './RadioButton'
 import RadioButtonSet from './RadioButtonSet'
-import { mount } from 'enzyme'
-import ThemeProvider from '../behaviour/ThemeProvider'
 
-const THEME = {
-  background: 'blueDanube',
-}
+it('should chain the onChange property', () => {
+  const handleChange1 = jest.fn()
+  const handleChange2 = jest.fn()
+  const wrapper = shallow(
+    <RadioButtonSet value="" name="test" onChange={handleChange1}>
+      <RadioButton onChange={handleChange2} />
+      <RadioButton onChange={handleChange2} />
+    </RadioButtonSet>
+  )
 
-const selection = [
-  { key: 'b', value: 'blue pill' },
-  { key: 'r', value: 'red pill' },
-  { key: 'g', value: 'green' },
-]
-
-const defaultVal = 'green'
-
+  const internalRadio = wrapper.children().first()
+  internalRadio.simulate(
+    'change',
+    { target: { value: 'woofRadioGroup' } },
+    true
+  )
+  expect(handleChange1).toBeCalled()
+  expect(handleChange2).toBeCalled()
+})
+/**
 test('First radio-button should be selected', () => {
   const wrapper = mount(
     <ThemeProvider theme={THEME}>
@@ -54,4 +61,4 @@ test('First radio-button should be selected', () => {
       .prop('defaultChecked')
   ).toBeTruthy()
   wrapper.unmount()
-})
+})*/
