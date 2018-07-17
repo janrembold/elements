@@ -14,6 +14,7 @@ import HorizontalView from './HorizontalView'
 import FormStory from './FormStory'
 import RadioButtonSetStory from './RadioButtonSetStory'
 import createViewportDecorator from './createViewportDecorator'
+import RadioButtonStory from './RadioButtonStory'
 import CollapsibleStory from './CollapsibleStory'
 
 storiesOf('Animations', module)
@@ -23,6 +24,7 @@ storiesOf('Animations', module)
 storiesOf('Forms', module)
   .addDecorator(createViewportDecorator())
   .add('SimpleForm', () => <FormStory />)
+  .add('RadioButton', () => <RadioButtonStory />)
 
 storiesOf('RadioButtonSet', module).add('Composable radio buttons', () => (
   <RadioButtonSetStory />

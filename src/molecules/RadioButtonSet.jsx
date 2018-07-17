@@ -6,69 +6,51 @@ import View from '../atoms/View'
 import Theme from '../behaviour/Theme'
 
 const styles = {
-  radioWrapper: () =>
-    css({
-      padding: '15px 15px',
-    }),
-  radioElement: num =>
-    css({
-      marginRight: 40,
-      width: 'auto',
-    }),
-  radio: primaryColor =>
-    css({
-      opacity: 0,
-      margin: 0,
-    }),
-  required: css({
-    position: 'absolute',
-    right: 10,
+  label: css({
+    position: 'relative',
+    marginBottom: 10,
   }),
 }
-
-/**
- * RadioButtonSet can be used to render a set of RadioButtons to allow users to select exactly one item from a set.
- * Like gender (male / female) or sizes (s,m,l,xl)
- *
- * ```example
- * *
- * <RadioButtonSet name="gender" defaultValue="male" required />
- *
- *
- * <RadioButtonSet
- *    name="sizes"
- *    selection={sizes}
- *    defaultValue="large"
- *    required
- * />
- * ```
- */
 
 const DIRECTION_HORIZONTAL = 'horizontal'
 const DIRECTION_VERTICAL = 'vertical'
 const DIRECTION_AUTO = 'auto'
 
+/**
+ * RadioButtonSet can be used to render a set of RadioButtons to allow users to select exactly one item from a set.
+ *
+ * ```example
+ * <RadioButtonSet
+ *    name="order"
+ *    defaultValue="tee"
+ *    required
+ * >
+ *   <RadioButton value="coffe">Coffe</RadioButton>
+ *   <RadioButton value="tee">Tee</RadioButton>
+ *   <RadioButton value="others">Others</RadioButton>
+ * </RadioButtonSet>
+ * ```
+ */
 class RadioButtonSet extends React.Component {
   static propTypes = {
+    /** Pass in RadioButton[] */
+    children: PropTypes.node.isRequired,
     /** The default value to put into the component, without making it controlled */
     defaultValue: PropTypes.string,
-    /** The name of this input field */
-    name: PropTypes.string.isRequired,
-    label: PropTypes.string,
-    /** Called when a radio button is clicked */
-    onChange: PropTypes.func,
-    /** Background color of the form item */
-    backgroundColor: PropTypes.string,
-    /** Mark if the RadioButton is required */
-    required: PropTypes.bool.isRequired,
-    /** Pass RadioButton[]  */
-    children: PropTypes.node.isRequired,
-    /** Mark if the RadioButton is required */
+    /** Customize direction */
     direction: PropTypes.oneOf([
       DIRECTION_HORIZONTAL,
       DIRECTION_VERTICAL,
       DIRECTION_AUTO,
     ]),
+    /** The label of this input field */
+    label: PropTypes.string,
+    /** The name of this input field */
+    name: PropTypes.string.isRequired,
+    /** Called when a radio button is clicked */
+    onChange: PropTypes.func,
+    /** Pass true to mark the field as required */
+    required: PropTypes.bool,
   }
 
   static DIRECTION_HORIZONTAL = DIRECTION_HORIZONTAL
@@ -99,11 +81,6 @@ class RadioButtonSet extends React.Component {
     const { children, label, required, name, direction, ...props } = this.props
     const { value } = this.state
 
-    const dir =
-      direction === DIRECTION_AUTO
-        ? this.getAutoDirection()
-        : this.getDirection()
-
     return (
       <Theme>
         {({ theme, colorize }) => (
@@ -126,13 +103,18 @@ class RadioButtonSet extends React.Component {
               alignH="space-between"
               alignV="start"
               style={{ width: '100%' }}
-              direction={dir}
+              direction={
+                direction === DIRECTION_AUTO
+                  ? this.getAutoDirection()
+                  : this.getDirection()
+              }
               {...props}
             >
               {React.Children.map(children, child => {
                 if (!React.isValidElement(child)) {
                   return null
                 }
+
                 if (child.type === React.Fragment) {
                   console.log(
                     [
@@ -141,6 +123,7 @@ class RadioButtonSet extends React.Component {
                     ].join('\n')
                   )
                 }
+
                 return React.cloneElement(child, {
                   name,
                   inputRef: node => {

@@ -46,24 +46,24 @@ const styles = {
  */
 class RadioButton extends React.Component {
   static propTypes = {
-    /** The value the checkbox will have */
-    value: PropTypes.string.isRequired,
-    /** The name of this input field */
-    name: PropTypes.string,
-    /** Called when a radio button is clicked */
-    onChange: PropTypes.func,
     /** Background color of the form item */
     backgroundColor: PropTypes.string,
-    /** Background color of the form item */
-    id: PropTypes.string,
-    /** Mark if the RadioButton is required */
-    required: PropTypes.bool,
     /** Set to true to controll radio button */
     checked: PropTypes.bool,
     /** Label of the radio button */
     children: PropTypes.node,
-    /** The referenced input field */
+    /** Background color of the form item */
+    id: PropTypes.string,
+    /** reference to the input field */
     inputRef: PropTypes.func,
+    /** The name of this input field */
+    name: PropTypes.string,
+    /** Called when a radio button is clicked */
+    onChange: PropTypes.func,
+    /** Mark if the RadioButton is required */
+    required: PropTypes.bool,
+    /** The value the checkbox will have */
+    value: PropTypes.string.isRequired,
   }
 
   static defaultProps = {
@@ -114,7 +114,7 @@ class RadioButton extends React.Component {
         {({ theme, colorize }) => (
           <View {...styles.radioElement} {...props}>
             <Relative direction="row" alignV="center" alignH="center">
-              <label>
+              <View htmlElement="label">
                 <Relative top={10}>
                   <Circle
                     color={`${
@@ -156,7 +156,7 @@ class RadioButton extends React.Component {
                     onChange={this.handleChange}
                   />
                 </Absolute>
-              </label>
+              </View>
             </Relative>
           </View>
         )}
