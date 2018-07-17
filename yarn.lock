@@ -3135,9 +3135,9 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-logux@23.0.2:
-  version "23.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-23.0.2.tgz#d658db0607d1d0bca7853cf3af4b7977e0c6cf63"
+eslint-config-logux@23.0.4:
+  version "23.0.4"
+  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-23.0.4.tgz#adf43c5dda33c4fba9c34ddeed52603c205a8732"
   dependencies:
     globals "^11.7.0"
 
