@@ -1,21 +1,22 @@
 import React from 'react'
 import {
-  ThemeProvider,
   Button,
   Card,
-  View,
   Checkbox,
-  TitleBar,
-  SquareIconButton,
-  PhoneInput,
-  Text,
-  SimpleLayout,
+  Form,
   List,
   ListItem,
-  TextInput,
+  PhoneInput,
   ResourceProvider,
-  Form,
   RadioButtonSet,
+  RadioButton,
+  SimpleLayout,
+  SquareIconButton,
+  Text,
+  TextInput,
+  TitleBar,
+  ThemeProvider,
+  View,
 } from '../src'
 
 export default class FormStory extends React.Component {
@@ -82,12 +83,14 @@ export default class FormStory extends React.Component {
 
                     <ListItem>
                       <RadioButtonSet
-                        selection={[
-                          { key: 'A', value: 'A' },
-                          { key: 'B', value: 'B' },
-                          { key: 'C', value: 'C' },
-                        ]}
-                      />
+                        name="drinks"
+                        label="Like to drink?"
+                        direction="horizontal"
+                      >
+                        <RadioButton value="coffe">Coffe</RadioButton>
+                        <RadioButton value="tee">Tee</RadioButton>
+                        <RadioButton value="beer">Beer</RadioButton>
+                      </RadioButtonSet>
                     </ListItem>
 
                     <ListItem alignH="center">

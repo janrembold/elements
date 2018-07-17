@@ -89,7 +89,6 @@ class RadioButton extends React.Component {
   }
 
   handleChange = e => {
-    console.log('ok', this.props)
     this.props.onChange && this.props.onChange(e)
     this.setState(({ checked }) => ({ checked: !checked }))
   }
@@ -97,12 +96,12 @@ class RadioButton extends React.Component {
   render() {
     const {
       backgroundColor,
-      inputRef,
-      onChange,
-      name,
-      id,
-      children,
       checked,
+      children,
+      id,
+      inputRef,
+      name,
+      onChange,
       value,
       ...props
     } = this.props
