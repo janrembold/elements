@@ -62,17 +62,6 @@ export default class FormStory extends React.Component {
                       </RadioButtonSet>
                     </ListItem>
                     <ListItem>
-                      <RadioButton name="Group" value="a" id="a">
-                        A
-                      </RadioButton>
-                      <RadioButton name="Group" value="b" id="b">
-                        B
-                      </RadioButton>
-                      <RadioButton name="Group" value="c" id="c">
-                        C
-                      </RadioButton>
-                    </ListItem>
-                    <ListItem>
                       <RadioButtonSet name="Ok">
                         <RadioButton value="rot" id="rot">
                           Blue
