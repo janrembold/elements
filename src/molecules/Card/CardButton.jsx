@@ -7,8 +7,16 @@ import Theme from '../../behaviour/Theme'
 
 const style = backgroundColor =>
   css({
+    border: 'none',
     backgroundColor,
-    transition: '500ms ease-in-out',
+    overflow: 'visible',
+    color: 'inherit',
+    font: 'inherit',
+    lineHeight: 'normal',
+    WebkitFontSmoothing: 'inherit',
+    MozOsxFontSmoothing: 'inherit',
+    WebkitAppearance: 'none',
+    transition: 'background 500ms ease-in-out',
     ':hover': {
       cursor: 'pointer',
       background: color(backgroundColor, lightness(-10)),
@@ -23,12 +31,15 @@ export default function CardButton({
   children,
   onClick = noop => noop,
   backgroundColor = '#ffffff',
+  type = 'button',
   ...props
 }) {
   return (
     <Theme>
       {({ colorize }) => (
         <View
+          htmlElement="button"
+          type={type}
           alignH="center"
           flex="flex"
           alignV="center"
@@ -50,4 +61,6 @@ CardButton.propTypes = {
   onClick: PropTypes.func,
   /** Color of the button **/
   backgroundColor: PropTypes.string,
+  /** Form action to trigger when button is clicked **/
+  type: PropTypes.oneOf(['submit', 'reset', 'button']),
 }

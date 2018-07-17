@@ -14,6 +14,7 @@ import HorizontalView from './HorizontalView'
 import FormStory from './FormStory'
 import createViewportDecorator from './createViewportDecorator'
 import CollapsibleStory from './CollapsibleStory'
+import FileSelectorStory from './FileSelectorStory'
 
 storiesOf('Animations', module)
   .addDecorator(createViewportDecorator())
@@ -71,3 +72,4 @@ storiesOf('PhoneInput', module)
 storiesOf('Containers', module)
   .addDecorator(createViewportDecorator())
   .add('Collapsible', CollapsibleStory)
+  .add('Image upload', FileSelectorStory)

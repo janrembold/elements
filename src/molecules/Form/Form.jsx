@@ -118,21 +118,20 @@ class Form extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    const data = {}
-    const elements = e.target.elements
-    for (let i = 0; i < elements.length; i++) {
-      let item = elements.item(i)
-      data[item.name] = item.value
-    }
+
+    const data = Array.from(e.target.elements).reduce(
+      (data, item) => ({
+        ...data,
+        [item.name]: item.type === 'file' ? item.files : item.value,
+      }),
+      {}
+    )
+
     this.props.onSubmit(e, data)
   }
 
   render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        {this.props.children}
-      </form>
-    )
+    return <form onSubmit={this.handleSubmit}>{this.props.children}</form>
   }
 }
 

@@ -1,0 +1,97 @@
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
+import { css } from 'glamor'
+
+const inputStyle = css({
+  position: 'absolute',
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
+  opacity: 0.00001,
+  pointerEvents: 'none',
+})
+
+/**
+ *
+ */
+export default class FileSelector extends React.Component {
+  static propTypes = {
+    children: PropTypes.func,
+    multiple: PropTypes.bool,
+    accept: PropTypes.string,
+  }
+
+  static defaultProps = {
+    children: () => {},
+  }
+
+  previews = []
+
+  componentWillUnmount() {
+    this.clearPreviews()
+  }
+
+  state = {
+    files: [],
+  }
+
+  setInputRef = ref => (this.inputRef = ref)
+
+  handleChange = e => {
+    const fileItems = e.dataTransfer ? e.dataTransfer.files : e.target.files
+    this.setState(state => ({ files: [...state.files, ...fileItems] }))
+  }
+
+  openDialog = () => this.inputRef.click()
+
+  clearPreviews = () => {
+    this.previews.forEach(window.URL.revokeObjectURL)
+    this.previews = []
+  }
+
+  clear = () => {
+    this.clearPreviews()
+    this.setState({ files: [] })
+  }
+
+  removeFile = file => {
+    const index = this.state.files.indexOf(file)
+
+    if (index >= 0) {
+      const files = [...this.state.files]
+      files.splice(index, 1)
+      this.setState({ files })
+    }
+  }
+
+  getPreview = file => {
+    const url = window.URL.createObjectURL(file)
+    this.previews.push(url)
+
+    return url
+  }
+
+  render() {
+    const { children, ...props } = this.props
+    return (
+      <Fragment>
+        <input
+          ref={this.setInputRef}
+          type="file"
+          name="images"
+          {...inputStyle}
+          {...props}
+          onChange={this.handleChange}
+        />
+        {children({
+          files: this.state.files,
+          openDialog: this.openDialog,
+          getPreview: this.getPreview,
+          removeFile: this.removeFile,
+          clear: this.clear,
+        })}
+      </Fragment>
+    )
+  }
+}
