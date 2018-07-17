@@ -15,7 +15,6 @@ exports[`Logo renders correctly 1`] = `
 
 <div
   data-css-0=""
-  onClick={undefined}
   style={
     Object {
       "height": "auto",

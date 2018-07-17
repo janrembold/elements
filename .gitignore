@@ -1,5 +1,7 @@
+yarn-error.log
 node_modules
 build
 docs/elements
 .eslintcache
 /coverage
+/storybook-static

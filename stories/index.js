@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import {
@@ -15,6 +14,7 @@ import HorizontalView from './HorizontalView'
 import FormStory from './FormStory'
 import createViewportDecorator from './createViewportDecorator'
 import RadioButtonStory from './RadioButtonStory'
+import CollapsibleStory from './CollapsibleStory'
 
 storiesOf('Animations', module)
   .addDecorator(createViewportDecorator())
@@ -25,44 +25,51 @@ storiesOf('Forms', module)
   .add('SimpleForm', () => <FormStory />)
   .add('RadioButton', () => <RadioButtonStory />)
 
-storiesOf('FloatingButton', module).add('with text', () => (
-  <ThemeProvider>
-    <FormValidityProvider
-      validity={{
-        valueMissing: 'YEYYYY, NOPEEEEEEEE!',
-      }}
-    >
-      <Form onSubmit={_ => _}>
-        <FloatingButton type="submit" onClick={action('clicked')}>
-          <Text strong size="s" color="white">
-            Hello Button
-          </Text>
-        </FloatingButton>
-        <TextInput
-          name="email"
-          type="email"
-          placeholder="Your email"
-          required
-        />
-      </Form>
-    </FormValidityProvider>
-  </ThemeProvider>
-))
-
-storiesOf('PhoneInput', module).add('with phone', () => {
-  return (
+storiesOf('FloatingButton', module)
+  .addDecorator(createViewportDecorator())
+  .add('with text', () => (
     <ThemeProvider>
-      <Form>
-        <PhoneInput
-          placeholder="hello, this is a placeholder"
-          defaultValue="49017632"
-          name="phone"
-          id="phone"
-        />
-        <FloatingButton>
-          <Text>get phone input value</Text>
-        </FloatingButton>
-      </Form>
+      <FormValidityProvider
+        validity={{
+          valueMissing: 'YEYYYY, NOPEEEEEEEE!',
+        }}
+      >
+        <Form onSubmit={_ => _}>
+          <FloatingButton type="submit" onClick={action('clicked')}>
+            <Text strong size="s" color="white">
+              Hello Button
+            </Text>
+          </FloatingButton>
+          <TextInput
+            name="email"
+            type="email"
+            placeholder="Your email"
+            required
+          />
+        </Form>
+      </FormValidityProvider>
     </ThemeProvider>
-  )
-})
+  ))
+
+storiesOf('PhoneInput', module)
+  .addDecorator(createViewportDecorator())
+  .add('with phone', () => {
+    return (
+      <ThemeProvider>
+        <Form>
+          <PhoneInput
+            placeholder="hello, this is a placeholder"
+            defaultValue="49017632"
+            name="phone"
+            id="phone"
+          />
+          <FloatingButton>
+            <Text>get phone input value</Text>
+          </FloatingButton>
+        </Form>
+      </ThemeProvider>
+    )
+  })
+storiesOf('Containers', module)
+  .addDecorator(createViewportDecorator())
+  .add('Collapsible', CollapsibleStory)

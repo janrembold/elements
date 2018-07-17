@@ -2,9 +2,7 @@
 
 <img alt="npm version" src="https://badge.fury.io/js/%40allthings%2Felements.svg"> [![Build Status](https://travis-ci.org/allthings/elements.svg?branch=master)](https://travis-ci.org/allthings/elements) [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
 
-
-
- Elements is a set of **carefully crafted, high quality React UI components,** that [Allthings](https://www.allthings.me) uses to build their mobile app.
+Elements is a set of **carefully crafted, high quality React UI components,** that [Allthings](https://www.allthings.me) uses to build their mobile app.
 
 ## Installation
 
@@ -22,21 +20,19 @@ Here is a quick example to get you started, it's all you need:
 
 ```jsx
 import React from 'react'
-import { render } from 'react-dom'
+import { render } from 'react-dom'
 import Button from '@allthings/elements/molecules/Button'
 
 function App() {
-  return (
-    <Button>
-      Hello World
-    </Button>
-  )
+  return <Button>Hello World</Button>
 }
 
 render(<App />, document.querySelector('#app'))
 ```
 
-**Notes:**
+### Notes:
+
+**fetch**
 
 `@allthings/elements` uses `fetch` and expects it to be globally available. For example [`cross-fetch`](https://github.com/lquixada/cross-fetch) can be used at the entry point of the app:
 
@@ -44,7 +40,17 @@ render(<App />, document.querySelector('#app'))
 import 'cross-fetch/polyfill'
 ```
 
-If you want to use the component `CDNIntlProvider` make sure to also install [`react-intl`](https://github.com/yahoo/react-intl).
+**i18n**
+
+The `CDNIntlProvider` fetches translations from the Allthings CDN.
+
+If you want to use the component make sure to also install the peer dependency [`react-intl`](https://github.com/yahoo/react-intl).
+
+We don't export the `CDNIntlProvider` from the index file, so it's necessary to import it directly from its destination:
+
+```
+import CDNIntlProvider from '@allthings/elements/behaviour/CDNIntlProvider'
+```
 
 ## Examples
 
@@ -76,13 +82,13 @@ SomeOtherDir
 To manually trigger the unit tests, run:
 
 ```sh
-yarn test:unit
+yarn test
 ```
 
 You can also use the corresponding watch task:
 
 ```sh
-yarn watch:test:unit
+yarn watch:test
 ```
 
 The unit tests are performed using the [Jest platform](https://facebook.github.io/jest/), please refer to its documentation.
@@ -97,15 +103,16 @@ If you want to make changes to `@allthings/elements` and see them taking effect 
 
 ### 🛠 Initial steps
 
-1. Install [**yalc**](https://github.com/whitecolor/yalc): `yarn global add yalc`
-1. Create a build with `yarn build`.
-1. Publish the build folder `yalc publish build`. Don't worry this will only 'publish' to a local store located on the hard disk (see yalc docs to read more about this).
+1.  Install [**yalc**](https://github.com/whitecolor/yalc): `yarn global add yalc`
+1.  Create a build with `yarn build`.
+1.  Publish the build folder `yalc publish build`. Don't worry this will only 'publish' to a local store located on the hard disk (see yalc docs to read more about this).
 
 **tl;dr**
 
 ```sh
 yarn global add yalc
 ```
+
 ```sh
 cd @allthings/elements
 yarn build
@@ -114,14 +121,14 @@ yalc publish build
 
 ### ☕️ Start developing in your app
 
-1. Go to the app, which will consume the local elements repository and execute `yalc add --link @allthings/elements`
-1. Run `yarn` so it will fetch the local repository now.
-1. Go back to `@allthings/elements` repository.
-1. Run `yarn babel:watch`.
-1. Make some changes 🧚‍✨
-1. Run `yalc push build`.
-1. Changes will be propagated to all linked projects.
-1. Everytime you do some changes you can run `yalc push build` again.
+1.  Go to the app, which will consume the local elements repository and execute `yalc add --link @allthings/elements`
+1.  Run `yarn` so it will fetch the local repository now.
+1.  Go back to `@allthings/elements` repository.
+1.  Run `yarn babel:watch`.
+1.  Make some changes 🧚‍✨
+1.  Run `yalc push build`.
+1.  Changes will be propagated to all linked projects.
+1.  Everytime you do some changes you can run `yalc push build` again.
 
 **tl;dr**
 
@@ -136,12 +143,11 @@ yarn babel:watch
 yalc push build
 ```
 
-
 > What does `yalc add --link` do?
 >
->  * Create a folder `.yalc` with the contents of the current local `@allthings/elements` repository.
->  * Create a `yalc.lock` file for computational stuff.
->  * Modify the `package.json` to load the package from `link:.yalc/@allthings/elements`.
+> - Create a folder `.yalc` with the contents of the current local `@allthings/elements` repository.
+> - Create a `yalc.lock` file for computational stuff.
+> - Modify the `package.json` to load the package from `link:.yalc/@allthings/elements`.
 >
 > Be sure to not commit any of these changes. Consider adding the created files to `.gitignore`.
 > See [`yalc`](https://github.com/whitecolor/yalc#what) for more information.
@@ -154,11 +160,11 @@ yalc remove @allthings/elements
 yarn
 ```
 
-
 #### ⚠️ Note:
 
 ##### webpack externals:
-If you're using server side rendering alongside with `webpack-node-externals`, be sure to add everything elements related to the whitelist: 
+
+If you're using server side rendering alongside with `webpack-node-externals`, be sure to add everything elements related to the whitelist:
 
 ```js
 // webpack.config.js
@@ -169,6 +175,7 @@ If you're using server side rendering alongside with `webpack-node-externals`, b
 ```
 
 ##### Serverless with `serverless-webpack`
-It seems that `serverless-webpack` does not recognize the `link:` format in, as [it doesn't support yarn *yet*](https://github.com/serverless-heaven/serverless-webpack/issues/286).
+
+It seems that `serverless-webpack` does not recognize the `link:` format in, as [it doesn't support yarn _yet_](https://github.com/serverless-heaven/serverless-webpack/issues/286).
 
 Rather than using `yalc add --link @allthings/elements` you should use `yalc add @allthings/elements`.
