@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from 'glamor'
+import Relative from '../atoms/Relative'
 
 const inputStyle = css({
   position: 'absolute',
@@ -8,6 +9,7 @@ const inputStyle = css({
   right: 0,
   bottom: 0,
   left: 0,
+  width: '100%',
   opacity: 0.00001,
   pointerEvents: 'none',
 })
@@ -75,11 +77,10 @@ export default class FileSelector extends React.Component {
   render() {
     const { children, ...props } = this.props
     return (
-      <Fragment>
+      <Relative>
         <input
           ref={this.setInputRef}
           type="file"
-          name="images"
           {...inputStyle}
           {...props}
           onChange={this.handleChange}
@@ -91,7 +92,7 @@ export default class FileSelector extends React.Component {
           removeFile: this.removeFile,
           clear: this.clear,
         })}
-      </Fragment>
+      </Relative>
     )
   }
 }
