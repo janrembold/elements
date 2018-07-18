@@ -2,7 +2,6 @@ import React from 'react'
 import RadioButton from './RadioButton'
 import renderer from 'react-test-renderer'
 import { shallow } from 'enzyme'
-import sinon from 'sinon'
 import ThemeProvider from '../behaviour/ThemeProvider'
 
 describe('<RadioButton />', () => {
@@ -18,13 +17,13 @@ describe('<RadioButton />', () => {
   })
 
   it('should handle onChange event', () => {
-    const handleChange = sinon.spy()
+    const handleChange = jest.fn()
     const wrapper = shallow(
       <ThemeProvider>
         <RadioButton value="white" onChange={handleChange} />
       </ThemeProvider>
     )
     wrapper.find('RadioButton').simulate('change')
-    expect(handleChange.calledOnce).toEqual(true)
+    expect(handleChange).toHaveBeenCalledTimes(1)
   })
 })

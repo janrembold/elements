@@ -21,10 +21,10 @@ describe('<RadioButtonSet />', () => {
   })
 
   it('should chain the onChange property', () => {
-    const spy = jest.fn()
+    const handleChange = jest.fn()
     const { getByText } = render(
       <ThemeProvider>
-        <RadioButtonSet name="colors" onChange={spy} default>
+        <RadioButtonSet name="colors" onChange={handleChange} default>
           <RadioButton value="blue">Blue</RadioButton>
           <RadioButton value="gray">Gray</RadioButton>
         </RadioButtonSet>
@@ -34,6 +34,6 @@ describe('<RadioButtonSet />', () => {
     const radio = getByText('Gray')
     radio.value = 'blue'
     fireEvent.change(radio)
-    expect(spy).toHaveBeenCalledTimes(1)
+    expect(handleChange).toHaveBeenCalledTimes(1)
   })
 })
