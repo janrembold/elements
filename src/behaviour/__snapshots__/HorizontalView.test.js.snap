@@ -26,6 +26,7 @@ exports[`HorizontalView behaviors should render non-arrays 1`] = `
   data-css-0=""
   fill={false}
   flex="flex"
+  htmlElement="div"
   onRef={[Function]}
 >
   <View
@@ -35,6 +36,7 @@ exports[`HorizontalView behaviors should render non-arrays 1`] = `
     direction="row"
     fill={false}
     flex="flex"
+    htmlElement="div"
     id="horizontal"
     onRef={[Function]}
     onTransitionEnd={[Function]}
@@ -46,6 +48,7 @@ exports[`HorizontalView behaviors should render non-arrays 1`] = `
       direction="column"
       fill={false}
       flex="none"
+      htmlElement="div"
       key="0/.$first"
       onRef={[Function]}
     >
@@ -66,6 +69,7 @@ exports[`HorizontalView behaviors should render non-arrays 1`] = `
       direction="column"
       fill={false}
       flex="none"
+      htmlElement="div"
       key="1/.$second"
       onRef={[Function]}
     >
@@ -86,6 +90,7 @@ exports[`HorizontalView behaviors should render non-arrays 1`] = `
       direction="column"
       fill={false}
       flex="none"
+      htmlElement="div"
       key="2/.2"
       onRef={[Function]}
     />
@@ -119,6 +124,7 @@ exports[`HorizontalView behaviors should render with array too 1`] = `
   data-css-0=""
   fill={false}
   flex="flex"
+  htmlElement="div"
   onRef={[Function]}
 >
   <View
@@ -128,6 +134,7 @@ exports[`HorizontalView behaviors should render with array too 1`] = `
     direction="row"
     fill={false}
     flex="flex"
+    htmlElement="div"
     onRef={[Function]}
     onTransitionEnd={[Function]}
   >
@@ -138,6 +145,7 @@ exports[`HorizontalView behaviors should render with array too 1`] = `
       direction="column"
       fill={false}
       flex="none"
+      htmlElement="div"
       key="0/.$first"
       onRef={[Function]}
     >
@@ -158,6 +166,7 @@ exports[`HorizontalView behaviors should render with array too 1`] = `
       direction="column"
       fill={false}
       flex="none"
+      htmlElement="div"
       key="1/.$second"
       onRef={[Function]}
     >
@@ -178,6 +187,7 @@ exports[`HorizontalView behaviors should render with array too 1`] = `
       direction="column"
       fill={false}
       flex="none"
+      htmlElement="div"
       key="2/.2"
       onRef={[Function]}
     />

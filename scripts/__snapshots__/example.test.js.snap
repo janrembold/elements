@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component Examples should match snapshot: Button0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-zt77k3,
-[data-css-zt77k3] {
+.css-1,
+[data-css-1] {
   position: relative;
   padding: 8px 14px;
   border-radius: 2px;
@@ -24,8 +24,8 @@ exports[`Component Examples should match snapshot: Button0 1`] = `
   -ms-user-select: none;
 }
 
-.css-1riya2o,
-[data-css-1riya2o] {
+.css-2,
+[data-css-2] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -35,29 +35,105 @@ exports[`Component Examples should match snapshot: Button0 1`] = `
 }
 
 <button
-  data-css-zt77k3=""
+  data-css-1=""
   name="button"
   type="button"
 >
   <div
-    data-css-1riya2o=""
-    data-css-4p3ux5=""
+    data-css-2=""
+    data-css-0=""
   >
     Hello you
   </div>
 </button>
 `;
 
-exports[`Component Examples should match snapshot: Card0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+exports[`Component Examples should match snapshot: Button1 1`] = `
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-18icfsk,
-[data-css-18icfsk] {
+.css-1,
+[data-css-1] {
+  position: relative;
+  padding: 8px 14px;
+  border-radius: 2px;
+  user-select: none;
+  outline: none;
+  border: none;
+  background: #3598db;
+  color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.css-2,
+[data-css-2] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+<div
+  data-css-0=""
+>
+   
+  <button
+    data-css-1=""
+    name="submit"
+    type="submit"
+  >
+    <div
+      data-css-2=""
+    >
+       Hello with icon 
+      <div
+        data-css-0=""
+        style="margin-left:10px"
+      >
+        <div
+          data-css-0=""
+          style="width:16px;height:16px;fill:white;stroke:"
+        />
+      </div>
+    </div>
+  </button>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Card0 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1,
+[data-css-1] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -66,21 +142,21 @@ exports[`Component Examples should match snapshot: Card0 1`] = `
   color: #333333;
 }
 
-.css-amrpfn,
-[data-css-amrpfn] {
+.css-2,
+[data-css-2] {
   width: 100%;
   background: white;
   box-shadow: 2px 2px 2px rgba(230, 230, 230, 0.5);
 }
 
-.css-38axn2,
-[data-css-38axn2] {
+.css-3,
+[data-css-3] {
   padding: 15px;
   position: relative;
 }
 
-.css-1i6mq27,
-[data-css-1i6mq27] {
+.css-4,
+[data-css-4] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -91,26 +167,26 @@ exports[`Component Examples should match snapshot: Card0 1`] = `
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
 >
    
   <div
-    data-css-4p3ux5=""
-    data-css-amrpfn=""
+    data-css-0=""
+    data-css-2=""
   >
     <div
-      data-css-38axn2=""
-      data-css-4p3ux5=""
+      data-css-3=""
+      data-css-0=""
     >
       <div
-        data-css-1i6mq27=""
-        data-css-4p3ux5=""
+        data-css-4=""
+        data-css-0=""
       >
          Cards 
       </div>
       <div
-        data-css-18icfsk=""
-        data-css-4p3ux5=""
+        data-css-1=""
+        data-css-0=""
       >
          Cards are the basic elements to fit content in. They can may contain any kind of content. 
       </div>
@@ -121,15 +197,15 @@ exports[`Component Examples should match snapshot: Card0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-18icfsk,
-[data-css-18icfsk] {
+.css-1,
+[data-css-1] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -138,19 +214,19 @@ exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
   color: #333333;
 }
 
-.css-1ebs7nx,
-[data-css-1ebs7nx] {
+.css-2,
+[data-css-2] {
   width: 100%;
   height: 100%;
 }
 
-.css-15n0sh2,
-[data-css-15n0sh2] {
+.css-3,
+[data-css-3] {
   padding: 0 15px 15px 15px;
 }
 
-.css-ia6o6a,
-[data-css-ia6o6a] {
+.css-4,
+[data-css-4] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -165,19 +241,19 @@ exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
   -webkit-justify-content: space-between;
 }
 
-.css-1vzm8wl,
-[data-css-1vzm8wl] {
+.css-5,
+[data-css-5] {
   font-weight: bold;
   opacity: 0.5;
 }
 
-.css-bwdon3,
-[data-css-bwdon3] {
+.css-6,
+[data-css-6] {
   opacity: 0.5;
 }
 
-.css-1b5v5q0,
-[data-css-1b5v5q0] {
+.css-7,
+[data-css-7] {
   margin-top: 4px;
   display: -webkit-box;
   display: -moz-box;
@@ -193,33 +269,35 @@ exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
   -webkit-justify-content: space-between;
 }
 
-.css-1l9a57c,
-[data-css-1l9a57c] {
+.css-8,
+[data-css-8] {
   flex-shrink: 0;
   -webkit-flex-shrink: 0;
 }
 
-.css-evmaeu,
-[data-css-evmaeu] {
+.css-9,
+[data-css-9] {
   white-space: pre-wrap;
 }
 
-.css-evmaeu a,
-[data-css-evmaeu] a {
+.css-9 a,
+[data-css-9] a {
   color: #fff;
   text-decoration: underline;
 }
 
-.css-13wj96o,
-[data-css-13wj96o] {
+.css-10,
+[data-css-10] {
   padding-left: 15px;
   flex: 1;
   position: relative;
   -webkit-flex: 1;
 }
 
-.css-13wj96o:before,
-[data-css-13wj96o]:before {
+.css-10:before,
+[data-css-10]:before,
+.css-10[data-simulate-before],
+[data-css-10][data-simulate-before] {
   content: "";
   background: transparent;
   position: absolute;
@@ -232,16 +310,16 @@ exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
   border-color: transparent white transparent transparent;
 }
 
-.css-bg2qj6,
-[data-css-bg2qj6] {
+.css-14,
+[data-css-14] {
   padding: 10px;
   border-radius: 6px;
   box-shadow: 2px 3px 3px 0px rgba(211, 211, 211, .25);
   background: white;
 }
 
-.css-1enkxco,
-[data-css-1enkxco] {
+.css-15,
+[data-css-15] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 12px;
@@ -250,8 +328,8 @@ exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
   color: #333333;
 }
 
-.css-1xt26v0,
-[data-css-1xt26v0] {
+.css-16,
+[data-css-16] {
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
@@ -261,8 +339,10 @@ exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
   -webkit-flex-shrink: 0;
 }
 
-.css-1xt26v0:before,
-[data-css-1xt26v0]:before {
+.css-16:before,
+[data-css-16]:before,
+.css-16[data-simulate-before],
+[data-css-16][data-simulate-before] {
   content: "";
   position: absolute;
   top: 0;
@@ -273,14 +353,14 @@ exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
   border-radius: 50%;
 }
 
-.css-9lr3u1,
-[data-css-9lr3u1] {
+.css-20,
+[data-css-20] {
   background-image: url(https://placeimg.com/40/40/people?t=3);
   background-size: contain;
 }
 
-.css-6srz6u,
-[data-css-6srz6u] {
+.css-21,
+[data-css-21] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -295,8 +375,8 @@ exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
   -webkit-justify-content: space-between;
 }
 
-.css-1esgfii,
-[data-css-1esgfii] {
+.css-22,
+[data-css-22] {
   margin-top: 4px;
   display: -webkit-box;
   display: -moz-box;
@@ -312,8 +392,8 @@ exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
   -webkit-justify-content: space-between;
 }
 
-.css-19pq1pm,
-[data-css-19pq1pm] {
+.css-23,
+[data-css-23] {
   padding-left: 0;
   flex: 1;
   position: relative;
@@ -321,8 +401,10 @@ exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
   -webkit-flex: 1;
 }
 
-.css-19pq1pm:before,
-[data-css-19pq1pm]:before {
+.css-23:before,
+[data-css-23]:before,
+.css-23[data-simulate-before],
+[data-css-23][data-simulate-before] {
   content: "";
   background: transparent;
   position: absolute;
@@ -336,66 +418,66 @@ exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
   right: 10px;
 }
 
-.css-to0zoj,
-[data-css-to0zoj] {
+.css-27,
+[data-css-27] {
   background-image: url(https://placeimg.com/40/40/people?t=1);
   background-size: contain;
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
 >
   <div
-    data-css-15n0sh2=""
+    data-css-3=""
   >
     <div
       class="info"
-      data-css-ia6o6a=""
+      data-css-4=""
     >
       <div
-        data-css-1enkxco=""
-        data-css-1vzm8wl=""
-        data-css-4p3ux5=""
+        data-css-15=""
+        data-css-5=""
+        data-css-0=""
       >
         You
       </div>
       <div
-        data-css-1enkxco=""
-        data-css-4p3ux5=""
-        data-css-bwdon3=""
+        data-css-15=""
+        data-css-0=""
+        data-css-6=""
       >
         a minute ago
       </div>
     </div>
     <div
       class="content"
-      data-css-1b5v5q0=""
+      data-css-7=""
     >
       <div
         class="image"
-        data-css-1l9a57c=""
+        data-css-8=""
       >
         <div
-          data-css-1xt26v0=""
+          data-css-16=""
         >
           <div
             alt=""
-            data-css-1ebs7nx=""
-            data-css-4p3ux5=""
-            data-css-9lr3u1=""
+            data-css-2=""
+            data-css-0=""
+            data-css-20=""
           />
         </div>
       </div>
       <div
-        data-css-13wj96o=""
+        data-css-10=""
       >
         <div
-          data-css-bg2qj6=""
+          data-css-14=""
         >
           <div
-            data-css-18icfsk=""
-            data-css-4p3ux5=""
-            data-css-evmaeu=""
+            data-css-1=""
+            data-css-0=""
+            data-css-9=""
           >
             Hello World
           </div>
@@ -404,56 +486,56 @@ exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
     </div>
   </div>
   <div
-    data-css-15n0sh2=""
+    data-css-3=""
   >
     <div
       class="info"
-      data-css-6srz6u=""
+      data-css-21=""
     >
       <div
-        data-css-1enkxco=""
-        data-css-1vzm8wl=""
-        data-css-4p3ux5=""
+        data-css-15=""
+        data-css-5=""
+        data-css-0=""
       >
         Agent
       </div>
       <div
-        data-css-1enkxco=""
-        data-css-4p3ux5=""
-        data-css-bwdon3=""
+        data-css-15=""
+        data-css-0=""
+        data-css-6=""
       >
         just now
       </div>
     </div>
     <div
       class="content"
-      data-css-1esgfii=""
+      data-css-22=""
     >
       <div
         class="image"
-        data-css-1l9a57c=""
+        data-css-8=""
       >
         <div
-          data-css-1xt26v0=""
+          data-css-16=""
         >
           <div
             alt=""
-            data-css-1ebs7nx=""
-            data-css-4p3ux5=""
-            data-css-to0zoj=""
+            data-css-2=""
+            data-css-0=""
+            data-css-27=""
           />
         </div>
       </div>
       <div
-        data-css-19pq1pm=""
+        data-css-23=""
       >
         <div
-          data-css-bg2qj6=""
+          data-css-14=""
         >
           <div
-            data-css-18icfsk=""
-            data-css-4p3ux5=""
-            data-css-evmaeu=""
+            data-css-1=""
+            data-css-0=""
+            data-css-9=""
           >
             Hello You
           </div>
@@ -465,8 +547,8 @@ exports[`Component Examples should match snapshot: ChatBubble0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: Checkbox0 1`] = `
-.css-h7582n,
-[data-css-h7582n] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -489,15 +571,20 @@ exports[`Component Examples should match snapshot: Checkbox0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-1,
+[data-css-1] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-18icfsk,
-[data-css-18icfsk] {
+.css-2,
+[data-css-2] {
+  position: relative;
+}
+
+.css-3,
+[data-css-3] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -506,95 +593,123 @@ exports[`Component Examples should match snapshot: Checkbox0 1`] = `
   color: #333333;
 }
 
-.css-jn2bq2,
-[data-css-jn2bq2] {
+.css-4,
+[data-css-4] {
   border-radius: 3px;
   height: 25px;
   width: 25px;
   background-color: #3598db;
-  border: 0;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #3598db;
+  transition: 250ms;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
 }
 
-.css-1m9hm8a,
-[data-css-1m9hm8a] {
+.css-5,
+[data-css-5] {
   padding: 10px 15px;
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-13azwyo,
-[data-css-13azwyo] {
+.css-6,
+[data-css-6] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-7,
+[data-css-7] {
   position: relative;
+  bottom: 1px;
 }
 
-.css-1vj6r0m,
-[data-css-1vj6r0m] {
-  position: absolute;
-  top: 1px;
-  left: 5px;
-}
-
-.css-uef4pa,
-[data-css-uef4pa] {
+.css-8,
+[data-css-8] {
   position: absolute;
   top: 0;
+  right: 0;
   left: 0;
+  bottom: 0;
 }
 
-.css-kvq3ck,
-[data-css-kvq3ck] {
+.css-9,
+[data-css-9] {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.css-8wl8ax,
-[data-css-8wl8ax] {
+.css-10,
+[data-css-10] {
   border-radius: 3px;
   height: 25px;
   width: 25px;
-  border: 3px solid lightGrey;
+  border-width: 3px;
+  border-style: solid;
+  border-color: lightGrey;
+  transition: 250ms;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-1=""
 >
    
   <div
-    data-css-4p3ux5=""
+    data-css-1=""
   >
     <div
-      data-css-1m9hm8a=""
-      data-css-h7582n=""
+      data-css-5=""
+      data-css-0=""
     >
       <div
-        data-css-h7582n=""
+        data-css-0=""
       >
         <div
-          data-css-13azwyo=""
-          data-css-4p3ux5=""
-          data-css-jn2bq2=""
+          data-css-2=""
+          data-css-6=""
+          data-css-4=""
         >
           <div
-            data-css-1vj6r0m=""
-            data-css-4p3ux5=""
+            data-css-7=""
+            data-css-1=""
           >
             <div
-              data-css-4p3ux5=""
+              data-css-1=""
               size="14"
-              style="width:14px;height:14px;fill:rgba(255,255,255,1);stroke:"
+              style="width:14px;height:14px;fill:#fff;stroke:"
             />
           </div>
           <div
-            data-css-4p3ux5=""
-            data-css-uef4pa=""
+            data-css-1=""
+            data-css-8=""
           >
             <input
               checked=""
               id="ok"
-              label="Are you ok?"
-              name="ok"
-              style="opacity:0;width:25px;height:25px"
+              style="opacity:0;width:25px;height:25px;margin:0"
               type="checkbox"
               value="true"
             />
@@ -605,12 +720,12 @@ exports[`Component Examples should match snapshot: Checkbox0 1`] = `
         for="ok"
       >
         <div
-          data-css-4p3ux5=""
-          data-css-kvq3ck=""
+          data-css-1=""
+          data-css-9=""
         >
           <div
-            data-css-18icfsk=""
-            data-css-4p3ux5=""
+            data-css-3=""
+            data-css-1=""
           >
             Are you ok?
           </div>
@@ -618,36 +733,24 @@ exports[`Component Examples should match snapshot: Checkbox0 1`] = `
       </label>
     </div>
     <div
-      data-css-1m9hm8a=""
-      data-css-h7582n=""
+      data-css-5=""
+      data-css-0=""
     >
       <div
-        data-css-h7582n=""
+        data-css-0=""
       >
         <div
-          data-css-13azwyo=""
-          data-css-4p3ux5=""
-          data-css-8wl8ax=""
+          data-css-2=""
+          data-css-10=""
+          data-css-6=""
         >
           <div
-            data-css-1vj6r0m=""
-            data-css-4p3ux5=""
-          >
-            <div
-              data-css-4p3ux5=""
-              size="14"
-              style="width:14px;height:14px;fill:rgba(255,255,255,0.3);stroke:"
-            />
-          </div>
-          <div
-            data-css-4p3ux5=""
-            data-css-uef4pa=""
+            data-css-1=""
+            data-css-8=""
           >
             <input
               id="notok"
-              label="Are you not ok?"
-              name="notok"
-              style="opacity:0;width:25px;height:25px"
+              style="opacity:0;width:25px;height:25px;margin:0"
               type="checkbox"
               value="false"
             />
@@ -658,12 +761,12 @@ exports[`Component Examples should match snapshot: Checkbox0 1`] = `
         for="notok"
       >
         <div
-          data-css-4p3ux5=""
-          data-css-kvq3ck=""
+          data-css-1=""
+          data-css-9=""
         >
           <div
-            data-css-18icfsk=""
-            data-css-4p3ux5=""
+            data-css-3=""
+            data-css-1=""
           >
             Are you not ok?
           </div>
@@ -676,8 +779,8 @@ exports[`Component Examples should match snapshot: Checkbox0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: Circle0 1`] = `
-.css-h7582n,
-[data-css-h7582n] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -700,8 +803,8 @@ exports[`Component Examples should match snapshot: Circle0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-1imhi9r,
-[data-css-1imhi9r] {
+.css-1,
+[data-css-1] {
   border: 1px solid lightGrey;
   border-radius: 50%;
   height: 40px;
@@ -711,8 +814,8 @@ exports[`Component Examples should match snapshot: Circle0 1`] = `
   -moz-transition: background-color 120ms linear;
 }
 
-.css-yirehu,
-[data-css-yirehu] {
+.css-2,
+[data-css-2] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -735,15 +838,15 @@ exports[`Component Examples should match snapshot: Circle0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-3,
+[data-css-3] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-ex3si9,
-[data-css-ex3si9] {
+.css-4,
+[data-css-4] {
   background-color: #3598db;
   border-radius: 50%;
   height: 40px;
@@ -753,8 +856,8 @@ exports[`Component Examples should match snapshot: Circle0 1`] = `
   -moz-transition: background-color 120ms linear;
 }
 
-.css-9mzqv9,
-[data-css-9mzqv9] {
+.css-5,
+[data-css-5] {
   background-color: #bada55;
   border-radius: 50%;
   height: 20px;
@@ -764,8 +867,8 @@ exports[`Component Examples should match snapshot: Circle0 1`] = `
   -moz-transition: background-color 120ms linear;
 }
 
-.css-25tizv,
-[data-css-25tizv] {
+.css-6,
+[data-css-6] {
   background-color: gray;
   border-radius: 50%;
   height: 10px;
@@ -776,42 +879,147 @@ exports[`Component Examples should match snapshot: Circle0 1`] = `
 }
 
 <div
-  data-css-h7582n=""
+  data-css-0=""
 >
   <div
-    data-css-1imhi9r=""
-    data-css-yirehu=""
+    data-css-1=""
+    data-css-2=""
   >
     <div
-      data-css-4p3ux5=""
+      data-css-3=""
       style="width:21.5px;height:21.5px;fill:lightGrey;stroke:"
     />
   </div>
   <div
-    data-css-ex3si9=""
-    data-css-yirehu=""
+    data-css-4=""
+    data-css-2=""
   />
   <div
-    data-css-9mzqv9=""
-    data-css-yirehu=""
+    data-css-5=""
+    data-css-2=""
   />
   <div
-    data-css-25tizv=""
-    data-css-yirehu=""
+    data-css-6=""
+    data-css-2=""
   />
 </div>
 `;
 
-exports[`Component Examples should match snapshot: ExpandingTextarea0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+exports[`Component Examples should match snapshot: CountIndicator0 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1,
+[data-css-1] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-1blxhe9,
-[data-css-1blxhe9] {
+.css-2,
+[data-css-2] {
+  position: relative;
+}
+
+.css-3,
+[data-css-3] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-4,
+[data-css-4] {
+  position: absolute;
+  top: 0;
+  left: 35px;
+}
+
+.css-5,
+[data-css-5] {
+  background-color: #e84c3d;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+.css-6,
+[data-css-6] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+<div
+  data-css-2=""
+  data-css-1=""
+>
+  <div
+    data-css-3=""
+    data-css-1=""
+  >
+    Hello
+  </div>
+  <div
+    color="warn"
+    data-css-1=""
+    data-css-4=""
+  >
+    <div
+      data-css-5=""
+      data-css-0=""
+    >
+      <div
+        data-css-1=""
+        data-css-6=""
+      >
+        9+
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component Examples should match snapshot: ExpandingTextarea0 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1,
+[data-css-1] {
   outline: none;
   border: 0;
   font-size: 13px;
@@ -824,8 +1032,8 @@ exports[`Component Examples should match snapshot: ExpandingTextarea0 1`] = `
   -webkit-flex: 1;
 }
 
-.css-1ctvsbg,
-[data-css-1ctvsbg] {
+.css-2,
+[data-css-2] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -849,15 +1057,15 @@ exports[`Component Examples should match snapshot: ExpandingTextarea0 1`] = `
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
 >
    
   <div
-    data-css-1ctvsbg=""
+    data-css-2=""
   >
     <textarea
       cols="1"
-      data-css-1blxhe9=""
+      data-css-1=""
       placeholder="Write somthing..."
       rows="1"
     />
@@ -867,8 +1075,8 @@ exports[`Component Examples should match snapshot: ExpandingTextarea0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: Form0 1`] = `
-.css-h7582n,
-[data-css-h7582n] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -891,15 +1099,92 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-1,
+[data-css-1] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-1riya2o,
-[data-css-1riya2o] {
+.css-2,
+[data-css-2] {
+  position: absolute;
+  bottom: 2px;
+  right: 15px;
+}
+
+.css-3,
+[data-css-3] {
+  min-height: 50px;
+  border-bottom: 1px solid #ecf0f1;
+  background-color: white;
+}
+
+.css-4,
+[data-css-4] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  padding-top: 0;
+  transition: padding-top .225s ease-out;
+  border: 0;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
+}
+
+.css-4:-webkit-autofill ~ .label,
+[data-css-4]:-webkit-autofill ~ .label {
+  opacity: 1 !important;
+  top: 8px !important;
+}
+
+.css-4:-webkit-autofill ~ .checkmark,
+[data-css-4]:-webkit-autofill ~ .checkmark {
+  opacity: 1 !important;
+}
+
+.css-4:-webkit-autofill,
+[data-css-4]:-webkit-autofill,
+.css-4[data-simulate-webkitautofill],
+[data-css-4][data-simulate-webkitautofill] {
+  padding-top: 10px !important;
+}
+
+.css-8,
+[data-css-8] {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  pointer-events: none;
+  transition: opacity .225s;
+  opacity: 0;
+  -webkit-transition: opacity .225s;
+  -moz-transition: opacity .225s;
+}
+
+.css-9,
+[data-css-9] {
+  position: relative;
+}
+
+.css-10,
+[data-css-10] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #626262;
+}
+
+.css-11,
+[data-css-11] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -908,15 +1193,15 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
   color: white;
 }
 
-.css-amrpfn,
-[data-css-amrpfn] {
+.css-12,
+[data-css-12] {
   width: 100%;
   background: white;
   box-shadow: 2px 2px 2px rgba(230, 230, 230, 0.5);
 }
 
-.css-1enkxco,
-[data-css-1enkxco] {
+.css-13,
+[data-css-13] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 12px;
@@ -925,102 +1210,16 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
   color: #333333;
 }
 
-.css-1m9hm8a,
-[data-css-1m9hm8a] {
+.css-14,
+[data-css-14] {
   padding: 10px 15px;
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-13azwyo,
-[data-css-13azwyo] {
-  position: relative;
-}
-
-.css-1vj6r0m,
-[data-css-1vj6r0m] {
-  position: absolute;
-  top: 1px;
-  left: 5px;
-}
-
-.css-uef4pa,
-[data-css-uef4pa] {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.css-kvq3ck,
-[data-css-kvq3ck] {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.css-8wl8ax,
-[data-css-8wl8ax] {
-  border-radius: 3px;
-  height: 25px;
-  width: 25px;
-  border: 3px solid lightGrey;
-}
-
-.css-1pyiiji,
-[data-css-1pyiiji] {
-  position: absolute;
-  right: 10px;
-}
-
-.css-z169em,
-[data-css-z169em] {
-  position: absolute;
-  bottom: 2px;
-  right: 15px;
-}
-
-.css-12jx2y3,
-[data-css-12jx2y3] {
-  box-sizing: border-box;
-  align-content: stretch;
-  align-items: stretch;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex: 1;
-  -webkit-align-content: stretch;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -webkit-flex: 1;
-}
-
-.css-2wchxd,
-[data-css-2wchxd] {
-  height: 50px;
-  background-color: #bada55;
-  position: relative;
-  z-index: 2;
-}
-
-.css-cjuhep,
-[data-css-cjuhep] {
-  height: 50px;
-  width: 50px;
-  border-radius: 2px;
-  background-color: transparent;
-}
-
-.css-1wp5mix,
-[data-css-1wp5mix] {
+.css-15,
+[data-css-15] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -1043,8 +1242,76 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-1i51xt9,
-[data-css-1i51xt9] {
+.css-16,
+[data-css-16] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.css-17,
+[data-css-17] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.css-18,
+[data-css-18] {
+  border-radius: 3px;
+  height: 25px;
+  width: 25px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: lightGrey;
+  transition: 250ms;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
+}
+
+.css-19,
+[data-css-19] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 1;
+}
+
+.css-20,
+[data-css-20] {
+  height: 50px;
+  background-color: #bada55;
+  position: relative;
+  z-index: 2;
+}
+
+.css-21,
+[data-css-21] {
+  height: 50px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.css-22,
+[data-css-22] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -1054,8 +1321,8 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
   color: white;
 }
 
-.css-136033y,
-[data-css-136033y] {
+.css-23,
+[data-css-23] {
   -webkit-overflow-scrolling: touch;
   overflow: auto;
   overflow-x: hidden;
@@ -1063,8 +1330,8 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
   height: 100%;
 }
 
-.css-iar4wy,
-[data-css-iar4wy] {
+.css-24,
+[data-css-24] {
   box-sizing: border-box;
   align-content: stretch;
   align-items: stretch;
@@ -1087,67 +1354,58 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-18egye,
-[data-css-18egye] {
-  height: 50px;
-  width: 100%;
-  padding: 10px 15px;
-  font-size: 14px;
-  border: 0;
-}
-
-.css-18egye:invalid:focus,
-[data-css-18egye]:invalid:focus {
-  color: red;
-}
-
-.css-dau5wj,
-[data-css-dau5wj] {
-  min-height: 50px;
-  border-bottom: 1px solid #ecf0f1;
-  background-color: white;
-}
-
-.css-1u2d6au,
-[data-css-1u2d6au] {
-  display: block;
+.css-25,
+[data-css-25] {
+  display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #626262;
-}
-
-.css-6s4sz7,
-[data-css-6s4sz7] {
+  box-sizing: border-box;
+  transition: padding-top .225s ease-out;
   height: calc(30px*3);
   width: 100%;
   padding: 10px 15px;
-  font-size: 14px;
+  padding-top: 10px;
   border: 0;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
 }
 
-.css-6s4sz7:invalid:focus,
-[data-css-6s4sz7]:invalid:focus {
+.css-25:invalid:focus,
+[data-css-25]:invalid:focus,
+.css-25[data-simulate-invalidfocus],
+[data-css-25][data-simulate-invalidfocus] {
   color: red;
 }
 
-.css-9ov9ah,
-[data-css-9ov9ah] {
+.css-29,
+[data-css-29] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  transition: padding-top .225s ease-out;
   height: calc(30px*2);
   width: 100%;
   padding: 10px 15px;
-  font-size: 14px;
+  padding-top: 10px;
   border: 0;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
 }
 
-.css-9ov9ah:invalid:focus,
-[data-css-9ov9ah]:invalid:focus {
+.css-29:invalid:focus,
+[data-css-29]:invalid:focus,
+.css-29[data-simulate-invalidfocus],
+[data-css-29][data-simulate-invalidfocus] {
   color: red;
 }
 
-.css-cuffp,
-[data-css-cuffp] {
+.css-33,
+[data-css-33] {
   position: relative;
   padding: 8px 14px;
   border-radius: 2px;
@@ -1163,8 +1421,8 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
 }
 
 @media (max-width: 640px) {
-  .css-cjuhep,
-  [data-css-cjuhep] {
+  .css-21,
+  [data-css-21] {
     height: 40px;
     width: 40px;
   }
@@ -1178,143 +1436,162 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
 }
 
 <div
-  data-css-12jx2y3=""
+  data-css-19=""
 >
   <div
-    data-css-2wchxd=""
-    data-css-h7582n=""
+    data-css-20=""
+    data-css-0=""
   >
     <div
-      data-css-1wp5mix=""
-      data-css-cjuhep=""
+      data-css-15=""
+      data-css-21=""
+      textcolor="#333333"
     >
       <div
-        data-css-4p3ux5=""
+        data-css-1=""
         style="width:21.5px;height:21.5px;fill:;stroke:white"
       />
     </div>
     <div
-      data-css-1i51xt9=""
-      data-css-4p3ux5=""
+      data-css-22=""
+      data-css-1=""
     >
        Create new account 
     </div>
   </div>
   <div
-    data-css-12jx2y3=""
-    data-css-136033y=""
+    data-css-19=""
+    data-css-23=""
     data-css-1u21jvx=""
     id="scroll-container"
   >
     <form>
       <div
-        data-css-4p3ux5=""
-        data-css-amrpfn=""
+        data-css-1=""
+        data-css-12=""
       >
         <div
-          data-css-iar4wy=""
+          data-css-24=""
         >
           <div
-            data-css-dau5wj=""
-            data-css-h7582n=""
+            data-css-3=""
+            data-css-0=""
           >
             <div
-              data-css-13azwyo=""
-              data-css-4p3ux5=""
+              data-css-9=""
+              data-css-1=""
               style="width:100%"
             >
-              <div
-                data-css-1pyiiji=""
-                data-css-4p3ux5=""
-              >
-                <div
-                  data-css-1u2d6au=""
-                  data-css-4p3ux5=""
-                >
-                  *
-                </div>
-              </div>
               <input
                 aria-required="true"
-                data-css-18egye=""
+                data-css-4=""
                 name="name"
                 pattern="[A-Za-z ]*"
                 placeholder="Your first- and surname"
                 required=""
                 type="text"
               />
+              <div
+                class="checkmark"
+                data-css-8=""
+                data-css-1=""
+              >
+                <div
+                  data-css-1=""
+                  style="width:16px;height:16px;fill:lightGrey;stroke:"
+                />
+              </div>
             </div>
           </div>
           <div
-            data-css-dau5wj=""
-            data-css-h7582n=""
+            data-css-3=""
+            data-css-0=""
           >
             <div
-              data-css-13azwyo=""
-              data-css-4p3ux5=""
+              data-css-9=""
+              data-css-1=""
               style="width:100%"
             >
-              <div
-                data-css-1pyiiji=""
-                data-css-4p3ux5=""
-              >
-                <div
-                  data-css-1u2d6au=""
-                  data-css-4p3ux5=""
-                >
-                  *
-                </div>
-              </div>
               <input
                 aria-required="true"
-                data-css-18egye=""
+                data-css-4=""
                 name="number"
                 placeholder="Your email address"
                 required=""
                 type="email"
               />
+              <div
+                class="checkmark"
+                data-css-8=""
+                data-css-1=""
+              >
+                <div
+                  data-css-1=""
+                  style="width:16px;height:16px;fill:lightGrey;stroke:"
+                />
+              </div>
             </div>
           </div>
           <div
-            data-css-dau5wj=""
-            data-css-h7582n=""
+            data-css-3=""
+            data-css-0=""
           >
             <div
-              data-css-13azwyo=""
-              data-css-4p3ux5=""
+              data-css-9=""
+              data-css-1=""
               style="width:100%"
             >
               <textarea
-                data-css-6s4sz7=""
+                data-css-25=""
                 name="longStory"
                 placeholder="A long story"
                 type="text"
               />
+              <div
+                class="checkmark"
+                data-css-8=""
+                data-css-1=""
+              >
+                <div
+                  data-css-1=""
+                  style="width:16px;height:16px;fill:lightGrey;stroke:"
+                />
+              </div>
             </div>
           </div>
           <div
-            data-css-dau5wj=""
-            data-css-h7582n=""
+            data-css-3=""
+            data-css-0=""
           >
             <div
-              data-css-13azwyo=""
-              data-css-4p3ux5=""
+              data-css-9=""
+              data-css-1=""
               style="width:100%"
             >
               <textarea
-                data-css-9ov9ah=""
+                data-css-29=""
                 maxlength="15"
                 name="limitedStory"
                 placeholder="A limited story"
                 type="text"
               />
               <div
-                data-css-4p3ux5=""
-                data-css-z169em=""
+                class="checkmark"
+                data-css-8=""
+                data-css-1=""
               >
                 <div
-                  data-css-1u2d6au=""
-                  data-css-4p3ux5=""
+                  data-css-1=""
+                  style="width:16px;height:16px;fill:lightGrey;stroke:"
+                />
+              </div>
+              <div
+                data-css-1=""
+                data-css-2=""
+              >
+                <div
+                  data-css-10=""
+                  data-css-1=""
                 >
                   0/15
                 </div>
@@ -1322,56 +1599,54 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
             </div>
           </div>
           <div
-            data-css-dau5wj=""
-            data-css-h7582n=""
+            data-css-3=""
+            data-css-0=""
           >
             <div
-              data-css-13azwyo=""
-              data-css-4p3ux5=""
+              data-css-9=""
+              data-css-1=""
               style="width:100%"
             >
               <input
                 aria-required="false"
-                data-css-18egye=""
+                data-css-4=""
                 minlength="3"
                 name="number"
                 placeholder="Your phone number"
                 type="text"
               />
+              <div
+                class="checkmark"
+                data-css-8=""
+                data-css-1=""
+              >
+                <div
+                  data-css-1=""
+                  style="width:16px;height:16px;fill:lightGrey;stroke:"
+                />
+              </div>
             </div>
           </div>
           <div
-            data-css-1m9hm8a=""
-            data-css-h7582n=""
+            data-css-14=""
+            data-css-0=""
           >
             <div
-              data-css-h7582n=""
+              data-css-0=""
             >
               <div
-                data-css-13azwyo=""
-                data-css-4p3ux5=""
-                data-css-8wl8ax=""
+                data-css-9=""
+                data-css-18=""
+                data-css-15=""
               >
                 <div
-                  data-css-1vj6r0m=""
-                  data-css-4p3ux5=""
-                >
-                  <div
-                    data-css-4p3ux5=""
-                    size="14"
-                    style="width:14px;height:14px;fill:rgba(255,255,255,0.3);stroke:"
-                  />
-                </div>
-                <div
-                  data-css-4p3ux5=""
-                  data-css-uef4pa=""
+                  data-css-1=""
+                  data-css-16=""
                 >
                   <input
                     id="accept"
-                    label="Hereby I accept the terms & blablabla"
-                    name="accept"
                     required=""
-                    style="opacity:0;width:25px;height:25px"
+                    style="opacity:0;width:25px;height:25px;margin:0"
                     type="checkbox"
                     value="false"
                   />
@@ -1382,12 +1657,12 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
               for="accept"
             >
               <div
-                data-css-4p3ux5=""
-                data-css-kvq3ck=""
+                data-css-1=""
+                data-css-17=""
               >
                 <div
-                  data-css-1enkxco=""
-                  data-css-4p3ux5=""
+                  data-css-13=""
+                  data-css-1=""
                 >
                   Hereby I accept the terms & blablabla
                 </div>
@@ -1395,17 +1670,17 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
             </label>
           </div>
           <div
-            data-css-1m9hm8a=""
-            data-css-1wp5mix=""
+            data-css-14=""
+            data-css-15=""
           >
             <button
-              data-css-cuffp=""
+              data-css-33=""
               name="submit"
               type="submit"
             >
               <div
-                data-css-1riya2o=""
-                data-css-4p3ux5=""
+                data-css-11=""
+                data-css-1=""
               >
                 Create my account
               </div>
@@ -1419,15 +1694,15 @@ exports[`Component Examples should match snapshot: Form0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: Hero0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-1riya2o,
-[data-css-1riya2o] {
+.css-1,
+[data-css-1] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -1436,14 +1711,33 @@ exports[`Component Examples should match snapshot: Hero0 1`] = `
   color: white;
 }
 
-.css-kvq3ck,
-[data-css-kvq3ck] {
+.css-2,
+[data-css-2] {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.css-1i51xt9,
-[data-css-1i51xt9] {
+.css-3,
+[data-css-3] {
+  position: absolute;
+  right: -150px;
+  top: -70px;
+  width: 360px;
+  height: 360px;
+}
+
+.css-4,
+[data-css-4] {
+  width: 150px;
+}
+
+.css-5,
+[data-css-5] {
+  width: 142px;
+}
+
+.css-6,
+[data-css-6] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -1453,8 +1747,8 @@ exports[`Component Examples should match snapshot: Hero0 1`] = `
   color: white;
 }
 
-.css-iar4wy,
-[data-css-iar4wy] {
+.css-7,
+[data-css-7] {
   box-sizing: border-box;
   align-content: stretch;
   align-items: stretch;
@@ -1477,27 +1771,8 @@ exports[`Component Examples should match snapshot: Hero0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-1b6io93,
-[data-css-1b6io93] {
-  position: absolute;
-  right: -150px;
-  top: -70px;
-  width: 360px;
-  height: 360px;
-}
-
-.css-18a50kg,
-[data-css-18a50kg] {
-  width: 150px;
-}
-
-.css-1n49tmg,
-[data-css-1n49tmg] {
-  width: 142px;
-}
-
-.css-ujqs66,
-[data-css-ujqs66] {
+.css-8,
+[data-css-8] {
   overflow-y: hidden;
   overflow-x: hidden;
   height: 232px;
@@ -1506,8 +1781,8 @@ exports[`Component Examples should match snapshot: Hero0 1`] = `
   box-shadow: 0px -1px 5px rgba(0,0,0,0.3);
 }
 
-.css-qvz9eo,
-[data-css-qvz9eo] {
+.css-9,
+[data-css-9] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -1530,8 +1805,8 @@ exports[`Component Examples should match snapshot: Hero0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-ry4scs,
-[data-css-ry4scs] {
+.css-10,
+[data-css-10] {
   box-sizing: border-box;
   align-content: stretch;
   align-items: stretch;
@@ -1558,8 +1833,8 @@ exports[`Component Examples should match snapshot: Hero0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-19kis64,
-[data-css-19kis64] {
+.css-11,
+[data-css-11] {
   position: relative;
   padding: 8px 14px;
   border-radius: 2px;
@@ -1575,38 +1850,38 @@ exports[`Component Examples should match snapshot: Hero0 1`] = `
 }
 
 @media (min-width: 641px) and (max-width: 930px), (min-width: 931px) {
-  .css-1n49tmg,
-  [data-css-1n49tmg] {
+  .css-5,
+  [data-css-5] {
     width: 50%;
   }
 }
 
 <div
-  data-css-qvz9eo=""
-  data-css-ujqs66=""
+  data-css-9=""
+  data-css-8=""
 >
   <div
-    data-css-1n49tmg=""
-    data-css-iar4wy=""
-    data-css-kvq3ck=""
+    data-css-5=""
+    data-css-7=""
+    data-css-2=""
   >
     <div
-      data-css-1i51xt9=""
-      data-css-4p3ux5=""
+      data-css-6=""
+      data-css-0=""
     >
       You are my Hero!
     </div>
     <div
-      data-css-ry4scs=""
+      data-css-10=""
     >
       <button
-        data-css-19kis64=""
+        data-css-11=""
         name="button"
         type="button"
       >
         <div
-          data-css-1riya2o=""
-          data-css-4p3ux5=""
+          data-css-1=""
+          data-css-0=""
         >
           Thank you
         </div>
@@ -1614,11 +1889,11 @@ exports[`Component Examples should match snapshot: Hero0 1`] = `
     </div>
   </div>
   <div
-    data-css-18a50kg=""
-    data-css-4p3ux5=""
+    data-css-4=""
+    data-css-0=""
   >
     <img
-      data-css-1b6io93=""
+      data-css-3=""
       src="https://placeimg.com/500/500/people"
     />
   </div>
@@ -1626,26 +1901,26 @@ exports[`Component Examples should match snapshot: Hero0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: Image0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-t4755w,
-[data-css-t4755w] {
+.css-1,
+[data-css-1] {
   background-image: url(https://placeimg.com/225/225/people);
   background-size: cover;
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
 >
    
   <div
-    data-css-4p3ux5=""
-    data-css-t4755w=""
+    data-css-0=""
+    data-css-1=""
     style="width:225px;height:225px"
   />
    
@@ -1653,34 +1928,34 @@ exports[`Component Examples should match snapshot: Image0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: Image1 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-17b8ly7,
-[data-css-17b8ly7] {
+.css-1,
+[data-css-1] {
   background-image: url(https://placeimg.com/nothing);
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
 >
    
   <div
-    data-css-17b8ly7=""
-    data-css-4p3ux5=""
+    data-css-1=""
+    data-css-0=""
     style="width:225px;height:225px"
   />
    
 </div>
 `;
 
-exports[`Component Examples should match snapshot: List0 1`] = `
-.css-h7582n,
-[data-css-h7582n] {
+exports[`Component Examples should match snapshot: Input0 1`] = `
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -1703,15 +1978,226 @@ exports[`Component Examples should match snapshot: List0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-1,
+[data-css-1] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-18icfsk,
-[data-css-18icfsk] {
+.css-2,
+[data-css-2] {
+  position: absolute;
+  bottom: 2px;
+  right: 15px;
+}
+
+.css-3,
+[data-css-3] {
+  min-height: 50px;
+  border-bottom: 1px solid #ecf0f1;
+  background-color: white;
+}
+
+.css-4,
+[data-css-4] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  padding-top: 0;
+  transition: padding-top .225s ease-out;
+  border: 0;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
+}
+
+.css-4:-webkit-autofill ~ .label,
+[data-css-4]:-webkit-autofill ~ .label {
+  opacity: 1 !important;
+  top: 8px !important;
+}
+
+.css-4:-webkit-autofill ~ .checkmark,
+[data-css-4]:-webkit-autofill ~ .checkmark {
+  opacity: 1 !important;
+}
+
+.css-4:-webkit-autofill,
+[data-css-4]:-webkit-autofill,
+.css-4[data-simulate-webkitautofill],
+[data-css-4][data-simulate-webkitautofill] {
+  padding-top: 10px !important;
+}
+
+.css-8,
+[data-css-8] {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  pointer-events: none;
+  transition: opacity .225s;
+  opacity: 0;
+  -webkit-transition: opacity .225s;
+  -moz-transition: opacity .225s;
+}
+
+.css-9,
+[data-css-9] {
+  position: relative;
+}
+
+.css-10,
+[data-css-10] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  transition: padding-top .225s ease-out;
+  height: calc(30px*5);
+  width: 100%;
+  padding: 10px 15px;
+  padding-top: 10px;
+  border: 0;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
+}
+
+.css-10:invalid:focus,
+[data-css-10]:invalid:focus,
+.css-10[data-simulate-invalidfocus],
+[data-css-10][data-simulate-invalidfocus] {
+  color: red;
+}
+
+.css-14,
+[data-css-14] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #626262;
+}
+
+<div
+  data-css-1=""
+>
+   
+  <div
+    data-css-3=""
+    data-css-0=""
+  >
+    <div
+      data-css-9=""
+      data-css-1=""
+      style="width:100%"
+    >
+      <input
+        aria-required="true"
+        data-css-4=""
+        name="email"
+        placeholder="Your email"
+        required=""
+        type="email"
+      />
+      <div
+        class="checkmark"
+        data-css-8=""
+        data-css-1=""
+      >
+        <div
+          data-css-1=""
+          style="width:16px;height:16px;fill:lightGrey;stroke:"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    data-css-3=""
+    data-css-0=""
+  >
+    <div
+      data-css-9=""
+      data-css-1=""
+      style="width:100%"
+    >
+      <textarea
+        data-css-10=""
+        maxlength="255"
+        minlength="50"
+        name="inquiry"
+        placeholder="Your question"
+        type="text"
+      />
+      <div
+        class="checkmark"
+        data-css-8=""
+        data-css-1=""
+      >
+        <div
+          data-css-1=""
+          style="width:16px;height:16px;fill:lightGrey;stroke:"
+        />
+      </div>
+      <div
+        data-css-1=""
+        data-css-2=""
+      >
+        <div
+          data-css-14=""
+          data-css-1=""
+        >
+          0/255
+        </div>
+      </div>
+    </div>
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: List0 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1,
+[data-css-1] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-2,
+[data-css-2] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -1720,23 +2206,29 @@ exports[`Component Examples should match snapshot: List0 1`] = `
   color: #333333;
 }
 
-.css-amrpfn,
-[data-css-amrpfn] {
+.css-3,
+[data-css-3] {
   width: 100%;
   background: white;
   box-shadow: 2px 2px 2px rgba(230, 230, 230, 0.5);
 }
 
-.css-1m9hm8a,
-[data-css-1m9hm8a] {
+.css-4,
+[data-css-4] {
   padding: 10px 15px;
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-iar4wy,
-[data-css-iar4wy] {
+.css-5,
+[data-css-5] {
+  width: 12px;
+  height: 12px;
+}
+
+.css-6,
+[data-css-6] {
   box-sizing: border-box;
   align-content: stretch;
   align-items: stretch;
@@ -1759,19 +2251,13 @@ exports[`Component Examples should match snapshot: List0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-1iarg5e,
-[data-css-1iarg5e] {
-  width: 12px;
-  height: 12px;
-}
-
-.css-63oe3q,
-[data-css-63oe3q] {
+.css-7,
+[data-css-7] {
   width: 100%;
 }
 
-.css-1dd5qqi,
-[data-css-1dd5qqi] {
+.css-8,
+[data-css-8] {
   padding: 10px 15px;
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
@@ -1779,8 +2265,8 @@ exports[`Component Examples should match snapshot: List0 1`] = `
   background-color: white;
 }
 
-.css-zt522r,
-[data-css-zt522r] {
+.css-9,
+[data-css-9] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -1804,8 +2290,8 @@ exports[`Component Examples should match snapshot: List0 1`] = `
   -webkit-flex: 1 1 100%;
 }
 
-.css-10aplih,
-[data-css-10aplih] {
+.css-10,
+[data-css-10] {
   box-sizing: border-box;
   align-content: stretch;
   align-items: stretch;
@@ -1828,89 +2314,89 @@ exports[`Component Examples should match snapshot: List0 1`] = `
   -webkit-flex: 1 1 100%;
 }
 
-.css-nld6zb,
-[data-css-nld6zb] {
+.css-11,
+[data-css-11] {
   box-sizing: border-box;
   flex: 0 1 auto;
   -webkit-flex: 0 1 auto;
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-1=""
 >
    
   <div
-    data-css-4p3ux5=""
-    data-css-amrpfn=""
+    data-css-1=""
+    data-css-3=""
   >
     <div
-      data-css-iar4wy=""
+      data-css-6=""
     >
       <div
-        data-css-1m9hm8a=""
-        data-css-h7582n=""
+        data-css-4=""
+        data-css-0=""
       >
         <div
-          data-css-18icfsk=""
-          data-css-4p3ux5=""
+          data-css-2=""
+          data-css-1=""
         >
           Item 1
         </div>
       </div>
       <div
-        data-css-1m9hm8a=""
-        data-css-h7582n=""
+        data-css-4=""
+        data-css-0=""
       >
         <div
-          data-css-18icfsk=""
-          data-css-4p3ux5=""
+          data-css-2=""
+          data-css-1=""
         >
           Item 2
         </div>
       </div>
       <div
-        data-css-1m9hm8a=""
-        data-css-h7582n=""
+        data-css-4=""
+        data-css-0=""
       >
         <div
-          data-css-18icfsk=""
-          data-css-4p3ux5=""
+          data-css-2=""
+          data-css-1=""
         >
           Item 3
         </div>
       </div>
       <div
-        data-css-1m9hm8a=""
-        data-css-h7582n=""
+        data-css-4=""
+        data-css-0=""
       >
         <div
-          data-css-18icfsk=""
-          data-css-4p3ux5=""
+          data-css-2=""
+          data-css-1=""
         >
           Item 4
         </div>
       </div>
       <div
-        data-css-1dd5qqi=""
-        data-css-zt522r=""
+        data-css-8=""
+        data-css-9=""
       >
         <div
-          data-css-10aplih=""
-          data-css-63oe3q=""
+          data-css-10=""
+          data-css-7=""
         >
           <div
-            data-css-18icfsk=""
-            data-css-4p3ux5=""
+            data-css-2=""
+            data-css-1=""
           >
             ChevronRightListItem to show indicator
           </div>
         </div>
         <div
-          data-css-nld6zb=""
+          data-css-11=""
         >
           <div
-            data-css-1iarg5e=""
-            data-css-4p3ux5=""
+            data-css-5=""
+            data-css-1=""
             style="width:16px;height:16px;fill:;stroke:#7e8c8d"
           />
         </div>
@@ -1922,8 +2408,8 @@ exports[`Component Examples should match snapshot: List0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: List1 1`] = `
-.css-yirehu,
-[data-css-yirehu] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -1946,15 +2432,15 @@ exports[`Component Examples should match snapshot: List1 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-1,
+[data-css-1] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-18icfsk,
-[data-css-18icfsk] {
+.css-2,
+[data-css-2] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -1963,23 +2449,53 @@ exports[`Component Examples should match snapshot: List1 1`] = `
   color: #333333;
 }
 
-.css-amrpfn,
-[data-css-amrpfn] {
+.css-3,
+[data-css-3] {
+  box-sizing: border-box;
+  align-content: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-4,
+[data-css-4] {
   width: 100%;
   background: white;
   box-shadow: 2px 2px 2px rgba(230, 230, 230, 0.5);
 }
 
-.css-1m9hm8a,
-[data-css-1m9hm8a] {
+.css-5,
+[data-css-5] {
   padding: 10px 15px;
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-iar4wy,
-[data-css-iar4wy] {
+.css-6,
+[data-css-6] {
+  width: 12px;
+  height: 12px;
+}
+
+.css-7,
+[data-css-7] {
   box-sizing: border-box;
   align-content: stretch;
   align-items: stretch;
@@ -2002,19 +2518,13 @@ exports[`Component Examples should match snapshot: List1 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-1iarg5e,
-[data-css-1iarg5e] {
-  width: 12px;
-  height: 12px;
-}
-
-.css-63oe3q,
-[data-css-63oe3q] {
+.css-8,
+[data-css-8] {
   width: 100%;
 }
 
-.css-10aplih,
-[data-css-10aplih] {
+.css-9,
+[data-css-9] {
   box-sizing: border-box;
   align-content: stretch;
   align-items: stretch;
@@ -2037,23 +2547,23 @@ exports[`Component Examples should match snapshot: List1 1`] = `
   -webkit-flex: 1 1 100%;
 }
 
-.css-nld6zb,
-[data-css-nld6zb] {
+.css-10,
+[data-css-10] {
   box-sizing: border-box;
   flex: 0 1 auto;
   -webkit-flex: 0 1 auto;
 }
 
-.css-1pfel1f,
-[data-css-1pfel1f] {
+.css-11,
+[data-css-11] {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
-.css-rbl5we,
-[data-css-rbl5we] {
+.css-12,
+[data-css-12] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -2063,37 +2573,13 @@ exports[`Component Examples should match snapshot: List1 1`] = `
   color: #333333;
 }
 
-.css-12s8f6o,
-[data-css-12s8f6o] {
-  box-sizing: border-box;
-  align-content: stretch;
-  align-items: stretch;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex: 0 0 auto;
-  -webkit-align-content: stretch;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -webkit-flex: 0 0 auto;
-}
-
-.css-155bo4i,
-[data-css-155bo4i] {
+.css-13,
+[data-css-13] {
   background-image: url(https://placeimg.com/80/80/people?t=1);
 }
 
-.css-2bjq5a,
-[data-css-2bjq5a] {
+.css-14,
+[data-css-14] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -2116,18 +2602,18 @@ exports[`Component Examples should match snapshot: List1 1`] = `
   -webkit-flex: 1 1 100%;
 }
 
-.css-tbyxvm,
-[data-css-tbyxvm] {
+.css-15,
+[data-css-15] {
   background-image: url(https://placeimg.com/80/80/people?t=2);
 }
 
-.css-od1ur0,
-[data-css-od1ur0] {
+.css-16,
+[data-css-16] {
   background-image: url(https://placeimg.com/80/80/people?t=3);
 }
 
-.css-1igobpl,
-[data-css-1igobpl] {
+.css-17,
+[data-css-17] {
   box-sizing: border-box;
   align-content: stretch;
   align-items: stretch;
@@ -2150,8 +2636,8 @@ exports[`Component Examples should match snapshot: List1 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-h9acye,
-[data-css-h9acye] {
+.css-18,
+[data-css-18] {
   background-color: white;
   border-radius: 50%;
   height: 40px;
@@ -2162,99 +2648,99 @@ exports[`Component Examples should match snapshot: List1 1`] = `
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-1=""
 >
    
   <div
-    data-css-4p3ux5=""
+    data-css-1=""
   >
     <div
-      data-css-4p3ux5=""
+      data-css-1=""
     >
       <div
-        data-css-1pfel1f=""
-        data-css-4p3ux5=""
+        data-css-11=""
+        data-css-1=""
       >
         <div
-          data-css-4p3ux5=""
-          data-css-rbl5we=""
+          data-css-1=""
+          data-css-12=""
         >
           A list with images
         </div>
       </div>
       <div
-        data-css-4p3ux5=""
-        data-css-amrpfn=""
+        data-css-1=""
+        data-css-4=""
       >
         <div
-          data-css-iar4wy=""
+          data-css-7=""
         >
           <div
-            data-css-12s8f6o=""
+            data-css-3=""
           >
             <div
-              data-css-155bo4i=""
-              data-css-4p3ux5=""
+              data-css-13=""
+              data-css-1=""
             />
             <div
-              data-css-1m9hm8a=""
-              data-css-2bjq5a=""
+              data-css-5=""
+              data-css-14=""
             >
               <div
-                data-css-10aplih=""
-                data-css-63oe3q=""
+                data-css-9=""
+                data-css-8=""
               >
                 <div
-                  data-css-18icfsk=""
-                  data-css-4p3ux5=""
+                  data-css-2=""
+                  data-css-1=""
                 >
                   Jules
                 </div>
               </div>
               <div
-                data-css-nld6zb=""
+                data-css-10=""
               >
                 <div
-                  data-css-1iarg5e=""
-                  data-css-4p3ux5=""
+                  data-css-6=""
+                  data-css-1=""
                   style="width:16px;height:16px;fill:;stroke:#7e8c8d"
                 />
               </div>
             </div>
           </div>
           <div
-            data-css-12s8f6o=""
+            data-css-3=""
           >
             <div
-              data-css-4p3ux5=""
-              data-css-tbyxvm=""
+              data-css-1=""
+              data-css-15=""
             />
             <div
-              data-css-1m9hm8a=""
-              data-css-2bjq5a=""
+              data-css-5=""
+              data-css-14=""
             >
               <div
-                data-css-18icfsk=""
-                data-css-4p3ux5=""
+                data-css-2=""
+                data-css-1=""
               >
                 Luan
               </div>
             </div>
           </div>
           <div
-            data-css-12s8f6o=""
+            data-css-3=""
           >
             <div
-              data-css-4p3ux5=""
-              data-css-od1ur0=""
+              data-css-1=""
+              data-css-16=""
             />
             <div
-              data-css-1m9hm8a=""
-              data-css-2bjq5a=""
+              data-css-5=""
+              data-css-14=""
             >
               <div
-                data-css-18icfsk=""
-                data-css-4p3ux5=""
+                data-css-2=""
+                data-css-1=""
               >
                 Uli
               </div>
@@ -2264,11 +2750,11 @@ exports[`Component Examples should match snapshot: List1 1`] = `
       </div>
     </div>
     <div
-      data-css-1igobpl=""
+      data-css-17=""
     >
       <div
-        data-css-h9acye=""
-        data-css-yirehu=""
+        data-css-18=""
+        data-css-0=""
       >
         <svg
           height="30px"
@@ -2325,8 +2811,8 @@ exports[`Component Examples should match snapshot: List1 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: ListIcon0 1`] = `
-.css-yirehu,
-[data-css-yirehu] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -2349,15 +2835,15 @@ exports[`Component Examples should match snapshot: ListIcon0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-1,
+[data-css-1] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-ex3si9,
-[data-css-ex3si9] {
+.css-2,
+[data-css-2] {
   background-color: #3598db;
   border-radius: 50%;
   height: 40px;
@@ -2368,17 +2854,17 @@ exports[`Component Examples should match snapshot: ListIcon0 1`] = `
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-1=""
 >
    
   <div
-    data-css-ex3si9=""
-    data-css-yirehu=""
+    data-css-2=""
+    data-css-0=""
     height="40"
     width="40"
   >
     <div
-      data-css-4p3ux5=""
+      data-css-1=""
       style="width:21.5px;height:21.5px;fill:#ffffff;stroke:"
     />
   </div>
@@ -2386,16 +2872,131 @@ exports[`Component Examples should match snapshot: ListIcon0 1`] = `
 </div>
 `;
 
-exports[`Component Examples should match snapshot: Pill0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+exports[`Component Examples should match snapshot: PhoneInput0 1`] = `
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-9j98ks,
-[data-css-9j98ks] {
+.css-1,
+[data-css-1] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  padding-top: 0;
+  transition: padding-top .225s ease-out;
+  border: 0;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
+}
+
+.css-1:-webkit-autofill ~ .label,
+[data-css-1]:-webkit-autofill ~ .label {
+  opacity: 1 !important;
+  top: 8px !important;
+}
+
+.css-1:-webkit-autofill ~ .checkmark,
+[data-css-1]:-webkit-autofill ~ .checkmark {
+  opacity: 1 !important;
+}
+
+.css-1:-webkit-autofill,
+[data-css-1]:-webkit-autofill,
+.css-1[data-simulate-webkitautofill],
+[data-css-1][data-simulate-webkitautofill] {
+  padding-top: 10px !important;
+}
+
+.css-5,
+[data-css-5] {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  pointer-events: none;
+  transition: opacity .225s;
+  opacity: 0;
+  -webkit-transition: opacity .225s;
+  -moz-transition: opacity .225s;
+}
+
+.css-6,
+[data-css-6] {
+  position: relative;
+}
+
+.css-7,
+[data-css-7] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+<div
+  data-css-0=""
+>
+   
+  <div
+    style="position:relative;cursor:text;width:100%"
+  >
+    <div
+      data-css-7=""
+      data-css-0=""
+      style="margin-left:5px;user-select:none;position:absolute;z-index:10;width:100%;top:50%;transform:translateY(-50%)"
+    >
+      +
+    </div>
+    <div
+      data-css-6=""
+      data-css-0=""
+      style="width:100%"
+    >
+      <input
+        aria-required="true"
+        data-css-1=""
+        name="phone"
+        placeholder="Example Placeholder"
+        required=""
+        type="tel"
+        value="4907615555555"
+      />
+      <div
+        class="checkmark"
+        data-css-5=""
+        data-css-0=""
+      >
+        <div
+          data-css-0=""
+          style="width:16px;height:16px;fill:lightGrey;stroke:"
+        />
+      </div>
+    </div>
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Pill0 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1,
+[data-css-1] {
   background-color: #3598db;
   display: inline-block;
   border-radius: 10px;
@@ -2403,8 +3004,8 @@ exports[`Component Examples should match snapshot: Pill0 1`] = `
   cursor: default;
 }
 
-.css-7xie1s,
-[data-css-7xie1s] {
+.css-2,
+[data-css-2] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -2414,8 +3015,8 @@ exports[`Component Examples should match snapshot: Pill0 1`] = `
   color: #ffffff;
 }
 
-.css-16z60nk,
-[data-css-16z60nk] {
+.css-3,
+[data-css-3] {
   background-color: #e84c3d;
   display: inline-block;
   border-radius: 10px;
@@ -2424,26 +3025,26 @@ exports[`Component Examples should match snapshot: Pill0 1`] = `
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
 >
   <div
-    data-css-4p3ux5=""
-    data-css-9j98ks=""
+    data-css-0=""
+    data-css-1=""
   >
     <div
-      data-css-4p3ux5=""
-      data-css-7xie1s=""
+      data-css-0=""
+      data-css-2=""
     >
       Important message
     </div>
   </div>
   <div
-    data-css-16z60nk=""
-    data-css-4p3ux5=""
+    data-css-3=""
+    data-css-0=""
   >
     <div
-      data-css-4p3ux5=""
-      data-css-7xie1s=""
+      data-css-0=""
+      data-css-2=""
     >
       A warning
     </div>
@@ -2452,28 +3053,28 @@ exports[`Component Examples should match snapshot: Pill0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: ProfileImage0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-amrpfn,
-[data-css-amrpfn] {
+.css-1,
+[data-css-1] {
   width: 100%;
   background: white;
   box-shadow: 2px 2px 2px rgba(230, 230, 230, 0.5);
 }
 
-.css-1ebs7nx,
-[data-css-1ebs7nx] {
+.css-2,
+[data-css-2] {
   width: 100%;
   height: 100%;
 }
 
-.css-1xt26v0,
-[data-css-1xt26v0] {
+.css-3,
+[data-css-3] {
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
@@ -2483,8 +3084,10 @@ exports[`Component Examples should match snapshot: ProfileImage0 1`] = `
   -webkit-flex-shrink: 0;
 }
 
-.css-1xt26v0:before,
-[data-css-1xt26v0]:before {
+.css-3:before,
+[data-css-3]:before,
+.css-3[data-simulate-before],
+[data-css-3][data-simulate-before] {
   content: "";
   position: absolute;
   top: 0;
@@ -2495,32 +3098,32 @@ exports[`Component Examples should match snapshot: ProfileImage0 1`] = `
   border-radius: 50%;
 }
 
-.css-94c4ii,
-[data-css-94c4ii] {
+.css-7,
+[data-css-7] {
   background-image: url(https://placeimg.com/100/100/people);
   background-size: contain;
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
 >
    
   <div
-    data-css-4p3ux5=""
-    data-css-amrpfn=""
+    data-css-0=""
+    data-css-1=""
   >
     <div
-      data-css-1xt26v0=""
+      data-css-3=""
     >
       <div
         alt=""
-        data-css-1ebs7nx=""
-        data-css-4p3ux5=""
-        data-css-94c4ii=""
+        data-css-2=""
+        data-css-0=""
+        data-css-7=""
       />
     </div>
     <div
-      data-css-1xt26v0=""
+      data-css-3=""
     >
       <svg
         style="width:40px;height:40px;background-color:#B4B4B4;box-sizing:border-box;padding-top:4px"
@@ -2540,28 +3143,719 @@ exports[`Component Examples should match snapshot: ProfileImage0 1`] = `
 </div>
 `;
 
-exports[`Component Examples should match snapshot: Slider0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+exports[`Component Examples should match snapshot: RadioButton0 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1,
+[data-css-1] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-vgixfh,
-[data-css-vgixfh] {
+.css-2,
+[data-css-2] {
+  position: relative;
+}
+
+.css-3,
+[data-css-3] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-4,
+[data-css-4] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.css-5,
+[data-css-5] {
+  margin-right: 40px;
+  width: auto;
+}
+
+.css-6,
+[data-css-6] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-7,
+[data-css-7] {
+  box-sizing: border-box;
+  align-content: flex-start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  -webkit-align-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-8,
+[data-css-8] {
+  opacity: 0;
+  margin: 0;
+}
+
+.css-9,
+[data-css-9] {
+  position: relative;
+  top: 10px;
+}
+
+.css-10,
+[data-css-10] {
+  background-color: lightGrey;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+.css-11,
+[data-css-11] {
+  background-color: white;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+.css-12,
+[data-css-12] {
+  background-color: white;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+.css-13,
+[data-css-13] {
+  position: relative;
+  top: -8px;
+}
+
+.css-14,
+[data-css-14] {
+  background-color: #3598db;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+.css-15,
+[data-css-15] {
+  background-color: #3598db;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+<div
+  data-css-1=""
+>
+   
+  <div
+    data-css-1=""
+  >
+    <div
+      data-css-7=""
+      style="width:100%"
+    >
+      <div
+        data-css-5=""
+        data-css-1=""
+      >
+        <div
+          data-css-2=""
+          data-css-3=""
+        >
+          <label
+            data-css-1=""
+          >
+            <div
+              data-css-9=""
+              data-css-1=""
+            >
+              <div
+                data-css-10=""
+                data-css-0=""
+              >
+                <div
+                  data-css-11=""
+                  data-css-0=""
+                >
+                  <div
+                    data-css-12=""
+                    data-css-0=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              data-css-1=""
+              data-css-13=""
+              style="margin-left:30px"
+            >
+              <div
+                data-css-6=""
+                data-css-1=""
+              >
+                Female
+              </div>
+            </div>
+            <div
+              data-css-1=""
+              data-css-4=""
+            >
+              <input
+                data-css-8=""
+                id="female"
+                name="gender"
+                type="radio"
+                value="female"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        data-css-5=""
+        data-css-1=""
+      >
+        <div
+          data-css-2=""
+          data-css-3=""
+        >
+          <label
+            data-css-1=""
+          >
+            <div
+              data-css-9=""
+              data-css-1=""
+            >
+              <div
+                data-css-14=""
+                data-css-0=""
+              >
+                <div
+                  data-css-11=""
+                  data-css-0=""
+                >
+                  <div
+                    data-css-15=""
+                    data-css-0=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              data-css-1=""
+              data-css-13=""
+              style="margin-left:30px"
+            >
+              <div
+                data-css-6=""
+                data-css-1=""
+              >
+                Male
+              </div>
+            </div>
+            <div
+              data-css-1=""
+              data-css-4=""
+            >
+              <input
+                checked=""
+                data-css-8=""
+                id="male"
+                name="gender"
+                type="radio"
+                value="male"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: RadioButtonSet0 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1,
+[data-css-1] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-2,
+[data-css-2] {
+  position: relative;
+}
+
+.css-3,
+[data-css-3] {
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 0 0 auto;
+  -webkit-align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-4,
+[data-css-4] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.css-5,
+[data-css-5] {
+  margin-right: 40px;
+  width: auto;
+}
+
+.css-6,
+[data-css-6] {
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.css-7,
+[data-css-7] {
+  opacity: 0;
+  margin: 0;
+}
+
+.css-8,
+[data-css-8] {
+  position: relative;
+  top: 10px;
+}
+
+.css-9,
+[data-css-9] {
+  background-color: lightGrey;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+.css-10,
+[data-css-10] {
+  background-color: white;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+.css-11,
+[data-css-11] {
+  background-color: white;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+.css-12,
+[data-css-12] {
+  position: relative;
+  top: -8px;
+}
+
+.css-13,
+[data-css-13] {
+  background-color: #3598db;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+.css-14,
+[data-css-14] {
+  background-color: #3598db;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  transition: background-color 120ms linear;
+  -webkit-transition: background-color 120ms linear;
+  -moz-transition: background-color 120ms linear;
+}
+
+.css-15,
+[data-css-15] {
+  box-sizing: border-box;
+  align-content: flex-start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  -webkit-align-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -webkit-flex: 0 0 auto;
+}
+
+<div
+  data-css-1=""
+>
+   
+  <div
+    data-css-1=""
+  >
+    <div
+      data-css-15=""
+      style="width:100%"
+    >
+      <div
+        data-css-5=""
+        data-css-1=""
+      >
+        <div
+          data-css-2=""
+          data-css-3=""
+        >
+          <label
+            data-css-1=""
+          >
+            <div
+              data-css-8=""
+              data-css-1=""
+            >
+              <div
+                data-css-9=""
+                data-css-0=""
+              >
+                <div
+                  data-css-10=""
+                  data-css-0=""
+                >
+                  <div
+                    data-css-11=""
+                    data-css-0=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              data-css-1=""
+              data-css-12=""
+              style="margin-left:30px"
+            >
+              <div
+                data-css-6=""
+                data-css-1=""
+              >
+                Coffe
+              </div>
+            </div>
+            <div
+              data-css-1=""
+              data-css-4=""
+            >
+              <input
+                data-css-7=""
+                id="coffe"
+                name="order"
+                type="radio"
+                value="coffe"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        data-css-5=""
+        data-css-1=""
+      >
+        <div
+          data-css-2=""
+          data-css-3=""
+        >
+          <label
+            data-css-1=""
+          >
+            <div
+              data-css-8=""
+              data-css-1=""
+            >
+              <div
+                data-css-13=""
+                data-css-0=""
+              >
+                <div
+                  data-css-10=""
+                  data-css-0=""
+                >
+                  <div
+                    data-css-14=""
+                    data-css-0=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              data-css-1=""
+              data-css-12=""
+              style="margin-left:30px"
+            >
+              <div
+                data-css-6=""
+                data-css-1=""
+              >
+                Tee
+              </div>
+            </div>
+            <div
+              data-css-1=""
+              data-css-4=""
+            >
+              <input
+                checked=""
+                data-css-7=""
+                id="tee"
+                name="order"
+                type="radio"
+                value="tee"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        data-css-5=""
+        data-css-1=""
+      >
+        <div
+          data-css-2=""
+          data-css-3=""
+        >
+          <label
+            data-css-1=""
+          >
+            <div
+              data-css-8=""
+              data-css-1=""
+            >
+              <div
+                data-css-9=""
+                data-css-0=""
+              >
+                <div
+                  data-css-10=""
+                  data-css-0=""
+                >
+                  <div
+                    data-css-11=""
+                    data-css-0=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              data-css-1=""
+              data-css-12=""
+              style="margin-left:30px"
+            >
+              <div
+                data-css-6=""
+                data-css-1=""
+              >
+                Others
+              </div>
+            </div>
+            <div
+              data-css-1=""
+              data-css-4=""
+            >
+              <input
+                data-css-7=""
+                id="others"
+                name="order"
+                type="radio"
+                value="others"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+</div>
+`;
+
+exports[`Component Examples should match snapshot: Slider0 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-1,
+[data-css-1] {
   -webkit-appearance: none;
   width: 100%;
   margin: 7px 0;
 }
 
-.css-vgixfh:focus,
-[data-css-vgixfh]:focus {
+.css-1:focus,
+[data-css-1]:focus,
+.css-1[data-simulate-focus],
+[data-css-1][data-simulate-focus] {
   outline: none;
 }
 
-.css-vgixfh::-webkit-slider-runnable-track,
-[data-css-vgixfh]::-webkit-slider-runnable-track {
+.css-1::-webkit-slider-runnable-track,
+[data-css-1]::-webkit-slider-runnable-track,
+.css-1[data-simulate-webkitsliderrunnabletrack],
+[data-css-1][data-simulate-webkitsliderrunnabletrack] {
   width: 100%;
   height: 2px;
   cursor: pointer;
@@ -2570,8 +3864,10 @@ exports[`Component Examples should match snapshot: Slider0 1`] = `
   border: 0px solid #010101;
 }
 
-.css-vgixfh::-webkit-slider-thumb,
-[data-css-vgixfh]::-webkit-slider-thumb {
+.css-1::-webkit-slider-thumb,
+[data-css-1]::-webkit-slider-thumb,
+.css-1[data-simulate-webkitsliderthumb],
+[data-css-1][data-simulate-webkitsliderthumb] {
   border: 0px solid #000000;
   height: 16px;
   width: 16px;
@@ -2582,13 +3878,17 @@ exports[`Component Examples should match snapshot: Slider0 1`] = `
   margin-top: -7px;
 }
 
-.css-vgixfh:focus::-webkit-slider-runnable-track,
-[data-css-vgixfh]:focus::-webkit-slider-runnable-track {
+.css-1:focus::-webkit-slider-runnable-track,
+[data-css-1]:focus::-webkit-slider-runnable-track,
+.css-1[data-simulate-focuswebkitsliderrunnabletrack],
+[data-css-1][data-simulate-focuswebkitsliderrunnabletrack] {
   background: #646f74;
 }
 
-.css-vgixfh::-moz-range-track,
-[data-css-vgixfh]::-moz-range-track {
+.css-1::-moz-range-track,
+[data-css-1]::-moz-range-track,
+.css-1[data-simulate-mozrangetrack],
+[data-css-1][data-simulate-mozrangetrack] {
   width: 100%;
   height: 2px;
   cursor: pointer;
@@ -2597,8 +3897,10 @@ exports[`Component Examples should match snapshot: Slider0 1`] = `
   border: 0px solid #010101;
 }
 
-.css-vgixfh::-moz-range-thumb,
-[data-css-vgixfh]::-moz-range-thumb {
+.css-1::-moz-range-thumb,
+[data-css-1]::-moz-range-thumb,
+.css-1[data-simulate-mozrangethumb],
+[data-css-1][data-simulate-mozrangethumb] {
   border: 0px solid #000000;
   height: 16px;
   width: 16px;
@@ -2607,8 +3909,10 @@ exports[`Component Examples should match snapshot: Slider0 1`] = `
   cursor: pointer;
 }
 
-.css-vgixfh::-ms-track,
-[data-css-vgixfh]::-ms-track {
+.css-1::-ms-track,
+[data-css-1]::-ms-track,
+.css-1[data-simulate-mstrack],
+[data-css-1][data-simulate-mstrack] {
   width: 100%;
   height: 2px;
   cursor: pointer;
@@ -2617,22 +3921,28 @@ exports[`Component Examples should match snapshot: Slider0 1`] = `
   color: transparent;
 }
 
-.css-vgixfh::-ms-fill-lower,
-[data-css-vgixfh]::-ms-fill-lower {
+.css-1::-ms-fill-lower,
+[data-css-1]::-ms-fill-lower,
+.css-1[data-simulate-msfilllower],
+[data-css-1][data-simulate-msfilllower] {
   background: #303538;
   border: 0px solid #010101;
   border-radius: 4px;
 }
 
-.css-vgixfh::-ms-fill-upper,
-[data-css-vgixfh]::-ms-fill-upper {
+.css-1::-ms-fill-upper,
+[data-css-1]::-ms-fill-upper,
+.css-1[data-simulate-msfillupper],
+[data-css-1][data-simulate-msfillupper] {
   background: #4a5256;
   border: 0px solid #010101;
   border-radius: 4px;
 }
 
-.css-vgixfh::-ms-thumb,
-[data-css-vgixfh]::-ms-thumb {
+.css-1::-ms-thumb,
+[data-css-1]::-ms-thumb,
+.css-1[data-simulate-msthumb],
+[data-css-1][data-simulate-msthumb] {
   border: 0px solid #000000;
   height: 2px;
   width: 16px;
@@ -2641,25 +3951,29 @@ exports[`Component Examples should match snapshot: Slider0 1`] = `
   cursor: pointer;
 }
 
-.css-vgixfh:focus::-ms-fill-lower,
-[data-css-vgixfh]:focus::-ms-fill-lower {
+.css-1:focus::-ms-fill-lower,
+[data-css-1]:focus::-ms-fill-lower,
+.css-1[data-simulate-focusmsfilllower],
+[data-css-1][data-simulate-focusmsfilllower] {
   background: #4a5256;
 }
 
-.css-vgixfh:focus::-ms-fill-upper,
-[data-css-vgixfh]:focus::-ms-fill-upper {
+.css-1:focus::-ms-fill-upper,
+[data-css-1]:focus::-ms-fill-upper,
+.css-1[data-simulate-focusmsfillupper],
+[data-css-1][data-simulate-focusmsfillupper] {
   background: #646f74;
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
 >
    
   <div
-    data-css-4p3ux5=""
+    data-css-0=""
   >
     <input
-      data-css-vgixfh=""
+      data-css-1=""
       max="200"
       min="20"
       step="10"
@@ -2671,15 +3985,15 @@ exports[`Component Examples should match snapshot: Slider0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: Spinner0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
 >
    
   <svg
@@ -2734,15 +4048,15 @@ exports[`Component Examples should match snapshot: Spinner0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: SquareIconButton0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-1wp5mix,
-[data-css-1wp5mix] {
+.css-1,
+[data-css-1] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -2765,8 +4079,8 @@ exports[`Component Examples should match snapshot: SquareIconButton0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-wum0co,
-[data-css-wum0co] {
+.css-2,
+[data-css-2] {
   height: 50px;
   width: 50px;
   border-radius: 2px;
@@ -2774,23 +4088,24 @@ exports[`Component Examples should match snapshot: SquareIconButton0 1`] = `
 }
 
 @media (max-width: 640px) {
-  .css-wum0co,
-  [data-css-wum0co] {
+  .css-2,
+  [data-css-2] {
     height: 40px;
     width: 40px;
   }
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
 >
    
   <div
-    data-css-1wp5mix=""
-    data-css-wum0co=""
+    data-css-1=""
+    data-css-2=""
+    textcolor="#333333"
   >
     <div
-      data-css-4p3ux5=""
+      data-css-0=""
       style="width:21.5px;height:21.5px;fill:white;stroke:"
     />
   </div>
@@ -2799,53 +4114,57 @@ exports[`Component Examples should match snapshot: SquareIconButton0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: SwitchList0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-13azwyo,
-[data-css-13azwyo] {
+.css-1,
+[data-css-1] {
   position: relative;
 }
 
-.css-14c6t4g,
-[data-css-14c6t4g] {
+.css-2,
+[data-css-2] {
   overflow: hidden;
   border: 1px solid #bbbbbb;
   border-radius: 2px;
 }
 
-.css-14c6t4g> *:last-child,
-[data-css-14c6t4g]> *:last-child {
+.css-2> *:last-child,
+[data-css-2]> *:last-child {
   border-bottom: none;
 }
 
-.css-14c6t4g> *,
-[data-css-14c6t4g]> * {
+.css-2> *,
+[data-css-2]> * {
   border-bottom: 1px solid #bbbbbb;
 }
 
-.css-14c6t4g:hover,
-[data-css-14c6t4g]:hover {
+.css-2:hover,
+[data-css-2]:hover,
+.css-2[data-simulate-hover],
+[data-css-2][data-simulate-hover] {
   cursor: pointer;
 }
 
-.css-1eqigeq:hover,
-[data-css-1eqigeq]:hover {
+.css-6,
+[data-css-7]:hover,
+.css-7[data-simulate-hover],
+[data-css-7][data-simulate-hover] {
   cursor: pointer;
 }
 
-.css-1coqryx,
-[data-css-1coqryx] {
+.css-10,
+[data-css-10] {
   padding: 10px;
   text-align: center;
 }
 
-.css-1bwbff3,
-[data-css-1bwbff3] {
+.css-11,
+[data-css-11] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -2854,18 +4173,20 @@ exports[`Component Examples should match snapshot: SwitchList0 1`] = `
   color: gray;
 }
 
-.css-uoy6yz,
-[data-css-uoy6yz] {
+.css-12,
+[data-css-12] {
   background-color: #3598db;
 }
 
-.css-uoy6yz:hover,
-[data-css-uoy6yz]:hover {
+.css-12:hover,
+[data-css-12]:hover,
+.css-12[data-simulate-hover],
+[data-css-12][data-simulate-hover] {
   cursor: pointer;
 }
 
-.css-1v578pt,
-[data-css-1v578pt] {
+.css-16,
+[data-css-16] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -2875,51 +4196,51 @@ exports[`Component Examples should match snapshot: SwitchList0 1`] = `
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
 >
    
   <div
-    data-css-14c6t4g=""
-    data-css-4p3ux5=""
+    data-css-2=""
+    data-css-0=""
   >
     <div
-      data-css-13azwyo=""
-      data-css-1eqigeq=""
-      data-css-4p3ux5=""
+      data-css-1=""
+      data-css-7=""
+      data-css-0=""
       data-e2e="settings-switch-locale-a"
     >
       <div
-        data-css-1bwbff3=""
-        data-css-1coqryx=""
-        data-css-4p3ux5=""
+        data-css-11=""
+        data-css-10=""
+        data-css-0=""
       >
         Freiburg
       </div>
     </div>
     <div
-      data-css-13azwyo=""
-      data-css-4p3ux5=""
-      data-css-uoy6yz=""
+      data-css-1=""
+      data-css-0=""
+      data-css-12=""
       data-e2e="settings-switch-locale-b"
     >
       <div
-        data-css-1coqryx=""
-        data-css-1v578pt=""
-        data-css-4p3ux5=""
+        data-css-10=""
+        data-css-16=""
+        data-css-0=""
       >
         Berlin
       </div>
     </div>
     <div
-      data-css-13azwyo=""
-      data-css-1eqigeq=""
-      data-css-4p3ux5=""
+      data-css-1=""
+      data-css-7=""
+      data-css-0=""
       data-e2e="settings-switch-locale-c"
     >
       <div
-        data-css-1bwbff3=""
-        data-css-1coqryx=""
-        data-css-4p3ux5=""
+        data-css-11=""
+        data-css-10=""
+        data-css-0=""
       >
         München
       </div>
@@ -2930,15 +4251,15 @@ exports[`Component Examples should match snapshot: SwitchList0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: Text0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-18icfsk,
-[data-css-18icfsk] {
+.css-1,
+[data-css-1] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -2948,12 +4269,12 @@ exports[`Component Examples should match snapshot: Text0 1`] = `
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
 >
    
   <div
-    data-css-18icfsk=""
-    data-css-4p3ux5=""
+    data-css-1=""
+    data-css-0=""
   >
      Text will be used for everywhere a text appears. The only exception is in molecules that already provide the text component for you. 
   </div>
@@ -2962,15 +4283,15 @@ exports[`Component Examples should match snapshot: Text0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: Text1 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-x5idof,
-[data-css-x5idof] {
+.css-1,
+[data-css-1] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -2982,12 +4303,12 @@ exports[`Component Examples should match snapshot: Text1 1`] = `
 }
 
 <div
-  data-css-4p3ux5=""
+  data-css-0=""
 >
    
   <div
-    data-css-4p3ux5=""
-    data-css-x5idof=""
+    data-css-0=""
+    data-css-1=""
   >
      Textwillbeusedforeverywhereatextappears.Theonlyexceptionisinmoleculesthatalreadyprovidethetextcomponentforyou.Textwillbeusedforeverywhereatextappears.Theonlyexceptionisinmoleculesthatalreadyprovidethetextcomponentforyou. 
   </div>
@@ -2996,8 +4317,8 @@ exports[`Component Examples should match snapshot: Text1 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: TextInput0 1`] = `
-.css-h7582n,
-[data-css-h7582n] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -3020,54 +4341,107 @@ exports[`Component Examples should match snapshot: TextInput0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-1,
+[data-css-1] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-13azwyo,
-[data-css-13azwyo] {
-  position: relative;
-}
-
-.css-1pyiiji,
-[data-css-1pyiiji] {
-  position: absolute;
-  right: 10px;
-}
-
-.css-z169em,
-[data-css-z169em] {
+.css-2,
+[data-css-2] {
   position: absolute;
   bottom: 2px;
   right: 15px;
 }
 
-.css-18egye,
-[data-css-18egye] {
-  height: 50px;
-  width: 100%;
-  padding: 10px 15px;
-  font-size: 14px;
-  border: 0;
-}
-
-.css-18egye:invalid:focus,
-[data-css-18egye]:invalid:focus {
-  color: red;
-}
-
-.css-dau5wj,
-[data-css-dau5wj] {
+.css-3,
+[data-css-3] {
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-1u2d6au,
-[data-css-1u2d6au] {
+.css-4,
+[data-css-4] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  padding-top: 0;
+  transition: padding-top .225s ease-out;
+  border: 0;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
+}
+
+.css-4:-webkit-autofill ~ .label,
+[data-css-4]:-webkit-autofill ~ .label {
+  opacity: 1 !important;
+  top: 8px !important;
+}
+
+.css-4:-webkit-autofill ~ .checkmark,
+[data-css-4]:-webkit-autofill ~ .checkmark {
+  opacity: 1 !important;
+}
+
+.css-4:-webkit-autofill,
+[data-css-4]:-webkit-autofill,
+.css-4[data-simulate-webkitautofill],
+[data-css-4][data-simulate-webkitautofill] {
+  padding-top: 10px !important;
+}
+
+.css-8,
+[data-css-8] {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  pointer-events: none;
+  transition: opacity .225s;
+  opacity: 0;
+  -webkit-transition: opacity .225s;
+  -moz-transition: opacity .225s;
+}
+
+.css-9,
+[data-css-9] {
+  position: relative;
+}
+
+.css-10,
+[data-css-10] {
+  display: inline;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  transition: padding-top .225s ease-out;
+  height: calc(30px*5);
+  width: 100%;
+  padding: 10px 15px;
+  padding-top: 10px;
+  border: 0;
+  -webkit-transition: padding-top .225s ease-out;
+  -moz-transition: padding-top .225s ease-out;
+}
+
+.css-10:invalid:focus,
+[data-css-10]:invalid:focus,
+.css-10[data-simulate-invalidfocus],
+[data-css-10][data-simulate-invalidfocus] {
+  color: red;
+}
+
+.css-14,
+[data-css-14] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 12px;
@@ -3076,65 +4450,50 @@ exports[`Component Examples should match snapshot: TextInput0 1`] = `
   color: #626262;
 }
 
-.css-c808ky,
-[data-css-c808ky] {
-  height: calc(30px*5);
-  width: 100%;
-  padding: 10px 15px;
-  font-size: 14px;
-  border: 0;
-}
-
-.css-c808ky:invalid:focus,
-[data-css-c808ky]:invalid:focus {
-  color: red;
-}
-
 <div
-  data-css-4p3ux5=""
+  data-css-1=""
 >
    
   <div
-    data-css-dau5wj=""
-    data-css-h7582n=""
+    data-css-3=""
+    data-css-0=""
   >
     <div
-      data-css-13azwyo=""
-      data-css-4p3ux5=""
+      data-css-9=""
+      data-css-1=""
       style="width:100%"
     >
-      <div
-        data-css-1pyiiji=""
-        data-css-4p3ux5=""
-      >
-        <div
-          data-css-1u2d6au=""
-          data-css-4p3ux5=""
-        >
-          *
-        </div>
-      </div>
       <input
         aria-required="true"
-        data-css-18egye=""
+        data-css-4=""
         name="email"
         placeholder="Your email"
         required=""
         type="email"
       />
+      <div
+        class="checkmark"
+        data-css-8=""
+        data-css-1=""
+      >
+        <div
+          data-css-1=""
+          style="width:16px;height:16px;fill:lightGrey;stroke:"
+        />
+      </div>
     </div>
   </div>
   <div
-    data-css-dau5wj=""
-    data-css-h7582n=""
+    data-css-3=""
+    data-css-0=""
   >
     <div
-      data-css-13azwyo=""
-      data-css-4p3ux5=""
+      data-css-9=""
+      data-css-1=""
       style="width:100%"
     >
       <textarea
-        data-css-c808ky=""
+        data-css-10=""
         maxlength="255"
         minlength="50"
         name="inquiry"
@@ -3142,12 +4501,22 @@ exports[`Component Examples should match snapshot: TextInput0 1`] = `
         type="text"
       />
       <div
-        data-css-4p3ux5=""
-        data-css-z169em=""
+        class="checkmark"
+        data-css-8=""
+        data-css-1=""
       >
         <div
-          data-css-1u2d6au=""
-          data-css-4p3ux5=""
+          data-css-1=""
+          style="width:16px;height:16px;fill:lightGrey;stroke:"
+        />
+      </div>
+      <div
+        data-css-1=""
+        data-css-2=""
+      >
+        <div
+          data-css-14=""
+          data-css-1=""
         >
           0/255
         </div>
@@ -3159,8 +4528,8 @@ exports[`Component Examples should match snapshot: TextInput0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: TitleBar0 1`] = `
-.css-h7582n,
-[data-css-h7582n] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -3183,23 +4552,15 @@ exports[`Component Examples should match snapshot: TitleBar0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-1,
+[data-css-1] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-cjuhep,
-[data-css-cjuhep] {
-  height: 50px;
-  width: 50px;
-  border-radius: 2px;
-  background-color: transparent;
-}
-
-.css-1wp5mix,
-[data-css-1wp5mix] {
+.css-2,
+[data-css-2] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -3222,8 +4583,16 @@ exports[`Component Examples should match snapshot: TitleBar0 1`] = `
   -webkit-flex: 0 0 auto;
 }
 
-.css-1i51xt9,
-[data-css-1i51xt9] {
+.css-3,
+[data-css-3] {
+  height: 50px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.css-4,
+[data-css-4] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -3233,16 +4602,16 @@ exports[`Component Examples should match snapshot: TitleBar0 1`] = `
   color: white;
 }
 
-.css-19r6vwt,
-[data-css-19r6vwt] {
+.css-5,
+[data-css-5] {
   height: 50px;
   background-color: #3598db;
   position: relative;
   z-index: 2;
 }
 
-.css-lr7l9f,
-[data-css-lr7l9f] {
+.css-6,
+[data-css-6] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -3266,42 +4635,44 @@ exports[`Component Examples should match snapshot: TitleBar0 1`] = `
 }
 
 @media (max-width: 640px) {
-  .css-cjuhep,
-  [data-css-cjuhep] {
+  .css-3,
+  [data-css-3] {
     height: 40px;
     width: 40px;
   }
 }
 
 <div
-  data-css-19r6vwt=""
-  data-css-lr7l9f=""
+  data-css-5=""
+  data-css-6=""
 >
   <div
-    data-css-h7582n=""
+    data-css-0=""
   >
     <div
-      data-css-1wp5mix=""
-      data-css-cjuhep=""
+      data-css-2=""
+      data-css-3=""
+      textcolor="#333333"
     >
       <div
-        data-css-4p3ux5=""
+        data-css-1=""
         style="width:21.5px;height:21.5px;fill:white;stroke:"
       />
     </div>
     <div
-      data-css-1i51xt9=""
-      data-css-4p3ux5=""
+      data-css-4=""
+      data-css-1=""
     >
        Get Relaxed 
     </div>
   </div>
   <div
-    data-css-1wp5mix=""
-    data-css-cjuhep=""
+    data-css-2=""
+    data-css-3=""
+    textcolor="#333333"
   >
     <div
-      data-css-4p3ux5=""
+      data-css-1=""
       style="width:21.5px;height:21.5px;fill:white;stroke:"
     />
   </div>
@@ -3309,15 +4680,15 @@ exports[`Component Examples should match snapshot: TitleBar0 1`] = `
 `;
 
 exports[`Component Examples should match snapshot: View0 1`] = `
-.css-4p3ux5,
-[data-css-4p3ux5] {
+.css-0,
+[data-css-0] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-18icfsk,
-[data-css-18icfsk] {
+.css-1,
+[data-css-1] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -3326,8 +4697,8 @@ exports[`Component Examples should match snapshot: View0 1`] = `
   color: #333333;
 }
 
-.css-zos5k4,
-[data-css-zos5k4] {
+.css-2,
+[data-css-2] {
   box-sizing: border-box;
   align-content: stretch;
   align-items: stretch;
@@ -3355,11 +4726,11 @@ exports[`Component Examples should match snapshot: View0 1`] = `
 }
 
 <div
-  data-css-zos5k4=""
+  data-css-2=""
 >
   <div
-    data-css-18icfsk=""
-    data-css-4p3ux5=""
+    data-css-1=""
+    data-css-0=""
   >
     Say Hello!
   </div>
