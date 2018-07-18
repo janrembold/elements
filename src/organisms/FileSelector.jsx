@@ -106,7 +106,6 @@ export default class FileSelector extends React.Component {
     if (this.previews.has(file)) {
       return this.previews.get(file)
     } else {
-      console.log('creating new preview')
       const url = window.URL.createObjectURL(file)
       this.previews.set(file, url)
       return url
