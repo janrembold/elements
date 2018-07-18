@@ -24,7 +24,7 @@
   "scripts": {
     "create:release": "yarn lint && yarn test && yarn version && git push --tags origin HEAD && yarn build && cd build && yarn publish",
     "prebuild": "rimraf build",
-    "babel": "babel ./src --ignore *.spec.js --out-dir ./build",
+    "babel": "babel ./src --ignore *.test.js --out-dir ./build",
     "babel:watch": "yarn babel --watch",
     "build": "NODE_ENV=production yarn babel && yarn build:copy-files",
     "build:copy-files": "babel-node ./scripts/copy-files.js",
@@ -102,7 +102,6 @@
   },
   "jest": {
     "bail": true,
-    "collectCoverage": true,
     "setupTestFrameworkScriptFile": "<rootDir>/bootstrap-jest.js",
     "snapshotSerializers": [
       "enzyme-to-json/serializer",
