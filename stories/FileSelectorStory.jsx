@@ -1,16 +1,18 @@
 import React from 'react'
 import { css } from 'glamor'
-
-import Form from '../src/molecules/Form/Form'
-import ThemeProvider from '../src/behaviour/ThemeProvider'
-import Card from '../src/molecules/Card/Card'
-import Text from '../src/atoms/Text'
-import CardButton from '../src/molecules/Card/CardButton'
-import CardFooter from '../src/molecules/Card/CardFooter'
-import View from '../src/atoms/View'
-import FileSelector from '../src/molecules/FileSelector'
-import Relative from '../src/atoms/Relative'
 import { action } from '@storybook/addon-actions'
+
+import {
+  Form,
+  ThemeProvider,
+  Card,
+  Text,
+  CardButton,
+  CardFooter,
+  View,
+  FileSelector,
+  Relative,
+} from '../src'
 
 const imageOverlayStyle = css({
   margin: 5,
