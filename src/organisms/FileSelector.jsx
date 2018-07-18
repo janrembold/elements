@@ -56,6 +56,8 @@ export default class FileSelector extends React.Component {
     required: PropTypes.bool,
     /** Accepted file types. See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-accept **/
     accept: PropTypes.string,
+    /** Called when a file is added **/
+    onChange: PropTypes.func,
   }
 
   previews = new Map()
@@ -73,6 +75,7 @@ export default class FileSelector extends React.Component {
   handleChange = e => {
     const fileItems = e.dataTransfer ? e.dataTransfer.files : e.target.files
     this.setState(state => ({ files: [...state.files, ...fileItems] }))
+    this.props.onChange && this.props.onChange(e, fileItems)
   }
 
   openDialog = () => this.inputRef.click()
