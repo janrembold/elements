@@ -1,13 +1,30 @@
 import React from 'react'
 import RadioButton from './RadioButton'
+import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
+import sinon from 'sinon'
+import ThemeProvider from '../behaviour/ThemeProvider'
 
-it('should chain the onChange property', () => {
-  const handleChange1 = jest.fn()
-  const wrapper = shallow(<RadioButton value="a" onChange={handleChange1} />)
+describe('<RadioButton />', () => {
+  it('should render without error', () => {
+    const tree = renderer
+      .create(
+        <ThemeProvider>
+          <RadioButton value="white" />
+        </ThemeProvider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 
-  const internalRadio = wrapper.children().first()
-  console.log(internalRadio)
-
-  internalRadio.simulate('change', { target: { value: 'a' } }, true)
-  expect(handleChange1).toBeCalled()
+  it('should handle onChange event', () => {
+    const handleChange = sinon.spy()
+    const wrapper = shallow(
+      <ThemeProvider>
+        <RadioButton value="white" onChange={handleChange} />
+      </ThemeProvider>
+    )
+    wrapper.find('RadioButton').simulate('change')
+    expect(handleChange.calledOnce).toEqual(true)
+  })
 })

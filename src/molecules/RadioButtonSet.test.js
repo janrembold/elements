@@ -1,64 +1,39 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
+import { render, fireEvent } from 'react-testing-library'
 import RadioButton from './RadioButton'
 import RadioButtonSet from './RadioButtonSet'
+import ThemeProvider from '../behaviour/ThemeProvider'
 
-it('should chain the onChange property', () => {
-  const handleChange1 = jest.fn()
-  const handleChange2 = jest.fn()
-  const wrapper = shallow(
-    <RadioButtonSet value="" name="test" onChange={handleChange1}>
-      <RadioButton onChange={handleChange2} />
-      <RadioButton onChange={handleChange2} />
-    </RadioButtonSet>
-  )
+describe('<RadioButtonSet />', () => {
+  it('should render without error', () => {
+    const tree = renderer
+      .create(
+        <ThemeProvider>
+          <RadioButtonSet name="colors">
+            <RadioButton value="blue">Blue</RadioButton>
+            <RadioButton value="gray">Gray</RadioButton>
+          </RadioButtonSet>
+        </ThemeProvider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 
-  const internalRadio = wrapper.children().first()
-  internalRadio.simulate(
-    'change',
-    { target: { value: 'woofRadioGroup' } },
-    true
-  )
-  expect(handleChange1).toBeCalled()
-  expect(handleChange2).toBeCalled()
+  it('should chain the onChange property', () => {
+    const spy = jest.fn()
+    const { getByText } = render(
+      <ThemeProvider>
+        <RadioButtonSet name="colors" onChange={spy} default>
+          <RadioButton value="blue">Blue</RadioButton>
+          <RadioButton value="gray">Gray</RadioButton>
+        </RadioButtonSet>
+      </ThemeProvider>
+    )
+
+    const radio = getByText('Gray')
+    radio.value = 'blue'
+    fireEvent.change(radio)
+    expect(spy).toHaveBeenCalledTimes(1)
+  })
 })
-/**
-test('First radio-button should be selected', () => {
-  const wrapper = mount(
-    <ThemeProvider theme={THEME}>
-      <RadioButtonSet
-        name="color"
-        selection={selection}
-        defaultValue={defaultVal}
-      />
-    </ThemeProvider>
-  )
-  const input = wrapper.find('input').first()
-  expect(wrapper).toMatchSnapshot()
-  expect(
-    wrapper
-      .find('label')
-      .first()
-      .text()
-  ).toEqual(selection[0].value)
-  // Select other.
-  input.simulate('change')
-  expect(
-    wrapper
-      .find('label')
-      .last()
-      .text()
-  ).toEqual(defaultVal)
-  expect(input.prop('defaultChecked')).toBeFalsy()
-  // Select other.
-  input.simulate('change')
-  // Re-render in order to get it checked.
-  wrapper.update()
-  expect(wrapper).toMatchSnapshot()
-  expect(
-    wrapper
-      .find('input')
-      .first()
-      .prop('defaultChecked')
-  ).toBeTruthy()
-  wrapper.unmount()
-})*/
