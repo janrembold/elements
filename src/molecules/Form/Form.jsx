@@ -120,14 +120,8 @@ class Form extends React.Component {
     e.preventDefault()
 
     const data = Array.from(e.target.elements)
-      .filter(element => element.name !== '')
-      .reduce(
-        (data, item) => ({
-          ...data,
-          [item.name]: item.type === 'file' ? item.files : item.value,
-        }),
-        {}
-      )
+      .filter(element => element.name !== '' && element.type !== 'file')
+      .reduce((data, item) => ({ ...data, [item.name]: item.value }), {})
 
     this.props.onSubmit(e, data)
   }

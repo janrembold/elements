@@ -1,6 +1,5 @@
 import React from 'react'
 import { css } from 'glamor'
-import { action } from '@storybook/addon-actions'
 
 import {
   Form,
@@ -12,6 +11,7 @@ import {
   View,
   FileSelector,
   Relative,
+  Input,
 } from '../src'
 
 const imageOverlayStyle = css({
@@ -43,13 +43,25 @@ const imageStyle = css({
 
 const FileSelectorStory = () => (
   <ThemeProvider>
-    <Form onSubmit={action('submit')}>
-      <FileSelector name="myImages" multiple accept="image/*">
-        {({ files, openDialog, getPreview, removeFile, clear }) => (
+    <FileSelector multiple accept="image/*">
+      {({ files, openFileDialog, getFilePreview, removeFile, resetFiles }) => (
+        <Form
+          onSubmit={(e, data) => {
+            // Example:
+            // const formData = new FormData()
+            // files.forEach(file => formData.append('images[]', file))
+            console.log(data, files)
+            resetFiles()
+          }}
+        >
           <Card>
             <Text strong size="xl" align="center" {...css({ padding: 15 })}>
               Image uploader 🖼
             </Text>
+            <Input
+              name="description"
+              placeholder="Describe your pictures here."
+            />
             <View direction="row" wrap="wrap">
               {files.map(file => (
                 <Relative
@@ -59,7 +71,7 @@ const FileSelectorStory = () => (
                 >
                   <img
                     title={file.name}
-                    src={getPreview(file)}
+                    src={getFilePreview(file)}
                     {...imageStyle}
                   />
                 </Relative>
@@ -67,17 +79,17 @@ const FileSelectorStory = () => (
             </View>
 
             <CardFooter>
-              <CardButton onClick={openDialog}>
+              <CardButton onClick={openFileDialog}>
                 <Text size="m">Add images</Text>
               </CardButton>
-              <CardButton onClick={clear} type="submit">
+              <CardButton type="submit">
                 <Text size="m">Send</Text>
               </CardButton>
             </CardFooter>
           </Card>
-        )}
-      </FileSelector>
-    </Form>
+        </Form>
+      )}
+    </FileSelector>
   </ThemeProvider>
 )
 
