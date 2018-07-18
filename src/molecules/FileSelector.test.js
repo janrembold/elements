@@ -40,6 +40,7 @@ describe('File selector component', () => {
             <Fragment>
               <ul>
                 {files.map(file => (
+                  // eslint-disable-next-line react/jsx-no-bind
                   <li key={file} onClick={() => removeFile(file)}>
                     {file}
                   </li>
