@@ -8,7 +8,7 @@ import Text from '../src/atoms/Text'
 import CardButton from '../src/molecules/Card/CardButton'
 import CardFooter from '../src/molecules/Card/CardFooter'
 import View from '../src/atoms/View'
-import FileSelector from '../src/organisms/FileSelector'
+import FileSelector from '../src/molecules/FileSelector'
 import Relative from '../src/atoms/Relative'
 import { action } from '@storybook/addon-actions'
 
