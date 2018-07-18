@@ -13,31 +13,6 @@ const inputStyle = css({
   opacity: 0.00001,
   pointerEvents: 'none',
 })
-// Use state controlled files, because file inputs are readonly.
-
-const x = () => (
-  <ThemeProvider>
-    <FileSelector>
-      {({ files, openDialog, getPreview, removeFile, reset }) => (
-        <Form
-          onSubmit={() => {
-            console.log(files)
-            reset()
-          }}
-        >
-          <ul>
-            {files.map(file => (
-              <li key={file.name} onClick={() => removeFile(file)}>
-                <img src={getPreview(file)} height={40} width={40} />
-                {file.name}
-              </li>
-            ))}
-          </ul>
-        </Form>
-      )}
-    </FileSelector>
-  </ThemeProvider>
-)
 
 /**
  The FileSelector component acts similar to <input type="file" /> but also provides useful tools to manage and display files.
