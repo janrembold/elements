@@ -11,3 +11,4 @@ on cards. It should always go into a [CardFooter](CardFooter.md).
 |children|node|
 |onClick|func|Callback when button is clicked *<br>Default: noop => noop
 |backgroundColor|string|Color of the button *<br>Default: '#ffffff'
+|type|enum|Form action to trigger when button is clicked *<br>Default: 'button'
