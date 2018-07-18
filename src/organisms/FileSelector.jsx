@@ -47,7 +47,7 @@ const inputStyle = css({
  */
 export default class FileSelector extends React.Component {
   static propTypes = {
-    children: PropTypes.func,
+    children: PropTypes.func.isRequired,
     /** Name of the field which is picked up by <Form> **/
     name: PropTypes.string,
     /** Whether multiple files should be allowed **/
@@ -56,10 +56,6 @@ export default class FileSelector extends React.Component {
     required: PropTypes.bool,
     /** Accepted file types. See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-accept **/
     accept: PropTypes.string,
-  }
-
-  static defaultProps = {
-    children: () => {},
   }
 
   previews = new Map()
