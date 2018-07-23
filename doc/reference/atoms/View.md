@@ -23,6 +23,7 @@ For explanation see:
 | Name        | Type           | Description  |
 | ----------- |:--------------:| ------------:|
 |children|node|
+|htmlElement|string|<br>Default: 'div'
 |alignH|enum|horizontal alignment<br>Default: 'start'
 |alignV|enum|vertical alignment<br>Default: 'stretch'
 |direction|enum|direction
