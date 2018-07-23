@@ -88,7 +88,7 @@ class View extends Component {
     onClick: PropTypes.func,
 
     /** @deprecated */
-    onRef: PropTypes.oneOf(PropTypes.func, PropTypes.object),
+    onRef: PropTypes.oneOf([PropTypes.func, PropTypes.object]),
   }
 
   static defaultProps = {
