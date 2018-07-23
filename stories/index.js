@@ -13,6 +13,7 @@ import {
 import HorizontalView from './HorizontalView'
 import FormStory from './FormStory'
 import createViewportDecorator from './createViewportDecorator'
+import RadioButtonStory from './RadioButtonStory'
 import CollapsibleStory from './CollapsibleStory'
 
 storiesOf('Animations', module)
@@ -22,6 +23,7 @@ storiesOf('Animations', module)
 storiesOf('Forms', module)
   .addDecorator(createViewportDecorator())
   .add('SimpleForm', () => <FormStory />)
+  .add('RadioButton', () => <RadioButtonStory />)
 
 storiesOf('FloatingButton', module)
   .addDecorator(createViewportDecorator())
