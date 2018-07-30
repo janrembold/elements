@@ -31,4 +31,4 @@ For explanation see:
 |wrap|enum|Defining how children will wrap
 |flex|enum|Flex values, can be 5, 10, 15 ... 100 or 33, 66<br>Default: 'none'
 |onClick|func|
-|onRef|func|@deprecated<br>Default: _ => _
+|onRef|union|@deprecated<br>Default: _ => _
