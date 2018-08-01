@@ -15,6 +15,12 @@ import FormStory from './FormStory'
 import createViewportDecorator from './createViewportDecorator'
 import RadioButtonStory from './RadioButtonStory'
 import CollapsibleStory from './CollapsibleStory'
+import { Icons } from '../src/atoms/Icon'
+import Icon from '../src/atoms/Icon'
+import ResourceProvider from '../src/behaviour/ResourceProvider'
+import List from '../src/molecules/List/List'
+import ListItem from '../src/molecules/List/ListItem'
+import { css } from 'glamor'
 
 storiesOf('Animations', module)
   .addDecorator(createViewportDecorator())
@@ -73,3 +79,20 @@ storiesOf('PhoneInput', module)
 storiesOf('Containers', module)
   .addDecorator(createViewportDecorator())
   .add('Collapsible', CollapsibleStory)
+
+storiesOf('Icons', module)
+  .addDecorator(createViewportDecorator())
+  .add('List', () => (
+    <ThemeProvider>
+      <ResourceProvider>
+        <List>
+          {Icons.map(icon => (
+            <ListItem key={icon}>
+              <Icon size="m" name={icon} />
+              <Text {...css({ marginLeft: 10 })}>{icon}</Text>
+            </ListItem>
+          ))}
+        </List>
+      </ResourceProvider>
+    </ThemeProvider>
+  ))
