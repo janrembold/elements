@@ -5,7 +5,6 @@ import {
   FloatingButton,
   Form,
   FormValidityProvider,
-  Icons,
   Text,
   TextInput,
   ThemeProvider,
@@ -16,11 +15,12 @@ import FormStory from './FormStory'
 import createViewportDecorator from './createViewportDecorator'
 import RadioButtonStory from './RadioButtonStory'
 import CollapsibleStory from './CollapsibleStory'
-import Icon from '../src/atoms/Icon'
+import Icon, { Icons } from '../src/atoms/Icon'
 import ResourceProvider from '../src/behaviour/ResourceProvider'
 import List from '../src/molecules/List/List'
 import ListItem from '../src/molecules/List/ListItem'
 import { css } from 'glamor'
+import Input from '../src/atoms/Input'
 
 storiesOf('Animations', module)
   .addDecorator(createViewportDecorator())
@@ -85,9 +85,16 @@ storiesOf('Icons', module)
       <ResourceProvider>
         <List>
           {Icons.map(icon => (
-            <ListItem key={icon}>
+            <ListItem key={icon} directon="row">
               <Icon size="m" name={icon} />
-              <Text {...css({ marginLeft: 10 })}>{icon}</Text>
+              <Input
+                name="x[]"
+                onFocus={e => e.target.select()} // eslint-disable-line react/jsx-no-bind
+                type="text"
+                value={icon}
+                readonly
+                style={{ cursor: 'pointer', outline: 'none', flex: 1 }}
+              />
             </ListItem>
           ))}
         </List>
