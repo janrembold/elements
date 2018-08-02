@@ -5,6 +5,7 @@ import {
   FloatingButton,
   Form,
   FormValidityProvider,
+  Icons,
   Text,
   TextInput,
   ThemeProvider,
@@ -15,7 +16,6 @@ import FormStory from './FormStory'
 import createViewportDecorator from './createViewportDecorator'
 import RadioButtonStory from './RadioButtonStory'
 import CollapsibleStory from './CollapsibleStory'
-import { Icons } from '../src/atoms/Icon'
 import Icon from '../src/atoms/Icon'
 import ResourceProvider from '../src/behaviour/ResourceProvider'
 import List from '../src/molecules/List/List'
@@ -30,6 +30,23 @@ storiesOf('Forms', module)
   .addDecorator(createViewportDecorator())
   .add('SimpleForm', () => <FormStory />)
   .add('RadioButton', () => <RadioButtonStory />)
+  .add('PhoneInput', () => {
+    return (
+      <ThemeProvider>
+        <Form>
+          <PhoneInput
+            placeholder="hello, this is a placeholder"
+            defaultValue="49017632"
+            name="phone"
+            id="phone"
+          />
+          <FloatingButton>
+            <Text>get phone input value</Text>
+          </FloatingButton>
+        </Form>
+      </ThemeProvider>
+    )
+  })
 
 storiesOf('FloatingButton', module)
   .addDecorator(createViewportDecorator())
@@ -57,25 +74,6 @@ storiesOf('FloatingButton', module)
     </ThemeProvider>
   ))
 
-storiesOf('PhoneInput', module)
-  .addDecorator(createViewportDecorator())
-  .add('with phone', () => {
-    return (
-      <ThemeProvider>
-        <Form>
-          <PhoneInput
-            placeholder="hello, this is a placeholder"
-            defaultValue="49017632"
-            name="phone"
-            id="phone"
-          />
-          <FloatingButton>
-            <Text>get phone input value</Text>
-          </FloatingButton>
-        </Form>
-      </ThemeProvider>
-    )
-  })
 storiesOf('Containers', module)
   .addDecorator(createViewportDecorator())
   .add('Collapsible', CollapsibleStory)
