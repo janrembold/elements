@@ -8,7 +8,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0))
 
 /**
  * A Collapsible is a simple container, that makes it possible to change between collapsed and extended states, and this way hiding and showing the children passed in.
- * ```example
+ * ```js
  * <ThemeProvider>
  *  <Card>
  *    <Collapsible
