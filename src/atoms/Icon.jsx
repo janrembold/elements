@@ -99,6 +99,7 @@ export const Icons = [
   'pet-paw-filled',
   'phone',
   'phone-filled',
+  'picture-filled',
   'plus',
   'plus-filled',
   'plus-light',
