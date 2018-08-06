@@ -90,7 +90,7 @@
     "react-generate-props": "0.3.0",
     "react-intl": "2.4.0",
     "react-test-renderer": "16.4.2",
-    "react-testing-library": "4.1.6",
+    "react-testing-library": "4.1.7",
     "rimraf": "2.6.2"
   },
   "prettier": {
