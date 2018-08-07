@@ -13,8 +13,15 @@ import {
 import HorizontalView from './HorizontalView'
 import FormStory from './FormStory'
 import createViewportDecorator from './createViewportDecorator'
+import RadioButtonStory from './RadioButtonStory'
 import CollapsibleStory from './CollapsibleStory'
 import TypeaheadStory from './TypeaheadStory'
+import Icon, { Icons } from '../src/atoms/Icon'
+import ResourceProvider from '../src/behaviour/ResourceProvider'
+import List from '../src/molecules/List/List'
+import ListItem from '../src/molecules/List/ListItem'
+import { css } from 'glamor'
+import Input from '../src/atoms/Input'
 
 storiesOf('Animations', module)
   .addDecorator(createViewportDecorator())
@@ -22,8 +29,9 @@ storiesOf('Animations', module)
 
 storiesOf('Forms', module)
   .addDecorator(createViewportDecorator())
-  .add('Simple form', () => <FormStory />)
-  .add('Phone input', () => {
+  .add('SimpleForm', () => <FormStory />)
+  .add('RadioButton', () => <RadioButtonStory />)
+  .add('PhoneInput', () => {
     return (
       <ThemeProvider>
         <Form>
@@ -71,3 +79,27 @@ storiesOf('FloatingButton', module)
 storiesOf('Containers', module)
   .addDecorator(createViewportDecorator())
   .add('Collapsible', CollapsibleStory)
+
+storiesOf('Icons', module)
+  .addDecorator(createViewportDecorator())
+  .add('List', () => (
+    <ThemeProvider>
+      <ResourceProvider>
+        <List>
+          {Icons.map(icon => (
+            <ListItem key={icon} directon="row">
+              <Icon size="m" name={icon} />
+              <Input
+                name="x[]"
+                onFocus={e => e.target.select()} // eslint-disable-line react/jsx-no-bind
+                type="text"
+                value={icon}
+                readonly
+                style={{ cursor: 'pointer', outline: 'none', flex: 1 }}
+              />
+            </ListItem>
+          ))}
+        </List>
+      </ResourceProvider>
+    </ThemeProvider>
+  ))
