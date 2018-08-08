@@ -13,6 +13,8 @@ import View from '../atoms/View'
 import escapeRegex from '../utils/escapeRegex'
 import Spinner from '../atoms/Spinner'
 
+const NOOP = _ => _
+
 const bounceAnim = keyframes('bounce', {
   '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
   '40%': { transform: 'translateY(-10px)' },
@@ -21,33 +23,31 @@ const bounceAnim = keyframes('bounce', {
 
 export default class Typeahead extends React.PureComponent {
   static propTypes = {
+    autoOpen: PropTypes.bool,
+    isLoading: PropTypes.bool,
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        value: PropTypes.any.isRequired,
         label: PropTypes.node.isRequired,
+        value: PropTypes.any.isRequired,
       })
     ).isRequired,
-    autoOpen: PropTypes.bool,
-    onSelect: PropTypes.func,
+    limit: PropTypes.number,
+    menuHeight: PropTypes.number,
+    onClose: PropTypes.func,
     onInputValueChange: PropTypes.func,
     onOpen: PropTypes.func,
-    onClose: PropTypes.func,
-    isLoading: PropTypes.bool,
-    menuHeight: PropTypes.number,
+    onSelect: PropTypes.func,
     placeholder: PropTypes.string,
-    limit: PropTypes.number,
   }
 
   static defaultProps = {
-    menuHeight: 300,
-    onOpen: () => {},
-    onClose: () => {},
     limit: 20,
+    menuHeight: 300,
+    onClose: NOOP,
+    onOpen: NOOP,
   }
 
-  state = {
-    showScrollArrow: false,
-  }
+  state = { showScrollArrow: false }
 
   getHintText = (inputValue, itemText) => {
     if (itemText.toLowerCase().startsWith(inputValue.toLowerCase())) {
@@ -67,7 +67,8 @@ export default class Typeahead extends React.PureComponent {
     switch (changes.type) {
       case Downshift.stateChangeTypes.changeInput:
         return {
-          ...changes, // When the input value is cleared then also clear the selection
+          // When the input value is cleared then also clear the selection.
+          ...changes,
           selectedItem: changes.inputValue === '' ? null : state.selectedItem,
         }
       default:
@@ -78,9 +79,7 @@ export default class Typeahead extends React.PureComponent {
   handleStateChange = changes => {
     if (changes.isOpen === true) this.props.onOpen()
     if (changes.isOpen === false) this.props.onClose()
-    if (changes.hasOwnProperty('inputValue')) {
-      this.showArrowIfNecessary()
-    }
+    if (changes.hasOwnProperty('inputValue')) this.showArrowIfNecessary()
   }
 
   createRenderListItem = ({ getItemProps, highlightedIndex }) => (
@@ -89,9 +88,9 @@ export default class Typeahead extends React.PureComponent {
   ) => (
     <ListItem
       {...getItemProps({
-        key: item.value,
         index,
         item,
+        key: item.value,
         style: {
           backgroundColor:
             highlightedIndex === index
@@ -138,24 +137,24 @@ export default class Typeahead extends React.PureComponent {
     return (
       <Downshift
         defaultHighlightedIndex={0}
-        onChange={onSelect}
         itemToString={item => (item ? item.label : '')}
+        onChange={onSelect}
         onInputValueChange={onInputValueChange}
-        stateReducer={this.stateReducer}
         onStateChange={this.handleStateChange}
+        stateReducer={this.stateReducer}
       >
         {({
-          getInputProps,
-          getMenuProps,
-          getItemProps,
-          selectItem,
-          highlightedIndex,
-          selectedItem,
-          isOpen,
-          inputValue,
-          toggleMenu,
-          selectHighlightedItem,
           clearSelection,
+          getInputProps,
+          getItemProps,
+          getMenuProps,
+          highlightedIndex,
+          inputValue,
+          isOpen,
+          selectedItem,
+          selectHighlightedItem,
+          selectItem,
+          toggleMenu,
         }) => {
           const filtered = matchSorter(items, inputValue, {
             keys: ['label'],
@@ -164,39 +163,39 @@ export default class Typeahead extends React.PureComponent {
           const showOpen = isOpen && !isLoading && filtered.length > 0
 
           // Opt for <div> here because we don't want to mess with downshifts
-          // getRootProps and refKey, which is kind of strange
+          // getRootProps and refKey, which is kind of strange.
           return (
             <div
               {...css({
-                display: 'flex',
-                flexDirection: 'column',
                 alignItems: 'stretch',
-                width: '100%',
                 background: 'transparent',
                 border: 'none',
-                padding: 0,
                 boxShadow: showOpen && '1px 1px 3px rgba(29, 29, 29, 0.125)',
+                display: 'flex',
+                flexDirection: 'column',
+                padding: 0,
+                width: '100%',
               })}
             >
               <Relative
                 {...css({
                   ':after': selectedItem && {
+                    background:
+                      'linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(192,192,192,0) 52%,rgba(244,244,244,0) 66%,rgba(255,255,255,0.6) 81%,rgba(255,255,255,1) 88%,rgba(255,255,255,1) 100%)',
+                    bottom: 0,
                     content: `''`,
+                    left: 0,
                     pointerEvents: 'none',
                     position: 'absolute',
                     top: 0,
-                    left: 0,
-                    bottom: 0,
                     width: '100%',
-                    background:
-                      'linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(192,192,192,0) 52%,rgba(244,244,244,0) 66%,rgba(255,255,255,0.6) 81%,rgba(255,255,255,1) 88%,rgba(255,255,255,1) 100%)',
                   },
                 })}
               >
                 <Absolute top={0} left={0} {...css({ width: '100%' })}>
                   <Input
-                    tabIndex={-1}
                     name="hint"
+                    tabIndex={-1}
                     value={
                       inputValue && !selectedItem && filtered.length > 0
                         ? this.getHintText(inputValue, filtered[0].label)
@@ -206,14 +205,14 @@ export default class Typeahead extends React.PureComponent {
                       background: '#fff',
                       border: 'none',
                       boxShadow: 'none',
-                      opacity: 1,
                       color: '#999',
+                      opacity: 1,
                     })}
                   />
                 </Absolute>
                 <Input
-                  onClick={autoOpen && !selectedItem ? toggleMenu : undefined}
                   name="typed"
+                  onClick={autoOpen && !selectedItem ? toggleMenu : undefined}
                   placeholder={placeholder}
                   {...getInputProps({
                     onKeyDown: e => {
@@ -228,21 +227,21 @@ export default class Typeahead extends React.PureComponent {
                     },
                   })}
                   {...css({
-                    width: '100%',
-                    color: '#000',
-                    border: 'none',
-                    boxShadow: 'none',
                     background: 'transparent',
-                    outline: 'none',
+                    border: 'none',
                     borderBottom:
                       showOpen && `1px solid ${ColorPalette.lightGreyIntense}`,
+                    boxShadow: 'none',
+                    color: '#000',
+                    outline: 'none',
+                    width: '100%',
                   })}
                 />
                 <Absolute
+                  alignV="center"
+                  direction="row"
                   right={20}
                   top={0}
-                  direction="row"
-                  alignV="center"
                   {...css({ height: '100%' })}
                 >
                   {isLoading ? (
@@ -251,18 +250,18 @@ export default class Typeahead extends React.PureComponent {
                     <View
                       onClick={clearSelection}
                       {...css({
-                        // Some hitbox
+                        // Some hitbox.
+                        cursor: 'pointer',
                         margin: -10,
                         padding: 10,
-                        cursor: 'pointer',
                         transform: 'translateY(-3px)',
                         zIndex: 1,
                       })}
                     >
                       <Icon
+                        color="black"
                         name="remove-light-filled"
                         size={10}
-                        color="black"
                       />
                     </View>
                   ) : null}
@@ -274,13 +273,14 @@ export default class Typeahead extends React.PureComponent {
                     onRef={this.setListRef}
                     {...getMenuProps()}
                     {...css({
-                      maxHeight: menuHeight,
-                      overflow: 'auto',
-                      width: '100%',
-                      position: 'absolute',
-                      zIndex: 9999,
                       boxShadow:
                         showOpen && '1px 1px 3px rgba(29, 29, 29, 0.125)',
+                      maxHeight: menuHeight,
+                      overflowX: 'hidden',
+                      overflowY: 'auto',
+                      position: 'absolute',
+                      width: '100%',
+                      zIndex: 9999,
                     })}
                     onScroll={this.handleListScroll}
                   >
@@ -294,8 +294,8 @@ export default class Typeahead extends React.PureComponent {
                     <Absolute bottom={15} right={15}>
                       {showScrollArrow && (
                         <Icon
-                          name="arrow-down"
                           color="black"
+                          name="arrow-down"
                           size="xs"
                           {...css({ animation: `${bounceAnim} 2500ms 2` })}
                         />
