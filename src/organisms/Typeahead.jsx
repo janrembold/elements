@@ -23,31 +23,90 @@ const bounceAnim = keyframes('bounce', {
 
 export default class Typeahead extends React.PureComponent {
   static propTypes = {
+    /** Forces the menu to be opened when clicking in the input. */
     autoOpen: PropTypes.bool,
+    /** Automatically clears the selection. Must not be used with controlled
+     * and uncontrolled components. */
+    clearOnSelect: PropTypes.bool,
+    /** The default value of the component, without making it controlled. */
+    defaultValue: PropTypes.string,
+    /** The loading state of the component, e.g when externally fetching some
+     * data. */
     isLoading: PropTypes.bool,
+    /** The items passed to component as an array of objects. */
     items: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.node.isRequired,
         value: PropTypes.any.isRequired,
       })
     ).isRequired,
+    /** The maximum number of items displayed in the menu. */
     limit: PropTypes.number,
+    /** The height of the menu in pixels. */
     menuHeight: PropTypes.number,
+    /** Callback triggered when clearing the selection. */
+    onClearSelection: PropTypes.func,
+    /** Callback triggered when the menu is closed. */
     onClose: PropTypes.func,
+    /** Callback triggered when the input value is modified. */
     onInputValueChange: PropTypes.func,
+    /** Callback triggered when the menu is opened. */
     onOpen: PropTypes.func,
+    /** Callback triggered when selecting an item. */
     onSelect: PropTypes.func,
+    /** The placeholder displayed in the input field. */
     placeholder: PropTypes.string,
+    /** The value of the component, makes this a controlled component. */
+    value: PropTypes.string,
   }
 
   static defaultProps = {
     limit: 20,
     menuHeight: 300,
+    onClearSelection: NOOP,
     onClose: NOOP,
     onOpen: NOOP,
   }
 
-  state = { showScrollArrow: false }
+  constructor(props) {
+    super(props)
+    if (
+      (props.hasOwnProperty('clearOnSelect') &&
+        props.hasOwnProperty('defaultValue')) ||
+      props.hasOwnProperty('value')
+    ) {
+      console.warn(
+        [
+          'The clearOnSelect property should not be used on a controlled',
+          'or uncontrolled component in order to avoid side-effects.',
+        ].join('')
+      )
+    }
+    this.state = {
+      forceShowClearIcon:
+        props.hasOwnProperty('defaultValue') || props.hasOwnProperty('value'),
+      showScrollArrow: false,
+    }
+  }
+
+  componentDidUpdate({ value: prevValue = '' }) {
+    // Force to coerce to an empty string when used as a controlled component.
+    const { value = '' } = this.props
+    if (prevValue !== value && prevValue === '' && value !== '') {
+      this.setState({ forceShowClearIcon: true })
+    }
+  }
+
+  clearSelection = downshiftClearSelection => () => {
+    // Trigger the Downshift method.
+    downshiftClearSelection()
+    // Trigger the prop one.
+    this.props.onClearSelection()
+    // Clear the icon when controlled or uncontrolled.
+    if (this.state.forceShowClearIcon) {
+      this.setState({ forceShowClearIcon: false })
+    }
+  }
 
   getHintText = (inputValue, itemText) => {
     if (itemText.toLowerCase().startsWith(inputValue.toLowerCase())) {
@@ -65,12 +124,22 @@ export default class Typeahead extends React.PureComponent {
 
   stateReducer = (state, changes) => {
     switch (changes.type) {
+      // Special case when the clearOnSelect property is used and we want to
+      // clear the input.
+      // case Downshift.stateChangeTypes.clickItem:
+      case Downshift.stateChangeTypes.keyDownEnter:
+        return {
+          ...changes,
+          ...(this.props.clearOnSelect && { inputValue: '' }),
+        }
+
       case Downshift.stateChangeTypes.changeInput:
         return {
           // When the input value is cleared then also clear the selection.
           ...changes,
           selectedItem: changes.inputValue === '' ? null : state.selectedItem,
         }
+
       default:
         return changes
     }
@@ -82,10 +151,11 @@ export default class Typeahead extends React.PureComponent {
     if (changes.hasOwnProperty('inputValue')) this.showArrowIfNecessary()
   }
 
-  createRenderListItem = ({ getItemProps, highlightedIndex }) => (
-    item,
-    index
-  ) => (
+  createRenderListItem = ({
+    clearSelection,
+    getItemProps,
+    highlightedIndex,
+  }) => (item, index) => (
     <ListItem
       {...getItemProps({
         index,
@@ -97,6 +167,11 @@ export default class Typeahead extends React.PureComponent {
               ? alpha(ColorPalette.background.bright, 0.5, true)
               : ColorPalette.background.white,
         },
+        ...(this.props.clearOnSelect && {
+          onClick: () =>
+            // Perform it on next tick.
+            setTimeout(() => this.clearSelection(clearSelection)()),
+        }),
       })}
     >
       <Text size="m">{item.label}</Text>
@@ -122,21 +197,26 @@ export default class Typeahead extends React.PureComponent {
 
   render() {
     const {
-      placeholder,
+      autoOpen,
+      clearOnSelect,
+      defaultValue,
+      isLoading,
       items,
+      limit,
       menuHeight,
       onInputValueChange,
       onSelect,
-      autoOpen,
-      isLoading,
-      limit,
+      placeholder,
+      value,
     } = this.props
 
-    const { showScrollArrow } = this.state
+    const { forceShowClearIcon, showScrollArrow } = this.state
 
     return (
       <Downshift
         defaultHighlightedIndex={0}
+        defaultInputValue={defaultValue}
+        inputValue={value}
         itemToString={item => (item ? item.label : '')}
         onChange={onSelect}
         onInputValueChange={onInputValueChange}
@@ -197,7 +277,7 @@ export default class Typeahead extends React.PureComponent {
                     name="hint"
                     tabIndex={-1}
                     value={
-                      inputValue && !selectedItem && filtered.length > 0
+                      inputValue && filtered.length > 0
                         ? this.getHintText(inputValue, filtered[0].label)
                         : ''
                     }
@@ -222,6 +302,9 @@ export default class Typeahead extends React.PureComponent {
                         showOpen
                       ) {
                         selectHighlightedItem()
+                        // Clear the selection if clearOnSelect is used as we
+                        // want to keep the input empty.
+                        if (clearOnSelect) clearSelection()
                         e.preventDefault()
                       }
                     },
@@ -246,25 +329,28 @@ export default class Typeahead extends React.PureComponent {
                 >
                   {isLoading ? (
                     <Spinner size={16} />
-                  ) : selectedItem ? (
-                    <View
-                      onClick={clearSelection}
-                      {...css({
-                        // Some hitbox.
-                        cursor: 'pointer',
-                        margin: -10,
-                        padding: 10,
-                        transform: 'translateY(-3px)',
-                        zIndex: 1,
-                      })}
-                    >
-                      <Icon
-                        color="black"
-                        name="remove-light-filled"
-                        size={10}
-                      />
-                    </View>
-                  ) : null}
+                  ) : (
+                    (selectedItem || forceShowClearIcon) &&
+                    !clearOnSelect && (
+                      <View
+                        onClick={this.clearSelection(clearSelection)}
+                        {...css({
+                          // Some hitbox.
+                          cursor: 'pointer',
+                          margin: -10,
+                          padding: 10,
+                          transform: 'translateY(-3px)',
+                          zIndex: 1,
+                        })}
+                      >
+                        <Icon
+                          color="black"
+                          name="remove-light-filled"
+                          size={10}
+                        />
+                      </View>
+                    )
+                  )}
                 </Absolute>
               </Relative>
               <Relative>
@@ -286,9 +372,9 @@ export default class Typeahead extends React.PureComponent {
                   >
                     {filtered.map(
                       this.createRenderListItem({
+                        clearSelection,
                         getItemProps,
                         highlightedIndex,
-                        selectedItem,
                       })
                     )}
                     <Absolute bottom={15} right={15}>

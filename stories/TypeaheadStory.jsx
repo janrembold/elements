@@ -1,22 +1,35 @@
 import React from 'react'
-import { View, ThemeProvider, Typeahead, ResourceProvider } from '../src/'
+import {
+  Button,
+  View,
+  ThemeProvider,
+  Typeahead,
+  ResourceProvider,
+} from '../src/'
 import { css } from 'glamor'
 import Text from '../src/atoms/Text'
 
 import Names from './data/names'
 import Movies from './data/movies'
 
+const DEFAULT_VALUE = 'Danielle Lilleman'
+const MARGIN = 15 // px
+
+/* eslint-disable standard/no-callback-literal */
 const debounce = (callback, time = 200, interval) => (...args) =>
   clearTimeout(interval, (interval = setTimeout(() => callback(...args), time)))
+/* eslint-enable standard/no-callback-literal */
 
 const delay = time => new Promise(resolve => setTimeout(resolve, time))
 
 class TypeaheadStory extends React.Component {
   state = {
+    clearOnSelectValue: '',
+    forcedValue: DEFAULT_VALUE,
     inputValue: '',
+    loading: false,
     movies: [],
     selectedMovie: null,
-    loading: false,
   }
 
   fetch = async () => {
@@ -45,17 +58,67 @@ class TypeaheadStory extends React.Component {
   }
 
   render() {
-    const { movies } = this.state
+    const { clearOnSelectValue, forcedValue, loading, movies } = this.state
     return (
       <ThemeProvider>
         <ResourceProvider>
           <View direction="column" {...css({ padding: '10px 20px' })}>
-            <Text strong style={{ margin: '15px 0' }}>
+            <Text strong style={{ margin: `${MARGIN}px 0` }}>
               Static:
             </Text>
-            <Typeahead placeholder="Select an agent." items={Names} autoOpen />
+            <Typeahead autoOpen items={Names} placeholder="Select an agent." />
 
-            <Text strong style={{ margin: '15px 0' }}>
+            <Text strong style={{ margin: `${MARGIN}px 0` }}>
+              Uncontrolled component:
+            </Text>
+            <Typeahead
+              autoOpen
+              defaultValue={forcedValue}
+              items={Names}
+              placeholder="Select an agent."
+            />
+
+            <Text strong style={{ margin: `${MARGIN}px 0` }}>
+              Controlled component:
+            </Text>
+            <Typeahead
+              autoOpen
+              items={Names}
+              onClearSelection={() => this.setState({ forcedValue: '' })}
+              onInputValueChange={forcedValue => this.setState({ forcedValue })}
+              onSelect={item =>
+                item && this.setState({ forcedValue: item.label })
+              }
+              placeholder="Select an agent."
+              value={forcedValue}
+            />
+            <Button
+              onClick={() => this.setState({ forcedValue: DEFAULT_VALUE })}
+              style={{ marginTop: MARGIN }}
+            >
+              Reset
+            </Button>
+
+            <Text strong style={{ margin: `${MARGIN}px 0` }}>
+              Clear on select:
+            </Text>
+            <Typeahead
+              autoOpen
+              clearOnSelect
+              items={Names}
+              onSelect={item =>
+                item &&
+                this.setState({
+                  clearOnSelectValue: item.label,
+                })
+              }
+              placeholder="Select an agent."
+            />
+            <Text
+              style={{ marginTop: MARGIN }}
+            >{`Last selection: ${clearOnSelectValue}`}</Text>
+
+            <Text strong style={{ margin: `${MARGIN}px 0` }}>
               Fetch from (fake) remote:
             </Text>
             <Typeahead
@@ -63,7 +126,7 @@ class TypeaheadStory extends React.Component {
               onSelect={item => this.setState({ selectedMovie: item })}
               onInputValueChange={this.onInputChange}
               items={movies}
-              isLoading={this.state.loading}
+              isLoading={loading}
             />
           </View>
         </ResourceProvider>
