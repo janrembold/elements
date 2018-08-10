@@ -15,6 +15,13 @@ import Movies from './data/movies'
 const DEFAULT_VALUE = 'Danielle Lilleman'
 const MARGIN = 15 // px
 
+const STYLES = {
+  title: (first = false) =>
+    css({
+      margin: `${MARGIN * (first ? 1 : 2)}px 0 ${MARGIN}px 0`,
+    }),
+}
+
 /* eslint-disable standard/no-callback-literal */
 const debounce = (callback, time = 200, interval) => (...args) =>
   clearTimeout(interval, (interval = setTimeout(() => callback(...args), time)))
@@ -63,12 +70,12 @@ class TypeaheadStory extends React.Component {
       <ThemeProvider>
         <ResourceProvider>
           <View direction="column" {...css({ padding: '10px 20px' })}>
-            <Text strong style={{ margin: `${MARGIN}px 0` }}>
+            <Text strong {...STYLES.title(true)}>
               Static:
             </Text>
             <Typeahead autoOpen items={Names} placeholder="Select an agent." />
 
-            <Text strong style={{ margin: `${MARGIN}px 0` }}>
+            <Text strong {...STYLES.title()}>
               Uncontrolled component:
             </Text>
             <Typeahead
@@ -78,7 +85,7 @@ class TypeaheadStory extends React.Component {
               placeholder="Select an agent."
             />
 
-            <Text strong style={{ margin: `${MARGIN}px 0` }}>
+            <Text strong {...STYLES.title()}>
               Controlled component:
             </Text>
             <Typeahead
@@ -96,10 +103,10 @@ class TypeaheadStory extends React.Component {
               onClick={() => this.setState({ forcedValue: DEFAULT_VALUE })}
               style={{ marginTop: MARGIN }}
             >
-              Reset
+              {`Set it to ${DEFAULT_VALUE}`}
             </Button>
 
-            <Text strong style={{ margin: `${MARGIN}px 0` }}>
+            <Text strong {...STYLES.title()}>
               Clear on select:
             </Text>
             <Typeahead
@@ -114,11 +121,11 @@ class TypeaheadStory extends React.Component {
               }
               placeholder="Select an agent."
             />
-            <Text
-              style={{ marginTop: MARGIN }}
-            >{`Last selection: ${clearOnSelectValue}`}</Text>
+            <Text style={{ marginTop: MARGIN }}>
+              Last selection: <em>{clearOnSelectValue}</em>
+            </Text>
 
-            <Text strong style={{ margin: `${MARGIN}px 0` }}>
+            <Text strong {...STYLES.title()}>
               Fetch from (fake) remote:
             </Text>
             <Typeahead
