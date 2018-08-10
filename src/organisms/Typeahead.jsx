@@ -71,9 +71,8 @@ export default class Typeahead extends React.PureComponent {
   constructor(props) {
     super(props)
     if (
-      (props.hasOwnProperty('clearOnSelect') &&
-        props.hasOwnProperty('defaultValue')) ||
-      props.hasOwnProperty('value')
+      props.hasOwnProperty('clearOnSelect') &&
+      (props.hasOwnProperty('defaultValue') || props.hasOwnProperty('value'))
     ) {
       console.warn(
         [
