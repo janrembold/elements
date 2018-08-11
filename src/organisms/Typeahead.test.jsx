@@ -174,8 +174,8 @@ describe('Test the typeahead component', () => {
     const wrapper = mount(
       <Typeahead
         autoOpen
-        onClearSelection={handleOnClearSelection}
         items={ITEMS}
+        onClearSelection={handleOnClearSelection}
         placeholder={PLACEHOLDER}
       />
     )
@@ -190,21 +190,94 @@ describe('Test the typeahead component', () => {
     expect(wrapper.find(INPUT(7)).prop('value')).toBe('')
     expect(handleOnClearSelection.mock.calls.length).toBe(1)
   })
+  it('should handle the callback props - onOpen', () => {
+    const handleOnOpen = jest.fn()
+    const wrapper = mount(
+      <Typeahead
+        autoOpen
+        items={ITEMS}
+        onOpen={handleOnOpen}
+        placeholder={PLACEHOLDER}
+      />
+    )
+    expect(handleOnOpen.mock.calls.length).toBe(0)
+    // Open the menu.
+    wrapper.find(INPUT(8)).simulate('click')
+    expect(handleOnOpen.mock.calls.length).toBe(1)
+  })
   it('should handle the callback props - onClose', () => {
     const handleOnClose = jest.fn()
     const wrapper = mount(
       <Typeahead
         autoOpen
-        onClose={handleOnClose}
         items={ITEMS}
+        onClose={handleOnClose}
         placeholder={PLACEHOLDER}
       />
     )
     expect(handleOnClose.mock.calls.length).toBe(0)
     // Open the menu.
-    wrapper.find(INPUT(8)).simulate('click')
+    wrapper.find(INPUT(9)).simulate('click')
     // Select the first item.
-    wrapper.find(INPUT(8)).simulate('keyDown', { key: 'Enter' })
+    wrapper.find(INPUT(9)).simulate('keyDown', { key: 'Enter' })
     expect(handleOnClose.mock.calls.length).toBe(1)
+  })
+  it('should handle the callback props - onInputValueChange', () => {
+    const handleOnInputValueChange = jest.fn()
+    const wrapper = mount(
+      <Typeahead
+        autoOpen
+        items={ITEMS}
+        onInputValueChange={handleOnInputValueChange}
+        placeholder={PLACEHOLDER}
+      />
+    )
+    expect(handleOnInputValueChange.mock.calls.length).toBe(0)
+    // Enter something.
+    wrapper.find(INPUT(10)).simulate('change', { target: { value: NICK } })
+    expect(handleOnInputValueChange.mock.calls.length).toBe(1)
+  })
+  it('should handle the callback props - onSelect', () => {
+    const handleOnSelect = jest.fn()
+    const wrapper = mount(
+      <Typeahead
+        autoOpen
+        items={ITEMS}
+        onSelect={handleOnSelect}
+        placeholder={PLACEHOLDER}
+      />
+    )
+    expect(handleOnSelect.mock.calls.length).toBe(0)
+    // Open the menu.
+    wrapper.find(INPUT(11)).simulate('click')
+    // Select the first item.
+    wrapper.find(INPUT(11)).simulate('keyDown', { key: 'Enter' })
+    expect(handleOnSelect.mock.calls.length).toBe(1)
+  })
+  it('should handle warn the user if the clearOnSelect property is used on a controlled or uncontrolled component', () => {
+    const hasWarned = jest
+      .spyOn(console, 'warn')
+      .mockImplementationOnce(() => true)
+    expect(hasWarned.mock.calls.length).toBe(0)
+    shallow(
+      <Typeahead
+        autoOpen
+        items={ITEMS}
+        clearOnSelect
+        defaultValue={NICK}
+        placeholder={PLACEHOLDER}
+      />
+    )
+    expect(hasWarned.mock.calls.length).toBe(1)
+    shallow(
+        <Typeahead
+          autoOpen
+          clearOnSelect
+          items={ITEMS}
+          placeholder={PLACEHOLDER}
+          value={NICK}
+        />
+      )
+      expect(hasWarned.mock.calls.length).toBe(2)
   })
 })
