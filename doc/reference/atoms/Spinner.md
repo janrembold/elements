@@ -11,4 +11,4 @@ The spinner is usefull to indicate a loading state
 ## Usage
 | Name        | Type           | Description  |
 | ----------- |:--------------:| ------------:|
-*No properties to pass*
+|size|number|<br>Default: 30
