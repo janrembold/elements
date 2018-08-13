@@ -3206,9 +3206,9 @@ eslint-config-postcss@3.0.5:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/eslint-config-postcss/-/eslint-config-postcss-3.0.5.tgz#b2865f68cd66f2189ee915ba9e213f4d92147beb"
 
-eslint-config-prettier@2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-2.9.0.tgz#5ecd65174d486c22dff389fe036febf502d468a3"
+eslint-config-prettier@2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-2.10.0.tgz#ec07bc1d01f87d09f61d3840d112dc8a9791e30b"
   dependencies:
     get-stdin "^5.0.1"
 
