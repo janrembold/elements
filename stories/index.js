@@ -15,6 +15,7 @@ import FormStory from './FormStory'
 import createViewportDecorator from './createViewportDecorator'
 import RadioButtonStory from './RadioButtonStory'
 import CollapsibleStory from './CollapsibleStory'
+import TypeaheadStory from './TypeaheadStory'
 import Icon, { Icons } from '../src/atoms/Icon'
 import ResourceProvider from '../src/behaviour/ResourceProvider'
 import List from '../src/molecules/List/List'
@@ -47,6 +48,7 @@ storiesOf('Forms', module)
       </ThemeProvider>
     )
   })
+  .add('Typeahead', () => <TypeaheadStory />)
 
 storiesOf('FloatingButton', module)
   .addDecorator(createViewportDecorator())
