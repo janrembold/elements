@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test the editable text component should be a simple static one 1`] = `
+exports[`Test the editable text component should be editable 1`] = `
 .css-0,
 [data-css-0] {
   margin-left: 4px;
@@ -96,4 +96,216 @@ exports[`Test the editable text component should be a simple static one 1`] = `
     />
   </div>
 </div>
+`;
+
+exports[`Test the editable text component should be using a custom decoration color 1`] = `
+Snapshot Diff:
+- First value
++ Second value
+
+@@ -3,22 +3,10 @@
+    margin-left: 4px;
+  }
+  
+  .css-1,
+  [data-css-1] {
+-   border-bottom: 1px dashed #95a5a5;
+- }
+- 
+- .css-1:focus,
+- [data-css-1]:focus,
+- .css-1[data-simulate-focus],
+- [data-css-1][data-simulate-focus] {
+-   border-bottom: 1px solid #95a5a5;
+- }
+- 
+- .css-5,
+- [data-css-5] {
+    box-sizing: border-box;
+    align-content: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+@@ -37,45 +25,57 @@
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -webkit-flex: 0 0 auto;
+  }
+  
+- .css-6,
+- [data-css-6] {
++ .css-2,
++ [data-css-2] {
+    display: block;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #333333;
+  }
+  
+- .css-7,
+- [data-css-7] {
++ .css-3,
++ [data-css-3] {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+  }
+  
++ .css-4,
++ [data-css-4] {
++   border-bottom: 1px dashed #e84c3d;
++ }
++ 
++ .css-4:focus,
++ [data-css-4]:focus,
++ .css-4[data-simulate-focus],
++ [data-css-4][data-simulate-focus] {
++   border-bottom: 1px solid #e84c3d;
++ }
++ 
+  <div
+-   data-css-5=""
++   data-css-1=""
+  >
+    <div
+      contenteditable="true"
+-     data-css-1=""
+-     data-css-6=""
+-     data-css-7=""
++     data-css-2=""
++     data-css-4=""
++     data-css-3=""
+      spellcheck="false"
+    >
+      Edit me!
+    </div>
+    <div
+-     data-css-7=""
++     data-css-3=""
+    >
+      <div
+        data-css-0=""
+-       data-css-7=""
++       data-css-3=""
+        size="12"
+        style="width: 12px; height: 12px; stroke: #000000;"
+      />
+    </div>
+  </div>
+`;
+
+exports[`Test the editable text component should be using a custom icon 1`] = `
+.css-0,
+[data-css-0] {
+  margin-left: 4px;
+}
+
+.css-1,
+[data-css-1] {
+  border-bottom: 1px dashed #95a5a5;
+}
+
+.css-1:focus,
+[data-css-1]:focus,
+.css-1[data-simulate-focus],
+[data-css-1][data-simulate-focus] {
+  border-bottom: 1px solid #95a5a5;
+}
+
+<View
+  alignH="start"
+  alignV="center"
+  direction="row"
+  fill={false}
+  flex="none"
+  htmlElement="div"
+  onRef={[Function]}
+>
+  <Text
+    block={true}
+    color="text"
+    contentEditable={true}
+    data-css-1=""
+    onKeyPress={[Function]}
+    size="l"
+    spellCheck={false}
+    suppressContentEditableWarning={true}
+  >
+    Edit me!
+  </Text>
+  <View
+    alignH="start"
+    alignV="stretch"
+    fill={false}
+    flex="none"
+    htmlElement="div"
+    onRef={[Function]}
+  >
+    <Icon
+      color="#000000"
+      data-css-0=""
+      name="view"
+      size={12}
+    />
+  </View>
+</View>
+`;
+
+exports[`Test the editable text component should be using a custom icon color 1`] = `
+.css-0,
+[data-css-0] {
+  margin-left: 4px;
+}
+
+.css-1,
+[data-css-1] {
+  border-bottom: 1px dashed #95a5a5;
+}
+
+.css-1:focus,
+[data-css-1]:focus,
+.css-1[data-simulate-focus],
+[data-css-1][data-simulate-focus] {
+  border-bottom: 1px solid #95a5a5;
+}
+
+<View
+  alignH="start"
+  alignV="center"
+  direction="row"
+  fill={false}
+  flex="none"
+  htmlElement="div"
+  onRef={[Function]}
+>
+  <Text
+    block={true}
+    color="text"
+    contentEditable={true}
+    data-css-1=""
+    onKeyPress={[Function]}
+    size="l"
+    spellCheck={false}
+    suppressContentEditableWarning={true}
+  >
+    Edit me!
+  </Text>
+  <View
+    alignH="start"
+    alignV="stretch"
+    fill={false}
+    flex="none"
+    htmlElement="div"
+    onRef={[Function]}
+  >
+    <Icon
+      color="#e84c3d"
+      data-css-0=""
+      name="view"
+      size={12}
+    />
+  </View>
+</View>
 `;
