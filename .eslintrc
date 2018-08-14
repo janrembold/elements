@@ -10,10 +10,12 @@
     "describe": true,
     "expect": true,
     "fetch": false,
+    "fromDOMNode": true,
     "graphql": false,
     "it": true,
     "jest": true,
     "mount": true,
+    "render": true,
     "shallow": true
   },
   "parser": "babel-eslint",
