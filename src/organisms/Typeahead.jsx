@@ -13,6 +13,7 @@ import View from '../atoms/View'
 import escapeRegex from '../utils/escapeRegex'
 import Spinner from '../atoms/Spinner'
 
+const DEV = 'development'
 const NOOP = _ => _
 
 const bounceAnim = keyframes('bounce', {
@@ -71,6 +72,9 @@ export default class Typeahead extends React.PureComponent {
   constructor(props) {
     super(props)
     if (
+      process &&
+      process.env &&
+      process.env.NODE_ENV === DEV &&
       props.hasOwnProperty('clearOnSelect') &&
       (props.hasOwnProperty('defaultValue') || props.hasOwnProperty('value'))
     ) {
