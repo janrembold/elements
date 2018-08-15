@@ -96,6 +96,7 @@ class Checkbox extends React.Component {
                     type="checkbox"
                     checked={realChecked}
                     id={name}
+                    name={name}
                     value={realChecked}
                     style={{
                       opacity: 0,
