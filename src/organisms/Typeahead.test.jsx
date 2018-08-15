@@ -11,6 +11,8 @@ const CLEAR_SELECTION = 'div[onClick]'
 
 const INPUT = instance => `input#downshift-${instance}-input`
 
+const INPUT_HINT = 'input[name="hint"]'
+
 const ITEMS = [
   { value: 1, label: DEFAULT_VALUE },
   { value: 2, label: 'Abra' },
@@ -279,5 +281,15 @@ describe('Test the typeahead component', () => {
         />
       )
       expect(hasWarned.mock.calls.length).toBe(2)
+  })
+  it('should use autocomplete="off" for both inputs', () => {
+    const wrapper = mount(
+      <Typeahead
+        items={ITEMS}
+        placeholder={PLACEHOLDER}
+      />
+    )
+    expect(wrapper.find(INPUT(12)).prop('autoComplete')).toBe('off')
+    expect(wrapper.find(INPUT_HINT).prop('autoComplete')).toBe('off')
   })
 })
