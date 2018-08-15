@@ -126,6 +126,7 @@ exports[`Test the checkbox component should tick it 1`] = `
         <input
           checked={false}
           id="a"
+          name="a"
           onChange={[Function]}
           style={
             Object {
@@ -314,6 +315,7 @@ exports[`Test the checkbox component should tick it 2`] = `
         <input
           checked={true}
           id="a"
+          name="a"
           onChange={[Function]}
           style={
             Object {
@@ -473,6 +475,7 @@ exports[`Test the checkbox component should work with children 1`] = `
         <input
           checked={false}
           id="a"
+          name="a"
           onChange={[Function]}
           style={
             Object {
