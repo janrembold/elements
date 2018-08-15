@@ -277,6 +277,7 @@ export default class Typeahead extends React.PureComponent {
               >
                 <Absolute top={0} left={0} {...css({ width: '100%' })}>
                   <Input
+                    autoComplete="off"
                     name="hint"
                     tabIndex={-1}
                     value={
@@ -360,7 +361,9 @@ export default class Typeahead extends React.PureComponent {
                 {showOpen && (
                   <List
                     onRef={this.setListRef}
-                    {...getMenuProps()}
+                    {...getMenuProps({
+                      refKey: 'onRef',
+                    })}
                     {...css({
                       boxShadow:
                         showOpen && '1px 1px 3px rgba(29, 29, 29, 0.125)',
