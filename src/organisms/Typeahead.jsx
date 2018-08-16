@@ -86,16 +86,7 @@ export default class Typeahead extends React.PureComponent {
       )
     }
     this.state = {
-      forceShowClearIcon: props.defaultValue || props.value,
       showScrollArrow: false,
-    }
-  }
-
-  componentDidUpdate({ value: prevValue = '' }) {
-    // Force to coerce to an empty string when used as a controlled component.
-    const { value = '' } = this.props
-    if (prevValue !== value && prevValue === '' && value !== '') {
-      this.setState({ forceShowClearIcon: true })
     }
   }
 
@@ -106,10 +97,6 @@ export default class Typeahead extends React.PureComponent {
     downshiftClearSelection()
     // Trigger the prop one.
     this.props.onClearSelection()
-    // Clear the icon when controlled or uncontrolled.
-    if (this.state.forceShowClearIcon) {
-      this.setState({ forceShowClearIcon: false })
-    }
   }
 
   getHintText = (inputValue, itemText) => {
@@ -228,18 +215,24 @@ export default class Typeahead extends React.PureComponent {
       placeholder,
       value,
     } = this.props
-
-    const { forceShowClearIcon, showScrollArrow } = this.state
+    const { showScrollArrow } = this.state
+    const defaultSelectedItem = items.filter(
+      ({ label }) => label === defaultValue
+    )[0]
+    const selectedItem =
+      value !== '' && items.filter(({ label }) => label === value)[0]
 
     return (
       <Downshift
         defaultHighlightedIndex={0}
         defaultInputValue={defaultValue}
+        defaultSelectedItem={defaultSelectedItem}
         inputValue={value}
         itemToString={item => (item ? item.label : '')}
         onChange={onSelect}
         onInputValueChange={onInputValueChange}
         onStateChange={this.handleStateChange}
+        selectedItem={selectedItem}
         stateReducer={this.stateReducer}
       >
         {({
@@ -351,7 +344,7 @@ export default class Typeahead extends React.PureComponent {
                   {isLoading ? (
                     <Spinner size={16} />
                   ) : (
-                    (selectedItem || forceShowClearIcon) &&
+                    selectedItem &&
                     !clearOnSelect && (
                       <View
                         onClick={this.clearSelection(clearSelection)}

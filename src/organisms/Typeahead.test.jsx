@@ -342,4 +342,19 @@ describe('Test the typeahead component', () => {
     expect(wrapper.find(INPUT(16)).prop('value')).toBe('')
     expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(0)
   })
+  it('should not display a clear icon as a controlled component when value cleared', () => {
+    const wrapper = mount(
+      <Typeahead
+        autoOpen
+        items={ITEMS}
+        placeholder={PLACEHOLDER}
+        value={DEFAULT_VALUE}
+      />
+    )
+    expect(wrapper.find(INPUT(17)).prop('value')).toBe(DEFAULT_VALUE)
+    expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(1)
+    // Simulate clearing the input with the keyboard.
+    wrapper.setProps({ value: '' })
+    expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(0)
+  })
 })
