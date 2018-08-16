@@ -101,6 +101,8 @@ export default class Typeahead extends React.PureComponent {
   }
 
   clearSelection = downshiftClearSelection => () => {
+    // Focus back on the input.
+    this.inputRef && this.inputRef.focus()
     // Trigger the Downshift method.
     downshiftClearSelection()
     // Trigger the prop one.
@@ -126,6 +128,8 @@ export default class Typeahead extends React.PureComponent {
   }
 
   stateReducer = (state, changes) => {
+    const { clearOnSelect } = this.props
+
     switch (changes.type) {
       // Special case when the clearOnSelect property is used and we want to
       // clear the input.
@@ -133,7 +137,7 @@ export default class Typeahead extends React.PureComponent {
       case Downshift.stateChangeTypes.keyDownEnter:
         return {
           ...changes,
-          ...(this.props.clearOnSelect && { inputValue: '' }),
+          ...(clearOnSelect && { inputValue: '' }),
         }
 
       case Downshift.stateChangeTypes.changeInput:
@@ -144,7 +148,18 @@ export default class Typeahead extends React.PureComponent {
         }
 
       default:
-        return changes
+        return {
+          // When the clear selection button is used then reopen the menu
+          // in order to be consistent with what happens when clearing the
+          // selection with the keyboard.
+          ...changes,
+          // This should not happen when clearOnSelect is used and if the menu
+          // is already opened.
+          ...(!clearOnSelect &&
+            !state.isOpen && {
+              isOpen: !changes.inputValue ? true : state.isOpen,
+            }),
+        }
     }
   }
 
@@ -186,6 +201,8 @@ export default class Typeahead extends React.PureComponent {
     this.setState({
       showScrollArrow: this.listRef.scrollHeight > this.props.menuHeight,
     })
+
+  setInputRef = el => (this.inputRef = el)
 
   setListRef = el => {
     this.listRef = el
@@ -297,6 +314,7 @@ export default class Typeahead extends React.PureComponent {
                 <Input
                   name="typed"
                   onClick={autoOpen && !selectedItem ? toggleMenu : undefined}
+                  onInputRef={this.setInputRef}
                   placeholder={placeholder}
                   {...getInputProps({
                     onKeyDown: e => {
@@ -361,9 +379,8 @@ export default class Typeahead extends React.PureComponent {
                 {showOpen && (
                   <List
                     onRef={this.setListRef}
-                    {...getMenuProps({
-                      refKey: 'onRef',
-                    })}
+                    // Bypass the refKey check which is messy.
+                    {...getMenuProps({}, { suppressRefError: true })}
                     {...css({
                       boxShadow:
                         showOpen && '1px 1px 3px rgba(29, 29, 29, 0.125)',

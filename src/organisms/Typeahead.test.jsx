@@ -91,6 +91,8 @@ describe('Test the typeahead component', () => {
     expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(1)
     wrapper.find(CLEAR_SELECTION).simulate('click')
     expect(wrapper.find(INPUT(0)).prop('value')).toBe('')
+    // The menu should be opened back for selection.
+    expect(wrapper.find(DOWNSHIFT_ITEM(0, 0))).toHaveLength(1)
   })
   it('should be a simple static one which auto open on click', () => {
     const wrapper = mount(
