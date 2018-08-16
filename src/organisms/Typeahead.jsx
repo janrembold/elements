@@ -94,8 +94,16 @@ export default class Typeahead extends React.PureComponent {
   componentDidUpdate({ value: prevValue = '' }) {
     // Force to coerce to an empty string when used as a controlled component.
     const { value = '' } = this.props
-    if (prevValue !== value && prevValue === '' && value !== '') {
-      this.setState({ forceShowClearIcon: true })
+
+    if (prevValue !== value) {
+      // Show the clear icon if controlled when we have a value.
+      if (prevValue === '' && value !== '') {
+        this.setState({ forceShowClearIcon: true })
+      }
+      // Drop the clear icon if controlled when the value is emptied.
+      if (prevValue !== '' && value === '') {
+        this.setState({ forceShowClearIcon: false })
+      }
     }
   }
 
