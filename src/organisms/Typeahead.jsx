@@ -86,8 +86,7 @@ export default class Typeahead extends React.PureComponent {
       )
     }
     this.state = {
-      forceShowClearIcon:
-        props.hasOwnProperty('defaultValue') || props.hasOwnProperty('value'),
+      forceShowClearIcon: props.defaultValue || props.value,
       showScrollArrow: false,
     }
   }
