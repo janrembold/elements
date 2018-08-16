@@ -147,7 +147,7 @@ export default class Typeahead extends React.PureComponent {
           selectedItem: changes.inputValue === '' ? null : state.selectedItem,
         }
 
-      case Downshift.stateChangeTypes.unknow:
+      default:
         return {
           // When the clear selection button is used then reopen the menu
           // in order to be consistent with what happens when clearing the
@@ -157,12 +157,9 @@ export default class Typeahead extends React.PureComponent {
           // is already opened.
           ...(!clearOnSelect &&
             !state.isOpen && {
-              isOpen: changes.inputValue === '' ? true : state.isOpen,
+              isOpen: !changes.inputValue ? true : state.isOpen,
             }),
         }
-
-      default:
-        return changes
     }
   }
 
