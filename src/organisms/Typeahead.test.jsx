@@ -355,7 +355,6 @@ describe('Test the typeahead component', () => {
     expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(1)
     // Simulate clearing the input with the keyboard.
     wrapper.setProps({ value: '' })
-    wrapper.update()
     expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(0)
   })
 })
