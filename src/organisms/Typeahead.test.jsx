@@ -294,4 +294,52 @@ describe('Test the typeahead component', () => {
     expect(wrapper.find(INPUT(12)).prop('autoComplete')).toBe('off')
     expect(wrapper.find(INPUT_HINT).prop('autoComplete')).toBe('off')
   })
+  it('should not display a clear icon as a controlled component when value is an emtpy string', () => {
+    const wrapper = mount(
+      <Typeahead
+        autoOpen
+        items={ITEMS}
+        placeholder={PLACEHOLDER}
+        value={''}
+      />
+    )
+    expect(wrapper.find(INPUT(13)).prop('value')).toBe('')
+    expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(0)
+  })
+  it('should not display a clear icon as a controlled component when value is undefined', () => {
+    const wrapper = mount(
+      <Typeahead
+        autoOpen
+        items={ITEMS}
+        placeholder={PLACEHOLDER}
+        value={undefined}
+      />
+    )
+    expect(wrapper.find(INPUT(14)).prop('value')).toBe('')
+    expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(0)
+  })
+  it('should not display a clear icon as a uncontrolled component when defaultValue is an emtpy string', () => {
+    const wrapper = mount(
+      <Typeahead
+        autoOpen
+        defaultValue={''}
+        items={ITEMS}
+        placeholder={PLACEHOLDER}
+      />
+    )
+    expect(wrapper.find(INPUT(15)).prop('value')).toBe('')
+    expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(0)
+  })
+  it('should not display a clear icon as a uncontrolled component when defaultValue is undefined', () => {
+    const wrapper = mount(
+      <Typeahead
+        autoOpen
+        defaultValue={undefined}
+        items={ITEMS}
+        placeholder={PLACEHOLDER}
+      />
+    )
+    expect(wrapper.find(INPUT(16)).prop('value')).toBe('')
+    expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(0)
+  })
 })
