@@ -88,7 +88,7 @@
     "prettier": "1.14.2",
     "react": "16.5.2",
     "react-docgen": "2.21.0",
-    "react-dom": "16.5.1",
+    "react-dom": "16.5.2",
     "react-generate-props": "0.3.0",
     "react-intl": "2.6.0",
     "react-test-renderer": "16.5.1",
