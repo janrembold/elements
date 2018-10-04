@@ -63,8 +63,4 @@ class SquareIconButton extends React.Component {
   }
 }
 
-const mapThemeToProps = theme => ({
-  textColor: theme.text,
-})
-
-export default withTheme(mapThemeToProps)(SquareIconButton)
+export default SquareIconButton

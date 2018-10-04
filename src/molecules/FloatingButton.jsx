@@ -4,6 +4,7 @@ import { withTheme } from '../behaviour/ThemeProvider'
 import PropTypes from 'prop-types'
 import { css } from 'glamor'
 import View from '../atoms/View'
+import ListSpinner from './List/ListSpinner'
 
 const buttonStyle = css({
   width: '100%',
@@ -13,17 +14,36 @@ const buttonStyle = css({
   height: '100%',
   background: 'transparent',
   border: 0,
+  ':active': {
+    background: 'rgba(0, 0, 0, 0.15)',
+  },
+  ':disabled': {
+    background: 'rgba(0, 0, 0, 0.15)',
+  },
 })
 
 class FloatingButton extends React.Component {
   static propTypes = {
     color: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
+    /* True to use the button that something is in progress */
+    inProgress: PropTypes.bool,
     disabledColor: PropTypes.string.isRequired,
   }
 
+  static defaultProps = {
+    inProgress: false,
+  }
+
   render() {
-    const { color, disabled, disabledColor, ...props } = this.props
+    const {
+      color,
+      disabled,
+      disabledColor,
+      inProgress,
+      children,
+      ...props
+    } = this.props
     return (
       <View>
         <View style={{ height: 50 }} />
@@ -42,7 +62,9 @@ class FloatingButton extends React.Component {
             width: '100%',
           })}
         >
-          <button {...buttonStyle} {...props} />
+          <button {...buttonStyle} {...props}>
+            {inProgress ? <ListSpinner size="s" radius="30" /> : children}
+          </button>
         </Absolute>
       </View>
     )
