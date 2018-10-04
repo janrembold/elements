@@ -28,6 +28,7 @@ class FloatingButton extends React.Component {
     disabled: PropTypes.bool,
     /* True to use the button that something is in progress */
     inProgress: PropTypes.bool,
+    children: PropTypes.node,
     disabledColor: PropTypes.string.isRequired,
   }
 

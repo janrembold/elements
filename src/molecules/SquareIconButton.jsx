@@ -4,7 +4,6 @@ import Icon from '../atoms/Icon'
 import { css } from 'glamor'
 import View from '../atoms/View'
 import { color, colorCode } from '../propTypes/color'
-import { withTheme } from '../behaviour/ThemeProvider'
 import { createMQ } from '../behaviour/Responsive'
 
 const box = (background, onClick) =>
