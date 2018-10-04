@@ -18,13 +18,27 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-justify-content: center;
 }
 
-.css-1,
-[data-css-1] {
+.css-0:active,
+[data-css-0]:active,
+.css-0[data-simulate-active],
+[data-css-0][data-simulate-active] {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.css-0:disabled,
+[data-css-0]:disabled,
+.css-0[data-simulate-disabled],
+[data-css-0][data-simulate-disabled] {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.css-7,
+[data-css-7] {
   position: relative;
 }
 
-.css-2,
-[data-css-2] {
+.css-8,
+[data-css-8] {
   background-color: #3598db;
   box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -33,21 +47,21 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   width: 100%;
 }
 
-.css-3,
-[data-css-3] {
+.css-9,
+[data-css-9] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-4,
-[data-css-4] {
+.css-10,
+[data-css-10] {
   position: absolute;
   bottom: 0;
 }
 
-.css-5,
-[data-css-5] {
+.css-11,
+[data-css-11] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -70,8 +84,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 1;
 }
 
-.css-6,
-[data-css-6] {
+.css-12,
+[data-css-12] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -81,15 +95,15 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   color: white;
 }
 
-.css-7,
-[data-css-7] {
+.css-13,
+[data-css-13] {
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-8,
-[data-css-8] {
+.css-14,
+[data-css-14] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -112,8 +126,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 0 0 auto;
 }
 
-.css-9,
-[data-css-9] {
+.css-15,
+[data-css-15] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -130,26 +144,26 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-9:-webkit-autofill ~ .label,
-[data-css-9]:-webkit-autofill ~ .label {
+.css-15:-webkit-autofill ~ .label,
+[data-css-15]:-webkit-autofill ~ .label {
   opacity: 1 !important;
   top: 8px !important;
 }
 
-.css-9:-webkit-autofill ~ .checkmark,
-[data-css-9]:-webkit-autofill ~ .checkmark {
+.css-15:-webkit-autofill ~ .checkmark,
+[data-css-15]:-webkit-autofill ~ .checkmark {
   opacity: 1 !important;
 }
 
-.css-9:-webkit-autofill,
-[data-css-9]:-webkit-autofill,
-.css-9[data-simulate-webkitautofill],
-[data-css-9][data-simulate-webkitautofill] {
+.css-15:-webkit-autofill,
+[data-css-15]:-webkit-autofill,
+.css-15[data-simulate-webkitautofill],
+[data-css-15][data-simulate-webkitautofill] {
   padding-top: 10px !important;
 }
 
-.css-13,
-[data-css-13] {
+.css-19,
+[data-css-19] {
   position: absolute;
   top: 16px;
   right: 15px;
@@ -164,10 +178,10 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   onSubmit={[Function]}
 >
   <div
-    data-css-3=""
+    data-css-9=""
   >
     <div
-      data-css-3=""
+      data-css-9=""
       style={
         Object {
           "height": 50,
@@ -175,9 +189,9 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
       }
     />
     <div
-      data-css-2=""
-      data-css-5=""
-      data-css-4=""
+      data-css-8=""
+      data-css-11=""
+      data-css-10=""
     >
       <button
         data-css-0=""
@@ -185,8 +199,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
         type="submit"
       >
         <div
-          data-css-3=""
-          data-css-6=""
+          data-css-9=""
+          data-css-12=""
         >
           Submit
         </div>
@@ -194,12 +208,12 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
     </div>
   </div>
   <div
-    data-css-7=""
-    data-css-8=""
+    data-css-13=""
+    data-css-14=""
   >
     <div
-      data-css-1=""
-      data-css-3=""
+      data-css-7=""
+      data-css-9=""
       style={
         Object {
           "width": "100%",
@@ -208,7 +222,7 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
     >
       <input
         aria-required={true}
-        data-css-9=""
+        data-css-15=""
         name="email"
         onChange={[Function]}
         onInvalid={[Function]}
@@ -218,8 +232,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
       />
       <div
         className="checkmark"
-        data-css-13=""
-        data-css-3=""
+        data-css-19=""
+        data-css-9=""
       >
         <div
           dangerouslySetInnerHTML={
@@ -227,7 +241,7 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
               "__html": undefined,
             }
           }
-          data-css-3=""
+          data-css-9=""
           size="xs"
           style={
             Object {
@@ -262,8 +276,22 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-justify-content: center;
 }
 
-.css-1,
-[data-css-1] {
+.css-0:active,
+[data-css-0]:active,
+.css-0[data-simulate-active],
+[data-css-0][data-simulate-active] {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.css-0:disabled,
+[data-css-0]:disabled,
+.css-0[data-simulate-disabled],
+[data-css-0][data-simulate-disabled] {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.css-7,
+[data-css-7] {
   background-color: #c1392b;
   position: absolute;
   bottom: 100%;
@@ -275,8 +303,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   box-shadow: 0 1px 2px 1px rgba(0,0,0,.25);
 }
 
-.css-2,
-[data-css-2] {
+.css-8,
+[data-css-8] {
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -289,13 +317,13 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   border-top: 10px solid #c1392b;
 }
 
-.css-3,
-[data-css-3] {
+.css-9,
+[data-css-9] {
   position: relative;
 }
 
-.css-4,
-[data-css-4] {
+.css-10,
+[data-css-10] {
   background-color: #3598db;
   box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -304,21 +332,21 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   width: 100%;
 }
 
-.css-5,
-[data-css-5] {
+.css-11,
+[data-css-11] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-6,
-[data-css-6] {
+.css-12,
+[data-css-12] {
   position: absolute;
   bottom: 0;
 }
 
-.css-7,
-[data-css-7] {
+.css-13,
+[data-css-13] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -341,8 +369,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 1;
 }
 
-.css-8,
-[data-css-8] {
+.css-14,
+[data-css-14] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -352,15 +380,15 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   color: white;
 }
 
-.css-9,
-[data-css-9] {
+.css-15,
+[data-css-15] {
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-10,
-[data-css-10] {
+.css-16,
+[data-css-16] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -383,8 +411,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -webkit-flex: 0 0 auto;
 }
 
-.css-11,
-[data-css-11] {
+.css-17,
+[data-css-17] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -401,26 +429,26 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-11:-webkit-autofill ~ .label,
-[data-css-11]:-webkit-autofill ~ .label {
+.css-17:-webkit-autofill ~ .label,
+[data-css-17]:-webkit-autofill ~ .label {
   opacity: 1 !important;
   top: 8px !important;
 }
 
-.css-11:-webkit-autofill ~ .checkmark,
-[data-css-11]:-webkit-autofill ~ .checkmark {
+.css-17:-webkit-autofill ~ .checkmark,
+[data-css-17]:-webkit-autofill ~ .checkmark {
   opacity: 1 !important;
 }
 
-.css-11:-webkit-autofill,
-[data-css-11]:-webkit-autofill,
-.css-11[data-simulate-webkitautofill],
-[data-css-11][data-simulate-webkitautofill] {
+.css-17:-webkit-autofill,
+[data-css-17]:-webkit-autofill,
+.css-17[data-simulate-webkitautofill],
+[data-css-17][data-simulate-webkitautofill] {
   padding-top: 10px !important;
 }
 
-.css-15,
-[data-css-15] {
+.css-21,
+[data-css-21] {
   position: absolute;
   top: 16px;
   right: 15px;
@@ -431,8 +459,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   -moz-transition: opacity .225s;
 }
 
-.css-16,
-[data-css-16] {
+.css-22,
+[data-css-22] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -445,10 +473,10 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
   onSubmit={[Function]}
 >
   <div
-    data-css-5=""
+    data-css-11=""
   >
     <div
-      data-css-5=""
+      data-css-11=""
       style={
         Object {
           "height": 50,
@@ -456,9 +484,9 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
       }
     />
     <div
-      data-css-4=""
-      data-css-7=""
-      data-css-6=""
+      data-css-10=""
+      data-css-13=""
+      data-css-12=""
     >
       <button
         data-css-0=""
@@ -466,8 +494,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
         type="submit"
       >
         <div
-          data-css-5=""
-          data-css-8=""
+          data-css-11=""
+          data-css-14=""
         >
           Submit
         </div>
@@ -475,12 +503,12 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
     </div>
   </div>
   <div
-    data-css-9=""
-    data-css-10=""
+    data-css-15=""
+    data-css-16=""
   >
     <div
-      data-css-3=""
-      data-css-5=""
+      data-css-9=""
+      data-css-11=""
       style={
         Object {
           "width": "100%",
@@ -488,24 +516,24 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
       }
     >
       <div
-        data-css-5=""
-        data-css-1=""
+        data-css-11=""
+        data-css-7=""
         onClick={[Function]}
       >
         <div
-          data-css-16=""
-          data-css-5=""
+          data-css-22=""
+          data-css-11=""
         >
           A nice error message 🐼
         </div>
         <div
-          data-css-5=""
-          data-css-2=""
+          data-css-11=""
+          data-css-8=""
         />
       </div>
       <input
         aria-required={true}
-        data-css-11=""
+        data-css-17=""
         name="email"
         onChange={[Function]}
         onInvalid={[Function]}
@@ -515,8 +543,8 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
       />
       <div
         className="checkmark"
-        data-css-15=""
-        data-css-5=""
+        data-css-21=""
+        data-css-11=""
       >
         <div
           dangerouslySetInnerHTML={
@@ -524,7 +552,7 @@ exports[`Check FormValidityProvider should click on the button and get a custom 
               "__html": undefined,
             }
           }
-          data-css-5=""
+          data-css-11=""
           size="xs"
           style={
             Object {
@@ -559,13 +587,27 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-justify-content: center;
 }
 
-.css-1,
-[data-css-1] {
+.css-0:active,
+[data-css-0]:active,
+.css-0[data-simulate-active],
+[data-css-0][data-simulate-active] {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.css-0:disabled,
+[data-css-0]:disabled,
+.css-0[data-simulate-disabled],
+[data-css-0][data-simulate-disabled] {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.css-7,
+[data-css-7] {
   position: relative;
 }
 
-.css-2,
-[data-css-2] {
+.css-8,
+[data-css-8] {
   background-color: #3598db;
   box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -574,21 +616,21 @@ exports[`Check FormValidityProvider should click on the button and get a default
   width: 100%;
 }
 
-.css-3,
-[data-css-3] {
+.css-9,
+[data-css-9] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-4,
-[data-css-4] {
+.css-10,
+[data-css-10] {
   position: absolute;
   bottom: 0;
 }
 
-.css-5,
-[data-css-5] {
+.css-11,
+[data-css-11] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -611,8 +653,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 1;
 }
 
-.css-6,
-[data-css-6] {
+.css-12,
+[data-css-12] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -622,15 +664,15 @@ exports[`Check FormValidityProvider should click on the button and get a default
   color: white;
 }
 
-.css-7,
-[data-css-7] {
+.css-13,
+[data-css-13] {
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-8,
-[data-css-8] {
+.css-14,
+[data-css-14] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -653,8 +695,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 0 0 auto;
 }
 
-.css-9,
-[data-css-9] {
+.css-15,
+[data-css-15] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -671,26 +713,26 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-9:-webkit-autofill ~ .label,
-[data-css-9]:-webkit-autofill ~ .label {
+.css-15:-webkit-autofill ~ .label,
+[data-css-15]:-webkit-autofill ~ .label {
   opacity: 1 !important;
   top: 8px !important;
 }
 
-.css-9:-webkit-autofill ~ .checkmark,
-[data-css-9]:-webkit-autofill ~ .checkmark {
+.css-15:-webkit-autofill ~ .checkmark,
+[data-css-15]:-webkit-autofill ~ .checkmark {
   opacity: 1 !important;
 }
 
-.css-9:-webkit-autofill,
-[data-css-9]:-webkit-autofill,
-.css-9[data-simulate-webkitautofill],
-[data-css-9][data-simulate-webkitautofill] {
+.css-15:-webkit-autofill,
+[data-css-15]:-webkit-autofill,
+.css-15[data-simulate-webkitautofill],
+[data-css-15][data-simulate-webkitautofill] {
   padding-top: 10px !important;
 }
 
-.css-13,
-[data-css-13] {
+.css-19,
+[data-css-19] {
   position: absolute;
   top: 16px;
   right: 15px;
@@ -705,10 +747,10 @@ exports[`Check FormValidityProvider should click on the button and get a default
   onSubmit={[Function]}
 >
   <div
-    data-css-3=""
+    data-css-9=""
   >
     <div
-      data-css-3=""
+      data-css-9=""
       style={
         Object {
           "height": 50,
@@ -716,9 +758,9 @@ exports[`Check FormValidityProvider should click on the button and get a default
       }
     />
     <div
-      data-css-2=""
-      data-css-5=""
-      data-css-4=""
+      data-css-8=""
+      data-css-11=""
+      data-css-10=""
     >
       <button
         data-css-0=""
@@ -726,8 +768,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
         type="submit"
       >
         <div
-          data-css-3=""
-          data-css-6=""
+          data-css-9=""
+          data-css-12=""
         >
           Submit
         </div>
@@ -735,12 +777,12 @@ exports[`Check FormValidityProvider should click on the button and get a default
     </div>
   </div>
   <div
-    data-css-7=""
-    data-css-8=""
+    data-css-13=""
+    data-css-14=""
   >
     <div
-      data-css-1=""
-      data-css-3=""
+      data-css-7=""
+      data-css-9=""
       style={
         Object {
           "width": "100%",
@@ -749,7 +791,7 @@ exports[`Check FormValidityProvider should click on the button and get a default
     >
       <input
         aria-required={true}
-        data-css-9=""
+        data-css-15=""
         name="email"
         onChange={[Function]}
         onInvalid={[Function]}
@@ -759,8 +801,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
       />
       <div
         className="checkmark"
-        data-css-13=""
-        data-css-3=""
+        data-css-19=""
+        data-css-9=""
       >
         <div
           dangerouslySetInnerHTML={
@@ -768,7 +810,7 @@ exports[`Check FormValidityProvider should click on the button and get a default
               "__html": undefined,
             }
           }
-          data-css-3=""
+          data-css-9=""
           size="xs"
           style={
             Object {
@@ -803,8 +845,22 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-justify-content: center;
 }
 
-.css-1,
-[data-css-1] {
+.css-0:active,
+[data-css-0]:active,
+.css-0[data-simulate-active],
+[data-css-0][data-simulate-active] {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.css-0:disabled,
+[data-css-0]:disabled,
+.css-0[data-simulate-disabled],
+[data-css-0][data-simulate-disabled] {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.css-7,
+[data-css-7] {
   background-color: #c1392b;
   position: absolute;
   bottom: 100%;
@@ -816,8 +872,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   box-shadow: 0 1px 2px 1px rgba(0,0,0,.25);
 }
 
-.css-2,
-[data-css-2] {
+.css-8,
+[data-css-8] {
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -830,13 +886,13 @@ exports[`Check FormValidityProvider should click on the button and get a default
   border-top: 10px solid #c1392b;
 }
 
-.css-3,
-[data-css-3] {
+.css-9,
+[data-css-9] {
   position: relative;
 }
 
-.css-4,
-[data-css-4] {
+.css-10,
+[data-css-10] {
   background-color: #3598db;
   box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -845,21 +901,21 @@ exports[`Check FormValidityProvider should click on the button and get a default
   width: 100%;
 }
 
-.css-5,
-[data-css-5] {
+.css-11,
+[data-css-11] {
   box-sizing: border-box;
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
 }
 
-.css-6,
-[data-css-6] {
+.css-12,
+[data-css-12] {
   position: absolute;
   bottom: 0;
 }
 
-.css-7,
-[data-css-7] {
+.css-13,
+[data-css-13] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -882,8 +938,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 1;
 }
 
-.css-8,
-[data-css-8] {
+.css-14,
+[data-css-14] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -893,15 +949,15 @@ exports[`Check FormValidityProvider should click on the button and get a default
   color: white;
 }
 
-.css-9,
-[data-css-9] {
+.css-15,
+[data-css-15] {
   min-height: 50px;
   border-bottom: 1px solid #ecf0f1;
   background-color: white;
 }
 
-.css-10,
-[data-css-10] {
+.css-16,
+[data-css-16] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -924,8 +980,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -webkit-flex: 0 0 auto;
 }
 
-.css-11,
-[data-css-11] {
+.css-17,
+[data-css-17] {
   display: inline;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -942,26 +998,26 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -moz-transition: padding-top .225s ease-out;
 }
 
-.css-11:-webkit-autofill ~ .label,
-[data-css-11]:-webkit-autofill ~ .label {
+.css-17:-webkit-autofill ~ .label,
+[data-css-17]:-webkit-autofill ~ .label {
   opacity: 1 !important;
   top: 8px !important;
 }
 
-.css-11:-webkit-autofill ~ .checkmark,
-[data-css-11]:-webkit-autofill ~ .checkmark {
+.css-17:-webkit-autofill ~ .checkmark,
+[data-css-17]:-webkit-autofill ~ .checkmark {
   opacity: 1 !important;
 }
 
-.css-11:-webkit-autofill,
-[data-css-11]:-webkit-autofill,
-.css-11[data-simulate-webkitautofill],
-[data-css-11][data-simulate-webkitautofill] {
+.css-17:-webkit-autofill,
+[data-css-17]:-webkit-autofill,
+.css-17[data-simulate-webkitautofill],
+[data-css-17][data-simulate-webkitautofill] {
   padding-top: 10px !important;
 }
 
-.css-15,
-[data-css-15] {
+.css-21,
+[data-css-21] {
   position: absolute;
   top: 16px;
   right: 15px;
@@ -972,8 +1028,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
   -moz-transition: opacity .225s;
 }
 
-.css-16,
-[data-css-16] {
+.css-22,
+[data-css-22] {
   display: block;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -986,10 +1042,10 @@ exports[`Check FormValidityProvider should click on the button and get a default
   onSubmit={[Function]}
 >
   <div
-    data-css-5=""
+    data-css-11=""
   >
     <div
-      data-css-5=""
+      data-css-11=""
       style={
         Object {
           "height": 50,
@@ -997,9 +1053,9 @@ exports[`Check FormValidityProvider should click on the button and get a default
       }
     />
     <div
-      data-css-4=""
-      data-css-7=""
-      data-css-6=""
+      data-css-10=""
+      data-css-13=""
+      data-css-12=""
     >
       <button
         data-css-0=""
@@ -1007,8 +1063,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
         type="submit"
       >
         <div
-          data-css-5=""
-          data-css-8=""
+          data-css-11=""
+          data-css-14=""
         >
           Submit
         </div>
@@ -1016,12 +1072,12 @@ exports[`Check FormValidityProvider should click on the button and get a default
     </div>
   </div>
   <div
-    data-css-9=""
-    data-css-10=""
+    data-css-15=""
+    data-css-16=""
   >
     <div
-      data-css-3=""
-      data-css-5=""
+      data-css-9=""
+      data-css-11=""
       style={
         Object {
           "width": "100%",
@@ -1029,24 +1085,24 @@ exports[`Check FormValidityProvider should click on the button and get a default
       }
     >
       <div
-        data-css-5=""
-        data-css-1=""
+        data-css-11=""
+        data-css-7=""
         onClick={[Function]}
       >
         <div
-          data-css-16=""
-          data-css-5=""
+          data-css-22=""
+          data-css-11=""
         >
           Default error message from the browser 🐍.
         </div>
         <div
-          data-css-5=""
-          data-css-2=""
+          data-css-11=""
+          data-css-8=""
         />
       </div>
       <input
         aria-required={true}
-        data-css-11=""
+        data-css-17=""
         name="email"
         onChange={[Function]}
         onInvalid={[Function]}
@@ -1056,8 +1112,8 @@ exports[`Check FormValidityProvider should click on the button and get a default
       />
       <div
         className="checkmark"
-        data-css-15=""
-        data-css-5=""
+        data-css-21=""
+        data-css-11=""
       >
         <div
           dangerouslySetInnerHTML={
@@ -1065,7 +1121,7 @@ exports[`Check FormValidityProvider should click on the button and get a default
               "__html": undefined,
             }
           }
-          data-css-5=""
+          data-css-11=""
           size="xs"
           style={
             Object {
