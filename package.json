@@ -90,7 +90,7 @@
     "react-docgen": "2.21.0",
     "react-dom": "16.5.2",
     "react-generate-props": "0.3.0",
-    "react-intl": "2.7.0",
+    "react-intl": "2.7.1",
     "react-test-renderer": "16.5.2",
     "react-testing-library": "4.1.7",
     "rimraf": "2.6.2"
