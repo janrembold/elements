@@ -3684,12 +3684,12 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-logux@25.0.1:
-  version "25.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-25.0.1.tgz#c98094069d692ed54c906cec12c539f1896e260d"
-  integrity sha512-WxQT79GXNa7qqKrH5Rv6n9s65a0USt0dj0Seh58VF9zppcHqHem/uJkprnjFnn9IOQIVxc0bk9XznET0ZoXWCw==
+eslint-config-logux@25.0.2:
+  version "25.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-25.0.2.tgz#b818f21745c14f18c0947342dd9e5cec02e6cffc"
+  integrity sha512-WsdGi47i328O9iygZdDqu8t6R+/SbiBvngvQL1qooeFd8nK7vNHVkmL8SDJO5IC7QwcE9LH/0/tz1V5Ez/Z1ww==
   dependencies:
-    globals "^11.7.0"
+    globals "^11.8.0"
 
 eslint-config-postcss@3.0.6:
   version "3.0.6"
@@ -4597,10 +4597,10 @@ globals@^11.0.1, globals@^11.1.0:
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.3.0.tgz#e04fdb7b9796d8adac9c8f64c14837b2313378b0"
   integrity sha512-kkpcKNlmQan9Z5ZmgqKH/SMbSmjxQ7QjyNqfXVc8VJcoBV2UEg+sxQD15GQofGRh2hfpwUb70VC31DR7Rq5Hdw==
 
-globals@^11.7.0:
-  version "11.7.0"
-  resolved "https://registry.yarnpkg.com/globals/-/globals-11.7.0.tgz#a583faa43055b1aca771914bf68258e2fc125673"
-  integrity sha512-K8BNSPySfeShBQXsahYB/AbbWruVOTyVpgoIDnl8odPpeSfP2J5QO2oLFFdl2j7GfDCtZj2bMKar2T49itTPCg==
+globals@^11.8.0:
+  version "11.8.0"
+  resolved "https://registry.yarnpkg.com/globals/-/globals-11.8.0.tgz#c1ef45ee9bed6badf0663c5cb90e8d1adec1321d"
+  integrity sha512-io6LkyPVuzCHBSQV9fmOwxZkUk6nIaGmxheLDgmuFv89j0fm2aqDbIXKAGfzCMHqz3HLF2Zf8WSG6VqMh2qFmA==
 
 globals@^9.18.0:
   version "9.18.0"
