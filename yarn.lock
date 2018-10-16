@@ -3684,10 +3684,10 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-logux@25.0.2:
-  version "25.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-25.0.2.tgz#b818f21745c14f18c0947342dd9e5cec02e6cffc"
-  integrity sha512-WsdGi47i328O9iygZdDqu8t6R+/SbiBvngvQL1qooeFd8nK7vNHVkmL8SDJO5IC7QwcE9LH/0/tz1V5Ez/Z1ww==
+eslint-config-logux@26.0.0:
+  version "26.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-26.0.0.tgz#aa5a5eeb93d5b05e8eb1709539d0d9f2bd656689"
+  integrity sha512-aGmzHKHtyKEF1Q+xoHi+ZxHyYSJ+ZtCgaCY3tXKh+RYs8MiQiaetwc+IwWJXbkqaiElfdMRcXvvv/eE7XaZJEQ==
   dependencies:
     globals "^11.8.0"
 
