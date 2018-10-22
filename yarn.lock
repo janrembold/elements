@@ -116,6 +116,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@sheerun/mutationobserver-shim@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#8013f2af54a2b7d735f71560ff360d3a8176a87b"
+  integrity sha512-vTCdPp/T/Q3oSqwHmZ5Kpa9oI7iLtGl3RQaA/NyLHikvcrPxACkkKVr/XzkSPJWXHRhKGzVvb0urJsbMlRxi1Q==
+
 "@storybook/addon-actions@3.4.11":
   version "3.4.11"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.4.11.tgz#a51418c5b684fd3df2788c19ef266845d6068baf"
@@ -3281,14 +3286,14 @@ dom-serializer@0, dom-serializer@~0.1.0:
     domelementtype "~1.1.1"
     entities "~1.1.1"
 
-dom-testing-library@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/dom-testing-library/-/dom-testing-library-3.1.0.tgz#c9aecc4a6e506f456a03ffa3b344450fa046e6eb"
-  integrity sha512-wZVPTrGXV78AbaVRUZIOV4lVrx8hHVB6G4whytlIpNVNTSbI2V4U2nJ1LgNu7vPGPLFYKWFyJuvDoh6sX8d77w==
+dom-testing-library@^3.9.0:
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/dom-testing-library/-/dom-testing-library-3.11.1.tgz#a2a1b0fe04700f585da9f3539ca626ab17ccf050"
+  integrity sha512-qfa1l4UuQp4hQnokn/MZpnHbG3F3bbuvjDh8giFFVBESyvXJDF9FVC3NarUx2jxAULKXeq0mr/2s0kebrbSE+g==
   dependencies:
-    mutationobserver-shim "^0.3.2"
-    pretty-format "^22.4.3"
-    wait-for-expect "^0.4.0"
+    "@sheerun/mutationobserver-shim" "^0.3.2"
+    pretty-format "^23.6.0"
+    wait-for-expect "^1.0.0"
 
 dom-walk@^0.1.0:
   version "0.1.1"
@@ -6772,11 +6777,6 @@ ms@2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
   integrity sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
 
-mutationobserver-shim@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#f4d5dae7a4971a2207914fb5a90ebd514b65acca"
-  integrity sha1-9NXa56SXGiIHkU+1qQ69UUtlrMo=
-
 mute-stream@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
@@ -7867,7 +7867,7 @@ pretty-error@^2.0.2:
     renderkid "^2.0.1"
     utila "~0.4"
 
-pretty-format@^22.4.0, pretty-format@^22.4.3:
+pretty-format@^22.4.0:
   version "22.4.3"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-22.4.3.tgz#f873d780839a9c02e9664c8a082e9ee79eaac16f"
   integrity sha512-S4oT9/sT6MN7/3COoOy+ZJeA92VmOnveLHgrwBE3Z1W5N9S2A1QGNYiE1z75DAENbJrXXUb+OWXhpJcg05QKQQ==
@@ -8379,13 +8379,12 @@ react-test-renderer@^16.0.0-0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-testing-library@4.1.7:
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-4.1.7.tgz#1b13b8e38e2a66beea23d03326b3a143019d1d27"
-  integrity sha512-dNNA+BXfbo5Fpu9t0zM5GsKvS6LUjmXv+FCBGkrDanzKlo0vEtKMjft9NBautXpg8fKW88Ak2NnT7tAK3ZR1OQ==
+react-testing-library@5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-5.2.1.tgz#31f163e900457e5c0dcff7669ae06b502f8a9a7a"
+  integrity sha512-UNOWuWWFkqKvvIfnVK9JH9hMHk9Xd7G8Bl0F5zdxJJIhdcakKX2I0w+6SSIgI+Ru3UYDDVqgQTW2Zu1fc2PH8w==
   dependencies:
-    dom-testing-library "^3.1.0"
-    wait-for-expect "^1.0.0"
+    dom-testing-library "^3.9.0"
 
 react-transition-group@^1.1.2:
   version "1.2.1"
@@ -10119,11 +10118,6 @@ w3c-hr-time@^1.0.1:
   integrity sha1-gqwr/2PZUOqeMYmlimViX+3xkEU=
   dependencies:
     browser-process-hrtime "^0.1.2"
-
-wait-for-expect@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/wait-for-expect/-/wait-for-expect-0.4.0.tgz#341c96ab89d6102a0169a9be6cd0de354de92c17"
-  integrity sha512-itHoJUKL5P8abjhWRlp3F5QLDY7LokcJkgD78tjrX08ozBakfy9YD4bgxUVuSld8yqjza3ld6Sj7UMMOH/twFA==
 
 wait-for-expect@^1.0.0:
   version "1.0.0"
