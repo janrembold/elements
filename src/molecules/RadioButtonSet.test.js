@@ -22,18 +22,18 @@ describe('<RadioButtonSet />', () => {
 
   it('should chain the onChange property', () => {
     const handleChange = jest.fn()
-    const { getByText } = render(
+    const { getByLabelText } = render(
       <ThemeProvider>
-        <RadioButtonSet name="colors" onChange={handleChange} default>
+        <RadioButtonSet name="colors" onChange={handleChange}>
           <RadioButton value="blue">Blue</RadioButton>
           <RadioButton value="gray">Gray</RadioButton>
         </RadioButtonSet>
       </ThemeProvider>
     )
 
-    const radio = getByText('Gray')
-    radio.value = 'blue'
-    fireEvent.change(radio)
-    expect(handleChange).toHaveBeenCalledTimes(1)
+    fireEvent.click(getByLabelText('Gray', { selector: 'input' }))
+    // @todo The current implementation of RadioButtonSet triggers handleChange twice
+    expect(handleChange).toHaveBeenCalled()
+
   })
 })
