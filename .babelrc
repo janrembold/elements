@@ -1,39 +1,41 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "browsers": [
-          "Chrome >= 40",
-          "FireFox >= 44",
-          "Safari >= 7",
-          "Explorer 10",
-          "last 4 Edge versions"
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [
+            "Chrome >= 40",
+            "FireFox >= 44",
+            "Safari >= 7",
+            "Explorer 10",
+            "last 4 Edge versions"
+          ]
+        },
+        "useBuiltIns": "usage"
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "env": {
+    "docs": {
+      "plugins": [
+        "add-react-displayname",
+        [
+          "babel-plugin-react-docgen",
+          {
+            "DOC_GEN_COLLECTION_NAME": "REACT_DOCS"
+          }
         ]
-      },
-      "useBuiltIns": true
-    }],
-    "react"
-  ],
-   "env": {
-     "docs": {
-       "plugins": [
-         "add-react-displayname",
-         [
-           "babel-plugin-react-docgen",
-           {
-             "DOC_GEN_COLLECTION_NAME": "REACT_DOCS"
-           }
-         ]
-       ]
-     }
-   },
+      ]
+    }
+  },
   "plugins": [
-    "transform-class-properties",
-    "transform-export-extensions",
-    "transform-function-bind",
-    "transform-object-rest-spread",
-    "transform-runtime"
-  ],
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-export-namespace-from",
+    "@babel/plugin-proposal-function-bind",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-transform-runtime"
+  ]
 }
-
-
