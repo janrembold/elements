@@ -3990,10 +3990,10 @@ escodegen@^1.9.0:
   optionalDependencies:
     source-map "~0.5.6"
 
-eslint-config-logux@26.0.0:
-  version "26.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-26.0.0.tgz#aa5a5eeb93d5b05e8eb1709539d0d9f2bd656689"
-  integrity sha512-aGmzHKHtyKEF1Q+xoHi+ZxHyYSJ+ZtCgaCY3tXKh+RYs8MiQiaetwc+IwWJXbkqaiElfdMRcXvvv/eE7XaZJEQ==
+eslint-config-logux@26.0.1:
+  version "26.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-26.0.1.tgz#1d1d3ecc714cdd9fa0369cb4fba94820b9f9dc09"
+  integrity sha512-tRKL2YH4way0u3iEanJTMUoBlYW0mwofhgo3/n2GkaJIpvsbDPOlFQW9m+rxV4IRH+/jZ1C8gxOTBkDRhJBfHw==
   dependencies:
     globals "^11.8.0"
 
