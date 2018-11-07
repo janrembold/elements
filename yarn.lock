@@ -3286,10 +3286,10 @@ dom-serializer@0, dom-serializer@~0.1.0:
     domelementtype "~1.1.1"
     entities "~1.1.1"
 
-dom-testing-library@^3.9.0:
-  version "3.11.1"
-  resolved "https://registry.yarnpkg.com/dom-testing-library/-/dom-testing-library-3.11.1.tgz#a2a1b0fe04700f585da9f3539ca626ab17ccf050"
-  integrity sha512-qfa1l4UuQp4hQnokn/MZpnHbG3F3bbuvjDh8giFFVBESyvXJDF9FVC3NarUx2jxAULKXeq0mr/2s0kebrbSE+g==
+dom-testing-library@^3.12.0:
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/dom-testing-library/-/dom-testing-library-3.12.1.tgz#adaf65b719f7ef6c97632a58127fa990464b33f8"
+  integrity sha512-aLfXLoJzaX81Pqs4Cp8q6ti1zNTUpV0B4vxm+QBmPuMIehnmSvYizUewmzGiXI2XYPZjqxfFvuxYl/gH8GYbDw==
   dependencies:
     "@sheerun/mutationobserver-shim" "^0.3.2"
     pretty-format "^23.6.0"
@@ -8384,12 +8384,12 @@ react-test-renderer@^16.0.0-0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-testing-library@5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-5.2.1.tgz#31f163e900457e5c0dcff7669ae06b502f8a9a7a"
-  integrity sha512-UNOWuWWFkqKvvIfnVK9JH9hMHk9Xd7G8Bl0F5zdxJJIhdcakKX2I0w+6SSIgI+Ru3UYDDVqgQTW2Zu1fc2PH8w==
+react-testing-library@5.2.3:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-5.2.3.tgz#c3be44bfa5eb1ba2acc1fb218785c40ebbdfe8ed"
+  integrity sha512-Bw52++7uORuIQnL55lK/WQfppqAc9+8yFG4lWUp/kmSOvYDnt8J9oI5fNCfAGSQi9iIhAv9aNsI2G5rtid0nrA==
   dependencies:
-    dom-testing-library "^3.9.0"
+    dom-testing-library "^3.12.0"
 
 react-transition-group@^1.1.2:
   version "1.2.1"
@@ -8964,13 +8964,6 @@ sax@^1.2.4, sax@~1.2.1:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
-
-schedule@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/schedule/-/schedule-0.5.0.tgz#c128fffa0b402488b08b55ae74bb9df55cc29cc8"
-  integrity sha512-HUcJicG5Ou8xfR//c2rPT0lPIRR09vVvN81T9fqfVgBmhERUbDEQoYKjpBxbueJnCPpSu2ujXzOnRQt6x9o/jw==
-  dependencies:
-    object-assign "^4.1.1"
 
 scheduler@^0.11.0:
   version "0.11.0"
