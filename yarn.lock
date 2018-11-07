@@ -8261,10 +8261,10 @@ react-fuzzy@^0.5.2:
     fuse.js "^3.0.1"
     prop-types "^15.5.9"
 
-react-generate-props@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/react-generate-props/-/react-generate-props-0.3.0.tgz#f5952f26be0de6d91c4f8dee1ead1cede911fd28"
-  integrity sha512-GlGfRPgrxnUkiiGpGEFksL3VB7I6loFnUOtTOZAMO+wAYmP3JkiqzP5qzFqThFwUqB4n4BCfidX4N3WKwjjyUw==
+react-generate-props@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/react-generate-props/-/react-generate-props-0.5.0.tgz#ab1176fe3c9c3f3f1cfd7ea8cd7eaef371101778"
+  integrity sha512-A79BWt31RbvVevCx2kAQdHS0Ci9BQW8+llwWMPL6LOHo5z4bznd3GgV1Xsit0Vx+yWj6CVuuL7e6KMy0Zd5xKQ==
   dependencies:
     lodash "^4.13.1"
 

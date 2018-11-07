@@ -193,7 +193,7 @@ exports[`Input component Collapsible renders properly 1`] = `
           }
         }
       >
-        string
+        title
       </div>
     </div>
     <div
