@@ -91,7 +91,7 @@
     "react-dom": "16.6.1",
     "react-generate-props": "0.3.0",
     "react-intl": "2.7.2",
-    "react-test-renderer": "16.5.2",
+    "react-test-renderer": "16.6.1",
     "react-testing-library": "5.2.1",
     "rimraf": "2.6.2"
   },
