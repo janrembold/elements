@@ -36,7 +36,7 @@
     "watch:test": "yarn test --watch",
     "test": "NODE_ENV=development jest src/",
     "prettier": "prettier --no-semi --single-quote --trailing-comma es5 --write",
-    "lint": "eslint --cache --ext .js,.jsx src/ documentation/src/",
+    "lint": "eslint --cache --ext .js,.jsx src",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -79,7 +79,7 @@
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.7.0",
     "enzyme-to-json": "3.3.4",
-    "eslint": "4.19.1",
+    "eslint": "5.8.0",
     "eslint-config-logux": "26.0.1",
     "eslint-config-postcss": "3.0.6",
     "eslint-config-prettier": "3.1.0",
