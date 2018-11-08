@@ -36,7 +36,7 @@
     "watch:test": "yarn test --watch",
     "test": "NODE_ENV=development jest src/",
     "prettier": "prettier --no-semi --single-quote --trailing-comma es5 --write",
-    "lint": "eslint --cache --ext .js,.jsx src/ documentation/src/",
+    "lint": "eslint --cache --ext .js,.jsx src",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
