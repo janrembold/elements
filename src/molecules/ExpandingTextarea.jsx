@@ -49,20 +49,17 @@ export default class ExpandingTextarea extends React.Component {
     this.adjustTextareaHeight()
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentDidUpdate(prevProps) {
+    if (this.props.value !== prevProps.value) {
+      this.adjustTextareaHeight()
+    }
     if (
-      nextProps.autoFocus === true &&
-      this.props.autoFocus === false &&
+      this.props.autoFocus === true &&
+      prevProps.autoFocus === false &&
       this.textarea
     ) {
       this.textarea.focus()
       this.props.onFocus && this.props.onFocus()
-    }
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.props.value !== prevProps.value) {
-      this.adjustTextareaHeight()
     }
   }
 
