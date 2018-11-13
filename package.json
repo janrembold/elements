@@ -102,7 +102,7 @@
     "prettier": "1.15.2",
     "react": "16.6.3",
     "react-docgen": "2.21.0",
-    "react-dom": "16.6.1",
+    "react-dom": "16.6.3",
     "react-generate-props": "0.5.0",
     "react-intl": "2.7.2",
     "react-test-renderer": "16.6.1",
