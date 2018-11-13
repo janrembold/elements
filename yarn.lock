@@ -1154,17 +1154,17 @@
   resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#8013f2af54a2b7d735f71560ff360d3a8176a87b"
   integrity sha512-vTCdPp/T/Q3oSqwHmZ5Kpa9oI7iLtGl3RQaA/NyLHikvcrPxACkkKVr/XzkSPJWXHRhKGzVvb0urJsbMlRxi1Q==
 
-"@storybook/addon-actions@4.0.4":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-4.0.4.tgz#134b83f287ab43ea59e55ce3b22126ebfd541f80"
-  integrity sha512-XIqA8SUVZp9T+8QFZySzPbY/pSzv3dR17y2t/hgwnw0WJDQ0LcZ/1qUQJ9J87sz5ElMIQNrxKJJEk/kf2Qug4A==
+"@storybook/addon-actions@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-4.0.6.tgz#7dd73f2308cef35a1de6d63e200b878c1acc88d5"
+  integrity sha512-hMCaMCiVcaZGPflo9uiMRx2Iad0zc4Yuf+LywmLsDfcdsDqZMGi3vnoChTAITa6Ki6opqBdnl3q9uAN3ynWSBw==
   dependencies:
     "@emotion/core" "^0.13.1"
     "@emotion/provider" "^0.11.2"
     "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.0.4"
-    "@storybook/components" "4.0.4"
-    "@storybook/core-events" "4.0.4"
+    "@storybook/addons" "4.0.6"
+    "@storybook/components" "4.0.6"
+    "@storybook/core-events" "4.0.6"
     deep-equal "^1.0.1"
     global "^4.3.2"
     lodash "^4.17.11"
@@ -1194,6 +1194,16 @@
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
+"@storybook/addons@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.6.tgz#4af486c113145c46bbe0d8b5cf6efa04d005a00a"
+  integrity sha512-OTxuUfDxLzXFltUfsHl7XlKdUB6bqsnH9P0QUwa5j57Zfy5v4r24D/C5iUzKQBAtIDFhLl55pwcTeb3x+OOnlA==
+  dependencies:
+    "@storybook/channels" "4.0.6"
+    "@storybook/components" "4.0.6"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
 "@storybook/channel-postmessage@4.0.4":
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-4.0.4.tgz#5c8d0c8ac49b92fa95abcf23d1d80d043a8558b0"
@@ -1207,6 +1217,11 @@
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.4.tgz#fdf717cd726d15508ac80ff93a3893b75d3ab8b8"
   integrity sha512-EeRby5oCyyYBkBrxI7Cg8F65FkYJjVK0jbGWpIugcjtnfOeP57xLcZuukcjhLjl/oaC/RYw7A/6c0nFW4kV0GQ==
+
+"@storybook/channels@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.6.tgz#479211c776fae9837d1537dd5468cfdf405ed49f"
+  integrity sha512-UxGOs3XuO2S8K9KTLwOLiX6bUYDtp3fGa/mb9wIL/S+tERrLcSRv+CaaNneAgEVuudaiOHjCso7W6cmZIKzrHQ==
 
 "@storybook/client-logger@4.0.4":
   version "4.0.4"
@@ -1229,10 +1244,31 @@
     react-textarea-autosize "^7.0.4"
     render-fragment "^0.1.1"
 
+"@storybook/components@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.0.6.tgz#9ff82a5b280295203f5ebabe1fb9668d7cf0e1b6"
+  integrity sha512-9xa+eIcb8OwlckwQwaPtwkfZXWLtmNz9yEHYf6mGjf7VOvS5oepxPsyk+a4/0EdDO9In6u1zX5DUdIYSL2vGRA==
+  dependencies:
+    "@emotion/core" "^0.13.1"
+    "@emotion/provider" "^0.11.2"
+    "@emotion/styled" "^0.10.6"
+    global "^4.3.2"
+    lodash "^4.17.11"
+    prop-types "^15.6.2"
+    react-inspector "^2.3.0"
+    react-split-pane "^0.1.84"
+    react-textarea-autosize "^7.0.4"
+    render-fragment "^0.1.1"
+
 "@storybook/core-events@4.0.4":
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.0.4.tgz#bf457afe9aec3fb2cd66d7cad3fa5e5821e01503"
   integrity sha512-+OFFYTVSZd6zjZQMCUF2HQ0hIPfel9NyBBABbPxEtbvWEx/cp4RMfk5VFVISpwYJQMhnqCUU0/t3VoLTKFtm1g==
+
+"@storybook/core-events@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.0.6.tgz#4023ac7caba3f087ff5572b807aa6d6cd102f560"
+  integrity sha512-lExbWR55RLSi4erhRrBtBAgMdHu0xqnnxavkkaLZM9VaP331GVAWAtdS20H3QHdLrU56NZFX4sIPYlUeQDmfaA==
 
 "@storybook/core@4.0.4":
   version "4.0.4"
@@ -9061,14 +9097,6 @@ sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
-
-scheduler@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.11.0.tgz#def1f1bfa6550cc57981a87106e65e8aea41a6b5"
-  integrity sha512-MAYbBfmiEHxF0W+c4CxMpEqMYK+rYF584VP/qMKSiHM6lTkBKKYOJaDiSILpJHla6hBOsVd6GucPL46o2Uq3sg==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 scheduler@^0.11.2:
   version "0.11.2"
