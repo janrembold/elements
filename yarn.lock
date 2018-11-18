@@ -4086,12 +4086,12 @@ escodegen@^1.9.0:
   optionalDependencies:
     source-map "~0.5.6"
 
-eslint-config-logux@26.0.1:
-  version "26.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-26.0.1.tgz#1d1d3ecc714cdd9fa0369cb4fba94820b9f9dc09"
-  integrity sha512-tRKL2YH4way0u3iEanJTMUoBlYW0mwofhgo3/n2GkaJIpvsbDPOlFQW9m+rxV4IRH+/jZ1C8gxOTBkDRhJBfHw==
+eslint-config-logux@27.0.0:
+  version "27.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-logux/-/eslint-config-logux-27.0.0.tgz#3b40245b714602dcabb38d62bb9ea7177a3e8bd9"
+  integrity sha512-bxz0VGPyiQB8hxcA2EMRvcEmip2aaWnk92FRHjV4vGL5QjGo8O+ryYpzJem1ZJ9rzZkwV12BXjVwRx3DeoBRwg==
   dependencies:
-    globals "^11.8.0"
+    globals "^11.9.0"
 
 eslint-config-postcss@3.0.6:
   version "3.0.6"
@@ -5042,10 +5042,15 @@ globals@^11.1.0:
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.3.0.tgz#e04fdb7b9796d8adac9c8f64c14837b2313378b0"
   integrity sha512-kkpcKNlmQan9Z5ZmgqKH/SMbSmjxQ7QjyNqfXVc8VJcoBV2UEg+sxQD15GQofGRh2hfpwUb70VC31DR7Rq5Hdw==
 
-globals@^11.7.0, globals@^11.8.0:
+globals@^11.7.0:
   version "11.8.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.8.0.tgz#c1ef45ee9bed6badf0663c5cb90e8d1adec1321d"
   integrity sha512-io6LkyPVuzCHBSQV9fmOwxZkUk6nIaGmxheLDgmuFv89j0fm2aqDbIXKAGfzCMHqz3HLF2Zf8WSG6VqMh2qFmA==
+
+globals@^11.9.0:
+  version "11.9.0"
+  resolved "https://registry.yarnpkg.com/globals/-/globals-11.9.0.tgz#bde236808e987f290768a93d065060d78e6ab249"
+  integrity sha512-5cJVtyXWH8PiJPVLZzzoIizXx944O4OmRro5MWKx5fT4MgcN7OfaMutPeaTdJCCURwbWdhhcCWcKIffPnmTzBg==
 
 globals@^9.18.0:
   version "9.18.0"
