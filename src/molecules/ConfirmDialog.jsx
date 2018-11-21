@@ -61,7 +61,7 @@ class ConfirmDialog extends React.Component {
               onClick={onCancel}
               {...styles.button}
             >
-              {this.props.cancelMessage}
+              {this.state.cancelMessage}
             </Button>
             <Button
               backgroundColor={ColorPalette.white}
@@ -69,7 +69,7 @@ class ConfirmDialog extends React.Component {
               onClick={onSuccess}
               {...styles.button}
             >
-              {this.props.acceptMessage}
+              {this.state.acceptMessage}
             </Button>
           </View>
         </View>
