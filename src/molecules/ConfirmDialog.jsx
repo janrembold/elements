@@ -49,7 +49,7 @@ class ConfirmDialog extends React.Component {
   }
 
   render() {
-    const { onCancel, onSuccess } = this.props
+    const { message, onCancel, onSuccess } = this.props
     const { acceptMessage, cancelMessage } = this.state
 
     return (
