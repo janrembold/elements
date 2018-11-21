@@ -60,14 +60,14 @@ class CDNIntlProvider extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentDidUpdate(prevProps) {
     const { project, locale, variation } = this.props
     if (
-      nextProps.project !== project ||
-      nextProps.locale !== locale ||
-      nextProps.variation !== variation
+      prevProps.project !== project ||
+      prevProps.locale !== locale ||
+      prevProps.variation !== variation
     ) {
-      this.loadLanguages(nextProps)
+      this.loadLanguages(this.props)
     }
   }
 
