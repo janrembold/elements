@@ -38,6 +38,7 @@ class ConfirmDialog extends React.Component {
     message: PropTypes.node.isRequired,
     onCancel: PropTypes.func.isRequired,
     onSuccess: PropTypes.func.isRequired,
+    resolveAndClean: PropTypes.func.isRequired,
   }
 
   state = {
@@ -45,13 +46,32 @@ class ConfirmDialog extends React.Component {
     acceptMessage: this.props.accept || 'OK',
   }
 
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside)
+    document.addEventListener('touchstart', this.handleClickOutside)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside)
+    document.addEventListener('touchstart', this.handleClickOutside)
+  }
+
+  setWrapperRef = node => {
+    this.wrapperRef = node
+  }
+
+  handleClickOutside = event =>
+    this.wrapperRef &&
+    !this.wrapperRef.contains(event.target) &&
+    this.props.resolveAndClean(false)
+
   render() {
     const { message, onCancel, onSuccess } = this.props
     const { acceptMessage, cancelMessage } = this.state
 
     return (
       <View direction="row" alignV="center" alignH="center" {...styles.wrapper}>
-        <View {...styles.insideView}>
+        <div {...styles.insideView} ref={this.setWrapperRef}>
           <Text color={ColorPalette.lightBlack} {...styles.text}>
             {message}
           </Text>
@@ -71,7 +91,7 @@ class ConfirmDialog extends React.Component {
               <Text>{acceptMessage}</Text>
             </CardButton>
           </CardFooter>
-        </View>
+        </div>
       </View>
     )
   }
