@@ -1,16 +1,13 @@
 import React from 'react'
 import { css } from 'glamor'
-import Button from './Button'
+import CardButton from './Card/CardButton'
+import CardFooter from './Card/CardFooter'
 import Text from '../atoms/Text'
 import View from '../atoms/View'
 import PropTypes from 'prop-types'
 import { ColorPalette } from '@allthings/colors'
 
 const styles = {
-  button: css({
-    width: '50%',
-    border: '1px solid #e7ecee !important',
-  }),
   insideView: css({
     backgroundColor: '#fff',
     borderRadius: '3px',
@@ -58,24 +55,22 @@ class ConfirmDialog extends React.Component {
           <Text color={ColorPalette.lightBlack} {...styles.text}>
             {message}
           </Text>
-          <View alignH="center" flex="flex" alignV="center" direction="row">
-            <Button
+          <CardFooter>
+            <CardButton
               backgroundColor={ColorPalette.white}
               color={ColorPalette.greyIntense}
               onClick={onCancel}
-              {...styles.button}
             >
-              {cancelMessage}
-            </Button>
-            <Button
+              <Text>{cancelMessage}</Text>
+            </CardButton>
+            <CardButton
               backgroundColor={ColorPalette.white}
               color={ColorPalette.greyIntense}
               onClick={onSuccess}
-              {...styles.button}
             >
-              {acceptMessage}
-            </Button>
-          </View>
+              <Text>{acceptMessage}</Text>
+            </CardButton>
+          </CardFooter>
         </View>
       </View>
     )
