@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import ConfirmDialog from '../molecules/ConfirmDialog'
 import ThemeProvider from './ThemeProvider'
 
-const confirm = message =>
+const confirm = customTexts =>
   new Promise(resolve => {
     const div = document.createElement('div')
     document.body.appendChild(div)
@@ -19,9 +19,8 @@ const confirm = message =>
         <ConfirmDialog
           onCancel={() => resolveAndClean(false)}
           onSuccess={() => resolveAndClean(true)}
-        >
-          {message}
-        </ConfirmDialog>
+          customTexts={customTexts}
+        />
       </ThemeProvider>,
       div
     )
