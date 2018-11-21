@@ -30,33 +30,33 @@ const styles = {
     justifyContent: 'center',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(0, 0, 0, 0.25)',
   }),
 }
 
 class ConfirmDialog extends React.Component {
   static propTypes = {
+    accept: PropTypes.string,
+    cancel: PropTypes.string,
+    message: PropTypes.node.isRequired,
     onCancel: PropTypes.func.isRequired,
     onSuccess: PropTypes.func.isRequired,
-    customTexts: PropTypes.shape({
-      accept: PropTypes.string,
-      cancel: PropTypes.string,
-      message: PropTypes.node.isRequired,
-    }),
   }
 
   state = {
-    cancelMessage: this.props.customTexts.cancel || 'Cancel',
-    acceptMessage: this.props.customTexts.accept || 'OK',
+    cancelMessage: this.props.cancel || 'Cancel',
+    acceptMessage: this.props.accept || 'OK',
   }
 
   render() {
-    const { customTexts, onCancel, onSuccess } = this.props
+    const { onCancel, onSuccess } = this.props
+    const { acceptMessage, cancelMessage } = this.state
+
     return (
       <View direction="row" alignV="center" alignH="center" {...styles.wrapper}>
         <View {...styles.insideView}>
           <Text color={ColorPalette.lightBlack} {...styles.text}>
-            {customTexts.message}
+            {message}
           </Text>
           <View alignH="center" flex="flex" alignV="center" direction="row">
             <Button
@@ -65,7 +65,7 @@ class ConfirmDialog extends React.Component {
               onClick={onCancel}
               {...styles.button}
             >
-              {this.state.cancelMessage}
+              {cancelMessage}
             </Button>
             <Button
               backgroundColor={ColorPalette.white}
@@ -73,7 +73,7 @@ class ConfirmDialog extends React.Component {
               onClick={onSuccess}
               {...styles.button}
             >
-              {this.state.acceptMessage}
+              {acceptMessage}
             </Button>
           </View>
         </View>
