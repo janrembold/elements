@@ -36,25 +36,27 @@ const styles = {
 
 class ConfirmDialog extends React.Component {
   static propTypes = {
-    accept: PropTypes.string.isRequired,
-    cancel: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired,
     onCancel: PropTypes.func.isRequired,
     onSuccess: PropTypes.func.isRequired,
+    customTexts: PropTypes.shape({
+      accept: PropTypes.string,
+      cancel: PropTypes.string,
+      message: PropTypes.node.isRequired,
+    }),
   }
 
   state = {
-    cancelMessage: this.props.cancel || 'Cancel',
-    acceptMessage: this.props.accept || 'OK',
+    cancelMessage: this.props.customTexts.cancel || 'Cancel',
+    acceptMessage: this.props.customTexts.accept || 'OK',
   }
 
   render() {
-    const { children, onCancel, onSuccess } = this.props
+    const { customTexts, onCancel, onSuccess } = this.props
     return (
       <View direction="row" alignV="center" alignH="center" {...styles.wrapper}>
         <View {...styles.insideView}>
           <Text color={ColorPalette.lightBlack} {...styles.text}>
-            {children}
+            {customTexts.message}
           </Text>
           <View alignH="center" flex="flex" alignV="center" direction="row">
             <Button
