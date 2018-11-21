@@ -24,7 +24,7 @@ const confirm = customization =>
           message={message}
           onCancel={() => resolveAndClean(false)}
           onSuccess={() => resolveAndClean(true)}
-          customization={customization}
+          resolveAndClean={resolveAndClean}
         />
       </ThemeProvider>,
       div
