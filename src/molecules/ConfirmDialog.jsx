@@ -1,31 +1,28 @@
 import React from 'react'
-import View from '../atoms/View'
 import { css } from 'glamor'
-import Theme from '../behaviour/Theme'
-import Icon from '../atoms/Icon'
-import Text from '../atoms/Text'
 import Button from './Button'
-import { Motion, spring } from 'react-motion'
+import Text from '../atoms/Text'
+import View from '../atoms/View'
 import PropTypes from 'prop-types'
-import ReactDOM from 'react-dom'
-import { withTheme } from '../behaviour/ThemeProvider'
+import { ColorPalette } from '@allthings/colors'
 
 const styles = {
-  button: css({ width: '50%' }),
-  cancelButton: css({
-    border: '1px solid #e7ecee',
+  button: css({
+    width: '50%',
+    border: '1px solid #e7ecee !important',
   }),
   insideView: css({
     backgroundColor: '#fff',
-    maxWidth: '300px',
+    borderRadius: '3px',
+    maxWidth: '500px',
   }),
   text: css({
     textAlign: 'center',
-    padding: '15px',
+    padding: '25px',
   }),
-  view: css({
+  wrapper: css({
     position: 'fixed',
-    top: 0,
+    top: -100,
     left: 0,
     right: 0,
     bottom: 0,
@@ -33,57 +30,52 @@ const styles = {
     justifyContent: 'center',
     flexDirection: 'column',
     alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
   }),
 }
 
 class ConfirmDialog extends React.Component {
   static propTypes = {
-    color: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
+    onCancel: PropTypes.func.isRequired,
+    oSuccess: PropTypes.func.isRequired,
+  }
+
+  state = {
+    cancelMessage: this.props.cancel || 'Cancel',
+    acceptMessage: this.props.accept || 'OK',
   }
 
   render() {
-    const { children, onCancel, onSuccess, textColor } = this.props
+    const { children, onCancel, onSuccess } = this.props
     return (
-      <Theme>
-        {({ colorize }) => (
-          <View
-            direction="row"
-            alignV="center"
-            alignH="center"
-            {...styles.view}
-          >
-            <View {...styles.insideView}>
-              <Text {...styles.text}>{children}</Text>
-
-              <View alignH="center" flex="flex" alignV="center" direction="row">
-                <Button
-                  backgroundColor="rgba(0,0,0,0)"
-                  color={textColor}
-                  onClick={onCancel}
-                  {...styles.button}
-                  {...styles.cancelButton}
-                >
-                  Cancel
-                </Button>
-                <Button onClick={onSuccess} {...styles.button}>
-                  Ok
-                </Button>
-              </View>
-            </View>
+      <View direction="row" alignV="center" alignH="center" {...styles.wrapper}>
+        <View {...styles.insideView}>
+          <Text color={ColorPalette.lightBlack} {...styles.text}>
+            {children}
+          </Text>
+          <View alignH="center" flex="flex" alignV="center" direction="row">
+            <Button
+              backgroundColor={ColorPalette.white}
+              color={ColorPalette.greyIntense}
+              onClick={onCancel}
+              {...styles.button}
+            >
+              {this.props.cancelMessage}
+            </Button>
+            <Button
+              backgroundColor={ColorPalette.white}
+              color={ColorPalette.greyIntense}
+              onClick={onSuccess}
+              {...styles.button}
+            >
+              {this.props.acceptMessage}
+            </Button>
           </View>
-        )}
-      </Theme>
+        </View>
+      </View>
     )
   }
 }
 
-const mapThemeToProps = (theme, props) => ({
-  primary: theme.primary,
-  secondaryText: theme.secondaryText,
-  textColor: theme.text,
-  textOnBackground: theme.textOnBackground,
-  buttonColor: props.backgroundColor || theme.primary,
-})
-
-export default withTheme(mapThemeToProps)(ConfirmDialog)
+export default ConfirmDialog
