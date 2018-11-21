@@ -36,9 +36,11 @@ const styles = {
 
 class ConfirmDialog extends React.Component {
   static propTypes = {
+    accept: PropTypes.string.isRequired,
+    cancel: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
     onCancel: PropTypes.func.isRequired,
-    oSuccess: PropTypes.func.isRequired,
+    onSuccess: PropTypes.func.isRequired,
   }
 
   state = {
