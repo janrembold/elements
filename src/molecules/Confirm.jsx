@@ -8,13 +8,14 @@ const confirm = message =>
     const div = document.createElement('div')
     document.body.appendChild(div)
 
-    function resolveAndClean(response) {
+    const resolveAndClean = response => {
       ReactDOM.unmountComponentAtNode(div)
       document.body.removeChild(div)
       resolve(response)
     }
+
     ReactDOM.render(
-      <ThemeProvider theme={{ primary: '#bada55' }}>
+      <ThemeProvider>
         <ConfirmDialog
           onCancel={() => resolveAndClean(false)}
           onSuccess={() => resolveAndClean(true)}
