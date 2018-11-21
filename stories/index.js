@@ -22,15 +22,10 @@ import List from '../src/molecules/List/List'
 import ListItem from '../src/molecules/List/ListItem'
 import { css } from 'glamor'
 import Input from '../src/atoms/Input'
-import AlertStory from './AlertStory'
 
 storiesOf('Animations', module)
   .addDecorator(createViewportDecorator())
   .add('HorizontalView', () => <HorizontalView />)
-
-storiesOf('Informing Users', module)
-  .addDecorator(createViewportDecorator())
-  .add('Alert', () => <AlertStory />)
 
 storiesOf('Forms', module)
   .addDecorator(createViewportDecorator())
