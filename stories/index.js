@@ -22,6 +22,7 @@ import List from '../src/molecules/List/List'
 import ListItem from '../src/molecules/List/ListItem'
 import { css } from 'glamor'
 import Input from '../src/atoms/Input'
+import ConfirmStory from './ConfirmStory'
 
 storiesOf('Animations', module)
   .addDecorator(createViewportDecorator())
@@ -29,6 +30,7 @@ storiesOf('Animations', module)
 
 storiesOf('Forms', module)
   .addDecorator(createViewportDecorator())
+  .add('Confirm', () => <ConfirmStory />)
   .add('SimpleForm', () => <FormStory />)
   .add('RadioButton', () => <RadioButtonStory />)
   .add('PhoneInput', () => {
