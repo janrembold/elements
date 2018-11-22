@@ -28,6 +28,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.25)',
+    zIndex: 500,
   }),
 }
 
