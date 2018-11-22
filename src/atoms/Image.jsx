@@ -53,8 +53,8 @@ export default class Image extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    this.setState({ useFallback: false })
     if (this.props.src !== prevProps.src) {
+      this.setState({ useFallback: false })
       this.loadImage(this.props.src)
     }
   }
