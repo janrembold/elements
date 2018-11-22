@@ -5,7 +5,12 @@ import ThemeProvider from './ThemeProvider'
 
 const confirm = customization =>
   new Promise(resolve => {
-    const { appendDialogTo, accept, cancel, message } = customization
+    const {
+      acceptButtonLabel,
+      appendDialogTo,
+      cancelButtonLabel,
+      message,
+    } = customization
     const div = document.createElement('div')
     const nodeToAppendTo = appendDialogTo || document.body
     nodeToAppendTo.appendChild(div)
@@ -19,8 +24,8 @@ const confirm = customization =>
     ReactDOM.render(
       <ThemeProvider>
         <ConfirmDialog
-          accept={accept}
-          cancel={cancel}
+          acceptButtonLabel={acceptButtonLabel}
+          cancelButtonLabel={cancelButtonLabel}
           message={message}
           onCancel={() => resolveAndClean(false)}
           onSuccess={() => resolveAndClean(true)}

@@ -33,17 +33,12 @@ const styles = {
 
 class ConfirmDialog extends React.Component {
   static propTypes = {
-    accept: PropTypes.string,
-    cancel: PropTypes.string,
+    acceptButtonLabel: PropTypes.string.isRequired,
+    cancelButtonLabel: PropTypes.string.isRequired,
     message: PropTypes.node.isRequired,
     onCancel: PropTypes.func.isRequired,
     onSuccess: PropTypes.func.isRequired,
     resolveAndClean: PropTypes.func.isRequired,
-  }
-
-  state = {
-    cancelMessage: this.props.cancel || 'Cancel',
-    acceptMessage: this.props.accept || 'OK',
   }
 
   componentDidMount() {
@@ -66,8 +61,13 @@ class ConfirmDialog extends React.Component {
     this.props.resolveAndClean(false)
 
   render() {
-    const { message, onCancel, onSuccess } = this.props
-    const { acceptMessage, cancelMessage } = this.state
+    const {
+      acceptButtonLabel,
+      cancelButtonLabel,
+      message,
+      onCancel,
+      onSuccess,
+    } = this.props
 
     return (
       <View direction="row" alignV="center" alignH="center" {...styles.wrapper}>
@@ -81,14 +81,14 @@ class ConfirmDialog extends React.Component {
               color={ColorPalette.greyIntense}
               onClick={onCancel}
             >
-              <Text>{cancelMessage}</Text>
+              <Text>{cancelButtonLabel}</Text>
             </CardButton>
             <CardButton
               backgroundColor={ColorPalette.white}
               color={ColorPalette.greyIntense}
               onClick={onSuccess}
             >
-              <Text>{acceptMessage}</Text>
+              <Text>{acceptButtonLabel}</Text>
             </CardButton>
           </CardFooter>
         </div>
