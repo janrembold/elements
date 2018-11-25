@@ -1260,26 +1260,16 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-links@4.0.8":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.0.8.tgz#a1fc616417c7427754714bce4e1cf5e80431597e"
-  integrity sha512-PrE88FXXVupX0mnoRzW2a8nTkP6bTVWoQIcF46UeFGhUrqMhN/9/Y7SoYGW3CbptYqXlIZ9S9tRW5ZDTF7dDpg==
+"@storybook/addon-links@4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.0.9.tgz#72f594c46d70d9e7008888517765fa452c338cd6"
+  integrity sha512-n5KUirtb5r8YcXXV/pLjx0wf9E9YbzUfaaj76Z4hNkLegtG/9AJCXe0paFqwFXM7gi2nQR0ldWopdZqgVpV77g==
   dependencies:
-    "@storybook/addons" "4.0.8"
-    "@storybook/components" "4.0.8"
+    "@storybook/addons" "4.0.9"
+    "@storybook/components" "4.0.9"
     "@storybook/core-events" "4.0.8"
     global "^4.3.2"
     prop-types "^15.6.2"
-
-"@storybook/addons@4.0.8":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.8.tgz#841848c57406296f7b513708c15dc865f6b37fc7"
-  integrity sha512-rcLqzRHFPYQ5S0/NKc3Qk7klUseiq3YCAKghYjGzXPENgID6rKnqAYrlOybPgR0aUWs6koXKiIjtco9tT1UBxQ==
-  dependencies:
-    "@storybook/channels" "4.0.8"
-    "@storybook/components" "4.0.8"
-    global "^4.3.2"
-    util-deprecate "^1.0.2"
 
 "@storybook/addons@4.0.9":
   version "4.0.9"
@@ -1309,22 +1299,6 @@
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.0.8.tgz#159bc1732811c543393d86e06a7c32b41047d217"
   integrity sha512-q2PNkSVjQGLvJp9K8hTUjyRYtN8PDbLBddT2fmb/CFGFLXWTDe79+DuJGEFhUKfbtrvixIPXOeWeDYarwxnhAw==
-
-"@storybook/components@4.0.8":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.0.8.tgz#0c0701e64b52538acb0d39412db476549a3d7579"
-  integrity sha512-6r6/B2i2sQrDPvOgzo5YgCtSCj3q4E54e6V5fkbrYhSvH7Ro8fwca6Pee0uHbKECT+N8+HzWveV0WKg20TZvIg==
-  dependencies:
-    "@emotion/core" "^0.13.1"
-    "@emotion/provider" "^0.11.2"
-    "@emotion/styled" "^0.10.6"
-    global "^4.3.2"
-    lodash "^4.17.11"
-    prop-types "^15.6.2"
-    react-inspector "^2.3.0"
-    react-split-pane "^0.1.84"
-    react-textarea-autosize "^7.0.4"
-    render-fragment "^0.1.1"
 
 "@storybook/components@4.0.9":
   version "4.0.9"
