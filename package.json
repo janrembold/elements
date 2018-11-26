@@ -81,7 +81,7 @@
     "enzyme-to-json": "3.3.4",
     "eslint": "5.9.0",
     "eslint-config-logux": "27.0.0",
-    "eslint-config-postcss": "3.0.6",
+    "eslint-config-postcss": "3.0.7",
     "eslint-config-prettier": "3.3.0",
     "eslint-config-standard": "12.0.0",
     "eslint-plugin-es5": "1.3.1",

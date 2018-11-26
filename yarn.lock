@@ -4093,10 +4093,10 @@ eslint-config-logux@27.0.0:
   dependencies:
     globals "^11.9.0"
 
-eslint-config-postcss@3.0.6:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/eslint-config-postcss/-/eslint-config-postcss-3.0.6.tgz#baf855556fa77f9f2f18e63ad6c437a519ca6f35"
-  integrity sha512-/8etp+nnSTI4nMtaHw+vaMYJ64iNJs8czDNLyL80RBTKCDM3aR9fmsJK4Evdf4l67IHkpWQZeX4D77bMXwHWww==
+eslint-config-postcss@3.0.7:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/eslint-config-postcss/-/eslint-config-postcss-3.0.7.tgz#390d97d5ac08db9dc57630153cc0c1821559659b"
+  integrity sha512-5SCkmybZjQhOiFX8FNuqBo9SvCWH6inGXLHQ+BigXUiOGDhBNJuHp6JaF2qKMv+ti6kdk3J1ZFM3NurLww7Nxw==
 
 eslint-config-prettier@3.3.0:
   version "3.3.0"
