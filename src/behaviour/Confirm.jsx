@@ -3,21 +3,14 @@ import ReactDOM from 'react-dom'
 import ConfirmDialog from '../molecules/ConfirmDialog'
 import ThemeProvider from './ThemeProvider'
 
-const confirm = customization =>
+const confirm = ({ acceptButtonLabel, cancelButtonLabel, message }) =>
   new Promise(resolve => {
-    const {
-      acceptButtonLabel,
-      appendDialogTo,
-      cancelButtonLabel,
-      message,
-    } = customization
     const div = document.createElement('div')
-    const nodeToAppendTo = appendDialogTo || document.body
-    nodeToAppendTo.appendChild(div)
+    document.body.appendChild(div)
 
     const resolveAndClean = response => {
       ReactDOM.unmountComponentAtNode(div)
-      nodeToAppendTo.removeChild(div)
+      document.body.removeChild(div)
       resolve(response)
     }
 

@@ -10,8 +10,8 @@ export default class FormStory extends React.Component {
   handleClick = async () => {
     const response = await confirm({
       message: 'Turn the background red?',
-      accept: 'Okidoki',
-      cancel: 'Nope',
+      acceptButtonLabel: 'Okidoki',
+      cancelButtonLabel: 'Nope',
     })
     const backgroundColor = response ? 'red' : 'white'
 
