@@ -39,27 +39,35 @@ class ConfirmDialog extends React.Component {
     message: PropTypes.node.isRequired,
     onCancel: PropTypes.func.isRequired,
     onSuccess: PropTypes.func.isRequired,
-    resolveAndClean: PropTypes.func.isRequired,
   }
 
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClickOutside)
     document.addEventListener('touchstart', this.handleClickOutside)
+    document.addEventListener('keyup', this.handleEnterAndEscKey)
   }
 
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleClickOutside)
-    document.addEventListener('touchstart', this.handleClickOutside)
+    document.removeEventListener('touchstart', this.handleClickOutside)
+    document.removeEventListener('keyup', this.handleEnterAndEscKey)
   }
 
   setWrapperRef = node => {
     this.wrapperRef = node
   }
 
+  handleEnterAndEscKey = event => {
+    const code = event.keyCode || event.which
+    const { onCancel, onSuccess } = this.props
+    event.preventDefault()
+    code === 13 ? onSuccess() : code === 27 ? onCancel() : false
+  }
+
   handleClickOutside = event =>
     this.wrapperRef &&
     !this.wrapperRef.contains(event.target) &&
-    this.props.resolveAndClean(false)
+    this.props.onCancel()
 
   render() {
     const {
