@@ -106,7 +106,7 @@
     "react-generate-props": "0.5.0",
     "react-intl": "2.7.2",
     "react-test-renderer": "16.6.3",
-    "react-testing-library": "5.3.0",
+    "react-testing-library": "5.3.1",
     "rimraf": "2.6.2"
   },
   "prettier": {
