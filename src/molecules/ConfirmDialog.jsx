@@ -41,31 +41,27 @@ class ConfirmDialog extends React.Component {
     onSuccess: PropTypes.func.isRequired,
   }
 
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.wrapperRef = React.createRef()
   }
 
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClickOutside)
     document.addEventListener('touchstart', this.handleClickOutside)
-    document.addEventListener('keyup', this.handleEnterAndEscKey)
+    document.addEventListener('keyup', this.handleKeyUp)
   }
 
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleClickOutside)
     document.removeEventListener('touchstart', this.handleClickOutside)
-    document.removeEventListener('keyup', this.handleEnterAndEscKey)
+    document.removeEventListener('keyup', this.handleKeyUp)
   }
 
-  handleEnterAndEscKey = event => {
-    const code = event.keyCode || event.which
-    const { onCancel, onSuccess } = this.props
+  handleKeyUp = event => {
     event.preventDefault()
-    if (code === 13) {
-      onSuccess()
-    } else if (code === 27) {
-      onCancel()
+    if (event.key === 'Escape') {
+      this.props.onCancel()
     }
   }
 
@@ -99,6 +95,7 @@ class ConfirmDialog extends React.Component {
               backgroundColor={ColorPalette.white}
               color={ColorPalette.greyIntense}
               onClick={onSuccess}
+              autoFocus
             >
               <Text>{acceptButtonLabel}</Text>
             </CardButton>
