@@ -29,9 +29,17 @@ exports[`CardButton renders custom color 1`] = `
 .css-1,
 [data-css-1] {
   background-color: #f0f0f0;
+  border: none;
   transition: 500ms ease-in-out;
   -webkit-transition: 500ms ease-in-out;
   -moz-transition: 500ms ease-in-out;
+}
+
+.css-1:focus,
+[data-css-1]:focus,
+.css-1[data-simulate-focus],
+[data-css-1][data-simulate-focus] {
+  outline: none;
 }
 
 .css-1:hover,
@@ -42,22 +50,30 @@ exports[`CardButton renders custom color 1`] = `
   background: #d9d9d9;
 }
 
-<div
+<button
   data-css-1=""
   data-css-0=""
   onClick={[Function]}
 >
   Click me
-</div>
+</button>
 `;
 
 exports[`CardButton renders without error 1`] = `
 .css-0,
 [data-css-0] {
   background-color: #3598db;
+  border: none;
   transition: 500ms ease-in-out;
   -webkit-transition: 500ms ease-in-out;
   -moz-transition: 500ms ease-in-out;
+}
+
+.css-0:focus,
+[data-css-0]:focus,
+.css-0[data-simulate-focus],
+[data-css-0][data-simulate-focus] {
+  outline: none;
 }
 
 .css-0:hover,
@@ -68,8 +84,8 @@ exports[`CardButton renders without error 1`] = `
   background: #227dbf;
 }
 
-.css-4,
-[data-css-4] {
+.css-7,
+[data-css-7] {
   box-sizing: border-box;
   align-content: center;
   align-items: center;
@@ -93,11 +109,11 @@ exports[`CardButton renders without error 1`] = `
   -webkit-flex: 1;
 }
 
-<div
+<button
   data-css-0=""
-  data-css-4=""
+  data-css-7=""
   onClick={[Function]}
 >
   Click me
-</div>
+</button>
 `;
