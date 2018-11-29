@@ -8,7 +8,11 @@ import Theme from '../../behaviour/Theme'
 const style = backgroundColor =>
   css({
     backgroundColor,
+    border: 'none',
     transition: '500ms ease-in-out',
+    ':focus': {
+      outline: 'none',
+    },
     ':hover': {
       cursor: 'pointer',
       background: color(backgroundColor, lightness(-10)),
@@ -34,6 +38,7 @@ export default function CardButton({
           alignV="center"
           direction="row"
           onClick={onClick}
+          htmlElement="button"
           {...style(colorize(backgroundColor))}
           {...props}
         >

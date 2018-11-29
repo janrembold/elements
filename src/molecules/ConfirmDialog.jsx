@@ -39,27 +39,31 @@ class ConfirmDialog extends React.Component {
     message: PropTypes.node.isRequired,
     onCancel: PropTypes.func.isRequired,
     onSuccess: PropTypes.func.isRequired,
-    resolveAndClean: PropTypes.func.isRequired,
   }
+
+  wrapperRef = React.createRef()
 
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClickOutside)
     document.addEventListener('touchstart', this.handleClickOutside)
+    document.addEventListener('keyup', this.handleKeyUp)
   }
 
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleClickOutside)
-    document.addEventListener('touchstart', this.handleClickOutside)
+    document.removeEventListener('touchstart', this.handleClickOutside)
+    document.removeEventListener('keyup', this.handleKeyUp)
   }
 
-  setWrapperRef = node => {
-    this.wrapperRef = node
+  handleKeyUp = event => {
+    event.preventDefault()
+    if (event.key === 'Escape') {
+      this.props.onCancel()
+    }
   }
 
   handleClickOutside = event =>
-    this.wrapperRef &&
-    !this.wrapperRef.contains(event.target) &&
-    this.props.resolveAndClean(false)
+    !this.wrapperRef.current.contains(event.target) && this.props.onCancel()
 
   render() {
     const {
@@ -72,7 +76,7 @@ class ConfirmDialog extends React.Component {
 
     return (
       <View direction="row" alignV="center" alignH="center" {...styles.wrapper}>
-        <div {...styles.insideView} ref={this.setWrapperRef}>
+        <div {...styles.insideView} ref={this.wrapperRef}>
           <Text color={ColorPalette.lightBlack} {...styles.text}>
             {message}
           </Text>
@@ -88,6 +92,7 @@ class ConfirmDialog extends React.Component {
               backgroundColor={ColorPalette.white}
               color={ColorPalette.greyIntense}
               onClick={onSuccess}
+              autoFocus
             >
               <Text>{acceptButtonLabel}</Text>
             </CardButton>

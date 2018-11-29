@@ -22,7 +22,6 @@ const confirm = ({ acceptButtonLabel, cancelButtonLabel, message }) =>
           message={message}
           onCancel={() => resolveAndClean(false)}
           onSuccess={() => resolveAndClean(true)}
-          resolveAndClean={resolveAndClean}
         />
       </ThemeProvider>,
       div
