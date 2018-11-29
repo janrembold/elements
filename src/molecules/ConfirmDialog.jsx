@@ -41,6 +41,11 @@ class ConfirmDialog extends React.Component {
     onSuccess: PropTypes.func.isRequired,
   }
 
+  constructor(props) {
+    super(props)
+    this.wrapperRef = React.createRef()
+  }
+
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClickOutside)
     document.addEventListener('touchstart', this.handleClickOutside)
@@ -53,21 +58,19 @@ class ConfirmDialog extends React.Component {
     document.removeEventListener('keyup', this.handleEnterAndEscKey)
   }
 
-  setWrapperRef = node => {
-    this.wrapperRef = node
-  }
-
   handleEnterAndEscKey = event => {
     const code = event.keyCode || event.which
     const { onCancel, onSuccess } = this.props
     event.preventDefault()
-    code === 13 ? onSuccess() : code === 27 ? onCancel() : false
+    if (code === 13) {
+      onSuccess()
+    } else if (code === 27) {
+      onCancel()
+    }
   }
 
   handleClickOutside = event =>
-    this.wrapperRef &&
-    !this.wrapperRef.contains(event.target) &&
-    this.props.onCancel()
+    !this.wrapperRef.current.contains(event.target) && this.props.onCancel()
 
   render() {
     const {
@@ -80,7 +83,7 @@ class ConfirmDialog extends React.Component {
 
     return (
       <View direction="row" alignV="center" alignH="center" {...styles.wrapper}>
-        <div {...styles.insideView} ref={this.setWrapperRef}>
+        <div {...styles.insideView} ref={this.wrapperRef}>
           <Text color={ColorPalette.lightBlack} {...styles.text}>
             {message}
           </Text>
