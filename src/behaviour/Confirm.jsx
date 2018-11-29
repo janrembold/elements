@@ -3,8 +3,14 @@ import ReactDOM from 'react-dom'
 import ConfirmDialog from '../molecules/ConfirmDialog'
 import ThemeProvider from './ThemeProvider'
 
-const confirm = ({ acceptButtonLabel, cancelButtonLabel, message }) =>
+const confirm = props =>
   new Promise(resolve => {
+    const {
+      acceptButtonLabel,
+      cancelButtonLabel,
+      message,
+      ...restProps
+    } = props
     const div = document.createElement('div')
     document.body.appendChild(div)
 
@@ -22,6 +28,7 @@ const confirm = ({ acceptButtonLabel, cancelButtonLabel, message }) =>
           message={message}
           onCancel={() => resolveAndClean(false)}
           onSuccess={() => resolveAndClean(true)}
+          {...restProps}
         />
       </ThemeProvider>,
       div

@@ -72,10 +72,17 @@ class ConfirmDialog extends React.Component {
       message,
       onCancel,
       onSuccess,
+      ...restProps
     } = this.props
 
     return (
-      <View direction="row" alignV="center" alignH="center" {...styles.wrapper}>
+      <View
+        direction="row"
+        alignV="center"
+        alignH="center"
+        {...styles.wrapper}
+        {...restProps}
+      >
         <div {...styles.insideView} ref={this.wrapperRef}>
           <Text color={ColorPalette.lightBlack} {...styles.text}>
             {message}
