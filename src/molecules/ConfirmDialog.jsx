@@ -41,10 +41,7 @@ class ConfirmDialog extends React.Component {
     onSuccess: PropTypes.func.isRequired,
   }
 
-  constructor() {
-    super()
-    this.wrapperRef = React.createRef()
-  }
+  wrapperRef = React.createRef()
 
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClickOutside)
