@@ -1260,14 +1260,14 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-links@4.0.9":
-  version "4.0.9"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.0.9.tgz#72f594c46d70d9e7008888517765fa452c338cd6"
-  integrity sha512-n5KUirtb5r8YcXXV/pLjx0wf9E9YbzUfaaj76Z4hNkLegtG/9AJCXe0paFqwFXM7gi2nQR0ldWopdZqgVpV77g==
+"@storybook/addon-links@4.0.10":
+  version "4.0.10"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.0.10.tgz#20a0514c439ff49d0ae1591ea2d8651378da96be"
+  integrity sha512-C2oshzYgclHjrkImTA6ksmYySJqMYxhH3C2KhGlTjiC82IszG3kgYVr6tqDecPsmzl9tec9kjsArToPzQkAgSQ==
   dependencies:
-    "@storybook/addons" "4.0.9"
-    "@storybook/components" "4.0.9"
-    "@storybook/core-events" "4.0.8"
+    "@storybook/addons" "4.0.10"
+    "@storybook/components" "4.0.10"
+    "@storybook/core-events" "4.0.10"
     global "^4.3.2"
     prop-types "^15.6.2"
 
@@ -1278,16 +1278,6 @@
   dependencies:
     "@storybook/channels" "4.0.10"
     "@storybook/components" "4.0.10"
-    global "^4.3.2"
-    util-deprecate "^1.0.2"
-
-"@storybook/addons@4.0.9":
-  version "4.0.9"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.9.tgz#cfa18fe10ddda454dbbc3aae17562e46d04d3955"
-  integrity sha512-D+RsN1fNywgk46UxG6Lue+p9Egf7/DpgEJtQb6RS+UoyOF24p3FlwWMh36kpRfSSgGqFZ+a0jIKhXuRSr31UNQ==
-  dependencies:
-    "@storybook/channels" "4.0.8"
-    "@storybook/components" "4.0.9"
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
@@ -1304,11 +1294,6 @@
   version "4.0.10"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.10.tgz#ff507f8c6c905f08f80dccd94fc0aba3388390bd"
   integrity sha512-dkTCio9T3xaQRbZ3QR4j6faqybQcm9e1GOS+4Er0HZxwQ4b7neFwGX0WPlB89v78ogXfE7i4JjNsKcwhmUUMcA==
-
-"@storybook/channels@4.0.8":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.8.tgz#36d96ad714c685f144fd1f1e5394faf0e0291032"
-  integrity sha512-nGMVPN4eOJlAXxS2u3a5aj7YJ4ChhlLx0+4HC6xaU5Uv+PaL6ba0gh84Zd9K73JnTSPPMq/4Mg3oncZumyeN9Q==
 
 "@storybook/client-logger@4.0.10":
   version "4.0.10"
@@ -1331,47 +1316,10 @@
     react-textarea-autosize "^7.0.4"
     render-fragment "^0.1.1"
 
-"@storybook/components@4.0.10":
-  version "4.0.10"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.0.10.tgz#c408b1f2d253a2bb179d82579c2f9ee44f52357e"
-  integrity sha512-DmzSInZ72Ide4JsEl9ZSRO6NbkJFnR1whYKVKcafcMcn8Y2oZkDOG4892HkMBbR0KByFldNhsuL+EiGX7QQbgQ==
-  dependencies:
-    "@emotion/core" "^0.13.1"
-    "@emotion/provider" "^0.11.2"
-    "@emotion/styled" "^0.10.6"
-    global "^4.3.2"
-    lodash "^4.17.11"
-    prop-types "^15.6.2"
-    react-inspector "^2.3.0"
-    react-split-pane "^0.1.84"
-    react-textarea-autosize "^7.0.4"
-    render-fragment "^0.1.1"
-
-"@storybook/components@4.0.9":
-  version "4.0.9"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.0.9.tgz#c5cc9f52768fd7a6078d9601cecacd0e357dc130"
-  integrity sha512-EoPJitDUBkNdg4UiWyrmU6IkpLmJTjJO6KD382isHXA7qCxBJQTPb2m3GXy35KKF510NtJ9H0l4k5x7yg5Wzng==
-  dependencies:
-    "@emotion/core" "^0.13.1"
-    "@emotion/provider" "^0.11.2"
-    "@emotion/styled" "^0.10.6"
-    global "^4.3.2"
-    lodash "^4.17.11"
-    prop-types "^15.6.2"
-    react-inspector "^2.3.0"
-    react-split-pane "^0.1.84"
-    react-textarea-autosize "^7.0.4"
-    render-fragment "^0.1.1"
-
 "@storybook/core-events@4.0.10":
   version "4.0.10"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.0.10.tgz#686b87e6719854ca4183895da5229dc9d9fe1d08"
   integrity sha512-NME5Si0AY0/ii5e3bNtwa/nttwEA0f5ggj3djPfch2Fmp2a2ZIXc8d/tOUR87Ge3PJVNaa36rnMOjlfQPtGfKw==
-
-"@storybook/core-events@4.0.8":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.0.8.tgz#7af80f1c3eb32ae0eafe789be651c684dcfefd7b"
-  integrity sha512-S7g2oGnJKvLDpwcHFJ+efXww6zS7W3krimsqApf3foBfi3CVPLNJ9hrag30UGtnxQ3LDpkMj/aU4bkCWY7NRYA==
 
 "@storybook/core@4.0.10":
   version "4.0.10"
