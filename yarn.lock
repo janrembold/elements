@@ -368,13 +368,13 @@
     "@babel/helper-split-export-declaration" "^7.0.0"
     "@babel/plugin-syntax-decorators" "^7.2.0"
 
-"@babel/plugin-proposal-do-expressions@7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-do-expressions/-/plugin-proposal-do-expressions-7.0.0.tgz#4fe2f29c56a4b18d292caab0dfcb8119c89cc8d8"
-  integrity sha512-fIXsLAsQ5gVhQF44wZ9Yc3EBxaCHzeNjd8z9ivEzKOQyv5VoU1YJQ3AZa0VJgQMX5k/cbXJpNwp2mtg7iSdiGg==
+"@babel/plugin-proposal-do-expressions@7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-do-expressions/-/plugin-proposal-do-expressions-7.2.0.tgz#7abf56d27125f2b040c9cb0ab03119cf117128a9"
+  integrity sha512-2bWN48zQHf/W5T8XvemGQJSi8hzhIo7y4kv/RiA08UcMLQ73lkTknhlaFGf1HjCJzG8FGopgsq6pSe1C+10fPg==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-syntax-do-expressions" "^7.0.0"
+    "@babel/plugin-syntax-do-expressions" "^7.2.0"
 
 "@babel/plugin-proposal-export-default-from@7.2.0":
   version "7.2.0"
@@ -511,10 +511,10 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-syntax-do-expressions@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-do-expressions/-/plugin-syntax-do-expressions-7.0.0.tgz#069119d1d2fd2c13a3203b172619af5f95b6f696"
-  integrity sha512-ZN5MO2WuYfznTK0/TRlF9qG+pBGV/bY5CRO9/a00XEGvaU31JAewRbYaZrySDw6kwSdtPG76yk9jZdPrEC3jWg==
+"@babel/plugin-syntax-do-expressions@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-do-expressions/-/plugin-syntax-do-expressions-7.2.0.tgz#f3d4b01be05ecde2892086d7cfd5f1fa1ead5a2a"
+  integrity sha512-/u4rJ+XEmZkIhspVuKRS+7WLvm7Dky9j9TvGK5IgId8B3FKir9MG+nQxDZ9xLn10QMBvW58dZ6ABe2juSmARjg==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
