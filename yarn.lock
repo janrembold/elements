@@ -1441,16 +1441,6 @@
     global "^4.3.2"
     prop-types "^15.6.2"
 
-"@storybook/addons@4.0.11":
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.11.tgz#e02cb5084d65a0a6cfc4c5521031fde150b93e2f"
-  integrity sha512-b187r62kzYh2WPW3aa1BVP/YvKUqh1xIUFQx8Pw8iJ7Uo5evexkI7utiu2KzWk4hmn0IBavdDshM+NykOjWM7A==
-  dependencies:
-    "@storybook/channels" "4.0.11"
-    "@storybook/components" "4.0.11"
-    global "^4.3.2"
-    util-deprecate "^1.0.2"
-
 "@storybook/addons@4.0.12":
   version "4.0.12"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.12.tgz#3e1658875dd042095f4e4e987d385ee8558d8db6"
@@ -1470,11 +1460,6 @@
     global "^4.3.2"
     json-stringify-safe "^5.0.1"
 
-"@storybook/channels@4.0.11":
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.11.tgz#e6303959364d6d66918dbcbafe0c64df1c5b79d3"
-  integrity sha512-Rewcss3OW1gjgURNVEb4/NSrKGL/huJ+r/PxdXgi81AX1cafj+fMHRbL9AaG5/SNtPDY/6EfIGlC0uGCUbyVOw==
-
 "@storybook/channels@4.0.12":
   version "4.0.12"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.12.tgz#7698b5365a85b8a57ff018da637c8bc8bb6cc737"
@@ -1484,22 +1469,6 @@
   version "4.0.12"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.0.12.tgz#ec7dec5cd33226707df83c30dadab1b693c79312"
   integrity sha512-6VfDSJ3shrQ+iI5TGtF4ZzkRjrDE/BJpxhhU4r7b2UVgqeaLqWhW3AyV6e6CDfvjSt42+DVw94p4QNLBWuH8tg==
-
-"@storybook/components@4.0.11":
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.0.11.tgz#a09a22120685e324831876a620112ca16a28bdcb"
-  integrity sha512-oAy9NqCgq9gJeQ+YO+IXHUq9rqmnUxGae+jbM8lGJlBS0yKx1vpOsZYO/jV3qhNPcGWZzKVxQdoWH5ej4sq5TA==
-  dependencies:
-    "@emotion/core" "^0.13.1"
-    "@emotion/provider" "^0.11.2"
-    "@emotion/styled" "^0.10.6"
-    global "^4.3.2"
-    lodash "^4.17.11"
-    prop-types "^15.6.2"
-    react-inspector "^2.3.0"
-    react-split-pane "^0.1.84"
-    react-textarea-autosize "^7.0.4"
-    render-fragment "^0.1.1"
 
 "@storybook/components@4.0.12":
   version "4.0.12"
@@ -1516,11 +1485,6 @@
     react-split-pane "^0.1.84"
     react-textarea-autosize "^7.0.4"
     render-fragment "^0.1.1"
-
-"@storybook/core-events@4.0.11":
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.0.11.tgz#f524a3611e40baade2c5bacb309d37a6af9d952b"
-  integrity sha512-SHOyEeKa3Nb2RSaDChwpebZMkAlyEM/TkUOjhQUKFvwirXEzhlKg5O9JrNxEAkH5zZbtXNzYY4Vod3c+Fv03uA==
 
 "@storybook/core-events@4.0.12":
   version "4.0.12"
@@ -4458,10 +4422,10 @@ eslint-visitor-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
   integrity sha512-qzm/XxIbxm/FHyH341ZrbnMUpe+5Bocte9xkmFMzPMjRaZMcXww+MpBptFvtU+79L362nqiLhekCxCxDPaUMBQ==
 
-eslint@5.9.0:
-  version "5.9.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.9.0.tgz#b234b6d15ef84b5849c6de2af43195a2d59d408e"
-  integrity sha512-g4KWpPdqN0nth+goDNICNXGfJF7nNnepthp46CAlJoJtC5K/cLu3NgCM3AHu1CkJ5Hzt9V0Y0PBAO6Ay/gGb+w==
+eslint@5.10.0:
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.10.0.tgz#24adcbe92bf5eb1fc2d2f2b1eebe0c5e0713903a"
+  integrity sha512-HpqzC+BHULKlnPwWae9MaVZ5AXJKpkxCVXQHrFaRw3hbDj26V/9ArYM4Rr/SQ8pi6qUPLXSSXC4RBJlyq2Z2OQ==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.5.3"
@@ -4472,7 +4436,7 @@ eslint@5.9.0:
     eslint-scope "^4.0.0"
     eslint-utils "^1.3.1"
     eslint-visitor-keys "^1.0.0"
-    espree "^4.0.0"
+    espree "^5.0.0"
     esquery "^1.0.1"
     esutils "^2.0.2"
     file-entry-cache "^2.0.0"
@@ -4482,7 +4446,6 @@ eslint@5.9.0:
     ignore "^4.0.6"
     imurmurhash "^0.1.4"
     inquirer "^6.1.0"
-    is-resolvable "^1.1.0"
     js-yaml "^3.12.0"
     json-stable-stringify-without-jsonify "^1.0.1"
     levn "^0.3.0"
@@ -4502,10 +4465,10 @@ eslint@5.9.0:
     table "^5.0.2"
     text-table "^0.2.0"
 
-espree@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-4.1.0.tgz#728d5451e0fd156c04384a7ad89ed51ff54eb25f"
-  integrity sha512-I5BycZW6FCVIub93TeVY1s7vjhP9CY6cXCznIRfiig7nRviKZYdRnj/sHEWC6A7WE9RDWOFq9+7OsWSYz8qv2w==
+espree@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/espree/-/espree-5.0.0.tgz#fc7f984b62b36a0f543b13fb9cd7b9f4a7f5b65c"
+  integrity sha512-1MpUfwsdS9MMoN7ZXqAr9e9UKdVHDcvrJpyx7mm1WuQlx/ygErEQBzgi5Nh5qBHIoYweprhtMkTCb9GhcAIcsA==
   dependencies:
     acorn "^6.0.2"
     acorn-jsx "^5.0.0"
@@ -6177,11 +6140,6 @@ is-regex@^1.0.4:
   integrity sha1-VRdIm1RwkbCTDglWVM7SXul+lJE=
   dependencies:
     has "^1.0.1"
-
-is-resolvable@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/is-resolvable/-/is-resolvable-1.1.0.tgz#fb18f87ce1feb925169c9a407c19318a3206ed88"
-  integrity sha512-qgDYXFSR5WvEfuS5dMj6oTMEbrrSaM0CrFk2Yiq/gXnBvD9pMa2jGXxyhGLfvhZpuMZe18CJpFxAt3CRs42NMg==
 
 is-root@2.0.0:
   version "2.0.0"
