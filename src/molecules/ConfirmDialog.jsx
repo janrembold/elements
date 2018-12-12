@@ -12,6 +12,7 @@ const styles = {
     backgroundColor: '#fff',
     borderRadius: '3px',
     maxWidth: '500px',
+    margin: '20px',
   }),
   text: css({
     textAlign: 'center',
