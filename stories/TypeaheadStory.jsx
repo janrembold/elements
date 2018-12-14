@@ -126,7 +126,7 @@ class TypeaheadStory extends React.Component {
             </Text>
 
             <Text strong {...STYLES.title()}>
-              Fetch from (fake) remote:
+              Fetch from (fake) remote, and place the list top:
             </Text>
             <Typeahead
               placeholder="Select your favorite movie. Start typing…"
@@ -134,6 +134,7 @@ class TypeaheadStory extends React.Component {
               onInputValueChange={this.onInputChange}
               items={movies}
               isLoading={loading}
+              placement="top"
             />
           </View>
         </ResourceProvider>

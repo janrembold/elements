@@ -116,6 +116,22 @@ describe('Test the typeahead component', () => {
     expect(wrapper.find(DOWNSHIFT_ITEM(2, 2))).toHaveLength(0)
     expect(wrapper).toMatchSnapshot()
   })
+  it('should use the top placement property', () => {
+    const wrapper = mount(
+      <Typeahead
+        autoOpen
+        items={ITEMS}
+        placeholder={PLACEHOLDER}
+        placement="top"
+      />
+    )
+    // Perform a click on the input.
+    wrapper.find(INPUT(3)).simulate('click')
+    // We should get all the items.
+    expect(wrapper.find(DOWNSHIFT_ITEM(3, 9))).toHaveLength(1)
+    expect(wrapper.find(DOWNSHIFT_ITEM(3, 10))).toHaveLength(0)
+    expect(wrapper).toMatchSnapshot()
+  })
   it('should clear on select if clearOnSelect is used', () => {
     const wrapper = mount(
       <Typeahead
@@ -126,10 +142,10 @@ describe('Test the typeahead component', () => {
       />
     )
     // Perform a click on the input.
-    wrapper.find(INPUT(3)).simulate('click')
+    wrapper.find(INPUT(4)).simulate('click')
     // Select the first item.
-    wrapper.find(INPUT(3)).simulate('keyDown', { key: 'Enter' })
-    expect(wrapper.find(INPUT(3)).prop('value')).toBe('')
+    wrapper.find(INPUT(4)).simulate('keyDown', { key: 'Enter' })
+    expect(wrapper.find(INPUT(4)).prop('value')).toBe('')
   })
   it('should use the defaultValue property (uncontrolled component)', () => {
     const wrapper = mount(
@@ -140,7 +156,7 @@ describe('Test the typeahead component', () => {
         placeholder={PLACEHOLDER}
       />
     )
-    expect(wrapper.find(INPUT(4)).prop('value')).toBe(DEFAULT_VALUE)
+    expect(wrapper.find(INPUT(5)).prop('value')).toBe(DEFAULT_VALUE)
   })
   it('should use the value property (controlled component)', () => {
     const wrapper = mount(
@@ -151,13 +167,13 @@ describe('Test the typeahead component', () => {
         value={DEFAULT_VALUE}
       />
     )
-    expect(wrapper.find(INPUT(5)).prop('value')).toBe(DEFAULT_VALUE)
+    expect(wrapper.find(INPUT(6)).prop('value')).toBe(DEFAULT_VALUE)
     // Without controlling the value from the outside, we can't change it!
-    wrapper.find(INPUT(5)).simulate('change', { target: { value: NICK } })
-    expect(wrapper.find(INPUT(5)).prop('value')).toBe(DEFAULT_VALUE)
+    wrapper.find(INPUT(6)).simulate('change', { target: { value: NICK } })
+    expect(wrapper.find(INPUT(6)).prop('value')).toBe(DEFAULT_VALUE)
     // Control it now.
     wrapper.setProps({ value: NICK })
-    expect(wrapper.find(INPUT(5)).prop('value')).toBe(NICK)
+    expect(wrapper.find(INPUT(6)).prop('value')).toBe(NICK)
   })
   it('should render differently when loading', () => {
     const wrapper = mount(
@@ -185,13 +201,13 @@ describe('Test the typeahead component', () => {
     )
     expect(handleOnClearSelection.mock.calls.length).toBe(0)
     // Open the menu.
-    wrapper.find(INPUT(7)).simulate('click')
+    wrapper.find(INPUT(8)).simulate('click')
     // Select the first item.
-    wrapper.find(INPUT(7)).simulate('keyDown', { key: 'Enter' })
+    wrapper.find(INPUT(8)).simulate('keyDown', { key: 'Enter' })
     // Check for the clear selection button.
     expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(1)
     wrapper.find(CLEAR_SELECTION).simulate('click')
-    expect(wrapper.find(INPUT(7)).prop('value')).toBe('')
+    expect(wrapper.find(INPUT(8)).prop('value')).toBe('')
     expect(handleOnClearSelection.mock.calls.length).toBe(1)
   })
   it('should handle the callback props - onOpen', () => {
@@ -206,7 +222,7 @@ describe('Test the typeahead component', () => {
     )
     expect(handleOnOpen.mock.calls.length).toBe(0)
     // Open the menu.
-    wrapper.find(INPUT(8)).simulate('click')
+    wrapper.find(INPUT(9)).simulate('click')
     expect(handleOnOpen.mock.calls.length).toBe(1)
   })
   it('should handle the callback props - onClose', () => {
@@ -221,9 +237,9 @@ describe('Test the typeahead component', () => {
     )
     expect(handleOnClose.mock.calls.length).toBe(0)
     // Open the menu.
-    wrapper.find(INPUT(9)).simulate('click')
+    wrapper.find(INPUT(10)).simulate('click')
     // Select the first item.
-    wrapper.find(INPUT(9)).simulate('keyDown', { key: 'Enter' })
+    wrapper.find(INPUT(10)).simulate('keyDown', { key: 'Enter' })
     expect(handleOnClose.mock.calls.length).toBe(1)
   })
   it('should handle the callback props - onInputValueChange', () => {
@@ -238,7 +254,7 @@ describe('Test the typeahead component', () => {
     )
     expect(handleOnInputValueChange.mock.calls.length).toBe(0)
     // Enter something.
-    wrapper.find(INPUT(10)).simulate('change', { target: { value: NICK } })
+    wrapper.find(INPUT(11)).simulate('change', { target: { value: NICK } })
     expect(handleOnInputValueChange.mock.calls.length).toBe(1)
   })
   it('should handle the callback props - onSelect', () => {
@@ -253,9 +269,9 @@ describe('Test the typeahead component', () => {
     )
     expect(handleOnSelect.mock.calls.length).toBe(0)
     // Open the menu.
-    wrapper.find(INPUT(11)).simulate('click')
+    wrapper.find(INPUT(12)).simulate('click')
     // Select the first item.
-    wrapper.find(INPUT(11)).simulate('keyDown', { key: 'Enter' })
+    wrapper.find(INPUT(12)).simulate('keyDown', { key: 'Enter' })
     expect(handleOnSelect.mock.calls.length).toBe(1)
   })
   it('should handle warn the user if the clearOnSelect property is used on a controlled or uncontrolled component', () => {
@@ -274,36 +290,26 @@ describe('Test the typeahead component', () => {
     )
     expect(hasWarned.mock.calls.length).toBe(1)
     shallow(
-        <Typeahead
-          autoOpen
-          clearOnSelect
-          items={ITEMS}
-          placeholder={PLACEHOLDER}
-          value={NICK}
-        />
-      )
-      expect(hasWarned.mock.calls.length).toBe(2)
-  })
-  it('should use autocomplete="off" for both inputs', () => {
-    const wrapper = mount(
       <Typeahead
+        autoOpen
+        clearOnSelect
         items={ITEMS}
         placeholder={PLACEHOLDER}
+        value={NICK}
       />
     )
-    expect(wrapper.find(INPUT(12)).prop('autoComplete')).toBe('off')
+    expect(hasWarned.mock.calls.length).toBe(2)
+  })
+  it('should use autocomplete="off" for both inputs', () => {
+    const wrapper = mount(<Typeahead items={ITEMS} placeholder={PLACEHOLDER} />)
+    expect(wrapper.find(INPUT(13)).prop('autoComplete')).toBe('off')
     expect(wrapper.find(INPUT_HINT).prop('autoComplete')).toBe('off')
   })
   it('should not display a clear icon as a controlled component when value is an emtpy string', () => {
     const wrapper = mount(
-      <Typeahead
-        autoOpen
-        items={ITEMS}
-        placeholder={PLACEHOLDER}
-        value={''}
-      />
+      <Typeahead autoOpen items={ITEMS} placeholder={PLACEHOLDER} value={''} />
     )
-    expect(wrapper.find(INPUT(13)).prop('value')).toBe('')
+    expect(wrapper.find(INPUT(14)).prop('value')).toBe('')
     expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(0)
   })
   it('should not display a clear icon as a controlled component when value is undefined', () => {
@@ -315,7 +321,7 @@ describe('Test the typeahead component', () => {
         value={undefined}
       />
     )
-    expect(wrapper.find(INPUT(14)).prop('value')).toBe('')
+    expect(wrapper.find(INPUT(15)).prop('value')).toBe('')
     expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(0)
   })
   it('should not display a clear icon as a uncontrolled component when defaultValue is an emtpy string', () => {
@@ -327,7 +333,7 @@ describe('Test the typeahead component', () => {
         placeholder={PLACEHOLDER}
       />
     )
-    expect(wrapper.find(INPUT(15)).prop('value')).toBe('')
+    expect(wrapper.find(INPUT(16)).prop('value')).toBe('')
     expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(0)
   })
   it('should not display a clear icon as a uncontrolled component when defaultValue is undefined', () => {
@@ -339,7 +345,7 @@ describe('Test the typeahead component', () => {
         placeholder={PLACEHOLDER}
       />
     )
-    expect(wrapper.find(INPUT(16)).prop('value')).toBe('')
+    expect(wrapper.find(INPUT(17)).prop('value')).toBe('')
     expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(0)
   })
   it('should not display a clear icon as a controlled component when value cleared', () => {
@@ -351,7 +357,7 @@ describe('Test the typeahead component', () => {
         value={DEFAULT_VALUE}
       />
     )
-    expect(wrapper.find(INPUT(17)).prop('value')).toBe(DEFAULT_VALUE)
+    expect(wrapper.find(INPUT(18)).prop('value')).toBe(DEFAULT_VALUE)
     expect(wrapper.find(CLEAR_SELECTION)).toHaveLength(1)
     // Simulate clearing the input with the keyboard.
     wrapper.setProps({ value: '' })

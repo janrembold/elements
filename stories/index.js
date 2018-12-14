@@ -20,7 +20,6 @@ import Icon, { Icons } from '../src/atoms/Icon'
 import ResourceProvider from '../src/behaviour/ResourceProvider'
 import List from '../src/molecules/List/List'
 import ListItem from '../src/molecules/List/ListItem'
-import { css } from 'glamor'
 import Input from '../src/atoms/Input'
 import ConfirmStory from './ConfirmStory'
 

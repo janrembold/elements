@@ -16,11 +16,24 @@ import Spinner from '../atoms/Spinner'
 const DEV = 'development'
 const NOOP = _ => _
 
-const bounceAnim = keyframes('bounce', {
+const INPUT_FIELD_HEIGHT = '50px'
+
+const bounceDownwardsAnim = keyframes('bounce', {
   '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
   '40%': { transform: 'translateY(-10px)' },
   '60%': { transform: 'translateY(-10px)' },
 })
+
+const bounceUpwardsAnim = keyframes('bounce', {
+  '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+  '40%': { transform: 'translateY(+10px)' },
+  '60%': { transform: 'translateY(+10px)' },
+})
+
+const Placement = {
+  top: 'top',
+  bottom: 'bottom',
+}
 
 export default class Typeahead extends React.PureComponent {
   static propTypes = {
@@ -31,6 +44,8 @@ export default class Typeahead extends React.PureComponent {
     clearOnSelect: PropTypes.bool,
     /** The default value of the component, without making it controlled. */
     defaultValue: PropTypes.string,
+    /** If "top", then the list should be reversed and extended upwards, if "bottom" (default) then downwards */
+    placement: PropTypes.oneOf(Object.values(Placement)),
     /** The loading state of the component, e.g when externally fetching some
      * data. */
     isLoading: PropTypes.bool,
@@ -67,6 +82,7 @@ export default class Typeahead extends React.PureComponent {
     onClearSelection: NOOP,
     onClose: NOOP,
     onOpen: NOOP,
+    placement: Placement.bottom,
   }
 
   constructor(props) {
@@ -99,7 +115,7 @@ export default class Typeahead extends React.PureComponent {
     this.props.onClearSelection()
   }
 
-  getHintText = (inputValue, itemText) => {
+  getHintText = ({ inputValue, itemText }) => {
     if (itemText.toLowerCase().startsWith(inputValue.toLowerCase())) {
       const escaped = escapeRegex(inputValue)
       const restText = itemText
@@ -109,13 +125,15 @@ export default class Typeahead extends React.PureComponent {
 
       return inputValue + restText
     }
-
     return ''
   }
 
   stateReducer = (state, changes) => {
-    const { clearOnSelect } = this.props
-
+    const { clearOnSelect, placement } = this.props
+    const minOfLimits = Math.min(
+      this.props.items.length - 1,
+      this.props.limit - 1
+    )
     switch (changes.type) {
       // Special case when the clearOnSelect property is used and we want to
       // clear the input.
@@ -125,6 +143,28 @@ export default class Typeahead extends React.PureComponent {
           ...changes,
           ...(clearOnSelect && { inputValue: '' }),
         }
+      case Downshift.stateChangeTypes.keyDownArrowUp:
+        return placement === Placement.top
+          ? {
+              ...state,
+              highlightedIndex:
+                state.highlightedIndex >= minOfLimits
+                  ? 0
+                  : state.highlightedIndex + 1,
+            }
+          : { ...state, ...changes }
+      case Downshift.stateChangeTypes.keyDownArrowDown:
+        return placement === Placement.top
+          ? {
+              ...state,
+              highlightedIndex:
+                state.highlightedIndex > minOfLimits
+                  ? minOfLimits
+                  : state.highlightedIndex <= 0
+                  ? minOfLimits
+                  : state.highlightedIndex - 1,
+            }
+          : { ...state, ...changes }
 
       case Downshift.stateChangeTypes.changeInput:
         return {
@@ -206,6 +246,7 @@ export default class Typeahead extends React.PureComponent {
       autoOpen,
       clearOnSelect,
       defaultValue,
+      placement,
       isLoading,
       items,
       limit,
@@ -224,9 +265,10 @@ export default class Typeahead extends React.PureComponent {
 
     return (
       <Downshift
+        initialHighlightedIndex={0}
         defaultHighlightedIndex={0}
-        defaultInputValue={defaultValue}
-        defaultSelectedItem={defaultSelectedItem}
+        initialInputValue={defaultValue}
+        initialSelectedItem={defaultSelectedItem}
         inputValue={value}
         itemToString={item => (item ? item.label : '')}
         onChange={onSelect}
@@ -245,14 +287,11 @@ export default class Typeahead extends React.PureComponent {
           isOpen,
           selectedItem,
           selectHighlightedItem,
-          selectItem,
           toggleMenu,
         }) => {
           const filtered = matchSorter(items, inputValue, {
             keys: ['label'],
           }).slice(0, limit)
-
-          const showOpen = isOpen && !isLoading && filtered.length > 0
 
           // Opt for <div> here because we don't want to mess with downshifts
           // getRootProps and refKey, which is kind of strange.
@@ -262,7 +301,7 @@ export default class Typeahead extends React.PureComponent {
                 alignItems: 'stretch',
                 background: 'transparent',
                 border: 'none',
-                boxShadow: showOpen && '1px 1px 3px rgba(29, 29, 29, 0.125)',
+                boxShadow: isOpen && '1px 1px 3px rgba(29, 29, 29, 0.125)',
                 display: 'flex',
                 flexDirection: 'column',
                 padding: 0,
@@ -291,7 +330,13 @@ export default class Typeahead extends React.PureComponent {
                     tabIndex={-1}
                     value={
                       inputValue && filtered.length > 0
-                        ? this.getHintText(inputValue, filtered[0].label)
+                        ? this.getHintText({
+                            inputValue,
+                            itemText:
+                              (filtered[highlightedIndex] &&
+                                filtered[highlightedIndex].label) ||
+                              '',
+                          })
                         : ''
                     }
                     {...css({
@@ -300,6 +345,7 @@ export default class Typeahead extends React.PureComponent {
                       boxShadow: 'none',
                       color: '#999',
                       opacity: 1,
+                      height: INPUT_FIELD_HEIGHT,
                     })}
                   />
                 </Absolute>
@@ -313,7 +359,7 @@ export default class Typeahead extends React.PureComponent {
                       if (
                         ['Tab', 'ArrowRight', 'End'].includes(e.key) &&
                         highlightedIndex !== null &&
-                        showOpen
+                        isOpen
                       ) {
                         selectHighlightedItem()
                         // Clear the selection if clearOnSelect is used as we
@@ -327,11 +373,12 @@ export default class Typeahead extends React.PureComponent {
                     background: 'transparent',
                     border: 'none',
                     borderBottom:
-                      showOpen && `1px solid ${ColorPalette.lightGreyIntense}`,
+                      isOpen && `1px solid ${ColorPalette.lightGreyIntense}`,
                     boxShadow: 'none',
                     color: '#000',
                     outline: 'none',
                     width: '100%',
+                    height: INPUT_FIELD_HEIGHT,
                   })}
                 />
                 <Absolute
@@ -368,18 +415,22 @@ export default class Typeahead extends React.PureComponent {
                 </Absolute>
               </Relative>
               <Relative>
-                {showOpen && (
+                {isOpen && (
                   <List
+                    direction={
+                      placement === Placement.top ? 'column-reverse' : 'column'
+                    }
                     onRef={this.setListRef}
                     // Bypass the refKey check which is messy.
                     {...getMenuProps({}, { suppressRefError: true })}
                     {...css({
                       boxShadow:
-                        showOpen && '1px 1px 3px rgba(29, 29, 29, 0.125)',
+                        isOpen && '1px 1px 3px rgba(29, 29, 29, 0.125)',
                       maxHeight: menuHeight,
                       overflowX: 'hidden',
                       overflowY: 'auto',
                       position: 'absolute',
+                      bottom: placement === Placement.top && INPUT_FIELD_HEIGHT,
                       width: '100%',
                       zIndex: 9999,
                     })}
@@ -392,15 +443,31 @@ export default class Typeahead extends React.PureComponent {
                         highlightedIndex,
                       })
                     )}
-                    <Absolute bottom={15} right={15}>
-                      {showScrollArrow && (
-                        <Icon
-                          color="black"
-                          name="arrow-down"
-                          size="xs"
-                          {...css({ animation: `${bounceAnim} 2500ms 2` })}
-                        />
-                      )}
+                    <Absolute
+                      bottom={placement !== Placement.top ? 15 : null}
+                      top={placement === Placement.top ? 15 : null}
+                      right={15}
+                    >
+                      {showScrollArrow &&
+                        (placement === Placement.top ? (
+                          <Icon
+                            color="black"
+                            name="arrow-up"
+                            size="xs"
+                            {...css({
+                              animation: `${bounceUpwardsAnim} 2500ms 2`,
+                            })}
+                          />
+                        ) : (
+                          <Icon
+                            color="black"
+                            name="arrow-down"
+                            size="xs"
+                            {...css({
+                              animation: `${bounceDownwardsAnim} 2500ms 2`,
+                            })}
+                          />
+                        ))}
                     </Absolute>
                   </List>
                 )}
