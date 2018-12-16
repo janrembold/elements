@@ -1589,14 +1589,14 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-links@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.1.1.tgz#94c694754d8ec848bd3785c05b0366a3b5c368c7"
-  integrity sha512-3CXymEawhm1IoDLBj8eK01mPyuyy4T3sNBNsvxmXRJTT6qm7iZX18QBFGWOOX99RHcyadBA5d8B9OGSeL9WpgQ==
+"@storybook/addon-links@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.1.2.tgz#f5fce2a96b86574a4f8d3195dc249093dafe4055"
+  integrity sha512-/nmFJ+85/K0jS+9mQyWjGYNO4J/n6dK/J5ks6gMn8xXU4iys1l2vHEJupUHq5nERuLANYxJGogzko1kgvqIiCg==
   dependencies:
-    "@storybook/addons" "4.1.1"
-    "@storybook/components" "4.1.1"
-    "@storybook/core-events" "4.1.1"
+    "@storybook/addons" "4.1.2"
+    "@storybook/components" "4.1.2"
+    "@storybook/core-events" "4.1.2"
     core-js "^2.5.7"
     global "^4.3.2"
     prop-types "^15.6.2"
