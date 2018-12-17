@@ -39,7 +39,12 @@ class View extends Component {
     alignV: PropTypes.oneOf(['none', 'start', 'center', 'end', 'stretch']),
 
     /** direction */
-    direction: PropTypes.oneOf(['row', 'column']),
+    direction: PropTypes.oneOf([
+      'row',
+      'column',
+      'row-reverse',
+      'column-reverse',
+    ]),
 
     /** Passing true, will make the view fill out available space */
     fill: PropTypes.bool,
