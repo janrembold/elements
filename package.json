@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "@allthings/colors": "3.2.0",
-    "downshift": "3.1.5",
+    "downshift": "3.1.8",
     "glamor": "2.20.40",
     "kewler": "1.0.8",
     "match-sorter": "2.3.0",
